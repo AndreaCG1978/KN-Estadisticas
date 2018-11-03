@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+ <string name="app_name"><![CDATA[КН-графический]]></string>
+    
+    <string name="errorInicioAplicacion"><![CDATA[Приложение не удалось запустить.]]></string>
+    <string name="errorAltaChart"><![CDATA[Вы не можете добавить диаграмм.]]></string>
+    <string name="errorActualizacionChart"><![CDATA[Не удается обновить диаграмму.]]></string>
+    <string name="errorEliminacionChart"><![CDATA[Вы не можете удалять диаграмме.]]></string>
+    <string name="error_alta_chart_incompleto"><![CDATA[Вы должны заполнить имя и тип единицы.]]></string>
+    <string name="errorAltaItemChart"><![CDATA[Вы не можете добавить запись.]]></string>
+    <string name="errorActualizacionItemChart"><![CDATA[Не удалось обновить запись.]]></string>
+    <string name="error_alta_item_incompleto"><![CDATA[Вы должны заполнить значения.]]></string>
+    <string name="errorEliminacionItem"><![CDATA[Вы не можете удалять запись.]]></string>
+    <string name="errorEliminacionYear"><![CDATA[Вы не можете удалять записи.]]></string>
+    <string name="errorEliminacionMonth"><![CDATA[Вы не можете удалять записи.]]></string>
+    <string name="error_ver_publicaciones"><![CDATA[Не удается отобразить публикаций.]]></string>
+    <string name="error_enviar_mail"><![CDATA[Вы не можете отправить сообщение.]]></string>
+    
+    <string name="label_nombre"><![CDATA[Имя]]></string>
+    <string name="label_descripcion"><![CDATA[Описание]]></string>
+    <string name="label_unidad"><![CDATA[Тип значения]]></string>
+    <string name="label_guardar"><![CDATA[РЕГИСТР]]></string>
+    <string name="label_si"><![CDATA[ОК]]></string>
+    <string name="label_no"><![CDATA[Отменить]]></string>
+    <string name="label_fecha"><![CDATA[ДАТА]]></string>
+    <string name="label_valor"><![CDATA[ЗНАЧЕНИЕ]]></string>
+    <string name="label_hora"><![CDATA[ВРЕМЯ]]></string>
+    <string name="label_year"><![CDATA[ГОД]]></string>
+    <string name="label_month"><![CDATA[МЕСЯЦ]]></string>
+    <string name="label_day"><![CDATA[ДЕНЬ]]></string>    
+    <string name="label_cant_meses_reg"><![CDATA[месяцев:]]></string>
+    <string name="label_cant_dias_reg"><![CDATA[ - пунктов:]]></string>   
+    <string name="label_background"><![CDATA[ФОНД]]></string>
+    <string name="label_line"><![CDATA[ЛИНИЯ]]></string>
+    <string name="label_grid"><![CDATA[ГРИД]]></string>
+    <string name="label_labels"><![CDATA[ЭТИКЕТКИ]]></string>
+    <string name="label_timeformat"><![CDATA[ФОРМАТ ВРЕМЕНИ]]></string>
+    <string name="label_stylepoint"><![CDATA[ТОЧКА СТИЛЬ]]></string>
+    <string name="label_selectColor"><![CDATA[Выбранный цвет:]]></string>
+    <string name="label_pickColor"><![CDATA[ВЫБРАТЬ ЦВЕТ]]></string>
+    <string name="label_comparar"><![CDATA[СРАВНИТЬ]]></string>     
+    <string name="label_comparacion_sobrepuesta"><![CDATA[НАЛОЖЕНИЕ]]></string> 
+    <string name="label_comparacion_tiempo"><![CDATA[ВРЕМЕНИ]]></string>   
+    <string name="label_ok"><![CDATA[Хорошо]]></string>
+    <string name="label_mostrar_grilla"><![CDATA[Показать сетку]]></string>
+    <string name="label_mostrar_valores"><![CDATA[Показать значения]]></string>
+    <string name="label_configuracion"><![CDATA[Графическая конфигурация]]></string>
+    <string name="label_comparacion"><![CDATA[СРАВНЕНИЕ]]></string>
+    <string name="label_listado_items"><![CDATA[Список записей]]></string>
+    <string name="label_detalle_items"><![CDATA[Записи деталей]]></string>
+    <string name="label_fecha_hora"><![CDATA[ДАТА И ВРЕМЯ]]></string>
+   
+    <string name="label_circulo"><![CDATA[ОКРУЖНОСТЬ]]></string>
+    <string name="label_diamante"><![CDATA[АЛМАЗ]]></string>
+    <string name="label_punto"><![CDATA[ТОЧКА]]></string>
+    <string name="label_cuadrado"><![CDATA[КВАДРАТ]]></string>
+    <string name="label_triangulo"><![CDATA[ТРЕУГОЛЬНИК]]></string>
+    <string name="label_x"><![CDATA[X]]></string> 
+    
+    <string name="menu_agregar_chart"><![CDATA[Добавить Графический]]></string>
+    <string name="menu_agregar_item_chart"><![CDATA[Добавить элемент]]></string>
+    <string name="menu_eliminar_itemchart"><![CDATA[Удалить элемент]]></string>
+     <string name="menu_dibujar_chart"><![CDATA[Нарисуйте диаграмму]]></string>
+    <string name="menu_editar_chart"><![CDATA[Изменить диаграмму]]></string>
+    <string name="menu_borrar_chart"><![CDATA[Удалить Графический]]></string>
+    <string name="menu_comparar_charts"><![CDATA[Сравните графики]]></string>
+    <string name="menu_configuracion_comparacion"><![CDATA[Установлю Сравнение]]></string>
+    <string name="menu_configurar_chart"><![CDATA[Настройка графической]]></string>
+    <string name="menu_export_chart"><![CDATA[Экспорт графического]]></string>
+    <string name="menu_help"><![CDATA[Помощь]]></string>
+    <string name="menu_about_me"><![CDATA[О себе...]]></string>
+    <string name="menu_export_text"><![CDATA[Экспорт текста]]></string>
+   
+   	<string name="text_acerca_de_mail">support@boxico.com.ar</string>	 	  	
+   	<string name="text_acerca_de"><![CDATA[Продукт, произведенный путем]]></string>
+   	<string name="text_acerca_de_sugerencia"><![CDATA[Для любой проблемы, предложения или замечания, свяжитесь с нами по адресу:]]></string>
+   	<string name="text_acerca_de_verPublicaciones"><![CDATA[-ПОКАЗАТЬ ВСЕ ПУБЛИКАЦИИ-]]></string>
+    
+   	<string name="boxico">BOXICO</string>	 	  	
+   
+    
+    <string name="title_nuevo_chart"><![CDATA[Новый графический]]></string>
+    <string name="title_nuevo_item"><![CDATA[Элемент]]></string>
+    <string name="title_listado_principal"><![CDATA[ГРАФИЧЕСКИЙ СПИСОК]]></string>
+    <string name="title_config_chart"><![CDATA[Настройка графической:]]></string>
+    <string name="title_comparison_chart"><![CDATA[ГРАФИКА СРАВНЕНИЕ]]></string>
+    <string name="title_help"><![CDATA[ПОМОЩЬ]]></string>
+    <string name="title_acerca_de"><![CDATA[ОБО МНЕ...]]></string>
+    
+    
+    <string name="hint_chart"><![CDATA[ГРАФИКА]]></string>
+    
+     <string name="text_sinDatos"><![CDATA[НЕТ ДАННЫХ]]></string>
+     
+     <string name="mensaje_borrar_chart"><![CDATA[: графического, будут удалены. Продолжить?]]></string>
+     <string name="mensaje_borrar_item"><![CDATA[Вступление будут удалены. Продолжить?]]></string>
+     <string name="mensaje_borrar_year"><![CDATA[Все элементы будут устранены в этом году. Продолжить?]]></string>
+	 <string name="mensaje_borrar_month"><![CDATA[Все элементы в этом году и месяце, будут удалены. Продолжить?]]></string>
+     <string name="mensaje_sin_items"><![CDATA[Есть нет товаров записал для отображения в диаграмме.]]></string>    
+	 <string name="mensaje_tipo_comparacion"><![CDATA[Выберите тип сравнения:]]></string>     
+     <string name="mensaje_exito_exportar_chart"><![CDATA[Изображение было сохранено:]]></string>
+     <string name="mensaje_error_exportar_chart"><![CDATA[Изображение не может быть сохранен.]]></string>
+     <string name="mensaje_max_comparacion"><![CDATA[Вы можете выбрать до 6 диаграмм для сравнения.]]></string>  
+     <string name="mensaje_min_comparacion"><![CDATA[Вы должны выбрать два или более графами.]]></string>  
+     <string name="mensaje_error_dibujar"><![CDATA[Это невозможно сделать график.]]></string> 
+     <string name="mensaje_error_guardar"><![CDATA[Вы не можете записать информацию.]]></string>
+     <string name="mensaje_error_version_lite"><![CDATA[В версии Lite можно хранить только до 7 записей.]]></string>
+     
+     <string name="mensaje_error_tarjeta_solo_lectura"><![CDATA[SD-карта находится в режиме только для чтения.]]></string>
+	 <string name="mensaje_error_tarjeta_no_formato"><![CDATA[Ошибка, карта SD не может быть использована, не имеет правильного формата.]]></string>
+     <string name="mensaje_error_tarjeta_no_montada"><![CDATA[Ошибка, вам нужно вставить SD-CARD на мобильном.]]></string>
+     <string name="mensaje_error_tarjeta_shared"><![CDATA[Ошибка, SD-CARD в настоящее время совместно. Отключите кабель USB и попробуйте еще раз.]]></string>
+     <string name="mensaje_error_tarjeta_unmountable"><![CDATA[Ошибка, карты SD, не может быть смонтирован. Это может быть потому, что он поврежден.]]></string>
+     <string name="mensaje_error_tarjeta_unmounted"><![CDATA[Ошибка, SD-CARD присутствует в телефоне, но не смонтирована. Она должна быть установлена ​​до использования программы.]]></string>
+ 
+     <string name="mensaje_pocos_chart"><![CDATA[Не хватает графики (с данными) для сравнения.]]></string>
+     
+     <string name="help_draw"><![CDATA[Нарисуйте график или сравнение нескольких графики.]]></string> 
+	 <string name="help_list_items"><![CDATA[Отображает экран, который позволяет управлять записей..]]></string> 
+	 <string name="help_edit"><![CDATA[В зависимости от контекста, в котором он есть, идет на редактирование графических или билетов.]]></string> 
+	 <string name="help_remove"><![CDATA[В зависимости от контекста, в котором он есть, удалить диаграмму, все связанные с ним записи года, все записи, связанные с одного месяца до одного года, или простой ввод.]]></string>  
+	 <string name="help_config"><![CDATA[Установить появление графика или графического сравнения.]]></string>  
+     <string name="help_exporta"><![CDATA[Регистрация JPG образ графа. Если соответствует простой граф, изображение хранится в папке KNGraphIt-Pics. Если график соответствует сравнения, образ хранится в папке KNGraphIt-Comparison.]]></string>
+	 <string name="help_add_item"><![CDATA[Открытое окно, которое позволяет записывать пункта.]]></string> 
+	 <string name="help_show_item"><![CDATA[Отображает экран, который перечисляет все записи, связанные с тем же месяцем и годом.]]></string> 
+     <string name="help_txt"><![CDATA[Регистрация a. TXT записи, связанные с диаграммой. Он хранится в папке KNGraphIt-Txt.]]></string>
+
+
+
+	<string name="menu_import_csv"><![CDATA[ИМПОРТ CSV]]></string>
+	<string name="menu_export_csv"><![CDATA[ЭКСПОРТ CSV]]></string>
+	
+	<string name="mensaje_importando_csv"><![CDATA[Импорт данных...]]></string>
+	<string name="mensaje_exportando_csv"><![CDATA[Экспорт данных...]]></string>     
+	<string name="mensaje_nada_importar"><![CDATA[Есть нет файлов для импорта...]]></string>
+	<string name="mensaje_exito_exportar_csv"><![CDATA[CSV файл был сохранен успешно.]]></string>
+	<string name="mensaje_exito_importar_csv"><![CDATA[Файлы были импортированы успешно.]]></string>
+	<string name="mensaje_exito_exportar_txt"><![CDATA[Ваши данные диаграммы были сохранены успешно.]]></string>
+	
+	<string name="title_import_csv"><![CDATA[ИМПОРТ CSV]]></string>
+	<string name="title_export_csv"><![CDATA[ЭКСПОРТ CSV]]></string>
+	<string name="title_select_format"><![CDATA[Выберите формат...]]></string>
+	
+	<string name="format_date_time"><![CDATA[дата время,значение ]]></string>
+	<string name="format_date"><![CDATA[дата,значение ]]></string>
+	<string name="format_all_separated"><![CDATA[год,месяц,день,время,минута,значение]]></string>
+	
+	<string name="error_importar_csv"><![CDATA[Вы не можете импортировать CSV-файлов.]]></string>
+	<string name="error_exportar_csv"><![CDATA[Вы не можете экспортировать файл CSV.]]></string>
+	<string name="error_exportar_txt"><![CDATA[Не имея возможности экспорта файлов TXT.]]></string>
+	
+	<string name="help_import_csv"><![CDATA[Приложение загружает данные из CSV-файлов, которые хранятся в папке: KNGraphIt/CSV. Импортировать данные должны находиться в одном из следующих форматов: 1) ДАТА ВРЕМЯ,ЗНАЧЕНИЕ 2) ДАТА,ЗНАЧЕНИЕ 3) год,месяц,день,время,минута,значение. В начале импорта, необходимо выбрать тот формат, который соответствует формату файлов данных. Если информация верна, она будет создавать диаграммы с именем файла и его записи будут загружены с содержанием. Если у вас уже есть рисунок, который соответствует имени файла, элементы диаграммы будут добавлены данные, полученные из архива (Загрузка вещи не существуют или обновляет значение тех, кто согласен дата и время). Ниже приведен пример формата:]]></string>	 	 
+	<string name="help_export_csv"><![CDATA[Приложение экспортирует график записи в файл CSV, который хранится в папке KNGraphIt/CSV с тем же именем на графике. При экспорте, необходимо выбрать нужный формат для хранения данных: 1) ДАТА ВРЕМЯ,ЗНАЧЕНИЕ 2) ДАТА,ЗНАЧЕНИЕ 3) год,месяц,день,время,минута,значение.]]></string>
+	<string name="help_import_csv_example"><![CDATA[ДАТА ВРЕМЯ,ЗНАЧЕНИЕ \n\n 2011/01/01 10:20,100.0 \n 2011/01/31 10:30,120.5 \n 2011/11/30 11:30,150.5 \n \n ДАТА,ЗНАЧЕНИЕ \n \n 2011/01/01,100.0 \n 2011/01/31,120.50 \n 2011/11/30,150.5 \n \n год,месяц,день,время,минута,значение \n \n 2011,01,01,10,20,100.0 \n 2011,01,31,10,30,120.50 \n 2011,11,30,11,30,150.5]]></string>	
+
+</resources>

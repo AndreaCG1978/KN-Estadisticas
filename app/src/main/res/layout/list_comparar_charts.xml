@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent"
+  	android:layout_height="fill_parent"
+  	>
+  	<LinearLayout
+	  xmlns:android="http://schemas.android.com/apk/res/android"
+	  android:layout_width="fill_parent"
+	  android:layout_height="fill_parent"
+	  android:layout_gravity="top"
+	  android:orientation="vertical">
+	  	
+	  	   <TextView android:id="@+id/tituloListadoPrincipal"
+	      android:layout_width="fill_parent"
+	      android:layout_height="wrap_content"
+	      android:gravity="right"
+	      android:background="@color/color_gris_oscuro"
+	      android:layout_margin="1dp"
+	      android:textSize="15sp"
+	      android:padding="5dp"
+	      android:textStyle="bold"
+	      android:text="@string/title_comparison_chart"
+	      />
+
+	</LinearLayout>
+	<LinearLayout
+	  xmlns:android="http://schemas.android.com/apk/res/android"
+	  android:layout_width="fill_parent"
+	  android:layout_height="fill_parent"
+	  android:orientation="vertical"
+	  >
+	  
+	 
+	  	<ListView android:id="@android:id/list"
+		  android:layout_width="fill_parent"
+		  android:layout_height="wrap_content"
+		  android:layout_marginTop="40dp"
+	      android:layout_marginBottom="55dp"
+		  >
+		</ListView>  
+
+	  
+	</LinearLayout>
+	<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	    android:orientation="horizontal"
+	    android:layout_width="fill_parent"
+	    android:layout_height="fill_parent"
+	    android:gravity="bottom"
+	    >
+	    
+	    <ImageView android:id="@+id/btnDrw"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:src="@drawable/draw_chart_main"
+	    android:layout_marginLeft="20dp"
+	    android:layout_marginBottom="10dp"
+	    />		    
+		    	    
+ 
+	    <ImageView android:id="@+id/btnConfig"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:src="@drawable/setting_chart_main"
+	    android:layout_marginLeft="25dp"
+	    android:layout_marginBottom="10dp"
+	    />
+	 </LinearLayout> 
+	
+
+</FrameLayout>

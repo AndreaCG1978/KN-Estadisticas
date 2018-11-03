@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:gravity="top"
+    >
+    
+	<TextView
+	android:layout_height="wrap_content"
+	android:layout_width="fill_parent"
+	android:text="@string/text_acerca_de"
+	android:layout_margin="10dp" 
+	android:textSize="18sp"/>
+
+	<TextView
+	android:layout_height="wrap_content"
+	android:layout_width="fill_parent"
+	android:text="@string/text_acerca_de_sugerencia"
+	android:layout_margin="10dp" 
+	android:textSize="18sp"
+	android:layout_marginBottom="5dp" />	
+    
+	<TextView
+	android:id="@+id/textAcercaDeMail"
+	android:layout_height="wrap_content"
+	android:layout_width="fill_parent"
+	android:text="@string/text_acerca_de_mail"
+	android:layout_gravity="left"
+	android:layout_margin="10dp"
+	android:gravity="center"
+	android:textSize="18sp" 
+	android:textColor="@color/spinner_color"
+	android:textStyle="italic"
+	 />	
+	 
+	<TextView
+	android:id="@+id/textTodasLasPublicaciones"
+	android:layout_height="wrap_content"
+	android:layout_width="fill_parent"
+	android:text="@string/text_acerca_de_verPublicaciones"
+	android:layout_margin="10dp" 
+	android:textSize="18sp"
+	android:textStyle="bold"
+	android:textColor="@color/color_naranja" />	
+	 
+	 
+
+</LinearLayout>

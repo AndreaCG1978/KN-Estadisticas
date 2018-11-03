@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="wrap_content"
+  android:layout_height="fill_parent"
+  android:background="@color/color_gris_claro"
+  android:padding="8dp">
+  
+	    <ImageView android:id="@+id/btnRemove"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:src="@drawable/remove_icon"
+        android:layout_marginLeft="20dp"
+
+	    />
+
+  
+  	    <ImageView android:id="@+id/btnEdit"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:src="@drawable/manage_item"
+	    android:layout_toRightOf="@id/btnRemove"
+	    android:layout_marginLeft="20dp"
+	    
+
+	    />
+	    
+
+    
+	    <TextView android:id="@+id/labelMonth"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:text="@string/label_month"
+	    android:layout_marginLeft="15dp"
+	    android:textSize="12sp"
+	    android:textColor="@color/color_gris_oscuro"
+	    android:layout_toRightOf="@id/btnEdit"
+	    android:layout_alignBottom="@id/btnEdit"
+	    />
+  
+
+	    <TextView android:id="@+id/monthDesc"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:paddingLeft="6dp"
+	    android:textSize="17sp"
+	    android:textColor="@color/color_gris_oscuro"
+	    android:textStyle="bold"
+	    android:layout_toRightOf="@id/labelMonth"
+	    android:layout_alignBaseline="@id/labelMonth"
+	    android:layout_marginRight="5dp"
+	    />
+	    
+	    
+	    <TextView android:id="@+id/cantDiasRegistrados"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:textSize="12sp"
+	    android:textColor="@color/color_gris_oscuro"
+	    android:layout_toRightOf="@id/monthDesc"
+	    android:layout_alignBaseline="@id/monthDesc"
+	    android:layout_marginRight="30dp"
+	    />
+	    
+	    	    
+
+</RelativeLayout>

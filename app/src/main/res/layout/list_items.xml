@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent"
+  	android:layout_height="fill_parent"
+  	
+  	>
+  	
+<LinearLayout
+  android:layout_width="fill_parent"
+  android:layout_height="fill_parent"
+  android:orientation="vertical"
+  android:layout_marginBottom="60dp"
+  android:scrollbarAlwaysDrawVerticalTrack="true"
+  
+  >
+  
+    <TextView android:id="@+id/titleChartName"
+		android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+		android:background="@color/color_gris"
+		android:textSize="13sp"
+		android:textStyle="bold"
+	    android:padding="4dp"
+	    android:gravity="right"
+	/>
+	
+	<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+		    android:orientation="horizontal"
+		    android:layout_width="fill_parent"
+		    android:layout_height="wrap_content"
+		    android:background="@color/color_gris_oscuro">
+  
+	  	<TextView android:id="@+id/labelYear"
+	      android:layout_width="wrap_content"
+	      android:layout_height="wrap_content"
+	      android:text="@string/label_year"
+	      android:textSize="12sp"
+	      android:paddingLeft="10dp"
+	      android:paddingTop="6dp"
+	      android:paddingBottom="6dp"/>
+	      
+	    <TextView android:id="@+id/descYear"
+	      android:layout_width="wrap_content"
+	      android:layout_height="wrap_content"
+	      android:textStyle="bold"
+	      android:textSize="15sp"
+	      android:paddingLeft="4dp"
+	      android:paddingTop="6dp"
+	      android:paddingBottom="6dp"/>
+	      
+	    <TextView android:id="@+id/labelMonth"
+	      android:layout_width="wrap_content"
+	      android:layout_height="wrap_content"
+	      android:text="@string/label_month"
+	      android:textSize="12sp"
+	      android:paddingLeft="10dp"
+	      android:paddingTop="6dp"
+	      android:paddingBottom="6dp"/>
+	      
+	    <TextView android:id="@+id/descMonth"
+	      android:layout_width="wrap_content"
+	      android:layout_height="wrap_content"
+	      android:textSize="15sp"
+	      android:textStyle="bold"
+	      android:paddingLeft="4dp"
+	      android:paddingTop="6dp"
+	      android:paddingBottom="6dp"/>
+  
+    </LinearLayout>
+  	<ListView android:id="@android:id/list"
+	  android:layout_marginTop="7dp"
+	  android:layout_width="fill_parent"
+	  android:layout_height="wrap_content"
+	  >
+	</ListView>  
+
+   </LinearLayout>
+	<LinearLayout 
+		    android:orientation="horizontal"
+		    android:layout_width="fill_parent"
+		    android:layout_height="fill_parent"
+            android:gravity="bottom"
+	        android:layout_gravity="center"
+		    >
+		  
+	    <ImageView android:id="@+id/btnDrw"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:src="@drawable/draw_chart_main"
+	    android:layout_marginLeft="20dp"
+	    android:layout_marginBottom="10dp"
+	    />		    
+		    	    
+	    <ImageView android:id="@+id/btnAddItem"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:src="@drawable/add_item_main"
+	    android:layout_marginLeft="25dp"
+	    android:layout_marginBottom="10dp"
+	    />
+	    
+	    <ImageView android:id="@+id/btnConfig"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:src="@drawable/setting_chart_main"
+	    android:layout_marginLeft="25dp"
+	    android:layout_marginBottom="10dp"
+	    />
+	    
+
+	</LinearLayout>
+</FrameLayout>

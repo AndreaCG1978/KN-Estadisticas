@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="fill_parent"
+  android:layout_height="fill_parent"
+  android:orientation="vertical"
+  android:background="@color/color_gris_claro">
+  
+    
+	    <TextView android:id="@+id/textDesc"
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+		android:background="@color/color_gris_oscuro"
+		android:textColor="@color/color_blanco"
+		android:textSize="14sp"
+	    android:padding="10dp"
+	    android:layout_marginBottom="10dp"
+	    />
+  
+	<LinearLayout
+	  xmlns:android="http://schemas.android.com/apk/res/android"
+	  android:layout_width="fill_parent"
+	  android:layout_height="fill_parent"
+	  android:orientation="horizontal"
+	  android:gravity="center"
+	  android:layout_margin="8dp">
+	
+	    
+	    <ImageView android:id="@+id/btnDraw"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:src="@drawable/draw_chart_main"
+	    />
+	  
+
+	     <ImageView android:id="@+id/btnAddItem"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:src="@drawable/manage_item_main"
+	    android:layout_marginLeft="20dp"
+	    />
+	
+		<ImageView android:id="@+id/btnEdit"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:src="@drawable/edit_chart_main"
+	    android:layout_marginLeft="20dp"
+	    />
+	      
+	    <ImageView android:id="@+id/btnRemove"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:src="@drawable/trash_chart_main"
+	    android:layout_marginLeft="20dp"
+	    />
+	    
+	    <ImageView android:id="@+id/btnConfig"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:src="@drawable/setting_chart_main"
+	    android:layout_marginLeft="20dp"
+	    />
+
+	 
+	</LinearLayout>
+
+</LinearLayout>

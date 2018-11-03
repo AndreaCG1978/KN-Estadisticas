@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="fill_parent"
+  android:layout_height="fill_parent"
+  >
+  
+    <TextView android:id="@+id/label_valor"
+    android:text="@string/label_valor"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+	android:layout_marginLeft="8dp"
+	android:layout_marginRight="8dp"
+	android:layout_marginBottom="8dp"
+	android:layout_marginTop="20dp"
+    />
+    
+
+   <EditText android:id="@+id/valorEntrada" 
+   			android:layout_width="fill_parent"
+			android:layout_height="40dp"
+			android:hint="@string/label_valor"
+			android:inputType="numberDecimal|numberSigned"
+			android:layout_marginLeft="4dp"
+			android:layout_marginRight="10dp"
+			android:layout_marginTop="5dp"
+			android:maxLength="12"
+			android:layout_toRightOf="@id/label_valor"
+	    	android:layout_alignBaseline="@id/label_valor"
+			/>
+
+
+			
+  <Button android:id="@+id/buttonPickDate" 
+			android:text="@string/label_fecha"
+			android:layout_below="@id/label_valor"
+			android:layout_marginTop="10dp"
+			android:layout_marginLeft="8dp"
+		    android:layout_width="wrap_content"
+		    android:layout_height="38dp"
+		    android:textStyle="bold"
+		    android:textColor="@color/color_gris"
+			
+			/>
+			
+			
+			
+  <TextView android:id="@+id/fechaEntrada"
+    android:layout_toRightOf="@id/buttonPickDate"
+    android:layout_below="@id/label_valor"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_alignBaseline="@id/buttonPickDate"
+    android:layout_marginTop="10dp"
+    android:layout_marginLeft="7dp"
+    />
+    
+  <Button android:id="@+id/buttonPickTime" 
+		    android:layout_width="wrap_content"
+		    android:layout_height="38dp"
+		    android:textStyle="bold"
+		    android:textColor="@color/color_gris"
+			android:text="@string/label_hora"
+			android:layout_below="@id/label_valor"
+			android:layout_toRightOf="@id/fechaEntrada"
+			android:layout_alignBaseline="@id/fechaEntrada"
+			android:layout_marginLeft="15dp"
+			android:layout_marginTop="10dp"
+			
+			/>
+			
+			
+			
+  <TextView android:id="@+id/horaEntrada"
+    android:layout_below="@id/label_valor"
+    android:layout_toRightOf="@id/buttonPickTime"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_alignBaseline="@id/buttonPickTime"
+    android:layout_marginTop="10dp"
+    android:layout_marginLeft="7dp"
+    />
+    
+						
+	<Button android:id="@+id/buttonGuardarItem" 
+		    android:layout_width="wrap_content"
+		    android:layout_height="40dp"
+		    android:textStyle="bold"
+		    android:textColor="@color/color_gris"
+			android:layout_marginTop="12dp"
+			android:layout_marginLeft="8dp"
+			android:layout_below="@id/buttonPickDate"
+			android:text="@string/label_guardar"
+			android:layout_alignParentRight="true"
+			
+			/>
+
+  
+  
+  
+</RelativeLayout>

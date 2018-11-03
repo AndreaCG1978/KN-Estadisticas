@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+	<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+    	android:layout_height="wrap_content"
+		android:orientation="horizontal"
+		android:background="@color/color_gris_claro"
+		android:padding="5dp"
+    	>
+		
+		<ImageView android:id="@+id/btnRemove"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:src="@drawable/remove_icon"
+	    android:layout_marginLeft="8dp"
+
+	    />
+	    
+	    <ImageView android:id="@+id/btnEdit"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:src="@drawable/edit_icon"
+	    android:layout_marginLeft="14dp"
+
+	    />
+	    
+	     <TextView 
+			  android:id="@+id/labelDay"
+			  android:layout_width="wrap_content"
+			  android:layout_height="wrap_content"
+			  android:paddingLeft="18dp"
+			  android:textColor="@color/color_gris_oscuro"
+			  android:textSize="11sp"
+			  android:text="@string/label_day"
+			  >
+			  
+		</TextView>
+		
+		<TextView 
+			  android:id="@+id/item_day"
+			  android:layout_width="wrap_content"
+			  android:layout_height="wrap_content"
+			  android:paddingLeft="3dp"
+			  android:textColor="@color/color_gris_oscuro"
+			  android:textSize="16sp"
+			  android:textStyle="bold"
+			  >
+			  
+		</TextView>
+		
+		<TextView 
+			  android:id="@+id/item_hour"
+			  android:layout_width="wrap_content"
+			  android:layout_height="wrap_content"
+			  android:paddingLeft="5dp"
+			  android:textColor="@color/color_gris_oscuro"
+			  android:textSize="13sp"
+			  android:textStyle="bold"
+			  >
+			  
+		</TextView>
+		
+		<TextView 
+			  android:id="@+id/labelValue"
+			  android:layout_width="wrap_content"
+			  android:layout_height="wrap_content"
+			  android:paddingLeft="3dp"
+			  android:textColor="@color/color_gris_oscuro"
+			  android:textSize="11sp"
+			  android:text="@string/label_valor"
+			  >
+			  
+		</TextView>
+		
+		<TextView 
+			  android:id="@+id/item_value"
+			  android:layout_width="wrap_content"
+			  android:layout_height="wrap_content"
+			  android:paddingLeft="5dp"
+			  android:textColor="@color/color_gris_oscuro"
+			  android:textSize="16sp"
+			  android:textStyle="bold"
+			  >
+			  
+		</TextView>
+		
+
+
+</LinearLayout>
+

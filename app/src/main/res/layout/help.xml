@@ -1,0 +1,320 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent"
+  	android:layout_height="fill_parent"
+  	>
+  	
+ 
+    <ScrollView  xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent"
+ 	android:layout_height="fill_parent"
+
+ 	
+ 	>
+ 	
+   <LinearLayout
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:scrollbarAlwaysDrawVerticalTrack="true"
+
+    >
+    
+
+ 	<LinearLayout 
+    android:orientation="horizontal"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    >
+    
+       	<ImageView 
+	    android:layout_width="30dp"
+	    android:layout_height="30dp"
+	    android:src="@drawable/draw_chart_main"
+	    android:layout_marginLeft="8dp"
+	    />	
+    
+		<TextView android:layout_width="wrap_content"
+	      android:layout_height="wrap_content"
+	      android:layout_marginLeft="20dp"
+	      android:text="@string/help_draw"
+	      />
+    </LinearLayout>
+    
+    <View android:layout_width="fill_parent"
+    	  android:layout_height="1dp"
+    	  android:background="@color/color_gris"/>
+ 
+ 
+    <LinearLayout 
+    android:orientation="horizontal"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    >
+    
+       	<ImageView 
+	    android:layout_width="30dp"
+	    android:layout_height="30dp"
+	    android:src="@drawable/manage_item_main"
+	    android:layout_marginLeft="8dp"
+	    />	
+    
+		<TextView android:layout_width="wrap_content"
+	      android:layout_height="wrap_content"
+	      android:layout_marginLeft="20dp"
+	      android:text="@string/help_list_items"
+	      />
+    </LinearLayout>
+    
+    <View android:layout_width="fill_parent"
+    	  android:layout_height="1dp"
+    	  android:background="@color/color_gris"/>
+        
+
+    <LinearLayout 
+    android:orientation="horizontal"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    >
+    
+       	<ImageView 
+	    android:layout_width="30dp"
+	    android:layout_height="30dp"
+	    android:src="@drawable/edit_chart_main"
+	    android:layout_marginLeft="8dp"
+	    />	
+    
+		<TextView android:layout_width="wrap_content"
+	      android:layout_height="wrap_content"
+	      android:layout_marginLeft="20dp"
+	      android:text="@string/help_edit"
+	      />
+    </LinearLayout>
+    
+    <View android:layout_width="fill_parent"
+    	  android:layout_height="1dp"
+    	  android:background="@color/color_gris"/>
+    	  
+    <LinearLayout 
+    android:orientation="horizontal"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    >
+    
+       	<ImageView 
+	    android:layout_width="30dp"
+	    android:layout_height="30dp"
+	    android:src="@drawable/trash_chart_main"
+	    android:layout_marginLeft="8dp"
+	    />	
+    
+		<TextView android:layout_width="wrap_content"
+	      android:layout_height="wrap_content"
+	      android:layout_marginLeft="20dp"
+	      android:text="@string/help_remove"
+	      />
+    </LinearLayout>
+    
+    <View android:layout_width="fill_parent"
+    	  android:layout_height="1dp"
+    	  android:background="@color/color_gris"/>
+    	  
+    <LinearLayout 
+    android:orientation="horizontal"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    >
+    
+       	<ImageView 
+	    android:layout_width="30dp"
+	    android:layout_height="30dp"
+	    android:src="@drawable/setting_chart_main"
+	    android:layout_marginLeft="8dp"
+	    />	
+    
+		<TextView android:layout_width="wrap_content"
+	      android:layout_height="wrap_content"
+	      android:layout_marginLeft="20dp"
+	      android:text="@string/help_config"
+	      />
+    </LinearLayout>
+    
+    <View android:layout_width="fill_parent"
+    	  android:layout_height="1dp"
+    	  android:background="@color/color_gris"/>
+    	  
+    <LinearLayout 
+    android:orientation="horizontal"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    >
+    
+       	<ImageView 
+	    android:layout_width="30dp"
+	    android:layout_height="30dp"
+	    android:src="@drawable/export_main"
+	    android:layout_marginLeft="8dp"
+	    />	
+    
+		<TextView android:layout_width="wrap_content"
+	      android:layout_height="wrap_content"
+	      android:layout_marginLeft="20dp"
+	      android:text="@string/help_exporta"
+	      />
+    </LinearLayout>
+    
+    <View android:layout_width="fill_parent"
+    	  android:layout_height="1dp"
+    	  android:background="@color/color_gris"/>
+
+    <LinearLayout 
+    android:orientation="horizontal"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    >
+    
+       	<ImageView 
+	    android:layout_width="30dp"
+	    android:layout_height="30dp"
+	    android:src="@drawable/export_txt"
+	    android:layout_marginLeft="8dp"
+	    />	
+    
+		<TextView android:layout_width="wrap_content"
+	      android:layout_height="wrap_content"
+	      android:layout_marginLeft="20dp"
+	      android:text="@string/help_txt"
+	      />
+    </LinearLayout>
+    
+    <View android:layout_width="fill_parent"
+    	  android:layout_height="1dp"
+    	  android:background="@color/color_gris"/>
+
+    	  
+    <LinearLayout 
+    android:orientation="horizontal"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    >
+    
+       	<ImageView 
+	    android:layout_width="30dp"
+	    android:layout_height="30dp"
+	    android:src="@drawable/add_item_main"
+	    android:layout_marginLeft="8dp"
+	    />	
+    
+		<TextView android:layout_width="wrap_content"
+	      android:layout_height="wrap_content"
+	      android:layout_marginLeft="20dp"
+	      android:text="@string/help_add_item"
+	      />
+    </LinearLayout>
+    
+    <View android:layout_width="fill_parent"
+    	  android:layout_height="1dp"
+    	  android:background="@color/color_gris"/>
+    	  
+    <LinearLayout 
+    android:orientation="horizontal"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    >
+    
+       	<ImageView 
+	    android:layout_width="30dp"
+	    android:layout_height="30dp"
+	    android:src="@drawable/manage_item"
+	    android:layout_marginLeft="8dp"
+	    />	
+    
+		<TextView android:layout_width="wrap_content"
+	      android:layout_height="wrap_content"
+	      android:layout_marginLeft="20dp"
+	      android:text="@string/help_show_item"
+	      />
+    </LinearLayout>
+    
+    <View android:layout_width="fill_parent"
+    	  android:layout_height="1dp"
+    	  android:background="@color/color_gris"/>
+    	  
+    <LinearLayout 
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    >
+    
+		<TextView android:layout_width="wrap_content"
+	      android:layout_height="wrap_content"
+	      android:layout_marginLeft="15dp"
+	      android:text="@string/title_import_csv"
+	      />
+    
+		<TextView android:layout_width="wrap_content"
+	      android:layout_height="wrap_content"
+	      android:layout_marginTop="10dp"
+	      android:layout_marginLeft="10dp"
+	      android:text="@string/help_import_csv"
+	      />
+	      
+		<TextView android:layout_width="wrap_content"
+	      android:layout_height="wrap_content"
+	      android:layout_margin="20dp"
+	      android:text="@string/help_import_csv_example"
+	      android:padding="5dp"
+	      android:textColor="@color/color_negro"
+	      android:background="@color/color_gris_claro"
+	      />
+	      
+    </LinearLayout>
+    
+    <View android:layout_width="fill_parent"
+    	  android:layout_height="1dp"
+    	  android:background="@color/color_gris"/>    
+    	  
+    <LinearLayout 
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    >
+    
+		<TextView android:layout_width="wrap_content"
+	      android:layout_height="wrap_content"
+	      android:layout_marginLeft="15dp"
+	      android:text="@string/title_export_csv"
+	      />
+    
+		<TextView android:layout_width="wrap_content"
+	      android:layout_height="wrap_content"
+	      android:layout_marginTop="10dp"
+	      android:layout_marginLeft="10dp"
+	      android:text="@string/help_export_csv"
+	      />
+	      
+    </LinearLayout>
+    
+    <View android:layout_width="fill_parent"
+    	  android:layout_height="1dp"
+    	  android:background="@color/color_gris"/>    	  
+    	  
+  
+
+  </LinearLayout>
+
+ </ScrollView>
+ 
+ </FrameLayout>

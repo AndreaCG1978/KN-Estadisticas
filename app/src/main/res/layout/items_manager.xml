@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent"
+  	android:layout_height="fill_parent"
+  	>
+  	
+	<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+		android:id="@+id/chart"
+	    android:orientation="vertical"
+	    android:layout_width="fill_parent"
+	    android:layout_height="fill_parent"
+	    android:layout_marginBottom="55dp"
+	    android:scrollbarAlwaysDrawVerticalTrack="true"
+	    >
+	
+		<TextView android:id="@+id/nameChartItemManager"
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+		android:background="@color/color_gris"
+		android:textSize="13sp"
+		android:textStyle="bold"
+	    android:padding="4dp"
+	    android:gravity="right"
+	    />    
+	    
+	    <TextView android:id="@+id/descChartItemManager"
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+		android:background="@color/color_gris_oscuro"
+		android:textColor="@color/color_gris_claro"
+		android:textSize="13sp"
+	    android:padding="5dp"
+	    android:layout_marginBottom="10dp"
+	    />
+	    
+	 <View
+        android:id="@+id/linea"
+        android:layout_width="wrap_content"
+		android:layout_height="5px"
+		android:background="@color/color_negro" />
+	    
+		<ExpandableListView
+			android:id="@android:id/list"
+		  android:layout_width="fill_parent"
+		  android:layout_height="wrap_content"
+		  android:scrollbarAlwaysDrawVerticalTrack="true"
+		  android:dividerHeight="3dp"
+		  android:fastScrollEnabled="true"
+		  >
+		</ExpandableListView>  
+		
+
+	
+	</LinearLayout>
+	
+	<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	    android:orientation="horizontal"
+	    android:layout_width="fill_parent"
+	    android:layout_height="fill_parent"
+	    android:gravity="bottom"
+	    android:layout_gravity="center"
+	    >
+	    
+	     <ImageView android:id="@+id/btnDrw"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:src="@drawable/draw_chart_main"
+	    android:layout_marginLeft="22dp"
+	    android:layout_marginBottom="8dp"
+	    />
+	  
+
+	     <ImageView android:id="@+id/btnAddItem"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:src="@drawable/add_item_main"
+	    android:layout_marginLeft="22dp"
+	    android:layout_marginBottom="8dp"
+	    />
+	
+		<ImageView android:id="@+id/btnEdit"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:src="@drawable/edit_chart_main"
+	    android:layout_marginLeft="22dp"
+	    android:layout_marginBottom="8dp"
+	    />
+	      
+	    <ImageView android:id="@+id/btnRemove"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:src="@drawable/trash_chart_main"
+	    android:layout_marginLeft="22dp"
+	    android:layout_marginBottom="8dp"
+	    />
+	    
+	    <ImageView android:id="@+id/btnConfig"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:src="@drawable/setting_chart_main"
+	    android:layout_marginLeft="22dp"
+	    android:layout_marginBottom="8dp"
+	    />
+	    
+	</LinearLayout>
+	
+</FrameLayout>

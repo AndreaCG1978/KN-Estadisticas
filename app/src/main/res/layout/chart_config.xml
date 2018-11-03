@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent"
+  	android:layout_height="fill_parent"
+  	>
+
+	<ScrollView 
+	android:layout_width="fill_parent"
+ 	android:layout_height="fill_parent"
+ 	android:layout_marginBottom="60dp"
+ 	>
+
+		<RelativeLayout
+	 	 android:layout_width="fill_parent"
+	 	 android:layout_height="fill_parent"
+	 	 
+	 	 
+	  	>
+	  
+
+			
+		   <TextView android:id="@+id/titleBackground"
+				android:layout_width="fill_parent"
+			    android:layout_height="wrap_content"
+				android:background="@color/color_gris_oscuro"
+				android:textSize="13sp"
+				android:textStyle="bold"
+			    android:padding="4dp"
+			    android:layout_marginTop="40dp"
+			    android:text="@string/label_background"
+			/>
+	
+		   <TextView android:id="@+id/labelColorBackground"
+		  	android:layout_width="wrap_content"
+		  	android:layout_height="wrap_content"
+		  	android:text="@string/label_selectColor"
+		  	android:layout_below="@id/titleBackground"
+		  	android:layout_marginTop="20dp"
+		  	android:layout_marginLeft="15dp">
+		   </TextView>
+  
+		  <Button android:id="@+id/labelBackground"
+		  	android:layout_width="fill_parent"
+		  	android:layout_height="25dp"
+		  	android:layout_below="@id/titleBackground"
+		  	android:layout_toRightOf="@id/labelColorBackground"
+		  	android:layout_marginLeft="15dp"
+		  	android:layout_marginRight="15dp"
+		  	android:textSize="8sp"
+		  	android:padding="1dp"
+		  	android:text="@string/label_pickColor"
+		  	android:layout_alignBaseline="@id/labelColorBackground"
+			>
+		  </Button>
+		  
+	     <TextView android:id="@+id/titleLine"
+			android:layout_width="fill_parent"
+		    android:layout_height="wrap_content"
+			android:background="@color/color_gris_oscuro"
+			android:textSize="13sp"
+			android:textStyle="bold"
+		    android:padding="4dp"
+		    android:layout_marginTop="25dp"
+		    android:layout_below="@id/labelColorBackground"
+		    android:text="@string/label_line"
+		/>
+
+		 <CheckBox android:id="@+id/checkShowValues"  
+			   android:layout_width="wrap_content"
+		       android:layout_height="wrap_content"
+		       android:layout_below="@id/titleLine"
+		       android:layout_marginLeft="10dp"
+		       android:layout_marginTop="10dp"
+		       android:textSize="14sp"
+		       android:text="@string/label_mostrar_valores"
+		       
+		      />
+		  
+		 
+		  <TextView android:id="@+id/labelColorLine"
+		  	android:layout_width="wrap_content"
+		  	android:layout_height="wrap_content"
+		  	android:text="@string/label_selectColor"
+		  	android:layout_below="@id/checkShowValues"
+		  	android:layout_marginTop="10dp"
+		  	android:layout_marginLeft="15dp">
+		  </TextView>
+ 
+		  <Button android:id="@+id/labelLine"
+		  	android:layout_width="fill_parent"
+		  	android:layout_height="25dp"
+		  	android:layout_marginLeft="15dp"
+		  	android:layout_marginRight="15dp"
+		  	android:textSize="8sp"
+		  	android:padding="1dp"
+		  	android:text="@string/label_pickColor"  	
+		  	android:layout_toRightOf="@id/labelColorLine"
+		  	android:layout_below="@id/checkShowValues"
+		  	android:layout_alignBaseline="@id/labelColorLine"
+		
+		  	>
+		  </Button>
+		  
+		    <TextView android:id="@+id/titleLabels"
+				android:layout_width="fill_parent"
+			    android:layout_height="wrap_content"
+				android:background="@color/color_gris_oscuro"
+				android:textSize="13sp"
+				android:textStyle="bold"
+			    android:padding="4dp"
+			    android:layout_marginTop="25dp"
+			    android:layout_below="@id/labelColorLine"
+			    android:text="@string/label_labels"
+			/>
+	
+			  <TextView android:id="@+id/labelColorLabels"
+			  	android:layout_width="wrap_content"
+			  	android:layout_height="wrap_content"
+			  	android:text="@string/label_selectColor"
+			  	android:layout_below="@id/titleLabels"
+			  	android:layout_marginTop="20dp"
+			  	android:layout_marginLeft="15dp"
+			  	>
+			  </TextView>
+  
+			  <Button android:id="@+id/labelLabels"
+			  	android:layout_width="fill_parent"
+			  	android:layout_height="25dp"
+		  	    android:layout_marginLeft="15dp"
+		  	    android:layout_marginRight="15dp"
+			  	android:textSize="8sp"
+			  	android:padding="1dp"
+			  	android:text="@string/label_pickColor" 
+			  	android:layout_alignBaseline="@id/labelColorLabels" 	
+			  	android:layout_toRightOf="@id/labelColorLabels"
+			  	android:layout_below="@id/titleLabels">
+			  </Button>
+			  
+		     <TextView android:id="@+id/titleGrid"
+				android:layout_width="fill_parent"
+			    android:layout_height="wrap_content"
+				android:background="@color/color_gris_oscuro"
+				android:textSize="13sp"
+				android:textStyle="bold"
+			    android:padding="4dp"
+			    android:layout_marginTop="25dp"
+			    android:layout_below="@id/labelColorLabels"
+			    android:text="@string/label_grid"
+			/>
+		
+		   	<CheckBox android:id="@+id/checkShowGrid"  
+			   android:layout_width="wrap_content"
+		       android:layout_height="wrap_content"
+		       android:layout_below="@id/titleGrid"
+		       android:text="@string/label_mostrar_grilla"
+		       android:layout_marginLeft="10dp"
+		       android:layout_marginTop="10dp"
+		       android:textSize="14sp"
+		      />
+		      
+			  <TextView android:id="@+id/labelColorGrid"
+			  	android:layout_width="wrap_content"
+			  	android:layout_height="wrap_content"
+			  	android:text="@string/label_selectColor"
+			  	android:layout_below="@id/checkShowGrid"
+			  	android:layout_marginTop="10dp"
+			  	android:layout_marginLeft="15dp">
+			  </TextView>
+			  
+			  <Button android:id="@+id/labelGrid"
+			  	android:layout_width="fill_parent"
+			  	android:layout_height="25dp"
+			  	android:layout_marginLeft="10dp"
+			  	android:layout_marginRight="10dp"
+			  	android:textSize="8sp"
+			  	android:padding="1dp"
+			  	android:text="@string/label_pickColor" 
+			  	android:layout_alignBaseline="@id/labelColorGrid" 	
+			  	android:layout_toRightOf="@id/labelColorGrid"
+			  	android:layout_below="@id/checkShowGrid">
+			  </Button>
+
+
+ 			  <TextView android:id="@+id/titlePoint"
+				android:layout_width="fill_parent"
+			    android:layout_height="wrap_content"
+				android:background="@color/color_gris_oscuro"
+				android:textSize="13sp"
+				android:textStyle="bold"
+			    android:padding="4dp"
+			    android:layout_marginTop="25dp"
+			    android:layout_below="@id/labelColorGrid"
+			    android:text="@string/label_stylepoint"
+			 />
+			 
+			<Spinner 
+		       android:id="@+id/spinnerStylePoint"
+		       android:layout_width="wrap_content"
+			   android:layout_height="40dp"     
+		       android:layout_marginLeft="15dp"  
+		       android:layout_marginTop="15dp"
+		       android:layout_below="@id/titlePoint"
+		           />
+		           
+		     <TextView android:id="@+id/titleTime"
+				android:layout_width="fill_parent"
+			    android:layout_height="wrap_content"
+				android:background="@color/color_gris_oscuro"
+				android:textSize="13sp"
+				android:textStyle="bold"
+			    android:padding="4dp"
+			    android:layout_marginTop="15dp"
+			    android:layout_below="@id/spinnerStylePoint"
+			    android:text="@string/label_timeformat"
+			 />       
+		  
+			<Spinner 
+		       android:id="@+id/spinnerTimeFormat"
+		       android:layout_width="wrap_content"
+			   android:layout_height="40dp"     
+		       android:layout_marginLeft="15dp"  
+		       android:layout_marginTop="15dp"
+		       android:layout_below="@id/titleTime" 
+		           />
+
+
+		</RelativeLayout>
+ 	</ScrollView>
+
+	<RelativeLayout
+  	 android:layout_width="fill_parent"
+ 	 android:layout_height="wrap_content"
+	 android:layout_gravity="bottom"
+	 android:gravity="right"
+	 >
+
+  	   
+  	    <Button android:id="@+id/buttonGuardarChart" 
+			android:layout_width="wrap_content"
+			android:layout_height="40dp"
+			android:text="@string/label_guardar"
+			android:textSize="15sp"
+		/>
+    </RelativeLayout>
+    <RelativeLayout
+  	 android:layout_width="fill_parent"
+ 	 android:layout_height="wrap_content"
+	 android:layout_gravity="top"
+	 
+	 >
+    
+     	 	<TextView android:id="@+id/titleChartName"
+			android:layout_width="fill_parent"
+		    android:layout_height="wrap_content"
+			android:background="@color/color_gris"
+			android:textSize="12sp"
+			android:textStyle="bold"
+		    android:padding="4dp"
+		    android:gravity="right"
+			>
+		    </TextView>
+     </RelativeLayout>
+   
+</FrameLayout>

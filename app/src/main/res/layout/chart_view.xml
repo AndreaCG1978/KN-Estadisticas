@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:id="@+id/chartView"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    >
+    
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:id="@+id/buttons"
+    android:orientation="horizontal"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="14dp"
+    android:layout_marginTop="10dp"
+    android:layout_marginBottom="10dp"
+    >
+	    <ImageView android:id="@+id/btnExport" 
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:src="@drawable/export_main"
+		    />
+	    <ImageView android:id="@+id/btnTxt" 
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:src="@drawable/export_txt"
+		    android:layout_marginLeft="17dp"
+		    android:visibility="gone"
+		    />
+		    
+	    <ImageView android:id="@+id/btnCsv" 
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:src="@drawable/export_csv"
+		    android:layout_marginLeft="17dp"
+		    android:visibility="gone"
+		    />		    
+		    
+		<ImageView android:id="@+id/btnConfig"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:src="@drawable/setting_chart_main"
+		    android:layout_marginLeft="17dp"
+		    />
+	</LinearLayout>
+	
+	<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+		android:id="@+id/chart"
+	    android:orientation="horizontal"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    >
+  
+	</LinearLayout>
+	
+	
+</LinearLayout>
