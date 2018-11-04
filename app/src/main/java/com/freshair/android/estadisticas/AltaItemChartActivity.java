@@ -254,7 +254,7 @@ public class AltaItemChartActivity extends Activity {
                     setResult(RESULT_OK);
                     finish();
             	}else{
-            		Toast t = Toast.makeText(getApplicationContext(), R.string.error_alta_item_incompleto, 4);
+            		Toast t = Toast.makeText(getApplicationContext(), R.string.error_alta_item_incompleto, Toast.LENGTH_LONG);
             		t.show();
             		
             	}

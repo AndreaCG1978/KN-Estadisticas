@@ -50,7 +50,7 @@ public class AltaChartActivity extends Activity {
                     setResult(RESULT_OK);
                     finish();
             	}else{
-            		Toast t = Toast.makeText(getApplicationContext(), R.string.error_alta_chart_incompleto, 4);
+            		Toast t = Toast.makeText(getApplicationContext(), R.string.error_alta_chart_incompleto, Toast.LENGTH_LONG);
             		t.show();
            		
             	}

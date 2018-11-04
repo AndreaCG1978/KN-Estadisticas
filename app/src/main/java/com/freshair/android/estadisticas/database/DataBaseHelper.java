@@ -14,16 +14,16 @@ public class DataBaseHelper extends SQLiteOpenHelper{
 	private static final String DATABASE_CREATE_CHART = "create table if not exists " + ConstantsAdmin.TABLE_CHART + 
         "(" + ConstantsAdmin.KEY_ROWID +" integer primary key autoincrement, "
         + ConstantsAdmin.KEY_CHART_NAME + " text not null, "
-        + ConstantsAdmin.KEY_CHART_DESCRIPTION + " text null, "
-        + ConstantsAdmin.KEY_CHART_POINT_STYLE + " text null, "
-        + ConstantsAdmin.KEY_CHART_LINE_COLOR + " text null, "
-        + ConstantsAdmin.KEY_CHART_LABEL_COLOR + " text null, "
-        + ConstantsAdmin.KEY_CHART_GRID_COLOR + " text null, "
-        + ConstantsAdmin.KEY_CHART_FORMAT_TIME + " text null, "
-        + ConstantsAdmin.KEY_CHART_BACKGROUND_COLOR + " text null, "
+        + ConstantsAdmin.KEY_CHART_DESCRIPTION + " text, "
+        + ConstantsAdmin.KEY_CHART_POINT_STYLE + " text, "
+        + ConstantsAdmin.KEY_CHART_LINE_COLOR + " text, "
+        + ConstantsAdmin.KEY_CHART_LABEL_COLOR + " text, "
+        + ConstantsAdmin.KEY_CHART_GRID_COLOR + " text, "
+        + ConstantsAdmin.KEY_CHART_FORMAT_TIME + " text, "
+        + ConstantsAdmin.KEY_CHART_BACKGROUND_COLOR + " text, "
         + ConstantsAdmin.KEY_CHART_SHOW_GRID + " integer not null default 1, "
         + ConstantsAdmin.KEY_CHART_SHOW_VALUE + " integer not null default 1, "
-        + ConstantsAdmin.KEY_CHART_UNIT + " text null);";
+        + ConstantsAdmin.KEY_CHART_UNIT + " text);";
 	
   
     private static final String DATABASE_CREATE_ITEM_CHART = "create table if not exists " + ConstantsAdmin.TABLE_ITEM_CHART + 
@@ -32,8 +32,8 @@ public class DataBaseHelper extends SQLiteOpenHelper{
     + ConstantsAdmin.KEY_ITEMCHART_DAY + " text not null, "
     + ConstantsAdmin.KEY_ITEMCHART_MONTH + " text not null, "
     + ConstantsAdmin.KEY_ITEMCHART_YEAR + " text not null, "
-    + ConstantsAdmin.KEY_ITEMCHART_HOUR + " text null, "
-    + ConstantsAdmin.KEY_ITEMCHART_MIN + " text null, "
+    + ConstantsAdmin.KEY_ITEMCHART_HOUR + " text, "
+    + ConstantsAdmin.KEY_ITEMCHART_MIN + " text, "
     + ConstantsAdmin.KEY_ITEMCHART_VALUE + " text not null);";
     
     

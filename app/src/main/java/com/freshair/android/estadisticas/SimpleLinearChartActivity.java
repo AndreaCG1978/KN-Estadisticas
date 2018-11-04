@@ -477,13 +477,7 @@ public class SimpleLinearChartActivity extends Activity {
 	    return dataset;
 	  }
 
-	  /**
-	   * Builds a category series using the provided values.
-	   * 
-	   * @param titles the series titles
-	   * @param values the values
-	   * @return the category series
-	   */
+
 	  protected CategorySeries buildCategoryDataset(String title, double[] values) {
 	    CategorySeries series = new CategorySeries(title);
 	    int k = 0;
@@ -494,13 +488,7 @@ public class SimpleLinearChartActivity extends Activity {
 	    return series;
 	  }
 
-	  /**
-	   * Builds a multiple category series using the provided values.
-	   * 
-	   * @param titles the series titles
-	   * @param values the values
-	   * @return the category series
-	   */
+
 	  protected MultipleCategorySeries buildMultipleCategoryDataset(String title,
 	      List<String[]> titles, List<double[]> values) {
 	    MultipleCategorySeries series = new MultipleCategorySeries(title);

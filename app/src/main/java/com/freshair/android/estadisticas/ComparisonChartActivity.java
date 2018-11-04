@@ -395,13 +395,7 @@ public class ComparisonChartActivity extends Activity {
 		    return dataset;
 		  }
 
-		  /**
-		   * Builds a category series using the provided values.
-		   * 
-		   * @param titles the series titles
-		   * @param values the values
-		   * @return the category series
-		   */
+
 		  protected CategorySeries buildCategoryDataset(String title, double[] values) {
 		    CategorySeries series = new CategorySeries(title);
 		    int k = 0;
