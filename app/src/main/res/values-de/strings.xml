@@ -40,9 +40,8 @@
     <string name="label_mostrar_grilla"><![CDATA[Raster anzeigen]]></string>
     <string name="label_mostrar_valores"><![CDATA[Werte anzeigen]]></string>
     <string name="label_selectColor"><![CDATA[Ausgewählte farbe:]]></string>  
-    <string name="label_pickColor"><![CDATA[PICKUP FARBE]]></string>  
-    <string name="label_comparar"><![CDATA[VERGLEICHEN]]></string>      
-    <string name="label_comparacion_sobrepuesta"><![CDATA[ÜBERLAPPENDE]]></string> 
+    <string name="label_pickColor"><![CDATA[PICKUP FARBE]]></string>
+    <string name="label_comparacion_sobrepuesta"><![CDATA[ÜBERLAPPENDE]]></string>
     <string name="label_comparacion_tiempo"><![CDATA[IN ZEIT]]></string>  
     <string name="label_ok"><![CDATA[OK]]></string>
     <string name="label_configuracion"><![CDATA[EINSTELLUNGEN ANZEIGEN]]></string>
@@ -71,24 +70,19 @@
     <string name="menu_configurar_chart"><![CDATA[Stellen Sie den Graphen]]></string>
     <string name="menu_export_chart"><![CDATA[Bild exportieren]]></string>
     <string name="menu_help"><![CDATA[Hilfe]]></string>
-    <string name="menu_about_me"><![CDATA[Über uns...]]></string>
+    <string name="menu_about_me"><![CDATA[Über uns…]]></string>
     <string name="menu_export_text"><![CDATA[Text exportieren]]></string>
     
 	
 	<string name="title_nuevo_chart"><![CDATA[Neues Diagramm]]></string>
 	<string name="title_nuevo_item"><![CDATA[Artikel]]></string>
 	<string name="title_listado_principal"><![CDATA[LISTE DER GRAFIK]]></string>
-	<string name="title_config_chart"><![CDATA[Stellen Sie den Graphen:]]></string>
-	<string name="title_comparison_chart"><![CDATA[GRAFIKVERGLEICH]]></string>
+    <string name="title_comparison_chart"><![CDATA[GRAFIKVERGLEICH]]></string>
 	<string name="title_help"><![CDATA[HILFE]]></string>
-	<string name="title_acerca_de"><![CDATA[ÜBER UNS...]]></string>
-    
-	
-	<string name="hint_chart"><![CDATA[Grafik]]></string>
-	
-	 <string name="text_sinDatos"><![CDATA[KEINE DATEN]]></string>
-	 
-	 <string name="mensaje_borrar_chart"><![CDATA[: Es entfernt die Grafik. Trotzdem fortfahren?]]></string>
+	<string name="title_acerca_de"><![CDATA[ÜBER UNS…]]></string>
+
+
+    <string name="mensaje_borrar_chart"><![CDATA[: Es entfernt die Grafik. Trotzdem fortfahren?]]></string>
 	 <string name="mensaje_borrar_item"><![CDATA[Der Eingang wird entfernt. Trotzdem fortfahren?]]></string>
 	 <string name="mensaje_borrar_year"><![CDATA[Die diesjährigen Einreichungen werden gelöscht. Trotzdem fortfahren?]]></string>
 	 <string name="mensaje_borrar_month"><![CDATA[Die Einträge in diesem Monat und Jahr werden eliminiert. Trotzdem fortfahren?]]></string>
@@ -100,9 +94,8 @@
      <string name="mensaje_min_comparacion"><![CDATA[Sie müssen mindestens 2 Grafiken zu vergleichen.]]></string>  
      <string name="mensaje_error_dibujar"><![CDATA[Nicht sie kann grafisch dargestellt werden.]]></string> 
      <string name="mensaje_error_guardar"><![CDATA[Die Informationen können nicht gespeichert werden.]]></string>
-     <string name="mensaje_error_version_lite"><![CDATA[In der Lite-Version können Sie nur bis zu 7 Einträge.]]></string>
- 
-     <string name="mensaje_error_tarjeta_solo_lectura"><![CDATA[Die SD-CARD ist im Nur-Lese-Modus.]]></string>
+
+    <string name="mensaje_error_tarjeta_solo_lectura"><![CDATA[Die SD-CARD ist im Nur-Lese-Modus.]]></string>
 	 <string name="mensaje_error_tarjeta_no_formato"><![CDATA[Fehler, kann die SD-CARD nicht verwendet werden, nicht in einem Format akzeptiert oder nicht richtig formatiert.]]></string>
      <string name="mensaje_error_tarjeta_no_montada"><![CDATA[Fehler, müssen Sie eine SD-Karte in Ihr Handy zu installieren.]]></string>
      <string name="mensaje_error_tarjeta_shared"><![CDATA[Fehler, die SD-CARD geteilt werden. Trennen Sie das USB-Kabel und versuchen Sie es erneut.]]></string>
@@ -132,16 +125,16 @@
 	<string name="menu_import_csv">CSV Importieren</string>
 	<string name="menu_export_csv">CSV Exportieren</string>
 	
-	<string name="mensaje_importando_csv">Die Daten werden importiert...</string>
-	<string name="mensaje_exportando_csv">Die Daten werden exportiert...</string>     
-	<string name="mensaje_nada_importar">Es gibt keine Dateien zu CSV-Import...</string>
+	<string name="mensaje_importando_csv">Die Daten werden importiert…</string>
+	<string name="mensaje_exportando_csv">Die Daten werden exportiert…</string>
+	<string name="mensaje_nada_importar">Es gibt keine Dateien zu CSV-Import…</string>
 	<string name="mensaje_exito_exportar_csv">Die CSV-Datei wurde erfolgreich gespeichert.</string>
 	<string name="mensaje_exito_importar_csv">CSV-Dateien sind erfolgreich importiert.</string>
 	<string name="mensaje_exito_exportar_txt"><![CDATA[Seine Chartplatzierungen wurden erfolgreich gespeichert.]]></string>
 	
 	<string name="title_import_csv">IMPORTIEREN CSV</string>
 	<string name="title_export_csv">EXPORTIEREN CSV</string>
-	<string name="title_select_format"><![CDATA[Wählen Sie das Format...]]></string>
+	<string name="title_select_format"><![CDATA[Wählen Sie das Format…]]></string>
 	
 	<string name="format_date_time">Datum Zeit,Wert </string>
 	<string name="format_date">Datum,Wert </string>

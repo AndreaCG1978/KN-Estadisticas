@@ -38,8 +38,7 @@
     <string name="label_stylepoint"><![CDATA[ТОЧКА СТИЛЬ]]></string>
     <string name="label_selectColor"><![CDATA[Выбранный цвет:]]></string>
     <string name="label_pickColor"><![CDATA[ВЫБРАТЬ ЦВЕТ]]></string>
-    <string name="label_comparar"><![CDATA[СРАВНИТЬ]]></string>     
-    <string name="label_comparacion_sobrepuesta"><![CDATA[НАЛОЖЕНИЕ]]></string> 
+    <string name="label_comparacion_sobrepuesta"><![CDATA[НАЛОЖЕНИЕ]]></string>
     <string name="label_comparacion_tiempo"><![CDATA[ВРЕМЕНИ]]></string>   
     <string name="label_ok"><![CDATA[Хорошо]]></string>
     <string name="label_mostrar_grilla"><![CDATA[Показать сетку]]></string>
@@ -68,7 +67,7 @@
     <string name="menu_configurar_chart"><![CDATA[Настройка графической]]></string>
     <string name="menu_export_chart"><![CDATA[Экспорт графического]]></string>
     <string name="menu_help"><![CDATA[Помощь]]></string>
-    <string name="menu_about_me"><![CDATA[О себе...]]></string>
+    <string name="menu_about_me"><![CDATA[О себе…]]></string>
     <string name="menu_export_text"><![CDATA[Экспорт текста]]></string>
    
    	<string name="text_acerca_de_mail">support@boxico.com.ar</string>	 	  	
@@ -82,17 +81,12 @@
     <string name="title_nuevo_chart"><![CDATA[Новый графический]]></string>
     <string name="title_nuevo_item"><![CDATA[Элемент]]></string>
     <string name="title_listado_principal"><![CDATA[ГРАФИЧЕСКИЙ СПИСОК]]></string>
-    <string name="title_config_chart"><![CDATA[Настройка графической:]]></string>
     <string name="title_comparison_chart"><![CDATA[ГРАФИКА СРАВНЕНИЕ]]></string>
     <string name="title_help"><![CDATA[ПОМОЩЬ]]></string>
-    <string name="title_acerca_de"><![CDATA[ОБО МНЕ...]]></string>
-    
-    
-    <string name="hint_chart"><![CDATA[ГРАФИКА]]></string>
-    
-     <string name="text_sinDatos"><![CDATA[НЕТ ДАННЫХ]]></string>
-     
-     <string name="mensaje_borrar_chart"><![CDATA[: графического, будут удалены. Продолжить?]]></string>
+    <string name="title_acerca_de"><![CDATA[ОБО МНЕ…]]></string>
+
+
+    <string name="mensaje_borrar_chart"><![CDATA[: графического, будут удалены. Продолжить?]]></string>
      <string name="mensaje_borrar_item"><![CDATA[Вступление будут удалены. Продолжить?]]></string>
      <string name="mensaje_borrar_year"><![CDATA[Все элементы будут устранены в этом году. Продолжить?]]></string>
 	 <string name="mensaje_borrar_month"><![CDATA[Все элементы в этом году и месяце, будут удалены. Продолжить?]]></string>
@@ -104,9 +98,8 @@
      <string name="mensaje_min_comparacion"><![CDATA[Вы должны выбрать два или более графами.]]></string>  
      <string name="mensaje_error_dibujar"><![CDATA[Это невозможно сделать график.]]></string> 
      <string name="mensaje_error_guardar"><![CDATA[Вы не можете записать информацию.]]></string>
-     <string name="mensaje_error_version_lite"><![CDATA[В версии Lite можно хранить только до 7 записей.]]></string>
-     
-     <string name="mensaje_error_tarjeta_solo_lectura"><![CDATA[SD-карта находится в режиме только для чтения.]]></string>
+
+    <string name="mensaje_error_tarjeta_solo_lectura"><![CDATA[SD-карта находится в режиме только для чтения.]]></string>
 	 <string name="mensaje_error_tarjeta_no_formato"><![CDATA[Ошибка, карта SD не может быть использована, не имеет правильного формата.]]></string>
      <string name="mensaje_error_tarjeta_no_montada"><![CDATA[Ошибка, вам нужно вставить SD-CARD на мобильном.]]></string>
      <string name="mensaje_error_tarjeta_shared"><![CDATA[Ошибка, SD-CARD в настоящее время совместно. Отключите кабель USB и попробуйте еще раз.]]></string>
@@ -130,16 +123,16 @@
 	<string name="menu_import_csv"><![CDATA[ИМПОРТ CSV]]></string>
 	<string name="menu_export_csv"><![CDATA[ЭКСПОРТ CSV]]></string>
 	
-	<string name="mensaje_importando_csv"><![CDATA[Импорт данных...]]></string>
-	<string name="mensaje_exportando_csv"><![CDATA[Экспорт данных...]]></string>     
-	<string name="mensaje_nada_importar"><![CDATA[Есть нет файлов для импорта...]]></string>
+	<string name="mensaje_importando_csv"><![CDATA[Импорт данных…]]></string>
+	<string name="mensaje_exportando_csv"><![CDATA[Экспорт данных…]]></string>
+	<string name="mensaje_nada_importar"><![CDATA[Есть нет файлов для импорта…]]></string>
 	<string name="mensaje_exito_exportar_csv"><![CDATA[CSV файл был сохранен успешно.]]></string>
 	<string name="mensaje_exito_importar_csv"><![CDATA[Файлы были импортированы успешно.]]></string>
 	<string name="mensaje_exito_exportar_txt"><![CDATA[Ваши данные диаграммы были сохранены успешно.]]></string>
 	
 	<string name="title_import_csv"><![CDATA[ИМПОРТ CSV]]></string>
 	<string name="title_export_csv"><![CDATA[ЭКСПОРТ CSV]]></string>
-	<string name="title_select_format"><![CDATA[Выберите формат...]]></string>
+	<string name="title_select_format"><![CDATA[Выберите формат…]]></string>
 	
 	<string name="format_date_time"><![CDATA[дата время,значение ]]></string>
 	<string name="format_date"><![CDATA[дата,значение ]]></string>

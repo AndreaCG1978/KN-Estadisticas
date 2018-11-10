@@ -22,7 +22,7 @@ import com.freshair.android.estadisticas.utils.ConstantsAdmin;
 
 public class AltaItemChartActivity extends Activity {
 	
-	Dialog dialog = null;
+	private Dialog dialog = null;
 	KNItemChart mItemChartSeleccionado = null;
 	TextView mDate = null;
 	TextView mTime = null;
@@ -65,12 +65,12 @@ public class AltaItemChartActivity extends Activity {
 	}
 	
 	private void registrarWidgets(){
-		mDate = (TextView) dialog.findViewById(R.id.fechaEntrada);
-		mValue = (EditText) dialog.findViewById(R.id.valorEntrada);	
-		mPickDate = (Button) dialog.findViewById(R.id.buttonPickDate);
-		mPickTime = (Button) dialog.findViewById(R.id.buttonPickTime);
-		mTime = (TextView) dialog.findViewById(R.id.horaEntrada);
-		btnEditar = (Button) dialog.findViewById(R.id.buttonGuardarItem);
+		mDate = dialog.findViewById(R.id.fechaEntrada);
+		mValue = dialog.findViewById(R.id.valorEntrada);
+		mPickDate = dialog.findViewById(R.id.buttonPickDate);
+		mPickTime = dialog.findViewById(R.id.buttonPickTime);
+		mTime = dialog.findViewById(R.id.horaEntrada);
+		btnEditar = dialog.findViewById(R.id.buttonGuardarItem);
 	}
 	
 	private void configurarDatePicker(){
@@ -133,7 +133,7 @@ public class AltaItemChartActivity extends Activity {
 	}
 
 	
-	private DatePickerDialog.OnDateSetListener mDateSetListener =
+	private final DatePickerDialog.OnDateSetListener mDateSetListener =
         new DatePickerDialog.OnDateSetListener() {
 
             public void onDateSet(DatePicker view, int year, 
@@ -202,7 +202,7 @@ public class AltaItemChartActivity extends Activity {
  	private void cargarVariablesDeFecha(){
 		mDay = mItemChartSeleccionado.getDay();
 		mMonth = mItemChartSeleccionado.getMonth();
-		mYear = new Integer(mItemChartSeleccionado.getYear());
+		mYear = Integer.valueOf(mItemChartSeleccionado.getYear());
 	}
 
  	
@@ -216,7 +216,7 @@ public class AltaItemChartActivity extends Activity {
 		mChartId = (String)intent.getExtras().get(ConstantsAdmin.CHART_SELECCIONADO);
 		if(intent.hasExtra(ConstantsAdmin.ITEM_CHART_SELECCIONADO)){
 			idItemString = (String)intent.getExtras().get(ConstantsAdmin.ITEM_CHART_SELECCIONADO);
-			int idItem = new Integer(idItemString);
+			int idItem = Integer.valueOf(idItemString);
 			mItemChartSeleccionado = ConstantsAdmin.obtenerItemId(this, idItem);
 			this.cargarEntriesConItemDto();
 		}else{

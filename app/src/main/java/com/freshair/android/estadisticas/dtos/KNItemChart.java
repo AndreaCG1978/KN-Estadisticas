@@ -1,6 +1,7 @@
 package com.freshair.android.estadisticas.dtos;
 
 import java.text.SimpleDateFormat;
+import java.util.Locale;
 
 import com.freshair.android.estadisticas.utils.ConstantsAdmin;
 
@@ -103,7 +104,7 @@ public class KNItemChart {
         }
     }
 
-    public void setTime(String time){
+    private void setTime(String time){
         String[] temp = time.split(ConstantsAdmin.SEPARADOR_HORA);
         if(temp != null && temp.length == 2){
             this.setHour(temp[0]);
@@ -141,7 +142,7 @@ public class KNItemChart {
 		boolean result = true;
 		SimpleDateFormat df = null;
 		try {
-		    df = new SimpleDateFormat("dd/MM/yyyy");
+		    df = new SimpleDateFormat("dd/MM/yyyy", Locale.getDefault());
 		    df.setLenient(false);
 		    df.parse(this.getDay() + ConstantsAdmin.SEPARADOR_FECHA + this.getMonth() + ConstantsAdmin.SEPARADOR_FECHA + Integer.parseInt(this.getYear()));
 		} catch (Exception e) {

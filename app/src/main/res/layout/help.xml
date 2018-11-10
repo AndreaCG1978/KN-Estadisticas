@@ -1,22 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-	android:layout_width="fill_parent"
-  	android:layout_height="fill_parent"
-  	>
-  	
- 
     <ScrollView  xmlns:android="http://schemas.android.com/apk/res/android"
 	android:layout_width="fill_parent"
  	android:layout_height="fill_parent"
 
- 	
+
  	>
- 	
+
    <LinearLayout
     android:orientation="vertical"
     android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
+    android:layout_height="wrap_content"
     android:scrollbarAlwaysDrawVerticalTrack="true"
 
     >
@@ -34,13 +28,14 @@
 	    android:layout_height="30dp"
 	    android:src="@drawable/draw_chart_main"
 	    android:layout_marginLeft="8dp"
-	    />	
+			android:contentDescription="@string/menu_dibujar_chart"
+            android:layout_marginStart="8dp" />
     
 		<TextView android:layout_width="wrap_content"
 	      android:layout_height="wrap_content"
 	      android:layout_marginLeft="20dp"
 	      android:text="@string/help_draw"
-	      />
+            android:layout_marginStart="20dp" />
     </LinearLayout>
     
     <View android:layout_width="fill_parent"
@@ -60,13 +55,14 @@
 	    android:layout_height="30dp"
 	    android:src="@drawable/manage_item_main"
 	    android:layout_marginLeft="8dp"
-	    />	
+			android:contentDescription="@string/menu_editar_chart"
+            android:layout_marginStart="8dp" />
     
 		<TextView android:layout_width="wrap_content"
 	      android:layout_height="wrap_content"
 	      android:layout_marginLeft="20dp"
 	      android:text="@string/help_list_items"
-	      />
+            android:layout_marginStart="20dp" />
     </LinearLayout>
     
     <View android:layout_width="fill_parent"
@@ -86,13 +82,14 @@
 	    android:layout_height="30dp"
 	    android:src="@drawable/edit_chart_main"
 	    android:layout_marginLeft="8dp"
-	    />	
+			android:contentDescription="@string/menu_editar_chart"
+            android:layout_marginStart="8dp" />
     
 		<TextView android:layout_width="wrap_content"
 	      android:layout_height="wrap_content"
 	      android:layout_marginLeft="20dp"
 	      android:text="@string/help_edit"
-	      />
+            android:layout_marginStart="20dp" />
     </LinearLayout>
     
     <View android:layout_width="fill_parent"
@@ -111,13 +108,14 @@
 	    android:layout_height="30dp"
 	    android:src="@drawable/trash_chart_main"
 	    android:layout_marginLeft="8dp"
-	    />	
+			android:contentDescription="@string/menu_borrar_chart"
+            android:layout_marginStart="8dp" />
     
 		<TextView android:layout_width="wrap_content"
 	      android:layout_height="wrap_content"
 	      android:layout_marginLeft="20dp"
 	      android:text="@string/help_remove"
-	      />
+            android:layout_marginStart="20dp" />
     </LinearLayout>
     
     <View android:layout_width="fill_parent"
@@ -136,13 +134,14 @@
 	    android:layout_height="30dp"
 	    android:src="@drawable/setting_chart_main"
 	    android:layout_marginLeft="8dp"
-	    />	
+			android:contentDescription="@string/menu_configurar_chart"
+            android:layout_marginStart="8dp" />
     
 		<TextView android:layout_width="wrap_content"
 	      android:layout_height="wrap_content"
 	      android:layout_marginLeft="20dp"
 	      android:text="@string/help_config"
-	      />
+            android:layout_marginStart="20dp" />
     </LinearLayout>
     
     <View android:layout_width="fill_parent"
@@ -161,13 +160,14 @@
 	    android:layout_height="30dp"
 	    android:src="@drawable/export_main"
 	    android:layout_marginLeft="8dp"
-	    />	
+			android:contentDescription="@string/menu_export_chart"
+            android:layout_marginStart="8dp" />
     
 		<TextView android:layout_width="wrap_content"
 	      android:layout_height="wrap_content"
 	      android:layout_marginLeft="20dp"
 	      android:text="@string/help_exporta"
-	      />
+            android:layout_marginStart="20dp" />
     </LinearLayout>
     
     <View android:layout_width="fill_parent"
@@ -186,13 +186,14 @@
 	    android:layout_height="30dp"
 	    android:src="@drawable/export_txt"
 	    android:layout_marginLeft="8dp"
-	    />	
+			android:contentDescription="@string/menu_export_text"
+            android:layout_marginStart="8dp" />
     
 		<TextView android:layout_width="wrap_content"
 	      android:layout_height="wrap_content"
 	      android:layout_marginLeft="20dp"
 	      android:text="@string/help_txt"
-	      />
+            android:layout_marginStart="20dp" />
     </LinearLayout>
     
     <View android:layout_width="fill_parent"
@@ -212,13 +213,14 @@
 	    android:layout_height="30dp"
 	    android:src="@drawable/add_item_main"
 	    android:layout_marginLeft="8dp"
-	    />	
+			android:contentDescription="@string/menu_agregar_item_chart"
+            android:layout_marginStart="8dp" />
     
 		<TextView android:layout_width="wrap_content"
 	      android:layout_height="wrap_content"
 	      android:layout_marginLeft="20dp"
 	      android:text="@string/help_add_item"
-	      />
+            android:layout_marginStart="20dp" />
     </LinearLayout>
     
     <View android:layout_width="fill_parent"
@@ -237,13 +239,14 @@
 	    android:layout_height="30dp"
 	    android:src="@drawable/manage_item"
 	    android:layout_marginLeft="8dp"
-	    />	
+			android:contentDescription="@string/menu_editar_chart"
+            android:layout_marginStart="8dp" />
     
 		<TextView android:layout_width="wrap_content"
 	      android:layout_height="wrap_content"
 	      android:layout_marginLeft="20dp"
 	      android:text="@string/help_show_item"
-	      />
+            android:layout_marginStart="20dp" />
     </LinearLayout>
     
     <View android:layout_width="fill_parent"
@@ -261,14 +264,14 @@
 	      android:layout_height="wrap_content"
 	      android:layout_marginLeft="15dp"
 	      android:text="@string/title_import_csv"
-	      />
+            android:layout_marginStart="15dp" />
     
 		<TextView android:layout_width="wrap_content"
 	      android:layout_height="wrap_content"
 	      android:layout_marginTop="10dp"
 	      android:layout_marginLeft="10dp"
 	      android:text="@string/help_import_csv"
-	      />
+            android:layout_marginStart="10dp" />
 	      
 		<TextView android:layout_width="wrap_content"
 	      android:layout_height="wrap_content"
@@ -296,14 +299,14 @@
 	      android:layout_height="wrap_content"
 	      android:layout_marginLeft="15dp"
 	      android:text="@string/title_export_csv"
-	      />
+            android:layout_marginStart="15dp" />
     
 		<TextView android:layout_width="wrap_content"
 	      android:layout_height="wrap_content"
 	      android:layout_marginTop="10dp"
 	      android:layout_marginLeft="10dp"
 	      android:text="@string/help_export_csv"
-	      />
+            android:layout_marginStart="10dp" />
 	      
     </LinearLayout>
     
@@ -317,4 +320,4 @@
 
  </ScrollView>
  
- </FrameLayout>
+

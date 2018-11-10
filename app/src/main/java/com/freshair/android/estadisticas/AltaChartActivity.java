@@ -16,7 +16,7 @@ import com.freshair.android.estadisticas.utils.ConstantsAdmin;
 
 public class AltaChartActivity extends Activity {
 	
-	EditText mNombreChart = null;
+	private EditText mNombreChart = null;
 	EditText mDescripcionChart = null;
 	EditText mUnidadChart = null;
 	Button btnEditar = null; 
@@ -93,7 +93,7 @@ public class AltaChartActivity extends Activity {
 		String idChartString = null;
 		if(intent.hasExtra(ConstantsAdmin.CHART_SELECCIONADO)){
 			idChartString = (String)intent.getExtras().get(ConstantsAdmin.CHART_SELECCIONADO);
-			int idChart = new Integer(idChartString);
+			int idChart = Integer.valueOf(idChartString);
 			mChartSeleccionado = ConstantsAdmin.obtenerChartId(this, idChart);
 			this.cargarEntriesConChartDto();
 		}else{
@@ -122,10 +122,10 @@ public class AltaChartActivity extends Activity {
 	
 	
 	private void registrarWidgets(){
-		mNombreChart = (EditText) dialog.findViewById(R.id.entryNombreChart);
-		mDescripcionChart = (EditText) dialog.findViewById(R.id.entryDescripcionChart);		
-		mUnidadChart = (EditText) dialog.findViewById(R.id.entryUnidadChart);	
-		btnEditar = (Button) dialog.findViewById(R.id.buttonGuardarChart); 
+		mNombreChart = dialog.findViewById(R.id.entryNombreChart);
+		mDescripcionChart = dialog.findViewById(R.id.entryDescripcionChart);
+		mUnidadChart = dialog.findViewById(R.id.entryUnidadChart);
+		btnEditar = dialog.findViewById(R.id.buttonGuardarChart);
 	}
 	
  

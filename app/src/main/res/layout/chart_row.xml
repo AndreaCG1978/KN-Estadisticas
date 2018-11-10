@@ -31,7 +31,7 @@
 	    android:layout_width="wrap_content"
 	    android:layout_height="wrap_content"
 	    android:src="@drawable/draw_chart_main"
-	    />
+		android:contentDescription="@string/menu_dibujar_chart" />
 	  
 
 	     <ImageView android:id="@+id/btnAddItem"
@@ -39,28 +39,32 @@
 	    android:layout_height="wrap_content"
 	    android:src="@drawable/manage_item_main"
 	    android:layout_marginLeft="20dp"
-	    />
+			 android:contentDescription="@string/menu_agregar_item_chart"
+             android:layout_marginStart="20dp" />
 	
 		<ImageView android:id="@+id/btnEdit"
 	    android:layout_width="wrap_content"
 	    android:layout_height="wrap_content"
 	    android:src="@drawable/edit_chart_main"
 	    android:layout_marginLeft="20dp"
-	    />
+			android:contentDescription="@string/menu_editar_chart"
+            android:layout_marginStart="20dp" />
 	      
 	    <ImageView android:id="@+id/btnRemove"
 	    android:layout_width="wrap_content"
 	    android:layout_height="wrap_content"
 	    android:src="@drawable/trash_chart_main"
 	    android:layout_marginLeft="20dp"
-	    />
+			android:contentDescription="@string/menu_eliminar_itemchart"
+            android:layout_marginStart="20dp" />
 	    
 	    <ImageView android:id="@+id/btnConfig"
 	    android:layout_width="wrap_content"
 	    android:layout_height="wrap_content"
 	    android:src="@drawable/setting_chart_main"
 	    android:layout_marginLeft="20dp"
-	    />
+			android:contentDescription="@string/menu_configurar_chart"
+            android:layout_marginStart="20dp" />
 
 	 
 	</LinearLayout>

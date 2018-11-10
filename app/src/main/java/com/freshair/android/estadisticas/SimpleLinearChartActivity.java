@@ -47,7 +47,7 @@ public class SimpleLinearChartActivity extends Activity {
   private GraphicalView mChartView = null;
   private String idChartSelect = null;	
   private ArrayList<Cursor> allMyCursors = null;
-  List<KNItemChart> items = null;
+  private List<KNItemChart> items = null;
   private int selectedFormatImport = -1;
   private SimpleLinearChartActivity me = null;
   
@@ -76,7 +76,7 @@ public class SimpleLinearChartActivity extends Activity {
   	Cursor cur = null;
   	Iterator<Cursor> it = allMyCursors.iterator();
   	while(it.hasNext()){
-  		cur = (Cursor) it.next();
+  		cur = it.next();
   		this.stopManagingCursor(cur);
   	}
   	allMyCursors = new ArrayList<Cursor>();
@@ -91,7 +91,7 @@ public class SimpleLinearChartActivity extends Activity {
   }
   
   private void configurarBotones(){
-	    ImageView btn = (ImageView) this.findViewById(R.id.btnExport);
+	    ImageView btn = this.findViewById(R.id.btnExport);
 	    btn.setOnClickListener(new View.OnClickListener() {
 			
 			@Override
@@ -100,7 +100,7 @@ public class SimpleLinearChartActivity extends Activity {
 				exportChartPicture();
 			}
 		});
-	    btn = (ImageView) this.findViewById(R.id.btnTxt);
+	    btn = this.findViewById(R.id.btnTxt);
 	    btn.setVisibility(View.VISIBLE);
 	    btn.setOnClickListener(new View.OnClickListener() {
 			
@@ -111,7 +111,7 @@ public class SimpleLinearChartActivity extends Activity {
 			}
 		});	    
 	    
-	    btn = (ImageView) this.findViewById(R.id.btnCsv);
+	    btn = this.findViewById(R.id.btnCsv);
 	    btn.setVisibility(View.VISIBLE);
 	    btn.setOnClickListener(new View.OnClickListener() {
 			
@@ -122,7 +122,7 @@ public class SimpleLinearChartActivity extends Activity {
 			}
 		});	    
 	    
-	    btn = (ImageView)this.findViewById(R.id.btnConfig);
+	    btn = this.findViewById(R.id.btnConfig);
 	    btn.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
             	openConfigChart();
@@ -136,7 +136,7 @@ public class SimpleLinearChartActivity extends Activity {
   }
   
   private void recuperarChart(){
-	  int idChart = new Integer(idChartSelect);
+	  int idChart = Integer.valueOf(idChartSelect);
 	  mChart = ConstantsAdmin.obtenerChartId(this, idChart); 	 
   }
   
@@ -160,7 +160,7 @@ public class SimpleLinearChartActivity extends Activity {
 		    double maxTime = 0;
 		    double val = 0.0;
 		    while(it.hasNext()){
-		    	item = (KNItemChart) it.next();
+		    	item = it.next();
 		    	dateValues[i] = new Date(Integer.valueOf(item.getYear())- 1900, Integer.valueOf(item.getMonth()) - 1, Integer.valueOf(item.getDay()), Integer.valueOf(item.getHour()), Integer.valueOf(item.getMin()));
 		    	val = Double.valueOf(item.getValue());
 		    	doubleValues[i] = val;
@@ -179,12 +179,12 @@ public class SimpleLinearChartActivity extends Activity {
 		    if(mChart.getLineColor()== null){
 		    	colors[0] = Color.GREEN;
 		    }else{
-		    	colors[0] = new Integer(mChart.getLineColor());
+		    	colors[0] = Integer.valueOf(mChart.getLineColor());
 		    }
 		    if(mChart.getPointStyle()== null){
 		    	styles[0] = PointStyle.DIAMOND;
 		    }else{
-		    	styles[0] = ConstantsAdmin.tiposPuntos[new Integer(mChart.getPointStyle())];
+		    	styles[0] = ConstantsAdmin.tiposPuntos[Integer.valueOf(mChart.getPointStyle())];
 		    }
 		    XYMultipleSeriesRenderer renderer = buildRenderer(colors, styles);
 		    if(mChart.isShowGrid()){
@@ -192,7 +192,7 @@ public class SimpleLinearChartActivity extends Activity {
 		        if(mChart.getGridColor() == null){
 		        	renderer.setGridColor(Color.GRAY);
 		        }else{
-		        	renderer.setGridColor(new Integer(mChart.getGridColor()));
+		        	renderer.setGridColor(Integer.valueOf(mChart.getGridColor()));
 		        }
 		    }else{
 		    	renderer.setShowGrid(false);
@@ -202,11 +202,11 @@ public class SimpleLinearChartActivity extends Activity {
 		    if(mChart.getBackgroundColor() == null){
 		    	renderer.setBackgroundColor(Color.DKGRAY);
 		    }else{
-		    	renderer.setBackgroundColor(new Integer(mChart.getBackgroundColor()));
+		    	renderer.setBackgroundColor(Integer.valueOf(mChart.getBackgroundColor()));
 		    }
 		    int labelColor = Color.WHITE;
 		    if(mChart.getLabelColor() != null){
-		    	labelColor = new Integer(mChart.getLabelColor());
+		    	labelColor = Integer.valueOf(mChart.getLabelColor());
 		    }
 		    String formatTime = ConstantsAdmin.formatTime[0];
 		    if(mChart.getFormatTime() != null){
@@ -234,7 +234,7 @@ public class SimpleLinearChartActivity extends Activity {
 				        renderer, formatTime);
 	    
 	    	   
-			    LinearLayout layout = (LinearLayout) findViewById(R.id.chart);
+			    LinearLayout layout = findViewById(R.id.chart);
 			    layout.removeAllViews();
 			    layout.addView(mChartView, new LayoutParams(LayoutParams.WRAP_CONTENT,
 			            LayoutParams.WRAP_CONTENT));
@@ -333,7 +333,7 @@ public class SimpleLinearChartActivity extends Activity {
 		builder.setSingleChoiceItems(items, -1, new DialogInterface.OnClickListener() {
 		    public void onClick(DialogInterface dialog, int item) {
 	    		Long[] params = new Long[1];
-	    		params[0] = new Long(1);
+	    		params[0] = Long.valueOf(1);
 	    		selectedFormatImport = item + 1;
 	    		dialog.cancel();
 	    		new ExportCSVTask().execute(params);

@@ -16,7 +16,7 @@ import com.freshair.android.estadisticas.dtos.KNItemChart;
 
 public class KNItemChartArrayAdapter extends ArrayAdapter<KNItemChart> {
 	
-	LayoutInflater mInflater = null;
+	private LayoutInflater mInflater = null;
 	ItemPerMonthActivity myContext = null;
 
 	
@@ -41,19 +41,19 @@ public class KNItemChartArrayAdapter extends ArrayAdapter<KNItemChart> {
 			e.getMessage();
 		}
 		item = this.getItem(position);
-		TextView text = (TextView) v.findViewById(R.id.item_day);
+		TextView text = v.findViewById(R.id.item_day);
 		text.setText(item.getDay());
-		text = (TextView) v.findViewById(R.id.item_hour);
+		text = v.findViewById(R.id.item_hour);
 		text.setText("(" + item.getHourMin() + ")");
-		text = (TextView) v.findViewById(R.id.item_value);
+		text = v.findViewById(R.id.item_value);
 		text.setText(item.getValue());
-		ImageView btn = (ImageView) v.findViewById(R.id.btnRemove);
+		ImageView btn = v.findViewById(R.id.btnRemove);
         btn.setOnClickListener(new View.OnClickListener() {
              public void onClick(View v) {
              	myContext.eliminarItemDialog(pos);
              }
         }); 
-        btn = (ImageView) v.findViewById(R.id.btnEdit);
+        btn = v.findViewById(R.id.btnEdit);
         btn.setOnClickListener(new View.OnClickListener() {
              public void onClick(View v) {
              	myContext.openEditItemChart(pos);

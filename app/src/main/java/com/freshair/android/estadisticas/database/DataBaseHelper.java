@@ -8,7 +8,7 @@ import android.database.sqlite.SQLiteOpenHelper;
 import android.util.Log;
 
 
-public class DataBaseHelper extends SQLiteOpenHelper{
+class DataBaseHelper extends SQLiteOpenHelper{
 	
 	 
 	private static final String DATABASE_CREATE_CHART = "create table if not exists " + ConstantsAdmin.TABLE_CHART + 

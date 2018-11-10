@@ -25,11 +25,10 @@ public class DataBaseManager {
 	 }
 
 	 	 
-     public DataBaseManager open() throws SQLException {
+     public void open() throws SQLException {
 	      mDbHelper = new DataBaseHelper(mCtx);
 	      mDb = mDbHelper.getWritableDatabase();
-	      return this;
-     }
+	 }
      
      public void close() {
          mDbHelper.close();

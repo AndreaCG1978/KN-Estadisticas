@@ -35,7 +35,7 @@ public class ItemChartManagerActivity extends ExpandableListActivity {
 	
 	private KNChart mChartSeleccionado = null;
 	List<KNItemChart> myItems = null; 
-	String MONTH = "MONTH";
+	private final String MONTH = "MONTH";
 	String YEAR = "YEAR";
 	String mMonthSelected = null;
 	String mYearSelected = null;
@@ -63,7 +63,7 @@ public class ItemChartManagerActivity extends ExpandableListActivity {
     	Cursor cur = null;
     	Iterator<Cursor> it = allMyCursors.iterator();
     	while(it.hasNext()){
-    		cur = (Cursor) it.next();
+    		cur = it.next();
     		this.stopManagingCursor(cur);
     	}
     	allMyCursors = new ArrayList<Cursor>();
@@ -83,8 +83,8 @@ public class ItemChartManagerActivity extends ExpandableListActivity {
     }
 	
 	private void registrarWidgets(){
-		mNameChart = (TextView) this.findViewById(R.id.nameChartItemManager);
-		mDescChart = (TextView) this.findViewById(R.id.descChartItemManager);
+		mNameChart = this.findViewById(R.id.nameChartItemManager);
+		mDescChart = this.findViewById(R.id.descChartItemManager);
 	}
 	
 	private void configurarList(ExpandableListView listView){
@@ -109,31 +109,31 @@ public class ItemChartManagerActivity extends ExpandableListActivity {
 	}
 	
 	private void registrarBotones(){
-		ImageView btn = (ImageView)this.findViewById(R.id.btnDrw);
+		ImageView btn = this.findViewById(R.id.btnDrw);
 		btn.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
             	 openChart();
             }
         });
-		btn = (ImageView)this.findViewById(R.id.btnAddItem);
+		btn = this.findViewById(R.id.btnAddItem);
 		btn.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
             	openAltaItemChart();
             }
         });
-        btn = (ImageView)this.findViewById(R.id.btnEdit);
+        btn = this.findViewById(R.id.btnEdit);
         btn.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                openEditarChart();
             }
         });
-        btn = (ImageView)this.findViewById(R.id.btnRemove);
+        btn = this.findViewById(R.id.btnRemove);
         btn.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
             	eliminarChartDialog();
             }
         });
-        btn = (ImageView)this.findViewById(R.id.btnConfig);
+        btn = this.findViewById(R.id.btnConfig);
         btn.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
             	openConfigChart();
@@ -209,7 +209,7 @@ public class ItemChartManagerActivity extends ExpandableListActivity {
         	@Override
             public View getChildView(int groupPosition, int childPosition, boolean isLastChild, View convertView, ViewGroup parent) {
                	final View v = super.getChildView(groupPosition, childPosition, isLastChild, convertView, parent);
-                TextView text = (TextView)v.findViewById(R.id.monthDesc);
+                TextView text = v.findViewById(R.id.monthDesc);
                 final String year = (String)allItems.keySet().toArray()[groupPosition];
                 final String mes = (String) allItems.get(year).keySet().toArray()[childPosition];
                 int cantItems = allItems.get(year).get(mes).size();
@@ -217,15 +217,15 @@ public class ItemChartManagerActivity extends ExpandableListActivity {
                 final int cp = childPosition;
 
                 text.setText(mes);                   
-                text = (TextView)v.findViewById(R.id.cantDiasRegistrados);
+                text = v.findViewById(R.id.cantDiasRegistrados);
                 text.setText(getString(R.string.label_cant_dias_reg) + " " + String.valueOf(cantItems));
-                ImageView btn = (ImageView) v.findViewById(R.id.btnRemove);
+                ImageView btn = v.findViewById(R.id.btnRemove);
                 btn.setOnClickListener(new View.OnClickListener() {
                     public void onClick(View v) {
                     	eliminarMonthDialog(year, mes);
                     }
                 });             
-                btn = (ImageView) v.findViewById(R.id.btnEdit);
+                btn = v.findViewById(R.id.btnEdit);
                 btn.setOnClickListener(new View.OnClickListener() {
                     public void onClick(View v) {
                     	openManagerItem(gp,cp);
@@ -237,13 +237,13 @@ public class ItemChartManagerActivity extends ExpandableListActivity {
         	@Override
             public View getGroupView(int groupPosition, boolean isExpanded, View convertView, ViewGroup parent) {
             	final View v = super.getGroupView(groupPosition, isExpanded, convertView, parent);
-            	TextView text = (TextView)v.findViewById(R.id.yearDesc);
+            	TextView text = v.findViewById(R.id.yearDesc);
                 final String year = (String)allItems.keySet().toArray()[groupPosition];
                 int cantMeses = allItems.get(year).size();
                 text.setText(year);                   
-                text = (TextView)v.findViewById(R.id.cantMesesRegistrados);
+                text = v.findViewById(R.id.cantMesesRegistrados);
                 text.setText(getString(R.string.label_cant_meses_reg) + " " + String.valueOf(cantMeses));
-                ImageView btn = (ImageView) v.findViewById(R.id.btnRemove);
+                ImageView btn = v.findViewById(R.id.btnRemove);
                 btn.setOnClickListener(new View.OnClickListener() {
                     public void onClick(View v) {
                     	eliminarYearDialog(year);
@@ -255,13 +255,13 @@ public class ItemChartManagerActivity extends ExpandableListActivity {
 
             @Override
             public View newChildView(boolean isLastChild, ViewGroup parent) {
-            	return layoutInflater.inflate(R.layout.month_row, null, false);
+            	return layoutInflater.inflate(R.layout.month_row, parent, false);
             }
             
 
             @Override
             public View newGroupView(boolean isLastChild, ViewGroup parent) {
-            	return layoutInflater.inflate(R.layout.year_row, null, false);
+            	return layoutInflater.inflate(R.layout.year_row, parent, false);
             }
             
             @Override
@@ -360,7 +360,7 @@ public class ItemChartManagerActivity extends ExpandableListActivity {
 	private void guardarChartSeleccionado(Intent intent){
 		String idChartString = null;
 		idChartString = (String)intent.getExtras().get(ConstantsAdmin.CHART_SELECCIONADO);
-		long idChart = new Long(idChartString);
+		long idChart = Long.valueOf(idChartString);
 		this.recargarChart(idChart);
 
  	}

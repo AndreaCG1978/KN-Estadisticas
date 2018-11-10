@@ -23,7 +23,7 @@ import com.freshair.android.estadisticas.utils.ConstantsAdmin;
 
 public class ListadoCompararChartsActivity extends ListActivity {
 	
-	List<Boolean> posSelected = new ArrayList<Boolean>();
+	private List<Boolean> posSelected = new ArrayList<Boolean>();
 	
 	String tipoCompSelected = null;
 	int cantSeleccionados = 0;
@@ -44,7 +44,7 @@ public class ListadoCompararChartsActivity extends ListActivity {
     	Cursor cur = null;
     	Iterator<Cursor> it = allMyCursors.iterator();
     	while(it.hasNext()){
-    		cur = (Cursor) it.next();
+    		cur = it.next();
     		this.stopManagingCursor(cur);
     	}
     	allMyCursors = new ArrayList<Cursor>();
@@ -60,13 +60,13 @@ public class ListadoCompararChartsActivity extends ListActivity {
     }
 	
 	private void configurarWidgets(){
-		ImageView btn = (ImageView) this.findViewById(R.id.btnDrw);
+		ImageView btn = this.findViewById(R.id.btnDrw);
         btn.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
             	openComparatorChart();
             }
         });    
-        btn = (ImageView) this.findViewById(R.id.btnConfig);
+        btn = this.findViewById(R.id.btnConfig);
         btn.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
             	openConfigurarComparacion();
@@ -128,11 +128,11 @@ public class ListadoCompararChartsActivity extends ListActivity {
 	}
 	
 	private void filtrarChartsSinItems(List<KNChart> charts){
-		Iterator<KNChart> it = charts.iterator();;
-		List<KNItemChart> items = null;
+		Iterator<KNChart> it = charts.iterator();
+        List<KNItemChart> items = null;
 		KNChart chrt = null;
 		while(it.hasNext()){
-			chrt = (KNChart) it.next();
+			chrt = it.next();
 			items = ConstantsAdmin.obtenerItemsDeChart(chrt, this);
 			if(items.size() == 0){
 				it.remove();
@@ -147,7 +147,7 @@ public class ListadoCompararChartsActivity extends ListActivity {
 		Boolean val = null;
 		int i = 0;
 		while(it.hasNext()){
-			val = (Boolean) it.next();
+			val = it.next();
 			if(val){
 				result.add((KNChart)this.getListAdapter().getItem(i));
 			}	
@@ -201,11 +201,7 @@ public class ListadoCompararChartsActivity extends ListActivity {
         super.onListItemClick(l, v, position, id);
         boolean val = false;
         val = posSelected.get(position);
-        if(val){
-        	val = false;
-        }else{
-        	val = true;
-        }
+        val = !val;
         if(!val){
         	posSelected.set(position, val);
         	cantSeleccionados--;

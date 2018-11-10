@@ -1,24 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-	<color name="color_boton">#130011</color>
-	<color name="color_gris">#767777</color>
+    <color name="color_gris">#767777</color>
 	<color name="color_gris_oscuro">#191919</color>
 	<color name="color_blanco">#FFFFFF</color>
-	<color name="custom_theme_color">#140016</color>
-	<color name="titulo_color">#C99002</color>
-	<color name="spinner_color">#B25900</color>
-	<color name="color_texto">#C9E5E5</color> 
-	<color name="color_texto_shadow">#EFF260</color>
-	<color name="selector_lista">#f0f0f0</color>
-	<color name="color_text_alta">#6D8FAA</color>
-	<color name="color_text_lista">#758452</color>
-	<color name="color_naranja">#EF9B00</color>
-	<color name="color_rojo">#EF9B00</color>
-	<color name="color_gris_claro">#ADAD9D</color>
+    <color name="spinner_color">#B25900</color>
+    <color name="color_naranja">#EF9B00</color>
+    <color name="color_gris_claro">#ADAD9D</color>
 	<color name="color_negro">#000000</color>
-	<color name="color_amarillo">#FCFF7F</color>
-	<color name="color_naranja_claro">#F4C43F</color>
-	<color name="color_verde">#69A269</color>
-	
+
 </resources>

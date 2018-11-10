@@ -42,8 +42,7 @@
     <string name="label_stylepoint">ESTILO DE PUNTO</string>
     <string name="label_selectColor">Color seleccionado:</string>
     <string name="label_pickColor">ELIGA COLOR</string>
-    <string name="label_comparar">COMPARAR</string>     
-    <string name="label_comparacion_sobrepuesta">SUPERPUESTA</string> 
+    <string name="label_comparacion_sobrepuesta">SUPERPUESTA</string>
     <string name="label_comparacion_tiempo">EN TIEMPO</string>   
     <string name="label_ok">Aceptar</string>
     <string name="label_mostrar_grilla">Ver Grilla</string>
@@ -72,7 +71,7 @@
     <string name="menu_configurar_chart"><![CDATA[Configurar Gráfico]]></string>
     <string name="menu_export_chart"><![CDATA[Exportar Gráfico]]></string>
     <string name="menu_help">Ayuda</string>
-    <string name="menu_about_me">Acerca de...</string>
+    <string name="menu_about_me">Acerca de…</string>
     <string name="menu_export_text">Exportar Texto</string>
     <string name="menu_import_csv">Importar CSV</string>
     <string name="menu_export_csv">Exportar CSV</string>
@@ -88,25 +87,20 @@
     <string name="title_nuevo_chart"><![CDATA[Nuevo Gráfico]]></string>
     <string name="title_nuevo_item">Entrada</string>
     <string name="title_listado_principal">LISTADO DE GRAFICOS</string>
-    <string name="title_config_chart"><![CDATA[Configuración del Gráfico:]]></string>
     <string name="title_comparison_chart"><![CDATA[COMPARACION DE GRAFICOS]]></string>
     <string name="title_help">AYUDA</string>
-    <string name="title_acerca_de">ACERCA DE...</string>
+    <string name="title_acerca_de">ACERCA DE…</string>
     <string name="title_import_csv">IMPORTACION CSV</string>
     <string name="title_export_csv">EXPORTACION CSV</string>
     
-    <string name="title_select_format">Seleccione formato...</string>
+    <string name="title_select_format">Seleccione formato…</string>
     
     <string name="format_date_time">Fecha Hora,Valor </string>
     <string name="format_date">Fecha,Valor </string>
     <string name="format_all_separated"><![CDATA[Año,Mes,Día,Hora,Min,Valor]]></string>
-    
-    
-    <string name="hint_chart"><![CDATA[Gráfico]]></string>
-    
-     <string name="text_sinDatos">SIN DATOS</string>
-     
-     <string name="mensaje_borrar_chart"><![CDATA[: El Gráfico será eliminado. Desea continuar?]]></string>
+
+
+    <string name="mensaje_borrar_chart"><![CDATA[: El Gráfico será eliminado. Desea continuar?]]></string>
      <string name="mensaje_borrar_item"><![CDATA[La Entrada será eliminada. Desea continuar?]]></string>
      <string name="mensaje_borrar_year"><![CDATA[Todas las Entradas de este año serán eliminadas. Desea continuar?]]></string>
 	 <string name="mensaje_borrar_month"><![CDATA[Todas las Entradas de este año y mes serán eliminadas. Desea continuar?]]></string>
@@ -121,9 +115,8 @@
      <string name="mensaje_min_comparacion"><![CDATA[Debe seleccionar 2 o mas Gráficos para comparar.]]></string>  
      <string name="mensaje_error_dibujar"><![CDATA[No es posible dibujar el Gráfico.]]></string> 
      <string name="mensaje_error_guardar"><![CDATA[No es posible registrar la información.]]></string>
-     <string name="mensaje_error_version_lite"><![CDATA[Solo se pueden almacenar 7 Entradas para cada Gráfico en la versión Lite.]]></string>
-     
-     <string name="mensaje_error_tarjeta_solo_lectura"><![CDATA[La SD-CARD se encuentra en el modo de solo lectura.]]></string>
+
+    <string name="mensaje_error_tarjeta_solo_lectura"><![CDATA[La SD-CARD se encuentra en el modo de solo lectura.]]></string>
 	 <string name="mensaje_error_tarjeta_no_formato"><![CDATA[Error, la SD-CARD no se puede usar, no tiene un formato aceptado o no está correctamente formateada.]]></string>
      <string name="mensaje_error_tarjeta_no_montada"><![CDATA[Error, necesita insertar una tarjeta SD-CARD en su móvil.]]></string>
      <string name="mensaje_error_tarjeta_shared"><![CDATA[Error, la SD-CARD está siendo compartida. Desconecte el cable USB y vuelva a intentarlo.]]></string>
@@ -131,9 +124,9 @@
      <string name="mensaje_error_tarjeta_unmounted"><![CDATA[Error, la SD-CARD está presente en el móvil pero no está montada. Móntela antes de usar el programa.]]></string>
  
      <string name="mensaje_pocos_chart"><![CDATA[No existen suficientes Gráficos (con datos) para comparar.]]></string>
- 	 <string name="mensaje_importando_csv">Importando los datos...</string>
- 	 <string name="mensaje_exportando_csv">Exportando los datos...</string>     
- 	 <string name="mensaje_nada_importar">No hay archivos CSV para importar...</string>
+ 	 <string name="mensaje_importando_csv">Importando los datos…</string>
+ 	 <string name="mensaje_exportando_csv">Exportando los datos…</string>
+ 	 <string name="mensaje_nada_importar">No hay archivos CSV para importar…</string>
      
      
      

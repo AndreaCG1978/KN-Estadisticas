@@ -24,7 +24,7 @@ public class ColorPickerDialog extends Dialog {
         void colorChanged(int color);
     }
 
-    private OnColorChangedListener mListener;
+    private final OnColorChangedListener mListener;
     private int mInitialColor;
 
     private static class ColorPickerView extends View {
@@ -127,6 +127,11 @@ public class ColorPickerDialog extends Dialog {
         private static final float PI = 3.1415926f;
 
         @Override
+        public boolean performClick() {
+            return super.performClick();
+        }
+
+        @Override
         public boolean onTouchEvent(MotionEvent event) {
             float x = event.getX() - CENTER_X;
             float y = event.getY() - CENTER_Y;
@@ -137,6 +142,7 @@ public class ColorPickerDialog extends Dialog {
                     mTrackingCenter = inCenter;
                     if (inCenter) {
                         mHighlightCenter = true;
+                        performClick();
                         invalidate();
                         break;
                     }

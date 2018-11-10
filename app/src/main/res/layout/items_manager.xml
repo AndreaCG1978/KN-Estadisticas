@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
 	android:layout_width="fill_parent"
   	android:layout_height="fill_parent"
   	>
@@ -21,7 +21,7 @@
 		android:textSize="13sp"
 		android:textStyle="bold"
 	    android:padding="4dp"
-	    android:gravity="right"
+	    android:gravity="end"
 	    />    
 	    
 	    <TextView android:id="@+id/descChartItemManager"
@@ -35,8 +35,7 @@
 	    />
 	    
 	 <View
-        android:id="@+id/linea"
-        android:layout_width="wrap_content"
+		 android:layout_width="wrap_content"
 		android:layout_height="5px"
 		android:background="@color/color_negro" />
 	    
@@ -68,7 +67,8 @@
 	    android:src="@drawable/draw_chart_main"
 	    android:layout_marginLeft="22dp"
 	    android:layout_marginBottom="8dp"
-	    />
+			 android:contentDescription="@string/menu_dibujar_chart"
+			 android:layout_marginStart="22dp" />
 	  
 
 	     <ImageView android:id="@+id/btnAddItem"
@@ -77,7 +77,8 @@
 	    android:src="@drawable/add_item_main"
 	    android:layout_marginLeft="22dp"
 	    android:layout_marginBottom="8dp"
-	    />
+			 android:contentDescription="@string/menu_agregar_item_chart"
+			 android:layout_marginStart="22dp" />
 	
 		<ImageView android:id="@+id/btnEdit"
 	    android:layout_width="wrap_content"
@@ -85,7 +86,8 @@
 	    android:src="@drawable/edit_chart_main"
 	    android:layout_marginLeft="22dp"
 	    android:layout_marginBottom="8dp"
-	    />
+			android:contentDescription="@string/menu_editar_chart"
+			android:layout_marginStart="22dp" />
 	      
 	    <ImageView android:id="@+id/btnRemove"
 	    android:layout_width="wrap_content"
@@ -93,7 +95,8 @@
 	    android:src="@drawable/trash_chart_main"
 	    android:layout_marginLeft="22dp"
 	    android:layout_marginBottom="8dp"
-	    />
+			android:contentDescription="@string/menu_eliminar_itemchart"
+			android:layout_marginStart="22dp" />
 	    
 	    <ImageView android:id="@+id/btnConfig"
 	    android:layout_width="wrap_content"
@@ -101,8 +104,9 @@
 	    android:src="@drawable/setting_chart_main"
 	    android:layout_marginLeft="22dp"
 	    android:layout_marginBottom="8dp"
-	    />
+			android:contentDescription="@string/menu_configurar_chart"
+			android:layout_marginStart="22dp" />
 	    
 	</LinearLayout>
 	
-</FrameLayout>
+</merge>

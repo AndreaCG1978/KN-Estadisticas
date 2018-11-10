@@ -13,7 +13,6 @@ import com.freshair.android.estadisticas.utils.ConstantsAdmin;
 public class AboutUsActivity extends Activity {
 	
 	private  TextView mail = null;
-	private TextView publicaciones = null;
 	private ImageView logo = null;
 
 	
@@ -27,7 +26,7 @@ public class AboutUsActivity extends Activity {
 
     
     private void configurarWidgets(){
-    	mail = (TextView) this.findViewById(R.id.textAcercaDeMail);
+    	mail = this.findViewById(R.id.textAcercaDeMail);
     	mail.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View v) {
@@ -35,7 +34,7 @@ public class AboutUsActivity extends Activity {
 				enviarMail(mail.getText().toString());
 			}
 		});
-    	publicaciones = (TextView) this.findViewById(R.id.textTodasLasPublicaciones);
+		TextView publicaciones = this.findViewById(R.id.textTodasLasPublicaciones);
     	publicaciones.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View v) {

@@ -11,7 +11,9 @@
 	    android:layout_width="wrap_content"
 	    android:layout_height="wrap_content"
         android:layout_marginLeft="40dp"
-	    android:src="@drawable/remove_icon">
+	    android:src="@drawable/remove_icon"
+			android:contentDescription="@string/menu_eliminar_itemchart"
+            android:layout_marginStart="40dp">
 	    </ImageView>
   
     
@@ -23,7 +25,8 @@
 	    android:textSize="11sp"
 	    android:layout_alignBottom="@id/btnRemove"
 	    android:layout_toRightOf="@id/btnRemove"
-	    />
+            android:layout_toEndOf="@id/btnRemove"
+            android:layout_marginStart="15dp" />
   
 
 	    <TextView android:id="@+id/yearDesc"
@@ -35,7 +38,9 @@
 	    android:layout_toRightOf="@id/labelYear"
 	    android:layout_alignBaseline="@id/labelYear"
 	    android:layout_marginRight="8dp"
-	    />
+            android:layout_toEndOf="@id/labelYear"
+            android:paddingStart="6dp"
+            android:layout_marginEnd="8dp" />
 	    
 	    
 	    <TextView android:id="@+id/cantMesesRegistrados"
@@ -44,9 +49,9 @@
 	    android:textSize="12sp"
 	    android:layout_toRightOf="@id/yearDesc"
 	    android:layout_alignBaseline="@id/yearDesc"
-	    />
+            android:layout_toEndOf="@id/yearDesc" />
 	    
 
 
-	    />
+
 </RelativeLayout>

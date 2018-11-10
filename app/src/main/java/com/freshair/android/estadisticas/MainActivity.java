@@ -32,7 +32,7 @@ import com.freshair.android.estadisticas.utils.ConstantsAdmin;
 public class MainActivity extends ExpandableListActivity {
     private static final String NAME = "NAME";
 
-    LayoutInflater layoutInflater = null;
+    private LayoutInflater layoutInflater = null;
     ArrayList<KNChart> myCharts = null;
     int mGroupSelected = -1;
 	private ArrayList<Cursor> allMyCursors = null;
@@ -77,7 +77,7 @@ public class MainActivity extends ExpandableListActivity {
     	Cursor cur = null;
     	Iterator<Cursor> it = allMyCursors.iterator();
     	while(it.hasNext()){
-    		cur = (Cursor) it.next();
+    		cur = it.next();
     		this.stopManagingCursor(cur);
     	}
     	allMyCursors = new ArrayList<Cursor>();
@@ -221,7 +221,7 @@ public class MainActivity extends ExpandableListActivity {
 		builder.setSingleChoiceItems(items, -1, new DialogInterface.OnClickListener() {
 		    public void onClick(DialogInterface dialog, int item) {
 	    		Long[] params = new Long[1];
-	    		params[0] = new Long(1);
+	    		params[0] = Long.valueOf(1);
 	    		selectedFormatImport = item + 1;
 	    		dialog.cancel();
 	    		new ImportCSVTask().execute(params);
@@ -264,7 +264,7 @@ public class MainActivity extends ExpandableListActivity {
         List<Map<String, String>> children = null;
         Map<String, String> curChildMap = null;
         while(it.hasNext()){
-        	chart = (KNChart) it.next();
+        	chart = it.next();
         	curGroupMap = new HashMap<String, String>();
         	groupData.add(curGroupMap);
         	curGroupMap.put(NAME, chart.getName());
@@ -292,8 +292,8 @@ public class MainActivity extends ExpandableListActivity {
                     final int grpPos = groupPosition;
                     TextView desc = null;
                 	final View v = super.getChildView(groupPosition, childPosition, isLastChild, convertView, parent);
-                	chartSelected = (KNChart) myCharts.get(groupPosition);
-                	desc = (TextView)v.findViewById(R.id.textDesc);
+                	chartSelected = myCharts.get(groupPosition);
+                	desc = v.findViewById(R.id.textDesc);
                 	if(chartSelected.getDescription() != null && !chartSelected.getDescription().equals("")){
                         desc.setText(chartSelected.getDescription());   
                         desc.setVisibility(View.VISIBLE);
@@ -301,7 +301,7 @@ public class MainActivity extends ExpandableListActivity {
                 		desc.setVisibility(View.GONE);
                 	}
                                     
-                    ImageView btn1 = (ImageView)v.findViewById(R.id.btnDraw);
+                    ImageView btn1 = v.findViewById(R.id.btnDraw);
                     btn1.setOnClickListener(new View.OnClickListener() {
                         public void onClick(View v) {
                         	try {
@@ -312,25 +312,25 @@ public class MainActivity extends ExpandableListActivity {
                         	 
                         }
                     });
-                    ImageView btn2 = (ImageView)v.findViewById(R.id.btnAddItem);
+                    ImageView btn2 = v.findViewById(R.id.btnAddItem);
                     btn2.setOnClickListener(new View.OnClickListener() {
                         public void onClick(View v) {
                         	openManagerItemChart(grpPos);
                         }
                     });
-                    ImageView btn3 = (ImageView)v.findViewById(R.id.btnEdit);
+                    ImageView btn3 = v.findViewById(R.id.btnEdit);
                     btn3.setOnClickListener(new View.OnClickListener() {
                         public void onClick(View v) {
                            openEditarChart(grpPos);
                         }
                     });
-                    ImageView btn4 = (ImageView)v.findViewById(R.id.btnRemove);
+                    ImageView btn4 = v.findViewById(R.id.btnRemove);
                     btn4.setOnClickListener(new View.OnClickListener() {
                         public void onClick(View v) {
                         	eliminarChartDialog(grpPos);
                         }
                     });
-                    ImageView btn5 = (ImageView)v.findViewById(R.id.btnConfig);
+                    ImageView btn5 = v.findViewById(R.id.btnConfig);
                     btn5.setOnClickListener(new View.OnClickListener() {
                         public void onClick(View v) {
                         	openConfigChart(grpPos);
@@ -341,11 +341,11 @@ public class MainActivity extends ExpandableListActivity {
 
                 @Override
                 public View newChildView(boolean isLastChild, ViewGroup parent) {
-                     return layoutInflater.inflate(R.layout.chart_row, null, false);
+                     return layoutInflater.inflate(R.layout.chart_row, parent, false);
                 }
                 
                 public View newGroupView(boolean isExpanded, ViewGroup parent){
-                	return layoutInflater.inflate(R.layout.chart_row_label, null, false);
+                	return layoutInflater.inflate(R.layout.chart_row_label, parent, false);
                 }
                 
                 @Override
@@ -356,9 +356,9 @@ public class MainActivity extends ExpandableListActivity {
                 
                 public View getGroupView(int groupPosition, boolean isExpanded, View convertView, ViewGroup parent) {
                 	final View v = super.getGroupView(groupPosition, isExpanded, convertView, parent);
-                	TextView text = (TextView)v.findViewById(R.id.textName);
+                	TextView text = v.findViewById(R.id.textName);
                    	KNChart chartSelected = null;
-                	chartSelected = (KNChart) myCharts.get(groupPosition);
+                	chartSelected = myCharts.get(groupPosition);
                 	text.setText(chartSelected.getName().toUpperCase() + " - (" + chartSelected.getUnit() + ")");
                 	return v;
                 }

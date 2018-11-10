@@ -36,7 +36,7 @@ import com.freshair.android.estadisticas.dtos.KNItemChart;
 public class ConstantsAdmin {
 	
 	
-	public static DataBaseManager mDBManager = null;
+	private static DataBaseManager mDBManager = null;
 
 	
 	public static DataBaseManager getmDBManager() {
@@ -154,7 +154,7 @@ public class ConstantsAdmin {
     		KNChart chart = null;
     		int i = 0;
          	while(it.hasNext()){
-         		chart = (KNChart) it.next();
+         		chart = it.next();
     			result[i] = chart.getName();
     			i = i + 1;
     		}
@@ -342,7 +342,7 @@ public class ConstantsAdmin {
     	if(chartCursor != null){
 	 //   	context.stopManagingCursor(perCursor);
     		temp = chartCursor.getString(chartCursor.getColumnIndex(ConstantsAdmin.KEY_ROWID));
-	        chart.setId(new Long(temp));
+	        chart.setId(Long.valueOf(temp));
 	        temp = chartCursor.getString(chartCursor.getColumnIndex(ConstantsAdmin.KEY_CHART_NAME));
 	        chart.setName(temp);
 	        temp = chartCursor.getString(chartCursor.getColumnIndex(ConstantsAdmin.KEY_CHART_DESCRIPTION));
@@ -495,7 +495,7 @@ public class ConstantsAdmin {
     
 
 
-    public static String pictureExtension  = ".jpg";
+    public static final String pictureExtension  = ".jpg";
     public static String textExtension  = ".txt";
 
     public static String comparisonName  = "comparisonChart";
@@ -642,7 +642,7 @@ public class ConstantsAdmin {
     
 
     
-    private static void almacenarImagen(Activity context, String nombreDirectorio, String nombreArchivo, Bitmap bm) throws IOException, FileNotFoundException{
+    private static void almacenarImagen(Activity context, String nombreDirectorio, String nombreArchivo, Bitmap bm) throws IOException {
     	  String path = obtenerPath(nombreDirectorio);
 	      OutputStream fOut = null;
 	      File dir = new File(path);
@@ -663,7 +663,7 @@ public class ConstantsAdmin {
     }
     
 
-    private static void almacenarArchivo(String nombreDirectorio, String nombreArchivo, String body) throws IOException, FileNotFoundException{
+    private static void almacenarArchivo(String nombreDirectorio, String nombreArchivo, String body) throws IOException {
     	  String path = obtenerPath(nombreDirectorio);
 	//      path = path + File.separator + nombreDirectorio;
 	      File dir = new File(path);
@@ -704,7 +704,7 @@ public class ConstantsAdmin {
         tab3 = "\t\t\t";
         result = chart.getName().toUpperCase();
         result = result + ENTER + ENTER;
-        item = (KNItemChart) it.next();
+        item = it.next();
         String anio, mes, dia, anioAnt, mesAnt, diaAnt = null;
         anio = item.getYear();
         anioAnt = item.getYear();
@@ -718,7 +718,7 @@ public class ConstantsAdmin {
         result = result + tab3 + context.getString(R.string.label_hora).toUpperCase() + ": " + item.getHourMin() + " - " + context.getString(R.string.label_valor).toUpperCase() + ": " + item.getValue();
         while(it.hasNext()){
             result = result + ENTER;
-            item = (KNItemChart) it.next();
+            item = it.next();
             anioAnt = anio;
             mesAnt = mes;
             diaAnt = dia;
@@ -810,7 +810,7 @@ public class ConstantsAdmin {
         Iterator<KNItemChart> it = list.iterator();
         KNItemChart item = null;
         while(it.hasNext()){
-            item = (KNItemChart) it.next();
+            item = it.next();
             result = result + item.getYear()+ COMA + item.getMonth() + COMA + item.getDay() + COMA + item.getHour() + COMA + item.getMin() + COMA + item.getValue() + ENTER;
         }
     	return result;
@@ -821,7 +821,7 @@ public class ConstantsAdmin {
         Iterator<KNItemChart> it = list.iterator();
         KNItemChart item = null;
         while(it.hasNext()){
-            item = (KNItemChart) it.next();
+            item = it.next();
             result = result + item.getYear()+ SEPARADOR_FECHA + item.getMonth() + SEPARADOR_FECHA + item.getDay() + " " + item.getHourMin() + COMA + item.getValue() + ENTER;
         }
     	return result;
@@ -832,7 +832,7 @@ public class ConstantsAdmin {
         Iterator<KNItemChart> it = list.iterator();
         KNItemChart item = null;
         while(it.hasNext()){
-            item = (KNItemChart) it.next();
+            item = it.next();
             result = result + item.getYear()+ SEPARADOR_FECHA + item.getMonth() + SEPARADOR_FECHA + item.getDay() + COMA + item.getValue() + ENTER;
         }
     	return result;
@@ -865,7 +865,7 @@ public class ConstantsAdmin {
 	            Iterator<KNItemChart> itItems = null;
 	
 	            while(it.hasNext()){
-	                file = (File) it.next();
+	                file = it.next();
 	                body = obtenerContenidoArchivo(file, context);
 	                chart = crearChartDesdeArchivo(file.getName(), context);
 	                items = obtenerItemsDeString(body, chart, formatInput);
@@ -876,7 +876,7 @@ public class ConstantsAdmin {
 	                	cantChartsIncompletos ++;
 	                }
 	                while (itItems.hasNext()){
-	                    item = (KNItemChart) itItems.next();
+	                    item = itItems.next();
 	                    //ACA GUARDAR EN LA BASE EL ITEM, ACORDATE DE MODIFICAR EL ALTA PARA QUE SI COINCIDE EN FECHA Y HORA SOBREESCRIBA
 	                    agregarItem(item, context);
 	                }
@@ -902,7 +902,8 @@ public class ConstantsAdmin {
         chart.setName(parts[parts.length -2]);
         chart.setUnit("X");
         // ACA TRUNCAR EL NOMBRE CON EL SIZE MAXIMO DE NOMBRE DE CHART
-        if(chart.getName().length() > maxChartNameLength){
+		int maxChartNameLength = 15;
+		if(chart.getName().length() > maxChartNameLength){
             chart.setName(chart.getName().substring(0, maxChartNameLength - 1));
         }
         // ACA TENGO QUE RECUPERAR DESDE LA BASE EL CHART CON ESTE NAME
@@ -1050,7 +1051,7 @@ public class ConstantsAdmin {
     }
 
 
-    private static String obtenerContenidoArchivo(File file, Activity context)throws FileNotFoundException, IOException{
+    private static String obtenerContenidoArchivo(File file, Activity context)throws IOException{
         // ACA DEBERIA CARGAR EL CONTENIDO DEL ARCHIVO PASADO COMO PARAMETRO, HACER LOS CONTROLES DE LECTURA
     	String line = null;
     	Asociacion canStore = comprobarSDCard(context);
@@ -1077,8 +1078,7 @@ public class ConstantsAdmin {
     }
     
     public static String csvExtension  = ".csv";
-    private static int maxChartNameLength = 15;
-    public static String folderCSV = "CSV";
+	public static String folderCSV = "CSV";
     public static final int ACTIVITY_EJECUTAR_IMPORT_CSV=18;
     public static final int ACTIVITY_EJECUTAR_EXPORT_CHART_CSV=19;
 	public static final int FORMAT_DATETIME = 1;

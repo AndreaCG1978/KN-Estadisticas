@@ -24,7 +24,7 @@ import com.freshair.android.estadisticas.utils.KNItemChartArrayAdapter;
 
 public class ItemPerMonthActivity extends ListActivity {
 	
-	String mYearSelected = null;
+	private String mYearSelected = null;
 	String mMonthSelecetd = null;
 	String idChartSelected = null;
 	private long mItemIdSelect = -1;
@@ -42,7 +42,7 @@ public class ItemPerMonthActivity extends ListActivity {
     	Cursor cur = null;
     	Iterator<Cursor> it = allMyCursors.iterator();
     	while(it.hasNext()){
-    		cur = (Cursor) it.next();
+    		cur = it.next();
     		this.stopManagingCursor(cur);
     	}
     	allMyCursors = new ArrayList<Cursor>();
@@ -59,19 +59,19 @@ public class ItemPerMonthActivity extends ListActivity {
     }
 	
 	private void configurarBotones(){
-		ImageView btn = (ImageView) this.findViewById(R.id.btnAddItem);
+		ImageView btn = this.findViewById(R.id.btnAddItem);
 		btn.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
             	openAltaItemChart();
             }
         });
-		btn = (ImageView) this.findViewById(R.id.btnDrw);
+		btn = this.findViewById(R.id.btnDrw);
 		btn.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
             	openChart();
             }
         });
-		btn = (ImageView) this.findViewById(R.id.btnConfig);
+		btn = this.findViewById(R.id.btnConfig);
 		btn.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
             	openConfigChart();
@@ -108,11 +108,11 @@ public class ItemPerMonthActivity extends ListActivity {
 	}
 	
 	private void actualizarWidgets(){
-		TextView text = (TextView) this.findViewById(R.id.titleChartName);
+		TextView text = this.findViewById(R.id.titleChartName);
 		text.setText(this.getString(R.string.label_detalle_items) + " (" + mChartSeleccionado.getName().toUpperCase()+ ")" );
-		text = (TextView) this.findViewById(R.id.descYear);
+		text = this.findViewById(R.id.descYear);
 		text.setText(mYearSelected);
-		text = (TextView) this.findViewById(R.id.descMonth);
+		text = this.findViewById(R.id.descMonth);
 		text.setText(mMonthSelecetd);
 
 	}

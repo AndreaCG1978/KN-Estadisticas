@@ -8,10 +8,10 @@
     >
     
 	<ImageView
-	android:id="@+id/imagenSplash"
-	android:src="@drawable/splash"
+        android:src="@drawable/splash"
 	android:layout_height="wrap_content"
 	android:layout_width="wrap_content"
-	android:layout_gravity="center" />
+	android:layout_gravity="center"
+		android:contentDescription="@string/menu_about_me" />
     
 </LinearLayout>

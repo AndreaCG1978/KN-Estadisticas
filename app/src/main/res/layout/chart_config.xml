@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
 	android:layout_width="fill_parent"
   	android:layout_height="fill_parent"
   	>
@@ -13,10 +13,7 @@
 
 		<RelativeLayout
 	 	 android:layout_width="fill_parent"
-	 	 android:layout_height="fill_parent"
-	 	 
-	 	 
-	  	>
+	 	 android:layout_height="wrap_content">
 	  
 
 			
@@ -37,7 +34,8 @@
 		  	android:text="@string/label_selectColor"
 		  	android:layout_below="@id/titleBackground"
 		  	android:layout_marginTop="20dp"
-		  	android:layout_marginLeft="15dp">
+		  	android:layout_marginLeft="15dp"
+               android:layout_marginStart="15dp">
 		   </TextView>
   
 		  <Button android:id="@+id/labelBackground"
@@ -51,7 +49,7 @@
 		  	android:padding="1dp"
 		  	android:text="@string/label_pickColor"
 		  	android:layout_alignBaseline="@id/labelColorBackground"
-			>
+              android:layout_toEndOf="@id/labelColorBackground">
 		  </Button>
 		  
 	     <TextView android:id="@+id/titleLine"
@@ -74,8 +72,8 @@
 		       android:layout_marginTop="10dp"
 		       android:textSize="14sp"
 		       android:text="@string/label_mostrar_valores"
-		       
-		      />
+
+             android:layout_marginStart="10dp" />
 		  
 		 
 		  <TextView android:id="@+id/labelColorLine"
@@ -84,7 +82,8 @@
 		  	android:text="@string/label_selectColor"
 		  	android:layout_below="@id/checkShowValues"
 		  	android:layout_marginTop="10dp"
-		  	android:layout_marginLeft="15dp">
+		  	android:layout_marginLeft="15dp"
+              android:layout_marginStart="15dp">
 		  </TextView>
  
 		  <Button android:id="@+id/labelLine"
@@ -98,8 +97,8 @@
 		  	android:layout_toRightOf="@id/labelColorLine"
 		  	android:layout_below="@id/checkShowValues"
 		  	android:layout_alignBaseline="@id/labelColorLine"
-		
-		  	>
+
+              android:layout_toEndOf="@id/labelColorLine">
 		  </Button>
 		  
 		    <TextView android:id="@+id/titleLabels"
@@ -121,7 +120,7 @@
 			  	android:layout_below="@id/titleLabels"
 			  	android:layout_marginTop="20dp"
 			  	android:layout_marginLeft="15dp"
-			  	>
+                  android:layout_marginStart="15dp">
 			  </TextView>
   
 			  <Button android:id="@+id/labelLabels"
@@ -134,7 +133,8 @@
 			  	android:text="@string/label_pickColor" 
 			  	android:layout_alignBaseline="@id/labelColorLabels" 	
 			  	android:layout_toRightOf="@id/labelColorLabels"
-			  	android:layout_below="@id/titleLabels">
+			  	android:layout_below="@id/titleLabels"
+                  android:layout_toEndOf="@id/labelColorLabels">
 			  </Button>
 			  
 		     <TextView android:id="@+id/titleGrid"
@@ -157,7 +157,7 @@
 		       android:layout_marginLeft="10dp"
 		       android:layout_marginTop="10dp"
 		       android:textSize="14sp"
-		      />
+                android:layout_marginStart="10dp" />
 		      
 			  <TextView android:id="@+id/labelColorGrid"
 			  	android:layout_width="wrap_content"
@@ -165,7 +165,8 @@
 			  	android:text="@string/label_selectColor"
 			  	android:layout_below="@id/checkShowGrid"
 			  	android:layout_marginTop="10dp"
-			  	android:layout_marginLeft="15dp">
+			  	android:layout_marginLeft="15dp"
+                  android:layout_marginStart="15dp">
 			  </TextView>
 			  
 			  <Button android:id="@+id/labelGrid"
@@ -178,7 +179,8 @@
 			  	android:text="@string/label_pickColor" 
 			  	android:layout_alignBaseline="@id/labelColorGrid" 	
 			  	android:layout_toRightOf="@id/labelColorGrid"
-			  	android:layout_below="@id/checkShowGrid">
+			  	android:layout_below="@id/checkShowGrid"
+                  android:layout_toEndOf="@id/labelColorGrid">
 			  </Button>
 
 
@@ -201,7 +203,7 @@
 		       android:layout_marginLeft="15dp"  
 		       android:layout_marginTop="15dp"
 		       android:layout_below="@id/titlePoint"
-		           />
+                android:layout_marginStart="15dp" />
 		           
 		     <TextView android:id="@+id/titleTime"
 				android:layout_width="fill_parent"
@@ -221,8 +223,8 @@
 			   android:layout_height="40dp"     
 		       android:layout_marginLeft="15dp"  
 		       android:layout_marginTop="15dp"
-		       android:layout_below="@id/titleTime" 
-		           />
+		       android:layout_below="@id/titleTime"
+                android:layout_marginStart="15dp" />
 
 
 		</RelativeLayout>
@@ -232,7 +234,7 @@
   	 android:layout_width="fill_parent"
  	 android:layout_height="wrap_content"
 	 android:layout_gravity="bottom"
-	 android:gravity="right"
+	 android:gravity="end"
 	 >
 
   	   
@@ -257,9 +259,9 @@
 			android:textSize="12sp"
 			android:textStyle="bold"
 		    android:padding="4dp"
-		    android:gravity="right"
+		    android:gravity="end"
 			>
 		    </TextView>
      </RelativeLayout>
    
-</FrameLayout>
+</merge>

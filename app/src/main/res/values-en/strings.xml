@@ -43,9 +43,8 @@
     <string name="label_mostrar_grilla">Show Grid</string>
     <string name="label_mostrar_valores">Show Values</string>
     <string name="label_selectColor">Selected color:</string>  
-    <string name="label_pickColor">PICK COLOR</string>  
-    <string name="label_comparar">COMPARE</string>      
-    <string name="label_comparacion_sobrepuesta">OVERLAPPING</string> 
+    <string name="label_pickColor">PICK COLOR</string>
+    <string name="label_comparacion_sobrepuesta">OVERLAPPING</string>
     <string name="label_comparacion_tiempo">IN TIME</string>  
     <string name="label_ok">OK</string>
     <string name="label_configuracion">CHART VIEW SETTINGS</string>
@@ -75,7 +74,7 @@
     <string name="menu_export_chart">Export Chart</string>
     <string name="menu_export_text">Export Text</string>
     <string name="menu_help">Help</string>
-    <string name="menu_about_me">About us...</string>
+    <string name="menu_about_me">About us…</string>
     <string name="menu_import_csv">Import CSV</string>
     <string name="menu_export_csv">Export CSV</string>
     
@@ -83,27 +82,21 @@
 	<string name="title_nuevo_chart">New Chart</string>
 	<string name="title_nuevo_item">Item</string>
 	<string name="title_listado_principal">CHARTS LIST</string>
-	<string name="title_config_chart">Chart Setting:</string>
-	<string name="title_comparison_chart">CHARTS COMPARISON</string>
+    <string name="title_comparison_chart">CHARTS COMPARISON</string>
 	<string name="title_help">HELP</string>
-	<string name="title_acerca_de">ABOUT US...</string>
+	<string name="title_acerca_de">ABOUT US…</string>
     <string name="title_import_csv">IMPORTING CSV</string>
     <string name="title_export_csv">EXPORTING CSV</string>
     	
-	<string name="title_select_format">Select format...</string>
+	<string name="title_select_format">Select format…</string>
 	
     
     <string name="format_date_time">Date Time,Value</string>
     <string name="format_date">Date,Value</string>
     <string name="format_all_separated">Year,Month,Day,Hour,Min,Value</string>
-	
-    
-	
-	<string name="hint_chart">Chart</string>
-	
-	 <string name="text_sinDatos">WITHOUT DATA</string>
-	 
-	 <string name="mensaje_borrar_chart">: The Chart will be removed. Are you sure?</string>
+
+
+    <string name="mensaje_borrar_chart">: The Chart will be removed. Are you sure?</string>
 	 <string name="mensaje_borrar_item">The Item will be removed. Are you sure?</string>
 	 <string name="mensaje_borrar_year">All Items in this year will be removed. Are you sure?</string>
 	 <string name="mensaje_borrar_month">All Items in this year and month will be removed. Are you sure?</string>
@@ -118,9 +111,8 @@
      <string name="mensaje_min_comparacion">You must select at least 2 Charts to compare.</string>  
      <string name="mensaje_error_dibujar">The Chart could not be plotted.</string> 
      <string name="mensaje_error_guardar">The data could not be saved.</string>
-     <string name="mensaje_error_version_lite">Only 7 Items can be stored in the Lite version.</string>
-     
-     <string name="mensaje_error_tarjeta_solo_lectura">The SD-CARD is in read-only mode.</string>
+
+    <string name="mensaje_error_tarjeta_solo_lectura">The SD-CARD is in read-only mode.</string>
 	 <string name="mensaje_error_tarjeta_no_formato">Error, the SD-CARD cannot be used, not in a format accepted or not properly formatted.</string>
      <string name="mensaje_error_tarjeta_no_montada">Error, you need to install an SD-CARD to your mobile.</string>
      <string name="mensaje_error_tarjeta_shared">Error, the SD-CARD is being shared. Disconnect the USB cable and try again.</string>
@@ -128,9 +120,9 @@
      <string name="mensaje_error_tarjeta_unmounted">Error, the SD-CARD is present in the mobile but not mounted. Mount it before using the program.</string>
  
      <string name="mensaje_pocos_chart">Not enough graphics (with items) for comparison.</string> 
-     <string name="mensaje_importando_csv">Please wait! Importing data...</string> 
-     <string name="mensaje_exportando_csv">Please wait! Exporting data...</string>
-     <string name="mensaje_nada_importar">There are no CSV files to import...</string>
+     <string name="mensaje_importando_csv">Please wait! Importing data…</string>
+     <string name="mensaje_exportando_csv">Please wait! Exporting data…</string>
+     <string name="mensaje_nada_importar">There are no CSV files to import…</string>
      
      <string name="help_draw">Plot a Chart or comparison of several Charts.</string> 
      <string name="help_list_items">Shows the Item management.</string>

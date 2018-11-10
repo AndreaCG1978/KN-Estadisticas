@@ -28,7 +28,7 @@ import com.freshair.android.estadisticas.utils.ConstantsAdmin;
 public class ConfigChartActivity extends Activity {
    	
 	private KNChart mChartSeleccionado = null;
-	KNConfigChart mConfig = null;
+	private KNConfigChart mConfig = null;
 	
 	ConfigChartActivity me = null;
 	int mColorSeleccionadoBackground = 0;
@@ -73,7 +73,7 @@ public class ConfigChartActivity extends Activity {
     	Cursor cur = null;
     	Iterator<Cursor> it = allMyCursors.iterator();
     	while(it.hasNext()){
-    		cur = (Cursor) it.next();
+    		cur = it.next();
     		this.stopManagingCursor(cur);
     	}
     	allMyCursors = new ArrayList<Cursor>();
@@ -103,7 +103,7 @@ public class ConfigChartActivity extends Activity {
     }
     
     private void configurarTitulo(){
-    	TextView text = (TextView) this.findViewById(R.id.titleChartName);
+    	TextView text = this.findViewById(R.id.titleChartName);
 		text.setText(this.getString(R.string.label_configuracion).toUpperCase());	
     	if(!(mChartSeleccionado.getName() == null || mChartSeleccionado.getName().equals(""))){
     		text.setText(text.getText() + " (" + mChartSeleccionado.getName().toUpperCase() + ")");
@@ -174,7 +174,7 @@ public class ConfigChartActivity extends Activity {
     	OnItemSelectedListener spinnerListener = new seleccionSpinnerStylePointListener();
     	stylePointSpinner.setOnItemSelectedListener(spinnerListener);
     	if(mChartSeleccionado.getPointStyle() != null){
-    		stylePointSpinner.setSelection(new Integer(mChartSeleccionado.getPointStyle()));
+    		stylePointSpinner.setSelection(Integer.valueOf(mChartSeleccionado.getPointStyle()));
     	}
     }
     
@@ -221,7 +221,7 @@ public class ConfigChartActivity extends Activity {
         }
     }   
     
-	private ColorPickerDialog.OnColorChangedListener mColorListenerBackground =
+	private final ColorPickerDialog.OnColorChangedListener mColorListenerBackground =
         new ColorPickerDialog.OnColorChangedListener() {
 
 			@Override
@@ -267,7 +267,7 @@ public class ConfigChartActivity extends Activity {
     
     
     private void configurarBotonGuardar(){
-    	Button b = (Button) this.findViewById(R.id.buttonGuardarChart);
+    	Button b = this.findViewById(R.id.buttonGuardarChart);
 	    b.setOnClickListener(new View.OnClickListener() {
 	        public void onClick(View v) {
 	        	guardarChart();
@@ -306,14 +306,14 @@ public class ConfigChartActivity extends Activity {
     
     
 	private void registrarWidgets(){
-		labelBackground = (Button) this.findViewById(R.id.labelBackground);
-		labelLine = (Button) this.findViewById(R.id.labelLine);
-		labelGrid = (Button) this.findViewById(R.id.labelGrid);
-		labelLabels = (Button) this.findViewById(R.id.labelLabels);
-		stylePointSpinner = (Spinner) this.findViewById(R.id.spinnerStylePoint);
-		timeFormatSpinner = (Spinner) this.findViewById(R.id.spinnerTimeFormat);
-		checkShowGrid = (CheckBox) this.findViewById(R.id.checkShowGrid);
-		checkShowValues = (CheckBox) this.findViewById(R.id.checkShowValues);
+		labelBackground = this.findViewById(R.id.labelBackground);
+		labelLine = this.findViewById(R.id.labelLine);
+		labelGrid = this.findViewById(R.id.labelGrid);
+		labelLabels = this.findViewById(R.id.labelLabels);
+		stylePointSpinner = this.findViewById(R.id.spinnerStylePoint);
+		timeFormatSpinner = this.findViewById(R.id.spinnerTimeFormat);
+		checkShowGrid = this.findViewById(R.id.checkShowGrid);
+		checkShowValues = this.findViewById(R.id.checkShowValues);
 		
 	}
 	
@@ -363,7 +363,7 @@ public class ConfigChartActivity extends Activity {
 		String idChartString = null;
 		if(intent.hasExtra(ConstantsAdmin.CHART_SELECCIONADO)){
 			idChartString = (String)intent.getExtras().get(ConstantsAdmin.CHART_SELECCIONADO);
-			long idChart = new Long(idChartString);
+			long idChart = Long.valueOf(idChartString);
 			this.recargarChart(idChart);
 		}else{
 			this.recuperarConfig();

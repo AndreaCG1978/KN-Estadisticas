@@ -16,8 +16,8 @@ import com.freshair.android.estadisticas.utils.ConstantsAdmin;
 
 public class InitActivity extends Activity {
 	
-    protected boolean _active = true;
-    protected int _splashTime = 1200;    
+    private boolean _active = true;
+    protected final int _splashTime = 1200;
     private Activity me = null;  
 	private ArrayList<Cursor> allMyCursors = null;
 	
@@ -36,7 +36,7 @@ public class InitActivity extends Activity {
     	Cursor cur = null;
     	Iterator<Cursor> it = allMyCursors.iterator();
     	while(it.hasNext()){
-    		cur = (Cursor) it.next();
+    		cur = it.next();
     		this.stopManagingCursor(cur);
     	}
     	allMyCursors = new ArrayList<Cursor>();

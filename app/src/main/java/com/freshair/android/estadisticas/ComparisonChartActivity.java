@@ -48,7 +48,7 @@ public class ComparisonChartActivity extends Activity {
 	
 	
 	private List<Integer> myColors = null;
-	boolean sobrePuestos = false;
+	private boolean sobrePuestos = false;
 	private GraphicalView mChartView = null;
 	private ArrayList<Cursor> allMyCursors = null;
 	
@@ -67,7 +67,7 @@ public class ComparisonChartActivity extends Activity {
     	Cursor cur = null;
     	Iterator<Cursor> it = allMyCursors.iterator();
     	while(it.hasNext()){
-    		cur = (Cursor) it.next();
+    		cur = it.next();
     		this.stopManagingCursor(cur);
     	}
     	allMyCursors = new ArrayList<Cursor>();
@@ -86,11 +86,7 @@ public class ComparisonChartActivity extends Activity {
   }
   
   private void configurarTipoGrafico(){
-	  if(ConstantsAdmin.tipoComparacionSelected.equals(ConstantsAdmin.COMPARACION_EN_TIEMPO)){
-		sobrePuestos = false;
-	  }else{
-		sobrePuestos = true;
-	  }	  
+      sobrePuestos = !ConstantsAdmin.tipoComparacionSelected.equals(ConstantsAdmin.COMPARACION_EN_TIEMPO);
   }
   
   
@@ -111,7 +107,7 @@ public class ComparisonChartActivity extends Activity {
   }
   
   private void configurarBotones(){
-	    ImageView btn = (ImageView) this.findViewById(R.id.btnExport);
+	    ImageView btn = this.findViewById(R.id.btnExport);
 	    btn.setOnClickListener(new View.OnClickListener() {
 			
 			@Override
@@ -119,7 +115,7 @@ public class ComparisonChartActivity extends Activity {
 				exportChart();
 			}
 		});
-	    btn = (ImageView)this.findViewById(R.id.btnConfig);
+	    btn = this.findViewById(R.id.btnConfig);
 	    btn.setOnClickListener(new View.OnClickListener() {
           public void onClick(View v) {
           	openConfigChart();
@@ -158,11 +154,11 @@ public class ComparisonChartActivity extends Activity {
 	    int[] colors = new int[ConstantsAdmin.chartsParaComparar.size()]; //{ Color.BLUE, Color.GREEN };
 	    PointStyle[] styles = new PointStyle[ConstantsAdmin.chartsParaComparar.size()]; //{ PointStyle.POINT, PointStyle.POINT };
     	for (Iterator<KNChart> iterator = ConstantsAdmin.chartsParaComparar.iterator(); iterator.hasNext();) {
-    		chrt = (KNChart) iterator.next();
+    		chrt = iterator.next();
     		colors[a] = myColors.get(a);
     		titles[a] = chrt.getName();
     		unitString = unitString + "-" + chrt.getUnit();
-    		styles[a] = ConstantsAdmin.tiposPuntos[new Integer(config.getPoint())];
+    		styles[a] = ConstantsAdmin.tiposPuntos[Integer.valueOf(config.getPoint())];
 			items = ConstantsAdmin.obtenerItemsDeChart(chrt, this);
 			if(!sobrePuestos){
 				dates.add(new Date[items.size()]);
@@ -201,13 +197,13 @@ public class ComparisonChartActivity extends Activity {
 	    XYMultipleSeriesRenderer renderer = buildRenderer(colors, styles);
     	String labelX= "";
 	    setChartSettings(renderer, this.getString(R.string.label_comparacion), labelX, unitString, minX,
-	        maxX, min, max, new Integer(config.getLabel()),  new Integer(config.getLabel()));
+	        maxX, min, max, Integer.valueOf(config.getLabel()),  Integer.valueOf(config.getLabel()));
 	    this.configurarPropiedadesRender(renderer, config);
 	    renderer.setApplyBackgroundColor(true);
-	    renderer.setBackgroundColor(new Integer(config.getBackground()));
+	    renderer.setBackgroundColor(Integer.valueOf(config.getBackground()));
 	    if(config.isShowGrid()){
 	    	renderer.setShowGrid(true);
-		    renderer.setGridColor(new Integer(config.getGrid()));
+		    renderer.setGridColor(Integer.valueOf(config.getGrid()));
 	    }else{
 	    	renderer.setShowGrid(false);
 	    }
@@ -230,7 +226,7 @@ public class ComparisonChartActivity extends Activity {
 	    		 mChartView = ChartFactory.getTimeChartView(this, buildDateDataset(titles, dates, values),
 	    			        renderer, config.getTime());
 	    	}
-	    	LinearLayout layout = (LinearLayout) findViewById(R.id.chart);
+	    	LinearLayout layout = findViewById(R.id.chart);
 	 	    layout.removeAllViews();
 	 	    layout.addView(mChartView, new LayoutParams(LayoutParams.WRAP_CONTENT,
 	 	            LayoutParams.WRAP_CONTENT));
