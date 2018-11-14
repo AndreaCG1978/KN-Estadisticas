@@ -1,4 +1,4 @@
-#Sat Nov 10 12:05:17 ART 2018
+#Wed Nov 14 19:30:31 ART 2018
 base.0=/home/andrea/AndroidStudioProjects/KN-Estadisticas-Full/app/build/intermediates/transforms/dexMerger/debug/0
 path.0=classes.dex
 renamed.0=classes.dex

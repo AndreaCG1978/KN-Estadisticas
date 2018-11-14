@@ -13,7 +13,7 @@ import com.freshair.android.estadisticas.utils.ConstantsAdmin;
 public class AboutUsActivity extends Activity {
 	
 	private  TextView mail = null;
-	private ImageView logo = null;
+	// --Commented out by Inspection (14/11/18 19:14):private ImageView logo = null;
 
 	
     @Override
@@ -66,20 +66,8 @@ public class AboutUsActivity extends Activity {
 		}
     	 	
     }
-    
-    private void irBoxico(){
-    	try {
-    		Intent intent = new Intent(Intent.ACTION_VIEW);
-    		intent.setData(Uri.parse(ConstantsAdmin.UrlBoxico));
-    		startActivity(intent);
-			
-		} catch (Exception e) {
-			ConstantsAdmin.mostrarMensajeAplicacion(this, getString(R.string.error_ver_publicaciones));
-		}
-    	 	
-    }
 
-    private void enviarMail(String text){
+	private void enviarMail(String text){
     	try {
     		Intent email_intent =  new Intent(android.content.Intent.ACTION_SEND);
         	email_intent.setType("plain/text");

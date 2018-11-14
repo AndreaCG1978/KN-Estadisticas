@@ -61,7 +61,7 @@ public class SimpleLinearChartActivity extends Activity {
   public void onCreate(Bundle savedInstanceState) {
       super.onCreate(savedInstanceState);
       me = this;
-      allMyCursors = new ArrayList<Cursor>();
+      allMyCursors = new ArrayList<>();
       this.setContentView(R.layout.chart_view);
       this.guardarChartSeleccionado();
       this.configurarBotones();
@@ -73,13 +73,12 @@ public class SimpleLinearChartActivity extends Activity {
   }
   
   private void resetAllMyCursors(){
-  	Cursor cur = null;
-  	Iterator<Cursor> it = allMyCursors.iterator();
-  	while(it.hasNext()){
-  		cur = it.next();
-  		this.stopManagingCursor(cur);
-  	}
-  	allMyCursors = new ArrayList<Cursor>();
+  	Cursor cur;
+	  for (Cursor allMyCursor : allMyCursors) {
+		  cur = allMyCursor;
+		  this.stopManagingCursor(cur);
+	  }
+  	allMyCursors = new ArrayList<>();
   }
   
   @Override
@@ -144,21 +143,21 @@ public class SimpleLinearChartActivity extends Activity {
   private void drawChart() {
 	this.recuperarChart();
     String[] titles = new String[] {mChart.getName()};
-    List<Date[]> dates = new ArrayList<Date[]>();
-    List<double[]> values = new ArrayList<double[]>();
+    List<Date[]> dates = new ArrayList<>();
+    List<double[]> values = new ArrayList<>();
     items = ConstantsAdmin.obtenerItemsDeChart(mChart, this);
     if(items.size()>0){
 	    if(items != null && items.size() > 0){
 		    Iterator<KNItemChart> it = items.iterator();
-		    KNItemChart item = null;
+		    KNItemChart item;
 		    Date[] dateValues = new Date[items.size()];
 		    double[] doubleValues = new double[items.size()];
 		    int i = 0;
 		    double max = Double.MIN_VALUE;
 		    double min = Double.MAX_VALUE;
-		    double minTime = 0;
-		    double maxTime = 0;
-		    double val = 0.0;
+		    double minTime;
+		    double maxTime;
+		    double val;
 		    while(it.hasNext()){
 		    	item = it.next();
 		    	dateValues[i] = new Date(Integer.valueOf(item.getYear())- 1900, Integer.valueOf(item.getMonth()) - 1, Integer.valueOf(item.getDay()), Integer.valueOf(item.getHour()), Integer.valueOf(item.getMin()));
@@ -275,7 +274,7 @@ public class SimpleLinearChartActivity extends Activity {
 	
 	@Override
   public boolean onCreateOptionsMenu(Menu menu) {
-      MenuItem item = null;
+      MenuItem item;
       super.onCreateOptionsMenu(menu);
       item = menu.add(0, ConstantsAdmin.ACTIVITY_EJECUTAR_CONFIG_CHART,0, R.string.menu_configurar_chart);
       item.setIcon(R.drawable.config_menubar);
@@ -309,7 +308,7 @@ public class SimpleLinearChartActivity extends Activity {
       return super.onMenuItemSelected(featureId, item);
   }
 
-  public void openConfigChart(){
+  private void openConfigChart(){
 	    Intent i = new Intent(this, ConfigChartActivity.class);
 	    i.putExtra(ConstantsAdmin.CHART_SELECCIONADO, String.valueOf(mChart.getId()));
 	    this.startActivityForResult(i, ConstantsAdmin.ACTIVITY_EJECUTAR_CONFIG_CHART);
@@ -333,7 +332,7 @@ public class SimpleLinearChartActivity extends Activity {
 		builder.setSingleChoiceItems(items, -1, new DialogInterface.OnClickListener() {
 		    public void onClick(DialogInterface dialog, int item) {
 	    		Long[] params = new Long[1];
-	    		params[0] = Long.valueOf(1);
+	    		params[0] = 1L;
 	    		selectedFormatImport = item + 1;
 	    		dialog.cancel();
 	    		new ExportCSVTask().execute(params);
@@ -380,8 +379,8 @@ public class SimpleLinearChartActivity extends Activity {
 	    return dataset;
 	 }
 
-	  public void addXYSeries(XYMultipleSeriesDataset dataset, String[] titles, List<double[]> xValues,
-	      List<double[]> yValues, int scale) {
+	  private void addXYSeries(XYMultipleSeriesDataset dataset, String[] titles, List<double[]> xValues,
+							   List<double[]> yValues, int scale) {
 	    int length = titles.length;
 	    for (int i = 0; i < length; i++) {
 	      XYSeries series = new XYSeries(titles[i], scale);
@@ -402,13 +401,13 @@ public class SimpleLinearChartActivity extends Activity {
 	   * @param styles the series point styles
 	   * @return the XY multiple series renderers
 	   */
-	  protected XYMultipleSeriesRenderer buildRenderer(int[] colors, PointStyle[] styles) {
+	  private XYMultipleSeriesRenderer buildRenderer(int[] colors, PointStyle[] styles) {
 	    XYMultipleSeriesRenderer renderer = new XYMultipleSeriesRenderer();
 	    setRenderer(renderer, colors, styles);
 	    return renderer;
 	  }
 
-	  protected void setRenderer(XYMultipleSeriesRenderer renderer, int[] colors, PointStyle[] styles) {
+	  private void setRenderer(XYMultipleSeriesRenderer renderer, int[] colors, PointStyle[] styles) {
 	    renderer.setAxisTitleTextSize(16);
 	    renderer.setChartTitleTextSize(20);
 	    renderer.setLabelsTextSize(15);
@@ -438,9 +437,9 @@ public class SimpleLinearChartActivity extends Activity {
 	   * @param axesColor the axes color
 	   * @param labelsColor the labels color
 	   */
-	  protected void setChartSettings(XYMultipleSeriesRenderer renderer, String title, String xTitle,
-	      String yTitle, double xMin, double xMax, double yMin, double yMax, int axesColor,
-	      int labelsColor) {
+	  private void setChartSettings(XYMultipleSeriesRenderer renderer, String title, String xTitle,
+									String yTitle, double xMin, double xMax, double yMin, double yMax, int axesColor,
+									int labelsColor) {
 	    renderer.setChartTitle(title);
 	    renderer.setXTitle(xTitle);
 	    renderer.setYTitle(yTitle);
@@ -460,8 +459,8 @@ public class SimpleLinearChartActivity extends Activity {
 	   * @param yValues the values for the Y axis
 	   * @return the XY multiple time dataset
 	   */
-	  protected XYMultipleSeriesDataset buildDateDataset(String[] titles, List<Date[]> xValues,
-	      List<double[]> yValues) {
+	  private XYMultipleSeriesDataset buildDateDataset(String[] titles, List<Date[]> xValues,
+													   List<double[]> yValues) {
 	    XYMultipleSeriesDataset dataset = new XYMultipleSeriesDataset();
 	    int length = titles.length;
 	    for (int i = 0; i < length; i++) {
@@ -519,27 +518,29 @@ public class SimpleLinearChartActivity extends Activity {
 	    return renderer;
 	  }
 
-	  /**
-	   * Builds a bar multiple series dataset using the provided values.
-	   * 
-	   * @param titles the series titles
-	   * @param values the values
-	   * @return the XY multiple bar dataset
-	   */
-	  protected XYMultipleSeriesDataset buildBarDataset(String[] titles, List<double[]> values) {
-	    XYMultipleSeriesDataset dataset = new XYMultipleSeriesDataset();
-	    int length = titles.length;
-	    for (int i = 0; i < length; i++) {
-	      CategorySeries series = new CategorySeries(titles[i]);
-	      double[] v = values.get(i);
-	      int seriesLength = v.length;
-	      for (int k = 0; k < seriesLength; k++) {
-	        series.add(v[k]);
-	      }
-	      dataset.addSeries(series.toXYSeries());
-	    }
-	    return dataset;
-	  }
+// --Commented out by Inspection START (14/11/18 19:16):
+//	  /**
+//	   * Builds a bar multiple series dataset using the provided values.
+//	   *
+//	   * @param titles the series titles
+//	   * @param values the values
+//	   * @return the XY multiple bar dataset
+//	   */
+//	  protected XYMultipleSeriesDataset buildBarDataset(String[] titles, List<double[]> values) {
+//	    XYMultipleSeriesDataset dataset = new XYMultipleSeriesDataset();
+//	    int length = titles.length;
+//	    for (int i = 0; i < length; i++) {
+//	      CategorySeries series = new CategorySeries(titles[i]);
+//	      double[] v = values.get(i);
+//	      int seriesLength = v.length;
+//	      for (int k = 0; k < seriesLength; k++) {
+//	        series.add(v[k]);
+//	      }
+//	      dataset.addSeries(series.toXYSeries());
+//	    }
+//	    return dataset;
+//	  }
+// --Commented out by Inspection STOP (14/11/18 19:16)
 
 	  /**
 	   * Builds a bar multiple series renderer to use the provided colors.
@@ -554,11 +555,11 @@ public class SimpleLinearChartActivity extends Activity {
 	    renderer.setLabelsTextSize(15);
 	    renderer.setLegendTextSize(15);
 	    int length = colors.length;
-	    for (int i = 0; i < length; i++) {
-	      SimpleSeriesRenderer r = new SimpleSeriesRenderer();
-	      r.setColor(colors[i]);
-	      renderer.addSeriesRenderer(r);
-	    }
+		  for (int color : colors) {
+			  SimpleSeriesRenderer r = new SimpleSeriesRenderer();
+			  r.setColor(color);
+			  renderer.addSeriesRenderer(r);
+		  }
 	    return renderer;
 	  }
   

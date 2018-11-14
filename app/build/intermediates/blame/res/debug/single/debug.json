@@ -8,12 +8,12 @@
         "source": "/home/andrea/AndroidStudioProjects/KN-Estadisticas-Full/app/src/main/res/drawable-mdpi/import_menubar.png"
     },
     {
-        "merged": "/home/andrea/AndroidStudioProjects/KN-Estadisticas-Full/app/build/intermediates/res/merged/debug/drawable-xhdpi_trash_chart_main.png.flat",
-        "source": "/home/andrea/AndroidStudioProjects/KN-Estadisticas-Full/app/src/main/res/drawable-xhdpi/trash_chart_main.png"
-    },
-    {
         "merged": "/home/andrea/AndroidStudioProjects/KN-Estadisticas-Full/app/build/intermediates/res/merged/debug/layout_row_item.xml.flat",
         "source": "/home/andrea/AndroidStudioProjects/KN-Estadisticas-Full/app/src/main/res/layout/row_item.xml"
+    },
+    {
+        "merged": "/home/andrea/AndroidStudioProjects/KN-Estadisticas-Full/app/build/intermediates/res/merged/debug/drawable-xhdpi_trash_chart_main.png.flat",
+        "source": "/home/andrea/AndroidStudioProjects/KN-Estadisticas-Full/app/src/main/res/drawable-xhdpi/trash_chart_main.png"
     },
     {
         "merged": "/home/andrea/AndroidStudioProjects/KN-Estadisticas-Full/app/build/intermediates/res/merged/debug/drawable-mdpi_about_us_menubar.png.flat",
@@ -92,16 +92,16 @@
         "source": "/home/andrea/AndroidStudioProjects/KN-Estadisticas-Full/app/src/main/res/drawable-ldpi/edit_chart_menubar.png"
     },
     {
-        "merged": "/home/andrea/AndroidStudioProjects/KN-Estadisticas-Full/app/build/intermediates/res/merged/debug/drawable-xhdpi_csv_menbar.png.flat",
-        "source": "/home/andrea/AndroidStudioProjects/KN-Estadisticas-Full/app/src/main/res/drawable-xhdpi/csv_menbar.png"
+        "merged": "/home/andrea/AndroidStudioProjects/KN-Estadisticas-Full/app/build/intermediates/res/merged/debug/drawable-ldpi_icon.png.flat",
+        "source": "/home/andrea/AndroidStudioProjects/KN-Estadisticas-Full/app/src/main/res/drawable-ldpi/icon.png"
     },
     {
         "merged": "/home/andrea/AndroidStudioProjects/KN-Estadisticas-Full/app/build/intermediates/res/merged/debug/drawable-hdpi_about_us_menubar.png.flat",
         "source": "/home/andrea/AndroidStudioProjects/KN-Estadisticas-Full/app/src/main/res/drawable-hdpi/about_us_menubar.png"
     },
     {
-        "merged": "/home/andrea/AndroidStudioProjects/KN-Estadisticas-Full/app/build/intermediates/res/merged/debug/drawable-ldpi_icon.png.flat",
-        "source": "/home/andrea/AndroidStudioProjects/KN-Estadisticas-Full/app/src/main/res/drawable-ldpi/icon.png"
+        "merged": "/home/andrea/AndroidStudioProjects/KN-Estadisticas-Full/app/build/intermediates/res/merged/debug/drawable-xhdpi_csv_menbar.png.flat",
+        "source": "/home/andrea/AndroidStudioProjects/KN-Estadisticas-Full/app/src/main/res/drawable-xhdpi/csv_menbar.png"
     },
     {
         "merged": "/home/andrea/AndroidStudioProjects/KN-Estadisticas-Full/app/build/intermediates/res/merged/debug/drawable-hdpi_setting_chart_main.png.flat",
@@ -148,12 +148,12 @@
         "source": "/home/andrea/AndroidStudioProjects/KN-Estadisticas-Full/app/src/main/res/layout/list_comparar_charts.xml"
     },
     {
-        "merged": "/home/andrea/AndroidStudioProjects/KN-Estadisticas-Full/app/build/intermediates/res/merged/debug/drawable-xhdpi_delete_chart_menubar.png.flat",
-        "source": "/home/andrea/AndroidStudioProjects/KN-Estadisticas-Full/app/src/main/res/drawable-xhdpi/delete_chart_menubar.png"
-    },
-    {
         "merged": "/home/andrea/AndroidStudioProjects/KN-Estadisticas-Full/app/build/intermediates/res/merged/debug/drawable-xhdpi_manage_item.png.flat",
         "source": "/home/andrea/AndroidStudioProjects/KN-Estadisticas-Full/app/src/main/res/drawable-xhdpi/manage_item.png"
+    },
+    {
+        "merged": "/home/andrea/AndroidStudioProjects/KN-Estadisticas-Full/app/build/intermediates/res/merged/debug/drawable-xhdpi_delete_chart_menubar.png.flat",
+        "source": "/home/andrea/AndroidStudioProjects/KN-Estadisticas-Full/app/src/main/res/drawable-xhdpi/delete_chart_menubar.png"
     },
     {
         "merged": "/home/andrea/AndroidStudioProjects/KN-Estadisticas-Full/app/build/intermediates/res/merged/debug/drawable-xhdpi_icon.png.flat",

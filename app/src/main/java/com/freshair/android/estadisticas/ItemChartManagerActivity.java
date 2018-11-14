@@ -34,18 +34,18 @@ import com.freshair.android.estadisticas.utils.ConstantsAdmin;
 public class ItemChartManagerActivity extends ExpandableListActivity {
 	
 	private KNChart mChartSeleccionado = null;
-	List<KNItemChart> myItems = null; 
+	// --Commented out by Inspection (14/11/18 19:16):List<KNItemChart> myItems = null;
 	private final String MONTH = "MONTH";
-	String YEAR = "YEAR";
-	String mMonthSelected = null;
-	String mYearSelected = null;
-	int mGroupSelected = -1;
-	ExpandableListAdapter mAdapter = null;
-    LayoutInflater layoutInflater = null;
-    TextView mNameChart = null;
-    TextView mDescChart = null;
-    Activity me = null;
-    Map<String,Map<String,List<KNItemChart>>> allItems = null;
+	private final String YEAR = "YEAR";
+	private String mMonthSelected = null;
+	private String mYearSelected = null;
+	private int mGroupSelected = -1;
+	private ExpandableListAdapter mAdapter = null;
+    private LayoutInflater layoutInflater = null;
+    private TextView mNameChart = null;
+    private TextView mDescChart = null;
+    private Activity me = null;
+    private Map<String,Map<String,List<KNItemChart>>> allItems = null;
 	private ArrayList<Cursor> allMyCursors = null;
 	
     @Override
@@ -60,19 +60,18 @@ public class ItemChartManagerActivity extends ExpandableListActivity {
     }
     
     private void resetAllMyCursors(){
-    	Cursor cur = null;
-    	Iterator<Cursor> it = allMyCursors.iterator();
-    	while(it.hasNext()){
-    		cur = it.next();
-    		this.stopManagingCursor(cur);
-    	}
-    	allMyCursors = new ArrayList<Cursor>();
+    	Cursor cur;
+		for (Cursor allMyCursor : allMyCursors) {
+			cur = allMyCursor;
+			this.stopManagingCursor(cur);
+		}
+    	allMyCursors = new ArrayList<>();
     }
 	
 	
 	public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        allMyCursors = new ArrayList<Cursor>();
+        allMyCursors = new ArrayList<>();
         this.setContentView(R.layout.items_manager);
         this.registrarWidgets();
         me = this;
@@ -144,28 +143,28 @@ public class ItemChartManagerActivity extends ExpandableListActivity {
     private void recargarLista(){
 
     	List<KNItemChart> items = ConstantsAdmin.obtenerItemsDeChart(mChartSeleccionado, this);
-    	List<Map<String, String>> groupData = new ArrayList<Map<String, String>>();
-        List<List<Map<String, String>>> childData = new ArrayList<List<Map<String, String>>>();
+    	List<Map<String, String>> groupData = new ArrayList<>();
+        List<List<Map<String, String>>> childData = new ArrayList<>();
         Iterator it = items.iterator();
-        KNItemChart item = null;
+        KNItemChart item;
 
-        allItems = new TreeMap<String, Map<String,List<KNItemChart>>>();
-        List<KNItemChart> listTemp = null;
-        Map<String, List<KNItemChart>> map = null;
+        allItems = new TreeMap<>();
+        List<KNItemChart> listTemp;
+        Map<String, List<KNItemChart>> map;
         while(it.hasNext()){
         	item = (KNItemChart) it.next();
-        	listTemp = new ArrayList<KNItemChart>();
+        	listTemp = new ArrayList<>();
         	if (allItems.containsKey(item.getYear())) {
         		listTemp = allItems.get(item.getYear()).get(item.getMonth());
         		if(listTemp == null){
-        			listTemp = new ArrayList();
+        			listTemp = new ArrayList<>();
         		}
         		listTemp.add(item);
         		allItems.get(item.getYear()).put(item.getMonth(), listTemp);
         		
         	} else {
         		listTemp.add(item);
-        		map = new TreeMap<String, List<KNItemChart>>();
+        		map = new TreeMap<>();
         		map.put(item.getMonth(), listTemp);
         		allItems.put(item.getYear(), map);
         	}
@@ -175,15 +174,15 @@ public class ItemChartManagerActivity extends ExpandableListActivity {
               	
         for (String key : allItems.keySet()) {
         	map = allItems.get(key);
-            Map<String, String> curGroupMap = new HashMap<String, String>();
+            Map<String, String> curGroupMap = new HashMap<>();
             groupData.add(curGroupMap);
             curGroupMap.put(YEAR, key);
                  
-            List<Map<String, String>> children = new ArrayList<Map<String, String>>();
+            List<Map<String, String>> children = new ArrayList<>();
             
             for (String month : map.keySet()){
             	listTemp = map.get(month);
-            	Map<String, String> curChildMap = new HashMap<String, String>();
+            	Map<String, String> curChildMap = new HashMap<>();
                 children.add(curChildMap);
                 curChildMap.put(MONTH, month);
                 curChildMap.put(YEAR, key);
@@ -358,7 +357,7 @@ public class ItemChartManagerActivity extends ExpandableListActivity {
     }
     
 	private void guardarChartSeleccionado(Intent intent){
-		String idChartString = null;
+		String idChartString;
 		idChartString = (String)intent.getExtras().get(ConstantsAdmin.CHART_SELECCIONADO);
 		long idChart = Long.valueOf(idChartString);
 		this.recargarChart(idChart);
@@ -371,7 +370,7 @@ public class ItemChartManagerActivity extends ExpandableListActivity {
 	
 	@Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        MenuItem item = null;
+        MenuItem item;
     	super.onCreateOptionsMenu(menu);
         item = menu.add(0, ConstantsAdmin.ACTIVITY_EJECUTAR_DRAW_CHART,0, R.string.menu_dibujar_chart);
         item.setIcon(R.drawable.draw_chart_menubar);
@@ -409,19 +408,19 @@ public class ItemChartManagerActivity extends ExpandableListActivity {
         return super.onMenuItemSelected(featureId, item);
     }
 
-    public void openEditarChart(){
+    private void openEditarChart(){
 	    Intent i = new Intent(this, AltaChartActivity.class);
 	    i.putExtra(ConstantsAdmin.CHART_SELECCIONADO, String.valueOf(mChartSeleccionado.getId()));
 	    this.startActivityForResult(i, ConstantsAdmin.ACTIVITY_EJECUTAR_EDITAR_CHART);
     }
     
-    public void openConfigChart(){
+    private void openConfigChart(){
 	    Intent i = new Intent(this, ConfigChartActivity.class);
 	    i.putExtra(ConstantsAdmin.CHART_SELECCIONADO, String.valueOf(mChartSeleccionado.getId()));
 	    this.startActivityForResult(i, ConstantsAdmin.ACTIVITY_EJECUTAR_CONFIG_CHART);
     }
     
-    public void openChart(){
+    private void openChart(){
     	try {
     		Intent i = new Intent(this, SimpleLinearChartActivity.class);
             i.putExtra(ConstantsAdmin.CHART_SELECCIONADO, String.valueOf(mChartSeleccionado.getId()));
@@ -459,7 +458,7 @@ public class ItemChartManagerActivity extends ExpandableListActivity {
 	}
 
     
-    protected void openAltaItemChart() {
+    private void openAltaItemChart() {
         Intent i = new Intent(this, AltaItemChartActivity.class);
         i.putExtra(ConstantsAdmin.CHART_SELECCIONADO, String.valueOf(mChartSeleccionado.getId()));
         this.startActivityForResult(i, ConstantsAdmin.ACTIVITY_EJECUTAR_ALTA_ITEM_CHART);

@@ -121,7 +121,7 @@ public class KNItemChart {
     }
 
 	public boolean validoDatos(){
-		boolean result = true;
+		boolean result;
 		result = validoValue() && validaFecha() && validaHora();
 		return result;
 	}
@@ -140,7 +140,7 @@ public class KNItemChart {
 	
 	private boolean validaFecha(){
 		boolean result = true;
-		SimpleDateFormat df = null;
+		SimpleDateFormat df;
 		try {
 		    df = new SimpleDateFormat("dd/MM/yyyy", Locale.getDefault());
 		    df.setLenient(false);
@@ -152,8 +152,8 @@ public class KNItemChart {
 	}
 	
 	private boolean validaHora(){
-		int i = 0;
-		boolean result = true;
+		int i;
+		boolean result;
 		try {
 			i = Integer.valueOf(this.getHour());
 			result = i <= 23 && i >= 0 && this.getHour().length() <= 2;

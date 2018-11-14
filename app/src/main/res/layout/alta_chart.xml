@@ -34,8 +34,7 @@
 			android:maxLength="15"
 			android:layout_below="@id/label_nombre_chart"
 			android:layout_marginLeft="5dp"
-	   android:layout_marginStart="5dp"
-	   android:autofillHints="" />
+	   android:layout_marginStart="5dp"/>
 
    
   <EditText android:id="@+id/entryUnidadChart" 
@@ -49,8 +48,7 @@
 			android:layout_marginRight="5dp"
 			android:layout_alignBaseline="@id/entryNombreChart"
 	  android:layout_toEndOf="@id/entryNombreChart"
-	  android:layout_marginEnd="5dp"
-	  android:importantForAutofill="no" />
+	  android:layout_marginEnd="5dp" />
 			
   <TextView android:id="@+id/label_desc_chart"
     android:text="@string/label_descripcion"
@@ -74,8 +72,7 @@
 			android:inputType="textMultiLine"
 			android:gravity="top|start"
 			android:layout_below="@id/label_desc_chart"
-	  android:layout_marginStart="5dp"
-	  android:importantForAutofill="no" />
+	  android:layout_marginStart="5dp"/>
 						
 	<Button android:id="@+id/buttonGuardarChart" 
 			android:layout_marginTop="25dp"

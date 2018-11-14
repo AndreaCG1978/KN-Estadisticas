@@ -23,22 +23,22 @@ import com.freshair.android.estadisticas.utils.ConstantsAdmin;
 public class AltaItemChartActivity extends Activity {
 	
 	private Dialog dialog = null;
-	KNItemChart mItemChartSeleccionado = null;
-	TextView mDate = null;
-	TextView mTime = null;
-	EditText mValue = null;
+	private KNItemChart mItemChartSeleccionado = null;
+	private TextView mDate = null;
+	private TextView mTime = null;
+	private EditText mValue = null;
 	private Button mPickDate;
 	private Button mPickTime;
-	Button btnEditar = null;
+	private Button btnEditar = null;
 	private int mYear;
 	private String mMonth;
 	private String mDay;
-	String mHour = null;
-	String mMin = null;
+	private String mHour = null;
+	private String mMin = null;
 	private String mChartId = null; 
 	
-	static final int DATE_DIALOG_ID = 0;
-	static final int TIME_DIALOG_ID = 1;
+	private static final int DATE_DIALOG_ID = 0;
+	private static final int TIME_DIALOG_ID = 1;
 	
 	public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -74,8 +74,8 @@ public class AltaItemChartActivity extends Activity {
 	}
 	
 	private void configurarDatePicker(){
-		 int month = 0;
-		 int day = 0;
+		 int month;
+		 int day;
 
          mPickDate.setOnClickListener(new View.OnClickListener() {
 	         public void onClick(View v) {
@@ -154,7 +154,7 @@ public class AltaItemChartActivity extends Activity {
             }
     };
     
-    private TimePickerDialog.OnTimeSetListener mTimeSetListener =
+    private final TimePickerDialog.OnTimeSetListener mTimeSetListener =
     	new TimePickerDialog.OnTimeSetListener() {
 			
 			@Override
@@ -175,13 +175,13 @@ public class AltaItemChartActivity extends Activity {
 		};
     
     private void actualizarFecha(){
-    	String fecha = null; 
+    	String fecha;
     	fecha = obtenerFecha();
 		mDate.setText(fecha);
     }
     
     private void actualizarHora(){
-    	String hora = null; 
+    	String hora;
     	hora = obtenerHora();
     	mTime.setText(hora);
     }
@@ -212,7 +212,7 @@ public class AltaItemChartActivity extends Activity {
 	}
  	
 	private void guardarItemChartSeleccionado(Intent intent){
-		String idItemString = null;
+		String idItemString;
 		mChartId = (String)intent.getExtras().get(ConstantsAdmin.CHART_SELECCIONADO);
 		if(intent.hasExtra(ConstantsAdmin.ITEM_CHART_SELECCIONADO)){
 			idItemString = (String)intent.getExtras().get(ConstantsAdmin.ITEM_CHART_SELECCIONADO);
@@ -237,7 +237,7 @@ public class AltaItemChartActivity extends Activity {
 	}
 	
 	private boolean validarEntradaDeDatos(){
-		boolean estaOk = false;
+		boolean estaOk;
 		String value = mValue.getText().toString();
 		String date = mDate.getText().toString();
 		estaOk = !value.equals("") && !date.equals("");

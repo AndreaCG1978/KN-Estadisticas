@@ -76,8 +76,8 @@ public class DataBaseManager {
          
      }
      
-     public long createOrUpdateConfigChart(KNConfigChart config) {
-    	 long returnValue = -1;
+     public void createOrUpdateConfigChart(KNConfigChart config) {
+    //	 long returnValue = -1;
     	 int showGrid = 1;
     	 int showValue = 1;
          ContentValues initialValues = new ContentValues();
@@ -99,48 +99,48 @@ public class DataBaseManager {
          
          try {
         	 if(config.getId() == -1 ){
-        		 returnValue= mDb.insert(ConstantsAdmin.TABLE_CONFIG, null, initialValues);
+        		 mDb.insert(ConstantsAdmin.TABLE_CONFIG, null, initialValues);
         	 }else{
         		 mDb.update(ConstantsAdmin.TABLE_CONFIG, initialValues, ConstantsAdmin.KEY_ROWID + "=" + config.getId() , null);
-        		 returnValue = config.getId();
+
         	 }
          } catch (Exception e) {
 			// TODO: handle exception
 			e.getMessage();
          }
-         return returnValue;
-         
+
      }
      
-     public int removeChart(long idChart){
-    	 return mDb.delete(ConstantsAdmin.TABLE_CHART, ConstantsAdmin.KEY_ROWID + "=" + String.valueOf(idChart), null);
+     public void removeChart(long idChart){
+         mDb.delete(ConstantsAdmin.TABLE_CHART, ConstantsAdmin.KEY_ROWID + "=" + String.valueOf(idChart), null);
      }
      
-     public int removeItemChart(long idItem){
-    	 return mDb.delete(ConstantsAdmin.TABLE_ITEM_CHART, ConstantsAdmin.KEY_ROWID + "=" + String.valueOf(idItem), null);
+     public void removeItemChart(long idItem){
+         mDb.delete(ConstantsAdmin.TABLE_ITEM_CHART, ConstantsAdmin.KEY_ROWID + "=" + String.valueOf(idItem), null);
      }
      
-     public int removeItemsCharts(String idChart, String year){
-    	 return mDb.delete(ConstantsAdmin.TABLE_ITEM_CHART, ConstantsAdmin.KEY_ITEMCHART_CHARTID + " = " + idChart + " AND " + ConstantsAdmin.KEY_ITEMCHART_YEAR + " = " +  year, null);
+     public void removeItemsCharts(String idChart, String year){
+         mDb.delete(ConstantsAdmin.TABLE_ITEM_CHART, ConstantsAdmin.KEY_ITEMCHART_CHARTID + " = " + idChart + " AND " + ConstantsAdmin.KEY_ITEMCHART_YEAR + " = " + year, null);
      }
      
-     public int removeItemsCharts(String idChart, String year, String month){
-    	 int val = -1;
-    	 val = mDb.delete(ConstantsAdmin.TABLE_ITEM_CHART, ConstantsAdmin.KEY_ITEMCHART_CHARTID + " = '" + idChart + "' AND " + ConstantsAdmin.KEY_ITEMCHART_YEAR + " = '" +  year + "' AND " + ConstantsAdmin.KEY_ITEMCHART_MONTH + " = '" +  month + "'", null);
-    	 return val;
-     } 
-     
-     public long tablaChartSize(){
-//    	 Cursor cur = null;
-    	 long result = 0;
-    	 SQLiteStatement s = mDb.compileStatement(DataBaseHelper.SIZE_CHART);
-    	 result = s.simpleQueryForLong();
-    	 return result;
+     public void removeItemsCharts(String idChart, String year, String month){
+    	// int val = -1;
+    	 mDb.delete(ConstantsAdmin.TABLE_ITEM_CHART, ConstantsAdmin.KEY_ITEMCHART_CHARTID + " = '" + idChart + "' AND " + ConstantsAdmin.KEY_ITEMCHART_YEAR + " = '" +  year + "' AND " + ConstantsAdmin.KEY_ITEMCHART_MONTH + " = '" +  month + "'", null);
      }
      
+// --Commented out by Inspection START (14/11/18 19:15):
+//     public long tablaChartSize(){
+////    	 Cursor cur = null;
+//    	 long result = 0;
+//    	 SQLiteStatement s = mDb.compileStatement(DataBaseHelper.SIZE_CHART);
+//    	 result = s.simpleQueryForLong();
+//    	 return result;
+//     }
+// --Commented out by Inspection STOP (14/11/18 19:15)
+
      public long tablaConfigSize(){
 //    	 Cursor cur = null;
-    	 long result = 0;
+    	 long result;
     	 SQLiteStatement s = mDb.compileStatement(DataBaseHelper.SIZE_CONFIG);
     	 result = s.simpleQueryForLong();
     	 return result;
@@ -155,8 +155,8 @@ public class DataBaseManager {
     	 return result;
      }
      
-     public long createOrUpdateItemChart(KNItemChart item){
-    	 long returnValue = -1;
+     public void createOrUpdateItemChart(KNItemChart item){
+    	// long returnValue = -1;
     	 ContentValues initialValues = new ContentValues();
          initialValues.put(ConstantsAdmin.KEY_ITEMCHART_DAY, item.getDay());
          initialValues.put(ConstantsAdmin.KEY_ITEMCHART_MONTH, item.getMonth());
@@ -168,17 +168,16 @@ public class DataBaseManager {
 
          try {
         	 if(item.getId() == -1 ){
-        		 returnValue= mDb.insert(ConstantsAdmin.TABLE_ITEM_CHART, null, initialValues);
+        		 mDb.insert(ConstantsAdmin.TABLE_ITEM_CHART, null, initialValues);
         	 }else{
         		 mDb.update(ConstantsAdmin.TABLE_ITEM_CHART, initialValues, ConstantsAdmin.KEY_ROWID + "=" + item.getId() , null);
-        		 returnValue = item.getId();
+        		 
         	 }
          } catch (Exception e) {
 			// TODO: handle exception
 			e.getMessage();
          }
-         return returnValue;
-         
+
      }
      
      public void createBD(){

@@ -24,7 +24,6 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.SimpleExpandableListAdapter;
 import android.widget.TextView;
-import android.widget.Toolbar;
 
 import com.freshair.android.estadisticas.dtos.KNChart;
 import com.freshair.android.estadisticas.utils.ConstantsAdmin;
@@ -33,8 +32,8 @@ public class MainActivity extends ExpandableListActivity {
     private static final String NAME = "NAME";
 
     private LayoutInflater layoutInflater = null;
-    ArrayList<KNChart> myCharts = null;
-    int mGroupSelected = -1;
+    private ArrayList<KNChart> myCharts = null;
+    private int mGroupSelected = -1;
 	private ArrayList<Cursor> allMyCursors = null;
 	private MainActivity me = null;
 	private int selectedFormatImport = -1;
@@ -49,7 +48,7 @@ public class MainActivity extends ExpandableListActivity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         me = this;
-        allMyCursors = new ArrayList<Cursor>();
+        allMyCursors = new ArrayList<>();
         this.setContentView(R.layout.main);
         me = this;
         layoutInflater = (LayoutInflater) this.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
@@ -74,13 +73,12 @@ public class MainActivity extends ExpandableListActivity {
     
     
     private void resetAllMyCursors(){
-    	Cursor cur = null;
-    	Iterator<Cursor> it = allMyCursors.iterator();
-    	while(it.hasNext()){
-    		cur = it.next();
-    		this.stopManagingCursor(cur);
-    	}
-    	allMyCursors = new ArrayList<Cursor>();
+    	Cursor cur;
+        for (Cursor allMyCursor : allMyCursors) {
+            cur = allMyCursor;
+            this.stopManagingCursor(cur);
+        }
+    	allMyCursors = new ArrayList<>();
     }
 	
     
@@ -112,7 +110,7 @@ public class MainActivity extends ExpandableListActivity {
 
     @Override
 	public boolean onCreateOptionsMenu(Menu menu){
-        MenuItem item = null;
+        MenuItem item;
 
 
         super.onCreateOptionsMenu(menu);
@@ -134,7 +132,7 @@ public class MainActivity extends ExpandableListActivity {
 
     @Override
     public void onCreateContextMenu(ContextMenu menu, View v, ContextMenu.ContextMenuInfo menuInfo) {
-        MenuItem item = null;
+        MenuItem item;
 
 
         super.onCreateContextMenu(menu, v, menuInfo);
@@ -221,7 +219,7 @@ public class MainActivity extends ExpandableListActivity {
 		builder.setSingleChoiceItems(items, -1, new DialogInterface.OnClickListener() {
 		    public void onClick(DialogInterface dialog, int item) {
 	    		Long[] params = new Long[1];
-	    		params[0] = Long.valueOf(1);
+	    		params[0] = 1L;
 	    		selectedFormatImport = item + 1;
 	    		dialog.cancel();
 	    		new ImportCSVTask().execute(params);
@@ -255,22 +253,22 @@ public class MainActivity extends ExpandableListActivity {
 	}
     
     private void recargarLista(){
-        List<Map<String, String>> groupData = new ArrayList<Map<String, String>>();
-        List<List<Map<String, String>>> childData = new ArrayList<List<Map<String, String>>>();
+        List<Map<String, String>> groupData = new ArrayList<>();
+        List<List<Map<String, String>>> childData = new ArrayList<>();
         myCharts = ConstantsAdmin.obtenerAllChart(this);
         Iterator<KNChart> it = myCharts.iterator();
-        KNChart chart = null;
-        Map<String, String> curGroupMap = null;
-        List<Map<String, String>> children = null;
-        Map<String, String> curChildMap = null;
+        KNChart chart;
+        Map<String, String> curGroupMap;
+        List<Map<String, String>> children;
+        Map<String, String> curChildMap;
         while(it.hasNext()){
         	chart = it.next();
-        	curGroupMap = new HashMap<String, String>();
+        	curGroupMap = new HashMap<>();
         	groupData.add(curGroupMap);
         	curGroupMap.put(NAME, chart.getName());
         	
-            curChildMap = new HashMap<String, String>();
-            children = new ArrayList<Map<String, String>>();
+            curChildMap = new HashMap<>();
+            children = new ArrayList<>();
             children.add(curChildMap);
             childData.add(children);
         }
@@ -288,9 +286,9 @@ public class MainActivity extends ExpandableListActivity {
             ) {
                 @Override
                 public View getChildView(int groupPosition, int childPosition, boolean isLastChild, View convertView, ViewGroup parent) {
-                    KNChart chartSelected = null;
+                    KNChart chartSelected;
                     final int grpPos = groupPosition;
-                    TextView desc = null;
+                    TextView desc;
                 	final View v = super.getChildView(groupPosition, childPosition, isLastChild, convertView, parent);
                 	chartSelected = myCharts.get(groupPosition);
                 	desc = v.findViewById(R.id.textDesc);
@@ -357,7 +355,7 @@ public class MainActivity extends ExpandableListActivity {
                 public View getGroupView(int groupPosition, boolean isExpanded, View convertView, ViewGroup parent) {
                 	final View v = super.getGroupView(groupPosition, isExpanded, convertView, parent);
                 	TextView text = v.findViewById(R.id.textName);
-                   	KNChart chartSelected = null;
+                   	KNChart chartSelected;
                 	chartSelected = myCharts.get(groupPosition);
                 	text.setText(chartSelected.getName().toUpperCase() + " - (" + chartSelected.getUnit() + ")");
                 	return v;
@@ -371,14 +369,14 @@ public class MainActivity extends ExpandableListActivity {
    	
     }
     
-    public void openConfigChart(int chrtPos){
+    private void openConfigChart(int chrtPos){
     	KNChart chrt = myCharts.get(chrtPos);
 	    Intent i = new Intent(this, ConfigChartActivity.class);
 	    i.putExtra(ConstantsAdmin.CHART_SELECCIONADO, String.valueOf(chrt.getId()));
 	    this.startActivityForResult(i, ConstantsAdmin.ACTIVITY_EJECUTAR_CONFIG_CHART);
     }
     
-    public void openEditarChart(int chrtPos){
+    private void openEditarChart(int chrtPos){
     	KNChart chrt = myCharts.get(chrtPos);
 	    Intent i = new Intent(this, AltaChartActivity.class);
 	    i.putExtra(ConstantsAdmin.CHART_SELECCIONADO, String.valueOf(chrt.getId()));
@@ -386,7 +384,7 @@ public class MainActivity extends ExpandableListActivity {
 	    this.startActivityForResult(i, ConstantsAdmin.ACTIVITY_EJECUTAR_EDITAR_CHART);
     }
     
-    public void openChart(int chrtPos){
+    private void openChart(int chrtPos){
        	KNChart chrt = myCharts.get(chrtPos);
         Intent i = new Intent(this, SimpleLinearChartActivity.class);
         i.putExtra(ConstantsAdmin.CHART_SELECCIONADO, String.valueOf(chrt.getId()));
@@ -396,7 +394,7 @@ public class MainActivity extends ExpandableListActivity {
     
    
     
-    protected void openManagerItemChart(int chrtPos) {
+    private void openManagerItemChart(int chrtPos) {
     	KNChart chrt = myCharts.get(chrtPos);
         Intent i = new Intent(this, ItemChartManagerActivity.class);
         i.putExtra(ConstantsAdmin.CHART_SELECCIONADO, String.valueOf(chrt.getId()));
@@ -404,7 +402,7 @@ public class MainActivity extends ExpandableListActivity {
     }
         
     
-    protected void openAltaChart() {
+    private void openAltaChart() {
         Intent i = new Intent(this, AltaChartActivity.class);
         this.startActivityForResult(i, ConstantsAdmin.ACTIVITY_EJECUTAR_ALTA_CHART);
     }

@@ -40,7 +40,9 @@
 	    android:layout_marginRight="8dp"
             android:layout_toEndOf="@id/labelYear"
             android:paddingStart="6dp"
-            android:layout_marginEnd="8dp" />
+            android:layout_marginEnd="8dp"
+			android:paddingRight="6dp"
+			android:paddingEnd="6dp"/>
 	    
 	    
 	    <TextView android:id="@+id/cantMesesRegistrados"

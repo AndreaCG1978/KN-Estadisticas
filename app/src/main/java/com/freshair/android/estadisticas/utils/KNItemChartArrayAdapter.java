@@ -16,8 +16,8 @@ import com.freshair.android.estadisticas.dtos.KNItemChart;
 
 public class KNItemChartArrayAdapter extends ArrayAdapter<KNItemChart> {
 	
-	private LayoutInflater mInflater = null;
-	ItemPerMonthActivity myContext = null;
+	private LayoutInflater mInflater;
+	private ItemPerMonthActivity myContext;
 
 	
 	public KNItemChartArrayAdapter(Context context, int textViewResourceId,
@@ -34,7 +34,7 @@ public class KNItemChartArrayAdapter extends ArrayAdapter<KNItemChart> {
 		//View v = super.getView(position, convertView, parent); 
 		View v = null;
 		final int pos = position;
-		KNItemChart item = null;
+		KNItemChart item;
 		try {
 			v = mInflater.inflate(R.layout.row_item, parent, false);
 		} catch (Exception e) {

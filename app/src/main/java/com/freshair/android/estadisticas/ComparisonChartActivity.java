@@ -40,12 +40,7 @@ import com.freshair.android.estadisticas.utils.ConstantsAdmin;
  * Sales comparison demo chart.
  */
 public class ComparisonChartActivity extends Activity {
-  /**
-   * Returns the chart name.
-   * 
-   * @return the chart name
-   */
-	
+
 	
 	private List<Integer> myColors = null;
 	private boolean sobrePuestos = false;
@@ -64,13 +59,12 @@ public class ComparisonChartActivity extends Activity {
     }
     
     private void resetAllMyCursors(){
-    	Cursor cur = null;
-    	Iterator<Cursor> it = allMyCursors.iterator();
-    	while(it.hasNext()){
-    		cur = it.next();
-    		this.stopManagingCursor(cur);
-    	}
-    	allMyCursors = new ArrayList<Cursor>();
+    	Cursor cur;
+		for (Cursor allMyCursor : allMyCursors) {
+			cur = allMyCursor;
+			this.stopManagingCursor(cur);
+		}
+    	allMyCursors = new ArrayList<>();
     }
     
     
@@ -128,75 +122,75 @@ public class ComparisonChartActivity extends Activity {
 	  ConstantsAdmin.exportComparison(this, mChartView);
   }
   
-  public void openConfigChart(){
+  private void openConfigChart(){
 	    Intent i = new Intent(this, ConfigChartActivity.class);
 	    this.startActivityForResult(i, ConstantsAdmin.ACTIVITY_EJECUTAR_CONFIG_CHART);
 }
   
   private void drawChart() {
-	    KNChart chrt = null;
+	    KNChart chrt;
 	    KNConfigChart config = ConstantsAdmin.obtenerConfigChart(this);
-	    KNItemChart item = null;
-	    List<KNItemChart> items = null;
+	    KNItemChart item;
+	    List<KNItemChart> items;
 	    String[] titles = new String[ConstantsAdmin.chartsParaComparar.size()];
 	    List<double[]> x = new ArrayList<double[]>();
 	    List<Date[]> dates = new ArrayList<Date[]>();
 	    List<double[]> values = new ArrayList<double[]>();
-	    int length = titles.length;
+	    int length;
 	    double max = Double.MIN_VALUE;
 	    double min = Double.MAX_VALUE;
 	    double minX = Long.MAX_VALUE;
 	    double maxX = Long.MIN_VALUE;
-	    double val = 0;
-	    double valX = 0;
+	    double val;
+	    double valX;
     	int a = 0;
-    	String unitString = "";
+    	StringBuilder unitString = new StringBuilder();
 	    int[] colors = new int[ConstantsAdmin.chartsParaComparar.size()]; //{ Color.BLUE, Color.GREEN };
 	    PointStyle[] styles = new PointStyle[ConstantsAdmin.chartsParaComparar.size()]; //{ PointStyle.POINT, PointStyle.POINT };
-    	for (Iterator<KNChart> iterator = ConstantsAdmin.chartsParaComparar.iterator(); iterator.hasNext();) {
-    		chrt = iterator.next();
-    		colors[a] = myColors.get(a);
-    		titles[a] = chrt.getName();
-    		unitString = unitString + "-" + chrt.getUnit();
-    		styles[a] = ConstantsAdmin.tiposPuntos[Integer.valueOf(config.getPoint())];
-			items = ConstantsAdmin.obtenerItemsDeChart(chrt, this);
-			if(!sobrePuestos){
-				dates.add(new Date[items.size()]);
-			}else{
-				x.add(new double[items.size()]);
-			}
-	    	values.add(new double[items.size()]);
-	    	for (int k = 0; k < items.size(); k++) {
-	    		item = items.get(k);
-	    		if(!sobrePuestos){
-		    		dates.get(a)[k] = new Date(Integer.valueOf(item.getYear())- 1900, Integer.valueOf(item.getMonth()) - 1, Integer.valueOf(item.getDay()), Integer.valueOf(item.getHour()), Integer.valueOf(item.getMin()));
-		    		valX = dates.get(a)[k].getTime();
-		    		
-	    		}else{
-	    			x.get(a)[k] = k + 1;
-	    			valX = x.get(a)[k];
-	    		}
-	    		if(maxX < valX){
-	    			maxX = valX;
-	        	}
-	        	if(minX > valX){
-	        		minX = valX;
-	        	}
-	    		val = Double.valueOf(item.getValue());
-	    		values.get(a)[k] = val;
-	        	if(max < val){
-	        		max = val;
-	        	}
-	        	if(min > val){
-	        		min = val;
-	        	}
-			}
-	    	a++;
-		}
+	  for (KNChart aChartsParaComparar : ConstantsAdmin.chartsParaComparar) {
+		  chrt = aChartsParaComparar;
+		  colors[a] = myColors.get(a);
+		  titles[a] = chrt.getName();
+		  unitString.append("-").append(chrt.getUnit());
+		  styles[a] = ConstantsAdmin.tiposPuntos[Integer.valueOf(config.getPoint())];
+		  items = ConstantsAdmin.obtenerItemsDeChart(chrt, this);
+		  if (!sobrePuestos) {
+			  dates.add(new Date[items.size()]);
+		  } else {
+			  x.add(new double[items.size()]);
+		  }
+		  values.add(new double[items.size()]);
+		  for (int k = 0; k < items.size(); k++) {
+			  item = items.get(k);
+			  if (!sobrePuestos) {
+				  dates.get(a)[k] = new Date(Integer.valueOf(item.getYear()) - 1900, Integer.valueOf(item.getMonth()) - 1, Integer.valueOf(item.getDay()), Integer.valueOf(item.getHour()), Integer.valueOf(item.getMin()));
+				  valX = dates.get(a)[k].getTime();
+
+			  } else {
+				  x.get(a)[k] = k + 1;
+				  valX = x.get(a)[k];
+			  }
+			  if (maxX < valX) {
+				  maxX = valX;
+			  }
+			  if (minX > valX) {
+				  minX = valX;
+			  }
+			  val = Double.valueOf(item.getValue());
+			  values.get(a)[k] = val;
+			  if (max < val) {
+				  max = val;
+			  }
+			  if (min > val) {
+				  min = val;
+			  }
+		  }
+		  a++;
+	  }
 
 	    XYMultipleSeriesRenderer renderer = buildRenderer(colors, styles);
     	String labelX= "";
-	    setChartSettings(renderer, this.getString(R.string.label_comparacion), labelX, unitString, minX,
+	    setChartSettings(renderer, this.getString(R.string.label_comparacion), labelX, unitString.toString(), minX,
 	        maxX, min, max, Integer.valueOf(config.getLabel()),  Integer.valueOf(config.getLabel()));
 	    this.configurarPropiedadesRender(renderer, config);
 	    renderer.setApplyBackgroundColor(true);
@@ -238,7 +232,7 @@ public class ComparisonChartActivity extends Activity {
   
 	@Override
 	  public boolean onCreateOptionsMenu(Menu menu) {
-	      MenuItem item = null;
+	      MenuItem item;
 	      super.onCreateOptionsMenu(menu);
 	      item = menu.add(0, ConstantsAdmin.ACTIVITY_EJECUTAR_CONFIG_CHART,0, R.string.menu_configurar_chart);
 	      item.setIcon(R.drawable.config_menubar);
@@ -288,14 +282,14 @@ public class ComparisonChartActivity extends Activity {
 
   }
   
-	 protected XYMultipleSeriesDataset buildDataset(String[] titles, List<double[]> xValues, List<double[]> yValues) {
+	 private XYMultipleSeriesDataset buildDataset(String[] titles, List<double[]> xValues, List<double[]> yValues) {
 		    XYMultipleSeriesDataset dataset = new XYMultipleSeriesDataset();
 		    addXYSeries(dataset, titles, xValues, yValues, 0);
 		    return dataset;
 	 }
 
-		  public void addXYSeries(XYMultipleSeriesDataset dataset, String[] titles, List<double[]> xValues,
-		      List<double[]> yValues, int scale) {
+		  private void addXYSeries(XYMultipleSeriesDataset dataset, String[] titles, List<double[]> xValues,
+                                   List<double[]> yValues, int scale) {
 			  int length = titles.length;
 			  for (int i = 0; i < length; i++) {
 			      XYSeries series = new XYSeries(titles[i], scale);
@@ -316,13 +310,13 @@ public class ComparisonChartActivity extends Activity {
 		   * @param styles the series point styles
 		   * @return the XY multiple series renderers
 		   */
-		  protected XYMultipleSeriesRenderer buildRenderer(int[] colors, PointStyle[] styles) {
+          private XYMultipleSeriesRenderer buildRenderer(int[] colors, PointStyle[] styles) {
 		    XYMultipleSeriesRenderer renderer = new XYMultipleSeriesRenderer();
 		    setRenderer(renderer, colors, styles);
 		    return renderer;
 		  }
 
-		  protected void setRenderer(XYMultipleSeriesRenderer renderer, int[] colors, PointStyle[] styles) {
+		  private void setRenderer(XYMultipleSeriesRenderer renderer, int[] colors, PointStyle[] styles) {
 		    renderer.setAxisTitleTextSize(16);
 		    renderer.setChartTitleTextSize(20);
 		    renderer.setLabelsTextSize(15);
@@ -352,9 +346,9 @@ public class ComparisonChartActivity extends Activity {
 		   * @param axesColor the axes color
 		   * @param labelsColor the labels color
 		   */
-		  protected void setChartSettings(XYMultipleSeriesRenderer renderer, String title, String xTitle,
-		      String yTitle, double xMin, double xMax, double yMin, double yMax, int axesColor,
-		      int labelsColor) {
+          private void setChartSettings(XYMultipleSeriesRenderer renderer, String title, String xTitle,
+                                        String yTitle, double xMin, double xMax, double yMin, double yMax, int axesColor,
+                                        int labelsColor) {
 		    renderer.setChartTitle(title);
 		    renderer.setXTitle(xTitle);
 		    renderer.setYTitle(yTitle);
@@ -374,8 +368,8 @@ public class ComparisonChartActivity extends Activity {
 		   * @param yValues the values for the Y axis
 		   * @return the XY multiple time dataset
 		   */
-		  protected XYMultipleSeriesDataset buildDateDataset(String[] titles, List<Date[]> xValues,
-		      List<double[]> yValues) {
+          private XYMultipleSeriesDataset buildDateDataset(String[] titles, List<Date[]> xValues,
+                                                           List<double[]> yValues) {
 		    XYMultipleSeriesDataset dataset = new XYMultipleSeriesDataset();
 		    int length = titles.length;
 		    for (int i = 0; i < length; i++) {
@@ -439,27 +433,29 @@ public class ComparisonChartActivity extends Activity {
 		    return renderer;
 		  }
 
-		  /**
-		   * Builds a bar multiple series dataset using the provided values.
-		   * 
-		   * @param titles the series titles
-		   * @param values the values
-		   * @return the XY multiple bar dataset
-		   */
-		  protected XYMultipleSeriesDataset buildBarDataset(String[] titles, List<double[]> values) {
-		    XYMultipleSeriesDataset dataset = new XYMultipleSeriesDataset();
-		    int length = titles.length;
-		    for (int i = 0; i < length; i++) {
-		      CategorySeries series = new CategorySeries(titles[i]);
-		      double[] v = values.get(i);
-		      int seriesLength = v.length;
-		      for (int k = 0; k < seriesLength; k++) {
-		        series.add(v[k]);
-		      }
-		      dataset.addSeries(series.toXYSeries());
-		    }
-		    return dataset;
-		  }
+// --Commented out by Inspection START (14/11/18 19:14):
+//		  /**
+//		   * Builds a bar multiple series dataset using the provided values.
+//		   *
+//		   * @param titles the series titles
+//		   * @param values the values
+//		   * @return the XY multiple bar dataset
+//		   */
+//		  protected XYMultipleSeriesDataset buildBarDataset(String[] titles, List<double[]> values) {
+//		    XYMultipleSeriesDataset dataset = new XYMultipleSeriesDataset();
+//		    int length = titles.length;
+//		    for (int i = 0; i < length; i++) {
+//		      CategorySeries series = new CategorySeries(titles[i]);
+//		      double[] v = values.get(i);
+//		      int seriesLength = v.length;
+//		      for (int k = 0; k < seriesLength; k++) {
+//		        series.add(v[k]);
+//		      }
+//		      dataset.addSeries(series.toXYSeries());
+//		    }
+//		    return dataset;
+//		  }
+// --Commented out by Inspection STOP (14/11/18 19:14)
 
 		  /**
 		   * Builds a bar multiple series renderer to use the provided colors.
@@ -474,11 +470,11 @@ public class ComparisonChartActivity extends Activity {
 		    renderer.setLabelsTextSize(15);
 		    renderer.setLegendTextSize(15);
 		    int length = colors.length;
-		    for (int i = 0; i < length; i++) {
-		      SimpleSeriesRenderer r = new SimpleSeriesRenderer();
-		      r.setColor(colors[i]);
-		      renderer.addSeriesRenderer(r);
-		    }
+			  for (int color : colors) {
+				  SimpleSeriesRenderer r = new SimpleSeriesRenderer();
+				  r.setColor(color);
+				  renderer.addSeriesRenderer(r);
+			  }
 		    return renderer;
 		  }
 	  

@@ -23,10 +23,10 @@ import com.freshair.android.estadisticas.utils.ConstantsAdmin;
 
 public class ListadoCompararChartsActivity extends ListActivity {
 	
-	private List<Boolean> posSelected = new ArrayList<Boolean>();
+	private List<Boolean> posSelected = new ArrayList<>();
 	
-	String tipoCompSelected = null;
-	int cantSeleccionados = 0;
+	// --Commented out by Inspection (14/11/18 19:16):String tipoCompSelected = null;
+	private int cantSeleccionados = 0;
 	private ArrayList<Cursor> allMyCursors = null;
 	
     @Override
@@ -41,19 +41,18 @@ public class ListadoCompararChartsActivity extends ListActivity {
     }
     
     private void resetAllMyCursors(){
-    	Cursor cur = null;
-    	Iterator<Cursor> it = allMyCursors.iterator();
-    	while(it.hasNext()){
-    		cur = it.next();
-    		this.stopManagingCursor(cur);
-    	}
-    	allMyCursors = new ArrayList<Cursor>();
+    	Cursor cur;
+		for (Cursor allMyCursor : allMyCursors) {
+			cur = allMyCursor;
+			this.stopManagingCursor(cur);
+		}
+    	allMyCursors = new ArrayList<>();
     }
 	
 	
 	public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        allMyCursors = new ArrayList<Cursor>();
+        allMyCursors = new ArrayList<>();
         this.setContentView(R.layout.list_comparar_charts);
         this.configurarList(getListView());    
         this.configurarWidgets();
@@ -78,7 +77,7 @@ public class ListadoCompararChartsActivity extends ListActivity {
 
 	@Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        MenuItem item = null;
+        MenuItem item;
     	super.onCreateOptionsMenu(menu);
         item = menu.add(0, ConstantsAdmin.ACTIVITY_EJECUTAR_CONFIG_COMPARE_CHART,0, R.string.menu_configuracion_comparacion);
         item.setIcon(R.drawable.config_menubar);
@@ -106,7 +105,7 @@ public class ListadoCompararChartsActivity extends ListActivity {
 		List<KNChart> charts = ConstantsAdmin.obtenerAllChart(this);
 		this.filtrarChartsSinItems(charts);
 		if(charts.size() > 1){
-			posSelected = new ArrayList<Boolean>();
+			posSelected = new ArrayList<>();
 	        listView.setItemsCanFocus(false);
 	        listView.setChoiceMode(ListView.CHOICE_MODE_MULTIPLE);
 	        listView.setFastScrollEnabled(true);
@@ -129,8 +128,8 @@ public class ListadoCompararChartsActivity extends ListActivity {
 	
 	private void filtrarChartsSinItems(List<KNChart> charts){
 		Iterator<KNChart> it = charts.iterator();
-        List<KNItemChart> items = null;
-		KNChart chrt = null;
+        List<KNItemChart> items;
+		KNChart chrt;
 		while(it.hasNext()){
 			chrt = it.next();
 			items = ConstantsAdmin.obtenerItemsDeChart(chrt, this);
@@ -141,10 +140,10 @@ public class ListadoCompararChartsActivity extends ListActivity {
 	}
 	
 	private List<KNChart> obtenerChartsSeleccionados(){
-		List<KNChart> result = null;
-		result = new ArrayList<KNChart>();
+		List<KNChart> result;
+		result = new ArrayList<>();
 		Iterator<Boolean> it = posSelected.iterator();
-		Boolean val = null;
+		Boolean val;
 		int i = 0;
 		while(it.hasNext()){
 			val = it.next();
@@ -199,7 +198,7 @@ public class ListadoCompararChartsActivity extends ListActivity {
 	
     protected void onListItemClick(ListView l, View v, int position, long id) {
         super.onListItemClick(l, v, position, id);
-        boolean val = false;
+        boolean val;
         val = posSelected.get(position);
         val = !val;
         if(!val){

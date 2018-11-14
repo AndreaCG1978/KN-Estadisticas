@@ -10,14 +10,14 @@ public class KNChart {
 	private String name = null;
 	private String description = null;
 	private String unit = null;
-	private String pointStyle = null;
-	private String lineColor = null;
-	private String labelColor = null;
-	private String gridColor = null;
-	private String backgroundColor = null;
-	private String formatTime = null;
-	private boolean showGrid = true;
-	private boolean showValue = true;
+	private String pointStyle;
+	private String lineColor;
+	private String labelColor;
+	private String gridColor;
+	private String backgroundColor;
+	private String formatTime;
+	private boolean showGrid;
+	private boolean showValue;
 	
 	public boolean isShowGrid() {
 		return showGrid;

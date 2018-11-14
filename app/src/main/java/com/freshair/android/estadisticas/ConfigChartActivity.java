@@ -29,33 +29,30 @@ public class ConfigChartActivity extends Activity {
    	
 	private KNChart mChartSeleccionado = null;
 	private KNConfigChart mConfig = null;
-	
-	ConfigChartActivity me = null;
-	int mColorSeleccionadoBackground = 0;
-	int mColorSeleccionadoLine = 0;
-	int mColorSeleccionadoGrid = 0;
-	int mColorSeleccionadoLabels = 0;
-	int mPointSelected = -1;
-	int mTimeSelected = -1;
 
-	Button labelBackground = null;
-	Button labelLine = null;
-	Button labelGrid = null;
-	Button labelLabels = null;
-	
-	CheckBox checkShowGrid = null;
-	CheckBox checkShowValues = null;
-	
+	private int mColorSeleccionadoBackground = 0;
+	private int mColorSeleccionadoLine = 0;
+	private int mColorSeleccionadoGrid = 0;
+	private int mColorSeleccionadoLabels = 0;
+	private int mPointSelected = -1;
+	private int mTimeSelected = -1;
 
-	ArrayAdapter<String> stylePointAdapter = null;
-	ArrayAdapter<String> timeFormatAdapter = null;
-	Spinner stylePointSpinner = null;
-	Spinner timeFormatSpinner = null;
+	private Button labelBackground = null;
+	private Button labelLine = null;
+	private Button labelGrid = null;
+	private Button labelLabels = null;
 	
-	static final int COLOR_BACKGROUND_DIALOG_ID = 0;
-	static final int COLOR_LINE_DIALOG_ID = 1;
-	static final int COLOR_GRID_DIALOG_ID = 2;
-	static final int COLOR_LABELS_DIALOG_ID = 3;
+	private CheckBox checkShowGrid = null;
+	private CheckBox checkShowValues = null;
+
+
+	private Spinner stylePointSpinner = null;
+	private Spinner timeFormatSpinner = null;
+	
+	private static final int COLOR_BACKGROUND_DIALOG_ID = 0;
+	private static final int COLOR_LINE_DIALOG_ID = 1;
+	private static final int COLOR_GRID_DIALOG_ID = 2;
+	private static final int COLOR_LABELS_DIALOG_ID = 3;
 	private ArrayList<Cursor> allMyCursors = null;
 	
     @Override
@@ -70,13 +67,12 @@ public class ConfigChartActivity extends Activity {
     }
     
     private void resetAllMyCursors(){
-    	Cursor cur = null;
-    	Iterator<Cursor> it = allMyCursors.iterator();
-    	while(it.hasNext()){
-    		cur = it.next();
-    		this.stopManagingCursor(cur);
-    	}
-    	allMyCursors = new ArrayList<Cursor>();
+    	Cursor cur;
+		for (Cursor allMyCursor : allMyCursors) {
+			cur = allMyCursor;
+			this.stopManagingCursor(cur);
+		}
+    	allMyCursors = new ArrayList<>();
     }
 	
 
@@ -84,8 +80,8 @@ public class ConfigChartActivity extends Activity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        allMyCursors = new ArrayList<Cursor>();
-        me = this;
+        allMyCursors = new ArrayList<>();
+		ConfigChartActivity me = this;
        	this.setContentView(R.layout.chart_config);
         this.registrarWidgets();
         this.guardarChartSeleccionado(this.getIntent());
@@ -159,16 +155,16 @@ public class ConfigChartActivity extends Activity {
     }
     
     private void configurarSpinnerStylePoint(){
-    	List<String> stylePoints = new ArrayList<String>();
+    	List<String> stylePoints = new ArrayList<>();
     	stylePoints.add(this.getString(R.string.label_circulo));
         stylePoints.add(this.getString(R.string.label_diamante));
         stylePoints.add(this.getString(R.string.label_punto));
         stylePoints.add(this.getString(R.string.label_cuadrado));
         stylePoints.add(this.getString(R.string.label_triangulo));
         stylePoints.add(this.getString(R.string.label_x));
-        
-        
-    	stylePointAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_dropdown_item_1line, stylePoints);
+
+
+		ArrayAdapter<String> stylePointAdapter = new ArrayAdapter<>(this, android.R.layout.simple_dropdown_item_1line, stylePoints);
     	stylePointSpinner.setAdapter(stylePointAdapter);
     	
     	OnItemSelectedListener spinnerListener = new seleccionSpinnerStylePointListener();
@@ -179,8 +175,8 @@ public class ConfigChartActivity extends Activity {
     }
     
     private void configurarSpinnerTimeFormat(){
-    	List<String> timeFormats = new ArrayList<String>();
-    	String tf = null;
+    	List<String> timeFormats = new ArrayList<>();
+    	String tf;
     	int j = -1;
     	for (int i = 0; i < ConstantsAdmin.formatTime.length; i++) {
     		tf = ConstantsAdmin.formatTime[i];
@@ -191,7 +187,7 @@ public class ConfigChartActivity extends Activity {
     	timeFormats.add(getString(R.string.label_fecha_hora).toUpperCase());
     	timeFormats.add(getString(R.string.label_fecha).toUpperCase());
 		timeFormats.add(getString(R.string.label_hora).toUpperCase());
-    	timeFormatAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_dropdown_item_1line, timeFormats);
+		ArrayAdapter<String> timeFormatAdapter = new ArrayAdapter<>(this, android.R.layout.simple_dropdown_item_1line, timeFormats);
     	timeFormatSpinner.setAdapter(timeFormatAdapter);
   	
     	OnItemSelectedListener spinnerListener = new seleccionSpinnerTimeFormatListener();
@@ -201,7 +197,7 @@ public class ConfigChartActivity extends Activity {
     	}
     }
     
-    public class seleccionSpinnerStylePointListener implements OnItemSelectedListener {
+    class seleccionSpinnerStylePointListener implements OnItemSelectedListener {
         public void onItemSelected(AdapterView<?> parent, View v, int pos, long row) {
         	mPointSelected = pos;
         }
@@ -211,7 +207,7 @@ public class ConfigChartActivity extends Activity {
         }
     }    
 
-    public class seleccionSpinnerTimeFormatListener implements OnItemSelectedListener {
+    class seleccionSpinnerTimeFormatListener implements OnItemSelectedListener {
         public void onItemSelected(AdapterView<?> parent, View v, int pos, long row) {
         	mTimeSelected = pos;
         }
@@ -231,7 +227,7 @@ public class ConfigChartActivity extends Activity {
 			}
     };
     
-	private ColorPickerDialog.OnColorChangedListener mColorListenerLine =
+	private final ColorPickerDialog.OnColorChangedListener mColorListenerLine =
         new ColorPickerDialog.OnColorChangedListener() {
 
 			@Override
@@ -242,7 +238,7 @@ public class ConfigChartActivity extends Activity {
 			}
     };
     
-	private ColorPickerDialog.OnColorChangedListener mColorListenerGrid =
+	private final ColorPickerDialog.OnColorChangedListener mColorListenerGrid =
         new ColorPickerDialog.OnColorChangedListener() {
 
 			@Override
@@ -254,7 +250,7 @@ public class ConfigChartActivity extends Activity {
     };
     
     
-	private ColorPickerDialog.OnColorChangedListener mColorListenerLabels =
+	private final ColorPickerDialog.OnColorChangedListener mColorListenerLabels =
         new ColorPickerDialog.OnColorChangedListener() {
 
 			@Override
@@ -360,7 +356,7 @@ public class ConfigChartActivity extends Activity {
 	}
     
 	private void guardarChartSeleccionado(Intent intent){
-		String idChartString = null;
+		String idChartString;
 		if(intent.hasExtra(ConstantsAdmin.CHART_SELECCIONADO)){
 			idChartString = (String)intent.getExtras().get(ConstantsAdmin.CHART_SELECCIONADO);
 			long idChart = Long.valueOf(idChartString);

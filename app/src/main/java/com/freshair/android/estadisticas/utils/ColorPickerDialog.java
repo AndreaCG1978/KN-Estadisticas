@@ -25,13 +25,13 @@ public class ColorPickerDialog extends Dialog {
     }
 
     private final OnColorChangedListener mListener;
-    private int mInitialColor;
+    private final int mInitialColor;
 
     private static class ColorPickerView extends View {
-        private Paint mPaint;
-        private Paint mCenterPaint;
+        private final Paint mPaint;
+        private final Paint mCenterPaint;
         private final int[] mColors;
-        private OnColorChangedListener mListener;
+        private final OnColorChangedListener mListener;
 
         ColorPickerView(Context c, OnColorChangedListener l, int color) {
             super(c);

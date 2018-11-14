@@ -1,9 +1,9 @@
 package com.freshair.android.estadisticas.utils;
 
-public class Asociacion {
+class Asociacion {
 	
-	private Object key = null;
-	private Object value = null;
+	private Object key;
+	private Object value;
 	public Object getKey() {
 		return key;
 	}

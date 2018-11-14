@@ -17,11 +17,11 @@ import com.freshair.android.estadisticas.utils.ConstantsAdmin;
 public class AltaChartActivity extends Activity {
 	
 	private EditText mNombreChart = null;
-	EditText mDescripcionChart = null;
-	EditText mUnidadChart = null;
-	Button btnEditar = null; 
-	Dialog dialog = null;
-	KNChart mChartSeleccionado = null;
+	private EditText mDescripcionChart = null;
+	private EditText mUnidadChart = null;
+	private Button btnEditar = null;
+	private Dialog dialog = null;
+	private KNChart mChartSeleccionado = null;
 	
     
 	public void onCreate(Bundle savedInstanceState) {
@@ -82,7 +82,7 @@ public class AltaChartActivity extends Activity {
     
     
 	private boolean validarEntradaDeDatos(){
-		boolean estaOk = false;
+		boolean estaOk;
 		String name = mNombreChart.getText().toString();
 		String unit = mUnidadChart.getText().toString();
 		estaOk = !name.equals("") && !unit.equals("");

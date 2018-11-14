@@ -79,8 +79,8 @@ public class ConstantsAdmin {
     }
     
     public static KNChart obtenerChartId(Activity context, long idChart){
-    	KNChart chart = new KNChart();
-    	Cursor chartCursor = null;
+    	KNChart chart;
+    	Cursor chartCursor;
 		inicializarBD(context);
 		chartCursor = mDBManager.fetchChartsForId(idChart);
 		context.startManagingCursor(chartCursor);
@@ -89,7 +89,7 @@ public class ConstantsAdmin {
     	return chart;
     }
     
-    public static KNChart obtenerChartNamed(Activity context, String chartName){
+    private static KNChart obtenerChartNamed(Activity context, String chartName){
     	KNChart chart = null;
     	Cursor chartCursor = null;
 		inicializarBD(context);
@@ -168,7 +168,7 @@ public class ConstantsAdmin {
 
     
     public static ArrayList<KNItemChart> obtenerItemsDeChart(KNChart chart, Activity context){
-    	ArrayList<KNItemChart> items = new ArrayList<KNItemChart>();
+    	ArrayList<KNItemChart> items = new ArrayList<>();
     	KNItemChart item = null;
     	Cursor itemsCursor = null;
     	inicializarBD(context);
@@ -186,7 +186,7 @@ public class ConstantsAdmin {
     }
     
     public static ArrayList<KNItemChart> obtenerItemsDeChart(String idChartSelected, String yearSelected, String monthSelected, Activity context){
-    	ArrayList<KNItemChart> items = new ArrayList<KNItemChart>();
+    	ArrayList<KNItemChart> items = new ArrayList<>();
     	KNItemChart item = null;
     	Cursor itemsCursor = null;
     	inicializarBD(context);
@@ -204,7 +204,7 @@ public class ConstantsAdmin {
     }
     
     public static ArrayList<KNItemChart> obtenerItemsDeChartOrdenadosPorAnioYMes(KNChart chart, Activity context){
-    	ArrayList<KNItemChart> items = new ArrayList<KNItemChart>();
+    	ArrayList<KNItemChart> items = new ArrayList<>();
     	KNItemChart item = null;
     	Cursor itemsCursor = null;
     	inicializarBD(context);
@@ -222,7 +222,7 @@ public class ConstantsAdmin {
     }
     
     public static ArrayList<KNChart> obtenerAllChart(Activity context){
-    	ArrayList<KNChart> allChart = new ArrayList<KNChart>();
+    	ArrayList<KNChart> allChart = new ArrayList<>();
     	KNChart chart = null;
     	Cursor chartCursor = null;
 		inicializarBD(context);
@@ -456,7 +456,7 @@ public class ConstantsAdmin {
     public static final int ACTIVITY_EJECUTAR_MANAGER_ITEM_CHART=3;
     public static final int ACTIVITY_EJECUTAR_ALTA_ITEM_CHART=4;
     public static final int ACTIVITY_EJECUTAR_EDITAR_ITEM_CHART=5;
-    public static final int ACTIVITY_EJECUTAR_ELIMINAR_ITEM_CHART=6;
+    // --Commented out by Inspection (14/11/18 19:15):public static final int ACTIVITY_EJECUTAR_ELIMINAR_ITEM_CHART=6;
     public static final int ACTIVITY_EJECUTAR_VIEW_ITEMS=7;
     public static final int ACTIVITY_EJECUTAR_DRAW_CHART=8;
     public static final int ACTIVITY_EJECUTAR_BORRAR_CHART=9;
@@ -495,46 +495,49 @@ public class ConstantsAdmin {
     
 
 
-    public static final String pictureExtension  = ".jpg";
-    public static String textExtension  = ".txt";
+    private static final String pictureExtension  = ".jpg";
+    private static final String textExtension  = ".txt";
 
-    public static String comparisonName  = "comparisonChart";
-    public static String chartName  = "kngraphit";
+    private static final String comparisonName  = "comparisonChart";
+    private static final String chartName  = "kngraphit";
     
  
     
-    public static Asociacion comprobarSDCard(Activity context){
+    private static Asociacion comprobarSDCard(Activity context){
     	Asociacion map = null;
         String auxSDCardStatus = Environment.getExternalStorageState();
         boolean sePuede = false;
         String msg = null;
 
-        if (auxSDCardStatus.equals(Environment.MEDIA_MOUNTED))
-            sePuede = true;
-        else if (auxSDCardStatus.equals(Environment.MEDIA_MOUNTED_READ_ONLY)){
-            msg = context.getString(R.string.mensaje_error_tarjeta_solo_lectura);
-            sePuede = false;
-        }
-        else if(auxSDCardStatus.equals(Environment.MEDIA_NOFS)){
-        	msg = context.getString(R.string.mensaje_error_tarjeta_no_formato);
-            sePuede = false;
-        }
-        else if(auxSDCardStatus.equals(Environment.MEDIA_REMOVED)){
-            msg =  context.getString(R.string.mensaje_error_tarjeta_no_montada);
-            sePuede = false;
-        }
-        else if(auxSDCardStatus.equals(Environment.MEDIA_SHARED)){
-            msg = context.getString(R.string.mensaje_error_tarjeta_shared);
-            sePuede = false;
-        }
-        else if (auxSDCardStatus.equals(Environment.MEDIA_UNMOUNTABLE)){
-            msg = context.getString(R.string.mensaje_error_tarjeta_unmountable);
-            sePuede = false;
-        }
-        else if (auxSDCardStatus.equals(Environment.MEDIA_UNMOUNTED)){
-            msg = context.getString(R.string.mensaje_error_tarjeta_unmounted);
-            sePuede = false;
-        }
+		switch (auxSDCardStatus) {
+			case Environment.MEDIA_MOUNTED:
+				sePuede = true;
+				break;
+			case Environment.MEDIA_MOUNTED_READ_ONLY:
+				msg = context.getString(R.string.mensaje_error_tarjeta_solo_lectura);
+				sePuede = false;
+				break;
+			case Environment.MEDIA_NOFS:
+				msg = context.getString(R.string.mensaje_error_tarjeta_no_formato);
+				sePuede = false;
+				break;
+			case Environment.MEDIA_REMOVED:
+				msg = context.getString(R.string.mensaje_error_tarjeta_no_montada);
+				sePuede = false;
+				break;
+			case Environment.MEDIA_SHARED:
+				msg = context.getString(R.string.mensaje_error_tarjeta_shared);
+				sePuede = false;
+				break;
+			case Environment.MEDIA_UNMOUNTABLE:
+				msg = context.getString(R.string.mensaje_error_tarjeta_unmountable);
+				sePuede = false;
+				break;
+			case Environment.MEDIA_UNMOUNTED:
+				msg = context.getString(R.string.mensaje_error_tarjeta_unmounted);
+				sePuede = false;
+				break;
+		}
         map = new Asociacion(sePuede, msg);
         
         return map;
@@ -695,15 +698,15 @@ public class ConstantsAdmin {
     }
     
     private static String obtenerTxtDeItems(List<KNItemChart> list, KNChart chart, Activity context){
-        String result = null;
+        StringBuilder result = null;
         Iterator<KNItemChart> it = list.iterator();
         KNItemChart item = null;
         String tab1, tab2, tab3 = null;
         tab1 = "\t";
         tab2 = "\t\t";
         tab3 = "\t\t\t";
-        result = chart.getName().toUpperCase();
-        result = result + ENTER + ENTER;
+        result = new StringBuilder(chart.getName().toUpperCase());
+        result.append(ENTER).append(ENTER);
         item = it.next();
         String anio, mes, dia, anioAnt, mesAnt, diaAnt = null;
         anio = item.getYear();
@@ -712,12 +715,12 @@ public class ConstantsAdmin {
         mesAnt = item.getMonth();
         dia = item.getDay();
         diaAnt = item.getDay();
-        result = result + context.getString(R.string.label_year).toUpperCase() + ": " + item.getYear() + ENTER;
-        result = result + tab1 + context.getString(R.string.label_month).toUpperCase() + ": " + item.getMonth() + ENTER;
-        result = result + tab2 + context.getString(R.string.label_day).toUpperCase() + ": " + item.getDay() + ENTER;
-        result = result + tab3 + context.getString(R.string.label_hora).toUpperCase() + ": " + item.getHourMin() + " - " + context.getString(R.string.label_valor).toUpperCase() + ": " + item.getValue();
+        result.append(context.getString(R.string.label_year).toUpperCase()).append(": ").append(item.getYear()).append(ENTER);
+        result.append(tab1).append(context.getString(R.string.label_month).toUpperCase()).append(": ").append(item.getMonth()).append(ENTER);
+        result.append(tab2).append(context.getString(R.string.label_day).toUpperCase()).append(": ").append(item.getDay()).append(ENTER);
+        result.append(tab3).append(context.getString(R.string.label_hora).toUpperCase()).append(": ").append(item.getHourMin()).append(" - ").append(context.getString(R.string.label_valor).toUpperCase()).append(": ").append(item.getValue());
         while(it.hasNext()){
-            result = result + ENTER;
+            result.append(ENTER);
             item = it.next();
             anioAnt = anio;
             mesAnt = mes;
@@ -726,39 +729,39 @@ public class ConstantsAdmin {
             mes = item.getMonth();
             dia = item.getDay();
             if(anio.equals(anioAnt)){
-                result = result + tab1;
+                result.append(tab1);
                 if(mes.equals(mesAnt)){
-                    result = result + tab1;
+                    result.append(tab1);
                     if(dia.equals(diaAnt)){
-                        result = result + tab1 + context.getString(R.string.label_hora).toUpperCase() + ": " + item.getHourMin() + " - " + context.getString(R.string.label_valor).toUpperCase() + ": " + item.getValue();
+                        result.append(tab1).append(context.getString(R.string.label_hora).toUpperCase()).append(": ").append(item.getHourMin()).append(" - ").append(context.getString(R.string.label_valor).toUpperCase()).append(": ").append(item.getValue());
                     }else{
-                        result = result + context.getString(R.string.label_day).toUpperCase() + ": " + item.getDay() + ENTER;
-                        result = result + tab3 + context.getString(R.string.label_hora).toUpperCase() + ": " + item.getHourMin() + " - " + context.getString(R.string.label_valor).toUpperCase() + ": " + item.getValue();
+                        result.append(context.getString(R.string.label_day).toUpperCase()).append(": ").append(item.getDay()).append(ENTER);
+                        result.append(tab3).append(context.getString(R.string.label_hora).toUpperCase()).append(": ").append(item.getHourMin()).append(" - ").append(context.getString(R.string.label_valor).toUpperCase()).append(": ").append(item.getValue());
                     }
                 }else{
-                    result = result + context.getString(R.string.label_month).toUpperCase() + ": " + item.getMonth() + ENTER;
-                    result = result + tab2 + context.getString(R.string.label_day).toUpperCase() + ": " + item.getDay() + ENTER;
-                    result = result + tab3 + context.getString(R.string.label_hora).toUpperCase() + ": " + item.getHourMin() + " - " + context.getString(R.string.label_valor).toUpperCase() + ": " + item.getValue();
+                    result.append(context.getString(R.string.label_month).toUpperCase()).append(": ").append(item.getMonth()).append(ENTER);
+                    result.append(tab2).append(context.getString(R.string.label_day).toUpperCase()).append(": ").append(item.getDay()).append(ENTER);
+                    result.append(tab3).append(context.getString(R.string.label_hora).toUpperCase()).append(": ").append(item.getHourMin()).append(" - ").append(context.getString(R.string.label_valor).toUpperCase()).append(": ").append(item.getValue());
                 }
             }else{
-                result = result + context.getString(R.string.label_year).toUpperCase() + ": " + item.getYear() + ENTER;
-                result = result + tab1 + context.getString(R.string.label_month).toUpperCase() + ": " + item.getMonth() + ENTER;
-                result = result + tab2 + context.getString(R.string.label_day).toUpperCase() + ": " + item.getDay() + ENTER;
-                result = result + tab3 + context.getString(R.string.label_hora).toUpperCase() + ": " + item.getHourMin() + " - " + context.getString(R.string.label_valor).toUpperCase() + ": " + item.getValue();
+                result.append(context.getString(R.string.label_year).toUpperCase()).append(": ").append(item.getYear()).append(ENTER);
+                result.append(tab1).append(context.getString(R.string.label_month).toUpperCase()).append(": ").append(item.getMonth()).append(ENTER);
+                result.append(tab2).append(context.getString(R.string.label_day).toUpperCase()).append(": ").append(item.getDay()).append(ENTER);
+                result.append(tab3).append(context.getString(R.string.label_hora).toUpperCase()).append(": ").append(item.getHourMin()).append(" - ").append(context.getString(R.string.label_valor).toUpperCase()).append(": ").append(item.getValue());
             }
         }
-        result = result + ENTER;
+        result.append(ENTER);
 
-        return result;
+        return result.toString();
 
     }
     
     public static List<KNChart> chartsParaComparar = null;
     public static String tipoComparacionSelected = null;
-    public static int cantMaxComparacion = 6;
+    public static final int cantMaxComparacion = 6;
 
     
-    public static String UrlBoxico = "http://www.boxico.com.ar";
+    public static final String UrlBoxico = "http://www.boxico.com.ar";
     
 
     
@@ -894,7 +897,7 @@ public class ConstantsAdmin {
 
     }
 
-    public static KNChart crearChartDesdeArchivo(String filename, Activity context){
+    private static KNChart crearChartDesdeArchivo(String filename, Activity context){
         KNChart chart = new KNChart();
         KNChart oldChart = null;
         long idNuevoChart = -1;
@@ -939,15 +942,15 @@ public class ConstantsAdmin {
    		      arrayFiles = dir.listFiles();
 
    
-   		      files = new ArrayList<File>();
+   		      files = new ArrayList<>();
    		      if(arrayFiles != null){
-   		    	  for (int i = 0; i < arrayFiles.length; i++) {
-   		    		 f = arrayFiles[i];
-   		     		 if(hasExtension(f.getName(), csvExtension)){
-   		    			 files.add(f);
-   		    		 }
-					
-   		    	  }
+				  for (File arrayFile : arrayFiles) {
+					  f = arrayFile;
+					  if (hasExtension(f.getName(), csvExtension)) {
+						  files.add(f);
+					  }
+
+				  }
    		      }
    		  }else{
   			  mensaje = msg;
@@ -959,7 +962,7 @@ public class ConstantsAdmin {
     	return filename.toLowerCase().endsWith(ext.toLowerCase());
     }
 
-    public static List<KNItemChart> obtenerItemsDeString(String body, KNChart chart, int inputFormat){
+    private static List<KNItemChart> obtenerItemsDeString(String body, KNChart chart, int inputFormat){
     	List<KNItemChart> items = null;
     	if(inputFormat == FORMAT_ALLSEPARATE){
     		items = obtenerItemsDeStringAllSeparateFormat(body, chart);
@@ -978,43 +981,43 @@ public class ConstantsAdmin {
         String[] items = body.split(ENTER);
         String[] campos = null;
         boolean esValido = false;
-        List<KNItemChart> itemList = new ArrayList<KNItemChart>();
-        for (int i = 0; i < items.length; i++) {
-            campos = items[i].split(COMA);
-            if(campos.length == 2){
-                item = new KNItemChart();
-                item.setDate(campos[0]);
-                item.setValue(campos[1]);
-                item.setChartId(String.valueOf(chart.getId()));
-                esValido = item.validoDatos();
-                if(esValido){
-                	itemList.add(item);
-                }            	
-            }
-        }
+        List<KNItemChart> itemList = new ArrayList<>();
+		for (String item1 : items) {
+			campos = item1.split(COMA);
+			if (campos.length == 2) {
+				item = new KNItemChart();
+				item.setDate(campos[0]);
+				item.setValue(campos[1]);
+				item.setChartId(String.valueOf(chart.getId()));
+				esValido = item.validoDatos();
+				if (esValido) {
+					itemList.add(item);
+				}
+			}
+		}
         return itemList;
     }
     
-    public static List<KNItemChart> obtenerItemsDeStringDateTimeFormat(String body, KNChart chart){
+    private static List<KNItemChart> obtenerItemsDeStringDateTimeFormat(String body, KNChart chart){
         // PONER EN CONSTANTE EL ENTER Y LA COMA
         KNItemChart item = null;
         String[] items = body.split(ENTER);
         String[] campos = null;
         boolean esValido = false;
-        List<KNItemChart> itemList = new ArrayList<KNItemChart>();
-        for (int i = 0; i < items.length; i++) {
-            campos = items[i].split(COMA);
-            if(campos.length == 2){
-                item = new KNItemChart();
-                item.setDateTime(campos[0]);
-                item.setValue(campos[1]);
-                item.setChartId(String.valueOf(chart.getId()));
-                esValido = item.validoDatos();
-                if(esValido){
-                	itemList.add(item);
-                }            	
-            }
-        }
+        List<KNItemChart> itemList = new ArrayList<>();
+		for (String item1 : items) {
+			campos = item1.split(COMA);
+			if (campos.length == 2) {
+				item = new KNItemChart();
+				item.setDateTime(campos[0]);
+				item.setValue(campos[1]);
+				item.setChartId(String.valueOf(chart.getId()));
+				esValido = item.validoDatos();
+				if (esValido) {
+					itemList.add(item);
+				}
+			}
+		}
         return itemList;
     }
     
@@ -1024,27 +1027,26 @@ public class ConstantsAdmin {
         String[] items = body.split(ENTER);
         String[] campos = null;
         boolean esValido = false;
-        List<KNItemChart> itemList = new ArrayList<KNItemChart>();
-        for (int i = 0; i < items.length; i++) {
-            campos = items[i].split(COMA);
-            if(campos.length == 6){
-                item = new KNItemChart();
-                item.setYear(campos[0]);
-               	item.setMonth(campos[1]);
-               	item.setDay(campos[2]);
-               	item.setHour(campos[3]);
-               	item.setMin(campos[4]);
-                item.setValue(campos[5]);
-                item.setChartId(String.valueOf(chart.getId()));
-                esValido = item.validoDatos();
-                if(esValido){
-                	itemList.add(item);
-                }            	
-            }
+        List<KNItemChart> itemList = new ArrayList<>();
+		for (String item1 : items) {
+			campos = item1.split(COMA);
+			if (campos.length == 6) {
+				item = new KNItemChart();
+				item.setYear(campos[0]);
+				item.setMonth(campos[1]);
+				item.setDay(campos[2]);
+				item.setHour(campos[3]);
+				item.setMin(campos[4]);
+				item.setValue(campos[5]);
+				item.setChartId(String.valueOf(chart.getId()));
+				esValido = item.validoDatos();
+				if (esValido) {
+					itemList.add(item);
+				}
+			}
 
-            
 
-        }
+		}
         return itemList;
 
 
@@ -1077,22 +1079,22 @@ public class ConstantsAdmin {
 
     }
     
-    public static String csvExtension  = ".csv";
-	public static String folderCSV = "CSV";
+    private static final String csvExtension  = ".csv";
+	private static final String folderCSV = "CSV";
     public static final int ACTIVITY_EJECUTAR_IMPORT_CSV=18;
     public static final int ACTIVITY_EJECUTAR_EXPORT_CHART_CSV=19;
-	public static final int FORMAT_DATETIME = 1;
-	public static final int FORMAT_DATE = 2;
-	public static final int FORMAT_ALLSEPARATE = 3;
-	public static final String ENTER = "\n";
-	public static final String COMA = ",";
-	public static final String PUNTO = "\\.";
+	private static final int FORMAT_DATETIME = 1;
+	private static final int FORMAT_DATE = 2;
+	private static final int FORMAT_ALLSEPARATE = 3;
+	private static final String ENTER = "\n";
+	private static final String COMA = ",";
+	private static final String PUNTO = "\\.";
 	public static final String SEPARADOR_FECHA = "/";
 	public static final String SEPARADOR_HORA = ":";
 	public static final String SEPARADOR_FECHA_HORA = " ";
 	public static String mensaje = null;
-    public static String folderKN = "KNGraphIt";
-    public static String folderTxt = "TXT";
-    public static String folderPicture = "Pics";
-    public static String folderComparison = "Comparison";
+    private static final String folderKN = "KNGraphIt";
+    private static final String folderTxt = "TXT";
+    private static final String folderPicture = "Pics";
+    private static final String folderComparison = "Comparison";
 }

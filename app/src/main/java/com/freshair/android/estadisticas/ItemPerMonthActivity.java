@@ -25,10 +25,10 @@ import com.freshair.android.estadisticas.utils.KNItemChartArrayAdapter;
 public class ItemPerMonthActivity extends ListActivity {
 	
 	private String mYearSelected = null;
-	String mMonthSelecetd = null;
-	String idChartSelected = null;
+	private String mMonthSelecetd = null;
+	private String idChartSelected = null;
 	private long mItemIdSelect = -1;
-	KNChart mChartSeleccionado = null;
+	private KNChart mChartSeleccionado = null;
 	private ArrayList<Cursor> allMyCursors = null;
 	
     @Override
@@ -39,18 +39,17 @@ public class ItemPerMonthActivity extends ListActivity {
     
     
     private void resetAllMyCursors(){
-    	Cursor cur = null;
-    	Iterator<Cursor> it = allMyCursors.iterator();
-    	while(it.hasNext()){
-    		cur = it.next();
-    		this.stopManagingCursor(cur);
-    	}
-    	allMyCursors = new ArrayList<Cursor>();
+    	Cursor cur;
+		for (Cursor allMyCursor : allMyCursors) {
+			cur = allMyCursor;
+			this.stopManagingCursor(cur);
+		}
+    	allMyCursors = new ArrayList<>();
     }
 	
 	public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        allMyCursors = new ArrayList<Cursor>();
+        allMyCursors = new ArrayList<>();
         this.setContentView(R.layout.list_items);
         this.guardarDatosSeleccionado(this.getIntent());
         this.configurarList(getListView()); 
@@ -80,14 +79,14 @@ public class ItemPerMonthActivity extends ListActivity {
 		
 	}
 	
-    public void openConfigChart(){
+    private void openConfigChart(){
 	    Intent i = new Intent(this, ConfigChartActivity.class);
 	    i.putExtra(ConstantsAdmin.CHART_SELECCIONADO, String.valueOf(mChartSeleccionado.getId()));
 	    this.startActivityForResult(i, ConstantsAdmin.ACTIVITY_EJECUTAR_CONFIG_CHART);
     }
     
 	
-    public void openChart(){
+    private void openChart(){
     	try {
             Intent i = new Intent(this, SimpleLinearChartActivity.class);
             i.putExtra(ConstantsAdmin.CHART_SELECCIONADO, String.valueOf(mChartSeleccionado.getId()));
@@ -141,7 +140,7 @@ public class ItemPerMonthActivity extends ListActivity {
 	
 	@Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        MenuItem item = null;
+        MenuItem item;
     	super.onCreateOptionsMenu(menu);
         item = menu.add(0, ConstantsAdmin.ACTIVITY_EJECUTAR_DRAW_CHART,0, R.string.menu_dibujar_chart);
         item.setIcon(R.drawable.draw_chart_menubar);
@@ -171,7 +170,7 @@ public class ItemPerMonthActivity extends ListActivity {
         return super.onMenuItemSelected(featureId, item);
     }	   
 	
-    protected void openAltaItemChart() {
+    private void openAltaItemChart() {
         Intent i = new Intent(this, AltaItemChartActivity.class);
         i.putExtra(ConstantsAdmin.CHART_SELECCIONADO, String.valueOf(mChartSeleccionado.getId()));
         this.startActivityForResult(i, ConstantsAdmin.ACTIVITY_EJECUTAR_ALTA_ITEM_CHART);
