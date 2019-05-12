@@ -8,20 +8,28 @@
         "source": "/home/andrea/AndroidStudioProjects/KN-Estadisticas-Full/app/src/main/res/drawable-mdpi/import_menubar.png"
     },
     {
-        "merged": "/home/andrea/AndroidStudioProjects/KN-Estadisticas-Full/app/build/intermediates/res/merged/debug/layout_row_item.xml.flat",
-        "source": "/home/andrea/AndroidStudioProjects/KN-Estadisticas-Full/app/src/main/res/layout/row_item.xml"
-    },
-    {
         "merged": "/home/andrea/AndroidStudioProjects/KN-Estadisticas-Full/app/build/intermediates/res/merged/debug/drawable-xhdpi_trash_chart_main.png.flat",
         "source": "/home/andrea/AndroidStudioProjects/KN-Estadisticas-Full/app/src/main/res/drawable-xhdpi/trash_chart_main.png"
+    },
+    {
+        "merged": "/home/andrea/AndroidStudioProjects/KN-Estadisticas-Full/app/build/intermediates/res/merged/debug/layout_row_item.xml.flat",
+        "source": "/home/andrea/AndroidStudioProjects/KN-Estadisticas-Full/app/src/main/res/layout/row_item.xml"
     },
     {
         "merged": "/home/andrea/AndroidStudioProjects/KN-Estadisticas-Full/app/build/intermediates/res/merged/debug/drawable-mdpi_about_us_menubar.png.flat",
         "source": "/home/andrea/AndroidStudioProjects/KN-Estadisticas-Full/app/src/main/res/drawable-mdpi/about_us_menubar.png"
     },
     {
+        "merged": "/home/andrea/AndroidStudioProjects/KN-Estadisticas-Full/app/build/intermediates/res/merged/debug/layout_notification_action_tombstone.xml.flat",
+        "source": "/home/andrea/.gradle/caches/transforms-2/files-2.1/3e33f18aa36992dcdee15821dc4b4e3e/res/layout/notification_action_tombstone.xml"
+    },
+    {
         "merged": "/home/andrea/AndroidStudioProjects/KN-Estadisticas-Full/app/build/intermediates/res/merged/debug/xml_backup_descriptor.xml.flat",
         "source": "/home/andrea/AndroidStudioProjects/KN-Estadisticas-Full/app/src/main/res/xml/backup_descriptor.xml"
+    },
+    {
+        "merged": "/home/andrea/AndroidStudioProjects/KN-Estadisticas-Full/app/build/intermediates/res/merged/debug/drawable_notification_bg_low.xml.flat",
+        "source": "/home/andrea/.gradle/caches/transforms-2/files-2.1/3e33f18aa36992dcdee15821dc4b4e3e/res/drawable/notification_bg_low.xml"
     },
     {
         "merged": "/home/andrea/AndroidStudioProjects/KN-Estadisticas-Full/app/build/intermediates/res/merged/debug/drawable-ldpi_add_menubar.png.flat",
@@ -36,6 +44,10 @@
         "source": "/home/andrea/AndroidStudioProjects/KN-Estadisticas-Full/app/src/main/res/drawable-ldpi/delete_chart_menubar.png"
     },
     {
+        "merged": "/home/andrea/AndroidStudioProjects/KN-Estadisticas-Full/app/build/intermediates/res/merged/debug/layout-v21_notification_action.xml.flat",
+        "source": "/home/andrea/.gradle/caches/transforms-2/files-2.1/3e33f18aa36992dcdee15821dc4b4e3e/res/layout-v21/notification_action.xml"
+    },
+    {
         "merged": "/home/andrea/AndroidStudioProjects/KN-Estadisticas-Full/app/build/intermediates/res/merged/debug/drawable_splash.png.flat",
         "source": "/home/andrea/AndroidStudioProjects/KN-Estadisticas-Full/app/src/main/res/drawable/splash.png"
     },
@@ -48,12 +60,16 @@
         "source": "/home/andrea/AndroidStudioProjects/KN-Estadisticas-Full/app/src/main/res/drawable-mdpi/export_menbar.png"
     },
     {
+        "merged": "/home/andrea/AndroidStudioProjects/KN-Estadisticas-Full/app/build/intermediates/res/merged/debug/drawable-mdpi_help_menubar.png.flat",
+        "source": "/home/andrea/AndroidStudioProjects/KN-Estadisticas-Full/app/src/main/res/drawable-mdpi/help_menubar.png"
+    },
+    {
         "merged": "/home/andrea/AndroidStudioProjects/KN-Estadisticas-Full/app/build/intermediates/res/merged/debug/drawable-mdpi_manage_item.png.flat",
         "source": "/home/andrea/AndroidStudioProjects/KN-Estadisticas-Full/app/src/main/res/drawable-mdpi/manage_item.png"
     },
     {
-        "merged": "/home/andrea/AndroidStudioProjects/KN-Estadisticas-Full/app/build/intermediates/res/merged/debug/drawable-mdpi_help_menubar.png.flat",
-        "source": "/home/andrea/AndroidStudioProjects/KN-Estadisticas-Full/app/src/main/res/drawable-mdpi/help_menubar.png"
+        "merged": "/home/andrea/AndroidStudioProjects/KN-Estadisticas-Full/app/build/intermediates/res/merged/debug/drawable-v21_notification_action_background.xml.flat",
+        "source": "/home/andrea/.gradle/caches/transforms-2/files-2.1/3e33f18aa36992dcdee15821dc4b4e3e/res/drawable-v21/notification_action_background.xml"
     },
     {
         "merged": "/home/andrea/AndroidStudioProjects/KN-Estadisticas-Full/app/build/intermediates/res/merged/debug/drawable-hdpi_trash_chart_main.png.flat",
@@ -72,12 +88,20 @@
         "source": "/home/andrea/AndroidStudioProjects/KN-Estadisticas-Full/app/src/main/res/drawable-hdpi/add_menubar.png"
     },
     {
+        "merged": "/home/andrea/AndroidStudioProjects/KN-Estadisticas-Full/app/build/intermediates/res/merged/debug/layout_notification_template_big_media.xml.flat",
+        "source": "/home/andrea/.gradle/caches/transforms-2/files-2.1/a02b0eac5896f5f55858121ed5131e3f/res/layout/notification_template_big_media.xml"
+    },
+    {
         "merged": "/home/andrea/AndroidStudioProjects/KN-Estadisticas-Full/app/build/intermediates/res/merged/debug/drawable-mdpi_export_txt.png.flat",
         "source": "/home/andrea/AndroidStudioProjects/KN-Estadisticas-Full/app/src/main/res/drawable-mdpi/export_txt.png"
     },
     {
         "merged": "/home/andrea/AndroidStudioProjects/KN-Estadisticas-Full/app/build/intermediates/res/merged/debug/drawable-xhdpi_edit_chart_menubar.png.flat",
         "source": "/home/andrea/AndroidStudioProjects/KN-Estadisticas-Full/app/src/main/res/drawable-xhdpi/edit_chart_menubar.png"
+    },
+    {
+        "merged": "/home/andrea/AndroidStudioProjects/KN-Estadisticas-Full/app/build/intermediates/res/merged/debug/layout_notification_template_part_chronometer.xml.flat",
+        "source": "/home/andrea/.gradle/caches/transforms-2/files-2.1/3e33f18aa36992dcdee15821dc4b4e3e/res/layout/notification_template_part_chronometer.xml"
     },
     {
         "merged": "/home/andrea/AndroidStudioProjects/KN-Estadisticas-Full/app/build/intermediates/res/merged/debug/drawable-mdpi_draw_chart_menubar.png.flat",
@@ -88,20 +112,48 @@
         "source": "/home/andrea/AndroidStudioProjects/KN-Estadisticas-Full/app/src/main/res/drawable-xhdpi/add_item_main.png"
     },
     {
+        "merged": "/home/andrea/AndroidStudioProjects/KN-Estadisticas-Full/app/build/intermediates/res/merged/debug/layout_notification_media_action.xml.flat",
+        "source": "/home/andrea/.gradle/caches/transforms-2/files-2.1/a02b0eac5896f5f55858121ed5131e3f/res/layout/notification_media_action.xml"
+    },
+    {
+        "merged": "/home/andrea/AndroidStudioProjects/KN-Estadisticas-Full/app/build/intermediates/res/merged/debug/drawable-hdpi-v4_notify_panel_notification_icon_bg.png.flat",
+        "source": "/home/andrea/.gradle/caches/transforms-2/files-2.1/3e33f18aa36992dcdee15821dc4b4e3e/res/drawable-hdpi-v4/notify_panel_notification_icon_bg.png"
+    },
+    {
+        "merged": "/home/andrea/AndroidStudioProjects/KN-Estadisticas-Full/app/build/intermediates/res/merged/debug/layout_notification_template_lines_media.xml.flat",
+        "source": "/home/andrea/.gradle/caches/transforms-2/files-2.1/a02b0eac5896f5f55858121ed5131e3f/res/layout/notification_template_lines_media.xml"
+    },
+    {
+        "merged": "/home/andrea/AndroidStudioProjects/KN-Estadisticas-Full/app/build/intermediates/res/merged/debug/layout-v21_notification_template_icon_group.xml.flat",
+        "source": "/home/andrea/.gradle/caches/transforms-2/files-2.1/3e33f18aa36992dcdee15821dc4b4e3e/res/layout-v21/notification_template_icon_group.xml"
+    },
+    {
         "merged": "/home/andrea/AndroidStudioProjects/KN-Estadisticas-Full/app/build/intermediates/res/merged/debug/drawable-ldpi_edit_chart_menubar.png.flat",
         "source": "/home/andrea/AndroidStudioProjects/KN-Estadisticas-Full/app/src/main/res/drawable-ldpi/edit_chart_menubar.png"
     },
     {
-        "merged": "/home/andrea/AndroidStudioProjects/KN-Estadisticas-Full/app/build/intermediates/res/merged/debug/drawable-ldpi_icon.png.flat",
-        "source": "/home/andrea/AndroidStudioProjects/KN-Estadisticas-Full/app/src/main/res/drawable-ldpi/icon.png"
+        "merged": "/home/andrea/AndroidStudioProjects/KN-Estadisticas-Full/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4_notification_bg_normal_pressed.9.png.flat",
+        "source": "/home/andrea/.gradle/caches/transforms-2/files-2.1/3e33f18aa36992dcdee15821dc4b4e3e/res/drawable-xhdpi-v4/notification_bg_normal_pressed.9.png"
+    },
+    {
+        "merged": "/home/andrea/AndroidStudioProjects/KN-Estadisticas-Full/app/build/intermediates/res/merged/debug/layout_notification_action.xml.flat",
+        "source": "/home/andrea/.gradle/caches/transforms-2/files-2.1/3e33f18aa36992dcdee15821dc4b4e3e/res/layout/notification_action.xml"
+    },
+    {
+        "merged": "/home/andrea/AndroidStudioProjects/KN-Estadisticas-Full/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4_notification_bg_low_normal.9.png.flat",
+        "source": "/home/andrea/.gradle/caches/transforms-2/files-2.1/3e33f18aa36992dcdee15821dc4b4e3e/res/drawable-xhdpi-v4/notification_bg_low_normal.9.png"
+    },
+    {
+        "merged": "/home/andrea/AndroidStudioProjects/KN-Estadisticas-Full/app/build/intermediates/res/merged/debug/drawable-xhdpi_csv_menbar.png.flat",
+        "source": "/home/andrea/AndroidStudioProjects/KN-Estadisticas-Full/app/src/main/res/drawable-xhdpi/csv_menbar.png"
     },
     {
         "merged": "/home/andrea/AndroidStudioProjects/KN-Estadisticas-Full/app/build/intermediates/res/merged/debug/drawable-hdpi_about_us_menubar.png.flat",
         "source": "/home/andrea/AndroidStudioProjects/KN-Estadisticas-Full/app/src/main/res/drawable-hdpi/about_us_menubar.png"
     },
     {
-        "merged": "/home/andrea/AndroidStudioProjects/KN-Estadisticas-Full/app/build/intermediates/res/merged/debug/drawable-xhdpi_csv_menbar.png.flat",
-        "source": "/home/andrea/AndroidStudioProjects/KN-Estadisticas-Full/app/src/main/res/drawable-xhdpi/csv_menbar.png"
+        "merged": "/home/andrea/AndroidStudioProjects/KN-Estadisticas-Full/app/build/intermediates/res/merged/debug/drawable-ldpi_icon.png.flat",
+        "source": "/home/andrea/AndroidStudioProjects/KN-Estadisticas-Full/app/src/main/res/drawable-ldpi/icon.png"
     },
     {
         "merged": "/home/andrea/AndroidStudioProjects/KN-Estadisticas-Full/app/build/intermediates/res/merged/debug/drawable-hdpi_setting_chart_main.png.flat",
@@ -118,6 +170,10 @@
     {
         "merged": "/home/andrea/AndroidStudioProjects/KN-Estadisticas-Full/app/build/intermediates/res/merged/debug/drawable-mdpi_export_main.png.flat",
         "source": "/home/andrea/AndroidStudioProjects/KN-Estadisticas-Full/app/src/main/res/drawable-mdpi/export_main.png"
+    },
+    {
+        "merged": "/home/andrea/AndroidStudioProjects/KN-Estadisticas-Full/app/build/intermediates/res/merged/debug/drawable-hdpi-v4_notification_bg_low_pressed.9.png.flat",
+        "source": "/home/andrea/.gradle/caches/transforms-2/files-2.1/3e33f18aa36992dcdee15821dc4b4e3e/res/drawable-hdpi-v4/notification_bg_low_pressed.9.png"
     },
     {
         "merged": "/home/andrea/AndroidStudioProjects/KN-Estadisticas-Full/app/build/intermediates/res/merged/debug/drawable-mdpi_add_menubar.png.flat",
@@ -148,12 +204,12 @@
         "source": "/home/andrea/AndroidStudioProjects/KN-Estadisticas-Full/app/src/main/res/layout/list_comparar_charts.xml"
     },
     {
-        "merged": "/home/andrea/AndroidStudioProjects/KN-Estadisticas-Full/app/build/intermediates/res/merged/debug/drawable-xhdpi_manage_item.png.flat",
-        "source": "/home/andrea/AndroidStudioProjects/KN-Estadisticas-Full/app/src/main/res/drawable-xhdpi/manage_item.png"
-    },
-    {
         "merged": "/home/andrea/AndroidStudioProjects/KN-Estadisticas-Full/app/build/intermediates/res/merged/debug/drawable-xhdpi_delete_chart_menubar.png.flat",
         "source": "/home/andrea/AndroidStudioProjects/KN-Estadisticas-Full/app/src/main/res/drawable-xhdpi/delete_chart_menubar.png"
+    },
+    {
+        "merged": "/home/andrea/AndroidStudioProjects/KN-Estadisticas-Full/app/build/intermediates/res/merged/debug/drawable-xhdpi_manage_item.png.flat",
+        "source": "/home/andrea/AndroidStudioProjects/KN-Estadisticas-Full/app/src/main/res/drawable-xhdpi/manage_item.png"
     },
     {
         "merged": "/home/andrea/AndroidStudioProjects/KN-Estadisticas-Full/app/build/intermediates/res/merged/debug/drawable-xhdpi_icon.png.flat",
@@ -162,6 +218,10 @@
     {
         "merged": "/home/andrea/AndroidStudioProjects/KN-Estadisticas-Full/app/build/intermediates/res/merged/debug/drawable-hdpi_export_menbar.png.flat",
         "source": "/home/andrea/AndroidStudioProjects/KN-Estadisticas-Full/app/src/main/res/drawable-hdpi/export_menbar.png"
+    },
+    {
+        "merged": "/home/andrea/AndroidStudioProjects/KN-Estadisticas-Full/app/build/intermediates/res/merged/debug/layout-v16_notification_template_custom_big.xml.flat",
+        "source": "/home/andrea/.gradle/caches/transforms-2/files-2.1/3e33f18aa36992dcdee15821dc4b4e3e/res/layout-v16/notification_template_custom_big.xml"
     },
     {
         "merged": "/home/andrea/AndroidStudioProjects/KN-Estadisticas-Full/app/build/intermediates/res/merged/debug/drawable-xhdpi_manage_item_main.png.flat",
@@ -186,6 +246,10 @@
     {
         "merged": "/home/andrea/AndroidStudioProjects/KN-Estadisticas-Full/app/build/intermediates/res/merged/debug/layout_list_items.xml.flat",
         "source": "/home/andrea/AndroidStudioProjects/KN-Estadisticas-Full/app/src/main/res/layout/list_items.xml"
+    },
+    {
+        "merged": "/home/andrea/AndroidStudioProjects/KN-Estadisticas-Full/app/build/intermediates/res/merged/debug/layout_notification_template_media.xml.flat",
+        "source": "/home/andrea/.gradle/caches/transforms-2/files-2.1/a02b0eac5896f5f55858121ed5131e3f/res/layout/notification_template_media.xml"
     },
     {
         "merged": "/home/andrea/AndroidStudioProjects/KN-Estadisticas-Full/app/build/intermediates/res/merged/debug/drawable-hdpi_manage_item_main.png.flat",
@@ -244,12 +308,28 @@
         "source": "/home/andrea/AndroidStudioProjects/KN-Estadisticas-Full/app/src/main/res/drawable-mdpi/delete_chart_menubar.png"
     },
     {
+        "merged": "/home/andrea/AndroidStudioProjects/KN-Estadisticas-Full/app/build/intermediates/res/merged/debug/drawable-hdpi-v4_notification_bg_normal.9.png.flat",
+        "source": "/home/andrea/.gradle/caches/transforms-2/files-2.1/3e33f18aa36992dcdee15821dc4b4e3e/res/drawable-hdpi-v4/notification_bg_normal.9.png"
+    },
+    {
         "merged": "/home/andrea/AndroidStudioProjects/KN-Estadisticas-Full/app/build/intermediates/res/merged/debug/layout_splash.xml.flat",
         "source": "/home/andrea/AndroidStudioProjects/KN-Estadisticas-Full/app/src/main/res/layout/splash.xml"
     },
     {
+        "merged": "/home/andrea/AndroidStudioProjects/KN-Estadisticas-Full/app/build/intermediates/res/merged/debug/layout_notification_template_big_media_narrow.xml.flat",
+        "source": "/home/andrea/.gradle/caches/transforms-2/files-2.1/a02b0eac5896f5f55858121ed5131e3f/res/layout/notification_template_big_media_narrow.xml"
+    },
+    {
         "merged": "/home/andrea/AndroidStudioProjects/KN-Estadisticas-Full/app/build/intermediates/res/merged/debug/drawable-mdpi_draw_chart_main.png.flat",
         "source": "/home/andrea/AndroidStudioProjects/KN-Estadisticas-Full/app/src/main/res/drawable-mdpi/draw_chart_main.png"
+    },
+    {
+        "merged": "/home/andrea/AndroidStudioProjects/KN-Estadisticas-Full/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4_notification_bg_normal.9.png.flat",
+        "source": "/home/andrea/.gradle/caches/transforms-2/files-2.1/3e33f18aa36992dcdee15821dc4b4e3e/res/drawable-xhdpi-v4/notification_bg_normal.9.png"
+    },
+    {
+        "merged": "/home/andrea/AndroidStudioProjects/KN-Estadisticas-Full/app/build/intermediates/res/merged/debug/layout_notification_template_icon_group.xml.flat",
+        "source": "/home/andrea/.gradle/caches/transforms-2/files-2.1/3e33f18aa36992dcdee15821dc4b4e3e/res/layout/notification_template_icon_group.xml"
     },
     {
         "merged": "/home/andrea/AndroidStudioProjects/KN-Estadisticas-Full/app/build/intermediates/res/merged/debug/layout_main.xml.flat",
@@ -264,8 +344,16 @@
         "source": "/home/andrea/AndroidStudioProjects/KN-Estadisticas-Full/app/src/main/res/drawable-ldpi/export_menbar.png"
     },
     {
+        "merged": "/home/andrea/AndroidStudioProjects/KN-Estadisticas-Full/app/build/intermediates/res/merged/debug/layout_notification_template_big_media_narrow_custom.xml.flat",
+        "source": "/home/andrea/.gradle/caches/transforms-2/files-2.1/a02b0eac5896f5f55858121ed5131e3f/res/layout/notification_template_big_media_narrow_custom.xml"
+    },
+    {
         "merged": "/home/andrea/AndroidStudioProjects/KN-Estadisticas-Full/app/build/intermediates/res/merged/debug/drawable-ldpi_export_main.png.flat",
         "source": "/home/andrea/AndroidStudioProjects/KN-Estadisticas-Full/app/src/main/res/drawable-ldpi/export_main.png"
+    },
+    {
+        "merged": "/home/andrea/AndroidStudioProjects/KN-Estadisticas-Full/app/build/intermediates/res/merged/debug/drawable-hdpi-v4_notification_bg_low_normal.9.png.flat",
+        "source": "/home/andrea/.gradle/caches/transforms-2/files-2.1/3e33f18aa36992dcdee15821dc4b4e3e/res/drawable-hdpi-v4/notification_bg_low_normal.9.png"
     },
     {
         "merged": "/home/andrea/AndroidStudioProjects/KN-Estadisticas-Full/app/build/intermediates/res/merged/debug/drawable-mdpi_edit_icon.png.flat",
@@ -284,12 +372,16 @@
         "source": "/home/andrea/AndroidStudioProjects/KN-Estadisticas-Full/app/src/main/res/drawable-mdpi/compare_charts_menubar.png"
     },
     {
+        "merged": "/home/andrea/AndroidStudioProjects/KN-Estadisticas-Full/app/build/intermediates/res/merged/debug/drawable-hdpi_csv_menbar.png.flat",
+        "source": "/home/andrea/AndroidStudioProjects/KN-Estadisticas-Full/app/src/main/res/drawable-hdpi/csv_menbar.png"
+    },
+    {
         "merged": "/home/andrea/AndroidStudioProjects/KN-Estadisticas-Full/app/build/intermediates/res/merged/debug/drawable-ldpi_export_csv.png.flat",
         "source": "/home/andrea/AndroidStudioProjects/KN-Estadisticas-Full/app/src/main/res/drawable-ldpi/export_csv.png"
     },
     {
-        "merged": "/home/andrea/AndroidStudioProjects/KN-Estadisticas-Full/app/build/intermediates/res/merged/debug/drawable-hdpi_csv_menbar.png.flat",
-        "source": "/home/andrea/AndroidStudioProjects/KN-Estadisticas-Full/app/src/main/res/drawable-hdpi/csv_menbar.png"
+        "merged": "/home/andrea/AndroidStudioProjects/KN-Estadisticas-Full/app/build/intermediates/res/merged/debug/layout_notification_media_cancel_action.xml.flat",
+        "source": "/home/andrea/.gradle/caches/transforms-2/files-2.1/a02b0eac5896f5f55858121ed5131e3f/res/layout/notification_media_cancel_action.xml"
     },
     {
         "merged": "/home/andrea/AndroidStudioProjects/KN-Estadisticas-Full/app/build/intermediates/res/merged/debug/drawable-ldpi_config_menubar.png.flat",
@@ -310,6 +402,10 @@
     {
         "merged": "/home/andrea/AndroidStudioProjects/KN-Estadisticas-Full/app/build/intermediates/res/merged/debug/drawable-mdpi_export_csv.png.flat",
         "source": "/home/andrea/AndroidStudioProjects/KN-Estadisticas-Full/app/src/main/res/drawable-mdpi/export_csv.png"
+    },
+    {
+        "merged": "/home/andrea/AndroidStudioProjects/KN-Estadisticas-Full/app/build/intermediates/res/merged/debug/layout_notification_template_part_time.xml.flat",
+        "source": "/home/andrea/.gradle/caches/transforms-2/files-2.1/3e33f18aa36992dcdee15821dc4b4e3e/res/layout/notification_template_part_time.xml"
     },
     {
         "merged": "/home/andrea/AndroidStudioProjects/KN-Estadisticas-Full/app/build/intermediates/res/merged/debug/drawable-hdpi_txt_menbar.png.flat",
@@ -336,12 +432,32 @@
         "source": "/home/andrea/AndroidStudioProjects/KN-Estadisticas-Full/app/src/main/res/drawable-ldpi/draw_chart_main.png"
     },
     {
+        "merged": "/home/andrea/AndroidStudioProjects/KN-Estadisticas-Full/app/build/intermediates/res/merged/debug/drawable_notification_icon_background.xml.flat",
+        "source": "/home/andrea/.gradle/caches/transforms-2/files-2.1/3e33f18aa36992dcdee15821dc4b4e3e/res/drawable/notification_icon_background.xml"
+    },
+    {
         "merged": "/home/andrea/AndroidStudioProjects/KN-Estadisticas-Full/app/build/intermediates/res/merged/debug/drawable-xhdpi_export_csv.png.flat",
         "source": "/home/andrea/AndroidStudioProjects/KN-Estadisticas-Full/app/src/main/res/drawable-xhdpi/export_csv.png"
     },
     {
+        "merged": "/home/andrea/AndroidStudioProjects/KN-Estadisticas-Full/app/build/intermediates/res/merged/debug/layout-v21_notification_template_custom_big.xml.flat",
+        "source": "/home/andrea/.gradle/caches/transforms-2/files-2.1/3e33f18aa36992dcdee15821dc4b4e3e/res/layout-v21/notification_template_custom_big.xml"
+    },
+    {
         "merged": "/home/andrea/AndroidStudioProjects/KN-Estadisticas-Full/app/build/intermediates/res/merged/debug/drawable-hdpi_manage_item.png.flat",
         "source": "/home/andrea/AndroidStudioProjects/KN-Estadisticas-Full/app/src/main/res/drawable-hdpi/manage_item.png"
+    },
+    {
+        "merged": "/home/andrea/AndroidStudioProjects/KN-Estadisticas-Full/app/build/intermediates/res/merged/debug/drawable_notification_tile_bg.xml.flat",
+        "source": "/home/andrea/.gradle/caches/transforms-2/files-2.1/3e33f18aa36992dcdee15821dc4b4e3e/res/drawable/notification_tile_bg.xml"
+    },
+    {
+        "merged": "/home/andrea/AndroidStudioProjects/KN-Estadisticas-Full/app/build/intermediates/res/merged/debug/layout_notification_template_big_media_custom.xml.flat",
+        "source": "/home/andrea/.gradle/caches/transforms-2/files-2.1/a02b0eac5896f5f55858121ed5131e3f/res/layout/notification_template_big_media_custom.xml"
+    },
+    {
+        "merged": "/home/andrea/AndroidStudioProjects/KN-Estadisticas-Full/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4_notify_panel_notification_icon_bg.png.flat",
+        "source": "/home/andrea/.gradle/caches/transforms-2/files-2.1/3e33f18aa36992dcdee15821dc4b4e3e/res/drawable-xhdpi-v4/notify_panel_notification_icon_bg.png"
     },
     {
         "merged": "/home/andrea/AndroidStudioProjects/KN-Estadisticas-Full/app/build/intermediates/res/merged/debug/drawable-mdpi_config_menubar.png.flat",
@@ -354,6 +470,14 @@
     {
         "merged": "/home/andrea/AndroidStudioProjects/KN-Estadisticas-Full/app/build/intermediates/res/merged/debug/drawable-ldpi_manage_item_main.png.flat",
         "source": "/home/andrea/AndroidStudioProjects/KN-Estadisticas-Full/app/src/main/res/drawable-ldpi/manage_item_main.png"
+    },
+    {
+        "merged": "/home/andrea/AndroidStudioProjects/KN-Estadisticas-Full/app/build/intermediates/res/merged/debug/drawable-mdpi-v4_notify_panel_notification_icon_bg.png.flat",
+        "source": "/home/andrea/.gradle/caches/transforms-2/files-2.1/3e33f18aa36992dcdee15821dc4b4e3e/res/drawable-mdpi-v4/notify_panel_notification_icon_bg.png"
+    },
+    {
+        "merged": "/home/andrea/AndroidStudioProjects/KN-Estadisticas-Full/app/build/intermediates/res/merged/debug/layout_notification_template_media_custom.xml.flat",
+        "source": "/home/andrea/.gradle/caches/transforms-2/files-2.1/a02b0eac5896f5f55858121ed5131e3f/res/layout/notification_template_media_custom.xml"
     },
     {
         "merged": "/home/andrea/AndroidStudioProjects/KN-Estadisticas-Full/app/build/intermediates/res/merged/debug/drawable-hdpi_remove_icon.png.flat",
@@ -372,12 +496,12 @@
         "source": "/home/andrea/AndroidStudioProjects/KN-Estadisticas-Full/app/src/main/res/layout/year_row.xml"
     },
     {
-        "merged": "/home/andrea/AndroidStudioProjects/KN-Estadisticas-Full/app/build/intermediates/res/merged/debug/drawable-hdpi_config_menubar.png.flat",
-        "source": "/home/andrea/AndroidStudioProjects/KN-Estadisticas-Full/app/src/main/res/drawable-hdpi/config_menubar.png"
-    },
-    {
         "merged": "/home/andrea/AndroidStudioProjects/KN-Estadisticas-Full/app/build/intermediates/res/merged/debug/layout_alta_chart.xml.flat",
         "source": "/home/andrea/AndroidStudioProjects/KN-Estadisticas-Full/app/src/main/res/layout/alta_chart.xml"
+    },
+    {
+        "merged": "/home/andrea/AndroidStudioProjects/KN-Estadisticas-Full/app/build/intermediates/res/merged/debug/drawable-hdpi_config_menubar.png.flat",
+        "source": "/home/andrea/AndroidStudioProjects/KN-Estadisticas-Full/app/src/main/res/drawable-hdpi/config_menubar.png"
     },
     {
         "merged": "/home/andrea/AndroidStudioProjects/KN-Estadisticas-Full/app/build/intermediates/res/merged/debug/drawable-xhdpi_edit_chart_main.png.flat",
@@ -408,6 +532,10 @@
         "source": "/home/andrea/AndroidStudioProjects/KN-Estadisticas-Full/app/src/main/res/drawable-ldpi/manage_item.png"
     },
     {
+        "merged": "/home/andrea/AndroidStudioProjects/KN-Estadisticas-Full/app/build/intermediates/res/merged/debug/layout-v21_notification_action_tombstone.xml.flat",
+        "source": "/home/andrea/.gradle/caches/transforms-2/files-2.1/3e33f18aa36992dcdee15821dc4b4e3e/res/layout-v21/notification_action_tombstone.xml"
+    },
+    {
         "merged": "/home/andrea/AndroidStudioProjects/KN-Estadisticas-Full/app/build/intermediates/res/merged/debug/layout_chart_row.xml.flat",
         "source": "/home/andrea/AndroidStudioProjects/KN-Estadisticas-Full/app/src/main/res/layout/chart_row.xml"
     },
@@ -432,8 +560,24 @@
         "source": "/home/andrea/AndroidStudioProjects/KN-Estadisticas-Full/app/src/main/res/drawable-hdpi/draw_chart_menubar.png"
     },
     {
+        "merged": "/home/andrea/AndroidStudioProjects/KN-Estadisticas-Full/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4_notification_bg_low_pressed.9.png.flat",
+        "source": "/home/andrea/.gradle/caches/transforms-2/files-2.1/3e33f18aa36992dcdee15821dc4b4e3e/res/drawable-xhdpi-v4/notification_bg_low_pressed.9.png"
+    },
+    {
         "merged": "/home/andrea/AndroidStudioProjects/KN-Estadisticas-Full/app/build/intermediates/res/merged/debug/drawable-mdpi_remove_icon.png.flat",
         "source": "/home/andrea/AndroidStudioProjects/KN-Estadisticas-Full/app/src/main/res/drawable-mdpi/remove_icon.png"
+    },
+    {
+        "merged": "/home/andrea/AndroidStudioProjects/KN-Estadisticas-Full/app/build/intermediates/res/merged/debug/drawable-hdpi-v4_notification_bg_normal_pressed.9.png.flat",
+        "source": "/home/andrea/.gradle/caches/transforms-2/files-2.1/3e33f18aa36992dcdee15821dc4b4e3e/res/drawable-hdpi-v4/notification_bg_normal_pressed.9.png"
+    },
+    {
+        "merged": "/home/andrea/AndroidStudioProjects/KN-Estadisticas-Full/app/build/intermediates/res/merged/debug/drawable-mdpi-v4_notification_bg_normal.9.png.flat",
+        "source": "/home/andrea/.gradle/caches/transforms-2/files-2.1/3e33f18aa36992dcdee15821dc4b4e3e/res/drawable-mdpi-v4/notification_bg_normal.9.png"
+    },
+    {
+        "merged": "/home/andrea/AndroidStudioProjects/KN-Estadisticas-Full/app/build/intermediates/res/merged/debug/drawable-mdpi-v4_notification_bg_low_pressed.9.png.flat",
+        "source": "/home/andrea/.gradle/caches/transforms-2/files-2.1/3e33f18aa36992dcdee15821dc4b4e3e/res/drawable-mdpi-v4/notification_bg_low_pressed.9.png"
     },
     {
         "merged": "/home/andrea/AndroidStudioProjects/KN-Estadisticas-Full/app/build/intermediates/res/merged/debug/drawable-xhdpi_export_main.png.flat",
@@ -460,11 +604,23 @@
         "source": "/home/andrea/AndroidStudioProjects/KN-Estadisticas-Full/app/src/main/res/drawable-mdpi/setting_chart_main.png"
     },
     {
+        "merged": "/home/andrea/AndroidStudioProjects/KN-Estadisticas-Full/app/build/intermediates/res/merged/debug/drawable_notification_bg.xml.flat",
+        "source": "/home/andrea/.gradle/caches/transforms-2/files-2.1/3e33f18aa36992dcdee15821dc4b4e3e/res/drawable/notification_bg.xml"
+    },
+    {
         "merged": "/home/andrea/AndroidStudioProjects/KN-Estadisticas-Full/app/build/intermediates/res/merged/debug/drawable-xhdpi_config_menubar.png.flat",
         "source": "/home/andrea/AndroidStudioProjects/KN-Estadisticas-Full/app/src/main/res/drawable-xhdpi/config_menubar.png"
     },
     {
         "merged": "/home/andrea/AndroidStudioProjects/KN-Estadisticas-Full/app/build/intermediates/res/merged/debug/drawable-xhdpi_import_menubar.png.flat",
         "source": "/home/andrea/AndroidStudioProjects/KN-Estadisticas-Full/app/src/main/res/drawable-xhdpi/import_menubar.png"
+    },
+    {
+        "merged": "/home/andrea/AndroidStudioProjects/KN-Estadisticas-Full/app/build/intermediates/res/merged/debug/drawable-mdpi-v4_notification_bg_low_normal.9.png.flat",
+        "source": "/home/andrea/.gradle/caches/transforms-2/files-2.1/3e33f18aa36992dcdee15821dc4b4e3e/res/drawable-mdpi-v4/notification_bg_low_normal.9.png"
+    },
+    {
+        "merged": "/home/andrea/AndroidStudioProjects/KN-Estadisticas-Full/app/build/intermediates/res/merged/debug/drawable-mdpi-v4_notification_bg_normal_pressed.9.png.flat",
+        "source": "/home/andrea/.gradle/caches/transforms-2/files-2.1/3e33f18aa36992dcdee15821dc4b4e3e/res/drawable-mdpi-v4/notification_bg_normal_pressed.9.png"
     }
 ]

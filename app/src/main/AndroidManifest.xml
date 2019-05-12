@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-      package="com.freshair.android.estadisticas"
+      package="com.freshair.android.knestadisticas"
       android:versionCode="6"
       android:versionName="1.3">
 
@@ -11,7 +11,7 @@
         android:fullBackupContent="@xml/backup_descriptor"
         android:allowBackup="true"
         android:supportsRtl="true">
-        <activity android:name=".InitActivity"
+        <activity android:name="com.freshair.android.knestadisticas.InitActivity"
                   android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -20,27 +20,27 @@
         </activity>
        
 
-        <activity android:name="MainActivity">
+        <activity android:name="com.freshair.android.knestadisticas.MainActivity">
         </activity>  
-        <activity android:name="AltaChartActivity">
+        <activity android:name="com.freshair.android.knestadisticas.AltaChartActivity">
         </activity> 
-        <activity android:name="ItemChartManagerActivity">
+        <activity android:name="com.freshair.android.knestadisticas.ItemChartManagerActivity">
         </activity>  
-        <activity android:name="AltaItemChartActivity">
+        <activity android:name="com.freshair.android.knestadisticas.AltaItemChartActivity">
         </activity>  
-        <activity android:name="ItemPerMonthActivity">
+        <activity android:name="com.freshair.android.knestadisticas.ItemPerMonthActivity">
         </activity>
-        <activity android:name="ListadoCompararChartsActivity">
+        <activity android:name="com.freshair.android.knestadisticas.ListadoCompararChartsActivity">
         </activity>  
-        <activity android:name="ConfigChartActivity">
+        <activity android:name="com.freshair.android.knestadisticas.ConfigChartActivity">
         </activity> 
-        <activity android:name="SimpleLinearChartActivity">
+        <activity android:name="com.freshair.android.knestadisticas.SimpleLinearChartActivity">
         </activity> 
-        <activity android:name="ComparisonChartActivity">
+        <activity android:name="com.freshair.android.knestadisticas.ComparisonChartActivity">
         </activity> 
-        <activity android:name="HelpActivity">
+        <activity android:name="com.freshair.android.knestadisticas.HelpActivity">
         </activity> 
-        <activity android:name="AboutUsActivity">
+        <activity android:name="com.freshair.android.knestadisticas.AboutUsActivity">
         </activity> 
         <activity android:name="org.achartengine.GraphicalActivity" />
         

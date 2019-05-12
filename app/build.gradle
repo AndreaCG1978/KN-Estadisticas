@@ -5,8 +5,8 @@ android {
     buildToolsVersion "28.0.3"
 
     defaultConfig {
-        applicationId "com.freshair.android.estadisticas"
-        minSdkVersion 15
+        applicationId "com.freshair.android.knestadisticas"
+        minSdkVersion 19
         targetSdkVersion 27
     }
 
@@ -16,8 +16,14 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
         }
     }
+
+    dependencies {
+        implementation 'com.android.support:support-v4:27.1.1'
+        implementation 'com.sun.mail:android-mail:1.6.2'
+        implementation 'com.sun.mail:android-activation:1.6.2'
+    }
 }
 
 dependencies {
-    compile files('libs/achartengine-0.7.0.jar')
+    implementation files('libs/achartengine-0.7.0.jar')
 }

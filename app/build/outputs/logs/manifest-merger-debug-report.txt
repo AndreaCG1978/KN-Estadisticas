@@ -4,11 +4,21 @@ ADDED from /home/andrea/AndroidStudioProjects/KN-Estadisticas-Full/app/src/main/
 INJECTED from /home/andrea/AndroidStudioProjects/KN-Estadisticas-Full/app/src/main/AndroidManifest.xml:2:1-49:12
 INJECTED from /home/andrea/AndroidStudioProjects/KN-Estadisticas-Full/app/src/main/AndroidManifest.xml:2:1-49:12
 INJECTED from /home/andrea/AndroidStudioProjects/KN-Estadisticas-Full/app/src/main/AndroidManifest.xml:2:1-49:12
+MERGED from [com.android.support:support-v4:27.1.1] /home/andrea/.gradle/caches/transforms-2/files-2.1/583e7b3a5354ad91a492cf8ebb06f1af/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-media-compat:27.1.1] /home/andrea/.gradle/caches/transforms-2/files-2.1/a02b0eac5896f5f55858121ed5131e3f/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-fragment:27.1.1] /home/andrea/.gradle/caches/transforms-2/files-2.1/e10395957c4d279fcff59fb5916affc6/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-core-ui:27.1.1] /home/andrea/.gradle/caches/transforms-2/files-2.1/57d171b5e0b5066538045a7ff891b16f/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-core-utils:27.1.1] /home/andrea/.gradle/caches/transforms-2/files-2.1/1d56c4b205c13732691ad366e4539a1f/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-compat:27.1.1] /home/andrea/.gradle/caches/transforms-2/files-2.1/3e33f18aa36992dcdee15821dc4b4e3e/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:runtime:1.1.0] /home/andrea/.gradle/caches/transforms-2/files-2.1/8a46bcc37189f166a4b09839c59e147c/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:livedata-core:1.1.0] /home/andrea/.gradle/caches/transforms-2/files-2.1/369b6ff8fd11294ca9476d5134412e97/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:viewmodel:1.1.0] /home/andrea/.gradle/caches/transforms-2/files-2.1/bd8032bb73de6fac6ba2230c644c1d07/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.core:runtime:1.1.0] /home/andrea/.gradle/caches/transforms-2/files-2.1/f9e139080dedb156da8f4344a3f792df/AndroidManifest.xml:17:1-22:12
 INJECTED from /home/andrea/AndroidStudioProjects/KN-Estadisticas-Full/app/src/main/AndroidManifest.xml:2:1-49:12
 INJECTED from /home/andrea/AndroidStudioProjects/KN-Estadisticas-Full/app/src/main/AndroidManifest.xml:2:1-49:12
 INJECTED from /home/andrea/AndroidStudioProjects/KN-Estadisticas-Full/app/src/main/AndroidManifest.xml:2:1-49:12
 	package
-		ADDED from /home/andrea/AndroidStudioProjects/KN-Estadisticas-Full/app/src/main/AndroidManifest.xml:3:7-50
+		ADDED from /home/andrea/AndroidStudioProjects/KN-Estadisticas-Full/app/src/main/AndroidManifest.xml:3:7-52
 		INJECTED from /home/andrea/AndroidStudioProjects/KN-Estadisticas-Full/app/src/main/AndroidManifest.xml
 		INJECTED from /home/andrea/AndroidStudioProjects/KN-Estadisticas-Full/app/src/main/AndroidManifest.xml
 	android:versionName
@@ -41,12 +51,12 @@ ADDED from /home/andrea/AndroidStudioProjects/KN-Estadisticas-Full/app/src/main/
 		ADDED from /home/andrea/AndroidStudioProjects/KN-Estadisticas-Full/app/src/main/AndroidManifest.xml:10:18-47
 	android:allowBackup
 		ADDED from /home/andrea/AndroidStudioProjects/KN-Estadisticas-Full/app/src/main/AndroidManifest.xml:12:9-35
-activity#com.freshair.android.estadisticas.InitActivity
+activity#com.freshair.android.knestadisticas.InitActivity
 ADDED from /home/andrea/AndroidStudioProjects/KN-Estadisticas-Full/app/src/main/AndroidManifest.xml:14:9-20:20
 	android:label
 		ADDED from /home/andrea/AndroidStudioProjects/KN-Estadisticas-Full/app/src/main/AndroidManifest.xml:15:19-51
 	android:name
-		ADDED from /home/andrea/AndroidStudioProjects/KN-Estadisticas-Full/app/src/main/AndroidManifest.xml:14:19-47
+		ADDED from /home/andrea/AndroidStudioProjects/KN-Estadisticas-Full/app/src/main/AndroidManifest.xml:14:19-82
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
 ADDED from /home/andrea/AndroidStudioProjects/KN-Estadisticas-Full/app/src/main/AndroidManifest.xml:16:13-19:29
 action#android.intent.action.MAIN
@@ -57,50 +67,50 @@ category#android.intent.category.LAUNCHER
 ADDED from /home/andrea/AndroidStudioProjects/KN-Estadisticas-Full/app/src/main/AndroidManifest.xml:18:17-77
 	android:name
 		ADDED from /home/andrea/AndroidStudioProjects/KN-Estadisticas-Full/app/src/main/AndroidManifest.xml:18:27-74
-activity#com.freshair.android.estadisticas.MainActivity
+activity#com.freshair.android.knestadisticas.MainActivity
 ADDED from /home/andrea/AndroidStudioProjects/KN-Estadisticas-Full/app/src/main/AndroidManifest.xml:23:9-24:20
 	android:name
-		ADDED from /home/andrea/AndroidStudioProjects/KN-Estadisticas-Full/app/src/main/AndroidManifest.xml:23:19-46
-activity#com.freshair.android.estadisticas.AltaChartActivity
+		ADDED from /home/andrea/AndroidStudioProjects/KN-Estadisticas-Full/app/src/main/AndroidManifest.xml:23:19-82
+activity#com.freshair.android.knestadisticas.AltaChartActivity
 ADDED from /home/andrea/AndroidStudioProjects/KN-Estadisticas-Full/app/src/main/AndroidManifest.xml:25:9-26:20
 	android:name
-		ADDED from /home/andrea/AndroidStudioProjects/KN-Estadisticas-Full/app/src/main/AndroidManifest.xml:25:19-51
-activity#com.freshair.android.estadisticas.ItemChartManagerActivity
+		ADDED from /home/andrea/AndroidStudioProjects/KN-Estadisticas-Full/app/src/main/AndroidManifest.xml:25:19-87
+activity#com.freshair.android.knestadisticas.ItemChartManagerActivity
 ADDED from /home/andrea/AndroidStudioProjects/KN-Estadisticas-Full/app/src/main/AndroidManifest.xml:27:9-28:20
 	android:name
-		ADDED from /home/andrea/AndroidStudioProjects/KN-Estadisticas-Full/app/src/main/AndroidManifest.xml:27:19-58
-activity#com.freshair.android.estadisticas.AltaItemChartActivity
+		ADDED from /home/andrea/AndroidStudioProjects/KN-Estadisticas-Full/app/src/main/AndroidManifest.xml:27:19-94
+activity#com.freshair.android.knestadisticas.AltaItemChartActivity
 ADDED from /home/andrea/AndroidStudioProjects/KN-Estadisticas-Full/app/src/main/AndroidManifest.xml:29:9-30:20
 	android:name
-		ADDED from /home/andrea/AndroidStudioProjects/KN-Estadisticas-Full/app/src/main/AndroidManifest.xml:29:19-55
-activity#com.freshair.android.estadisticas.ItemPerMonthActivity
+		ADDED from /home/andrea/AndroidStudioProjects/KN-Estadisticas-Full/app/src/main/AndroidManifest.xml:29:19-91
+activity#com.freshair.android.knestadisticas.ItemPerMonthActivity
 ADDED from /home/andrea/AndroidStudioProjects/KN-Estadisticas-Full/app/src/main/AndroidManifest.xml:31:9-32:20
 	android:name
-		ADDED from /home/andrea/AndroidStudioProjects/KN-Estadisticas-Full/app/src/main/AndroidManifest.xml:31:19-54
-activity#com.freshair.android.estadisticas.ListadoCompararChartsActivity
+		ADDED from /home/andrea/AndroidStudioProjects/KN-Estadisticas-Full/app/src/main/AndroidManifest.xml:31:19-90
+activity#com.freshair.android.knestadisticas.ListadoCompararChartsActivity
 ADDED from /home/andrea/AndroidStudioProjects/KN-Estadisticas-Full/app/src/main/AndroidManifest.xml:33:9-34:20
 	android:name
-		ADDED from /home/andrea/AndroidStudioProjects/KN-Estadisticas-Full/app/src/main/AndroidManifest.xml:33:19-63
-activity#com.freshair.android.estadisticas.ConfigChartActivity
+		ADDED from /home/andrea/AndroidStudioProjects/KN-Estadisticas-Full/app/src/main/AndroidManifest.xml:33:19-99
+activity#com.freshair.android.knestadisticas.ConfigChartActivity
 ADDED from /home/andrea/AndroidStudioProjects/KN-Estadisticas-Full/app/src/main/AndroidManifest.xml:35:9-36:20
 	android:name
-		ADDED from /home/andrea/AndroidStudioProjects/KN-Estadisticas-Full/app/src/main/AndroidManifest.xml:35:19-53
-activity#com.freshair.android.estadisticas.SimpleLinearChartActivity
+		ADDED from /home/andrea/AndroidStudioProjects/KN-Estadisticas-Full/app/src/main/AndroidManifest.xml:35:19-89
+activity#com.freshair.android.knestadisticas.SimpleLinearChartActivity
 ADDED from /home/andrea/AndroidStudioProjects/KN-Estadisticas-Full/app/src/main/AndroidManifest.xml:37:9-38:20
 	android:name
-		ADDED from /home/andrea/AndroidStudioProjects/KN-Estadisticas-Full/app/src/main/AndroidManifest.xml:37:19-59
-activity#com.freshair.android.estadisticas.ComparisonChartActivity
+		ADDED from /home/andrea/AndroidStudioProjects/KN-Estadisticas-Full/app/src/main/AndroidManifest.xml:37:19-95
+activity#com.freshair.android.knestadisticas.ComparisonChartActivity
 ADDED from /home/andrea/AndroidStudioProjects/KN-Estadisticas-Full/app/src/main/AndroidManifest.xml:39:9-40:20
 	android:name
-		ADDED from /home/andrea/AndroidStudioProjects/KN-Estadisticas-Full/app/src/main/AndroidManifest.xml:39:19-57
-activity#com.freshair.android.estadisticas.HelpActivity
+		ADDED from /home/andrea/AndroidStudioProjects/KN-Estadisticas-Full/app/src/main/AndroidManifest.xml:39:19-93
+activity#com.freshair.android.knestadisticas.HelpActivity
 ADDED from /home/andrea/AndroidStudioProjects/KN-Estadisticas-Full/app/src/main/AndroidManifest.xml:41:9-42:20
 	android:name
-		ADDED from /home/andrea/AndroidStudioProjects/KN-Estadisticas-Full/app/src/main/AndroidManifest.xml:41:19-46
-activity#com.freshair.android.estadisticas.AboutUsActivity
+		ADDED from /home/andrea/AndroidStudioProjects/KN-Estadisticas-Full/app/src/main/AndroidManifest.xml:41:19-82
+activity#com.freshair.android.knestadisticas.AboutUsActivity
 ADDED from /home/andrea/AndroidStudioProjects/KN-Estadisticas-Full/app/src/main/AndroidManifest.xml:43:9-44:20
 	android:name
-		ADDED from /home/andrea/AndroidStudioProjects/KN-Estadisticas-Full/app/src/main/AndroidManifest.xml:43:19-49
+		ADDED from /home/andrea/AndroidStudioProjects/KN-Estadisticas-Full/app/src/main/AndroidManifest.xml:43:19-85
 activity#org.achartengine.GraphicalActivity
 ADDED from /home/andrea/AndroidStudioProjects/KN-Estadisticas-Full/app/src/main/AndroidManifest.xml:45:9-71
 	android:name
@@ -109,6 +119,26 @@ uses-sdk
 INJECTED from /home/andrea/AndroidStudioProjects/KN-Estadisticas-Full/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from /home/andrea/AndroidStudioProjects/KN-Estadisticas-Full/app/src/main/AndroidManifest.xml
 INJECTED from /home/andrea/AndroidStudioProjects/KN-Estadisticas-Full/app/src/main/AndroidManifest.xml
+MERGED from [com.android.support:support-v4:27.1.1] /home/andrea/.gradle/caches/transforms-2/files-2.1/583e7b3a5354ad91a492cf8ebb06f1af/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-v4:27.1.1] /home/andrea/.gradle/caches/transforms-2/files-2.1/583e7b3a5354ad91a492cf8ebb06f1af/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-media-compat:27.1.1] /home/andrea/.gradle/caches/transforms-2/files-2.1/a02b0eac5896f5f55858121ed5131e3f/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-media-compat:27.1.1] /home/andrea/.gradle/caches/transforms-2/files-2.1/a02b0eac5896f5f55858121ed5131e3f/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-fragment:27.1.1] /home/andrea/.gradle/caches/transforms-2/files-2.1/e10395957c4d279fcff59fb5916affc6/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-fragment:27.1.1] /home/andrea/.gradle/caches/transforms-2/files-2.1/e10395957c4d279fcff59fb5916affc6/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:27.1.1] /home/andrea/.gradle/caches/transforms-2/files-2.1/57d171b5e0b5066538045a7ff891b16f/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:27.1.1] /home/andrea/.gradle/caches/transforms-2/files-2.1/57d171b5e0b5066538045a7ff891b16f/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:27.1.1] /home/andrea/.gradle/caches/transforms-2/files-2.1/1d56c4b205c13732691ad366e4539a1f/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:27.1.1] /home/andrea/.gradle/caches/transforms-2/files-2.1/1d56c4b205c13732691ad366e4539a1f/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:27.1.1] /home/andrea/.gradle/caches/transforms-2/files-2.1/3e33f18aa36992dcdee15821dc4b4e3e/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:27.1.1] /home/andrea/.gradle/caches/transforms-2/files-2.1/3e33f18aa36992dcdee15821dc4b4e3e/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:runtime:1.1.0] /home/andrea/.gradle/caches/transforms-2/files-2.1/8a46bcc37189f166a4b09839c59e147c/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:runtime:1.1.0] /home/andrea/.gradle/caches/transforms-2/files-2.1/8a46bcc37189f166a4b09839c59e147c/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata-core:1.1.0] /home/andrea/.gradle/caches/transforms-2/files-2.1/369b6ff8fd11294ca9476d5134412e97/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata-core:1.1.0] /home/andrea/.gradle/caches/transforms-2/files-2.1/369b6ff8fd11294ca9476d5134412e97/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:viewmodel:1.1.0] /home/andrea/.gradle/caches/transforms-2/files-2.1/bd8032bb73de6fac6ba2230c644c1d07/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:viewmodel:1.1.0] /home/andrea/.gradle/caches/transforms-2/files-2.1/bd8032bb73de6fac6ba2230c644c1d07/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.core:runtime:1.1.0] /home/andrea/.gradle/caches/transforms-2/files-2.1/f9e139080dedb156da8f4344a3f792df/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.core:runtime:1.1.0] /home/andrea/.gradle/caches/transforms-2/files-2.1/f9e139080dedb156da8f4344a3f792df/AndroidManifest.xml:20:5-44
 INJECTED from /home/andrea/AndroidStudioProjects/KN-Estadisticas-Full/app/src/main/AndroidManifest.xml
 INJECTED from /home/andrea/AndroidStudioProjects/KN-Estadisticas-Full/app/src/main/AndroidManifest.xml
 	android:targetSdkVersion

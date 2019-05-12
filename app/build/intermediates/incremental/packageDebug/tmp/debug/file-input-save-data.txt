@@ -1,7 +1,7 @@
 #Internal package file, do not edit.
-#Sat Nov 10 12:05:17 ART 2018
+#Sun May 12 09:43:52 ART 2019
 0.baseType=DIRECTORY
-0.base=/home/andrea/AndroidStudioProjects/KN-Estadisticas-Full/app/build/intermediates/transforms/dexMerger/debug/0
+0.base=/home/andrea/AndroidStudioProjects/KN-Estadisticas-Full/app/build/intermediates/dex/debug/mergeDexDebug/out
 0.path=classes.dex
 0.set=DEX
 count=1
