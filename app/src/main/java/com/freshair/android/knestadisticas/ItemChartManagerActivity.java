@@ -15,6 +15,11 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
+import android.support.annotation.Nullable;
+import android.support.v4.app.LoaderManager;
+import android.support.v4.content.CursorLoader;
+import android.support.v4.content.Loader;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -27,12 +32,13 @@ import android.widget.ListView;
 import android.widget.SimpleExpandableListAdapter;
 import android.widget.TextView;
 
+import com.freshair.android.knestadisticas.database.DataBaseManager;
 import com.freshair.android.knestadisticas.dtos.KNChart;
 import com.freshair.android.knestadisticas.dtos.KNItemChart;
 import com.freshair.android.knestadisticas.utils.ConstantsAdmin;
 import com.freshair.android.knestadisticas.utils.ExpandableListFragment;
 
-public class ItemChartManagerActivity extends ExpandableListFragment {
+public class ItemChartManagerActivity extends ExpandableListFragment implements LoaderManager.LoaderCallbacks<Cursor> {
 	
 	private KNChart mChartSeleccionado = null;
 	// --Commented out by Inspection (14/11/18 19:16):List<KNItemChart> myItems = null;
@@ -48,6 +54,8 @@ public class ItemChartManagerActivity extends ExpandableListFragment {
     private Activity me = null;
     private Map<String,Map<String,List<KNItemChart>>> allItems = null;
 	private ArrayList<Cursor> allMyCursors = null;
+
+	private final int GRAFICOS_CURSOR = 1;
 	
     @Override
 	public void startManagingCursor(Cursor c) {
@@ -473,6 +481,35 @@ public class ItemChartManagerActivity extends ExpandableListFragment {
         this.actualizarWidgets();
     }
 
-    
 
+	@NonNull
+	@Override
+	public Loader<Cursor> onCreateLoader(int id, @Nullable Bundle args) {
+		DataBaseManager mDBManager = DataBaseManager.getInstance(this);
+		CursorLoader cl = null;
+		switch(id) {
+			case GRAFICOS_CURSOR:
+				cl = mDBManager.cursorLoaderGraficosPorNombre(null, this);
+				ConstantsAdmin.cursorGraficos = cl;
+				break; // optional
+			default : // Optional
+				// Statements
+		}
+
+		return cl;
+
+
+
+
+	}
+
+	@Override
+	public void onLoadFinished(@NonNull Loader<Cursor> loader, Cursor data) {
+
+	}
+
+	@Override
+	public void onLoaderReset(@NonNull Loader<Cursor> loader) {
+
+	}
 }

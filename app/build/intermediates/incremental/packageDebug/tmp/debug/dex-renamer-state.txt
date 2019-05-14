@@ -1,4 +1,4 @@
-#Sun May 12 09:43:52 ART 2019
-base.0=/home/andrea/AndroidStudioProjects/KN-Estadisticas-Full/app/build/intermediates/dex/debug/mergeDexDebug/out
+#Mon May 13 07:57:53 ART 2019
+base.0=C\:\\Users\\a.grassano.spb\\ProyectosAndroid\\KN-Estadisticas\\app\\build\\intermediates\\dex\\debug\\mergeDexDebug\\out
 path.0=classes.dex
 renamed.0=classes.dex

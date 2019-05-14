@@ -23,6 +23,7 @@ import android.database.Cursor;
 import android.graphics.Bitmap;
 import android.os.Environment;
 import android.provider.MediaStore;
+import android.support.v4.content.CursorLoader;
 import android.widget.Toast;
 
 import com.freshair.android.knestadisticas.R;
@@ -37,6 +38,7 @@ public class ConstantsAdmin {
 	
 	
 	private static DataBaseManager mDBManager = null;
+	public static CursorLoader cursorGraficos = null;
 
 	
 	public static DataBaseManager getmDBManager() {
@@ -77,8 +79,17 @@ public class ConstantsAdmin {
     	Toast t = Toast.makeText(context.getApplicationContext(), message, duration);
 		t.show();    	
     }
-    
-    public static KNChart obtenerChartId(Activity context, long idChart){
+
+	public static String querySelectionColumnByValue(String column, Object value) {
+		String selection = null;
+		if (column != null && !column.equals("")) {
+			selection = column + "= '" + value + "'";
+		}
+		return selection;
+	}
+
+
+	public static KNChart obtenerChartId(Activity context, long idChart){
     	KNChart chart;
     	Cursor chartCursor;
 		inicializarBD(context);

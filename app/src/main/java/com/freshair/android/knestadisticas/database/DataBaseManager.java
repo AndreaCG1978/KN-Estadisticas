@@ -7,6 +7,7 @@ import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteException;
 import android.database.sqlite.SQLiteStatement;
+import android.support.v4.content.CursorLoader;
 
 import com.freshair.android.knestadisticas.dtos.KNChart;
 import com.freshair.android.knestadisticas.dtos.KNConfigChart;
@@ -18,11 +19,16 @@ public class DataBaseManager {
     
 	 private DataBaseHelper mDbHelper;
 	 private SQLiteDatabase mDb;
-	 private final Context mCtx;
+	 private Context mCtx;
+	 private static final DataBaseManager instanciaUnica = new DataBaseManager();
 	 
 	 public DataBaseManager(Context ctx) {
-	        this.mCtx = ctx;
+	 	this.mCtx = ctx;
 	 }
+
+	private DataBaseManager() {
+		super();
+	}
 
 	 	 
      public void open() throws SQLException {
@@ -33,11 +39,47 @@ public class DataBaseManager {
      public void close() {
          mDbHelper.close();
      }
-     
 
-     
-    
-     public long createOrUpdateChart(KNChart chart) {
+	public static DataBaseManager getInstance(Context ctx) {
+		instanciaUnica.setmCtx(ctx);
+		return instanciaUnica;
+	}
+
+	private void setmCtx(Context mCtx) {
+		this.mCtx = mCtx;
+	}
+
+
+	public CursorLoader cursorLoaderGraficosPorNombre(Object value, Context context) {
+	 	return cursorLoaderGraficosPorCampo(ConstantsAdmin.KEY_CHART_NAME, value, context);
+	}
+
+	private CursorLoader cursorLoaderGraficosPorCampo(String column, Object value, Context context) {
+		String selection = ConstantsAdmin.querySelectionColumnByValue(column, value);
+
+		return new CursorLoader( context, null, null, selection, null, null)
+		{
+			@Override
+			public Cursor loadInBackground()
+			{
+				// You better know how to get your database.
+				// You can use any query that returns a cursor.
+				Cursor c = null;
+				if(mDb.isOpen()){
+					c = mDb.query(ConstantsAdmin.TABLE_CHART, getProjection(), getSelection(), getSelectionArgs(), null, null, getSortOrder(), null );
+					if (c != null) {
+						c.moveToFirst();
+					}
+				}
+				return c;
+			}
+		};
+
+	}
+
+
+
+	public long createOrUpdateChart(KNChart chart) {
     	 long returnValue = -1;
     	 int showGrid = 1;
     	 int showValue = 1;
