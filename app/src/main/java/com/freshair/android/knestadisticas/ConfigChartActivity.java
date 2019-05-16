@@ -9,6 +9,11 @@ import android.content.Intent;
 import android.database.Cursor;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
+import android.support.annotation.Nullable;
+import android.support.v4.app.LoaderManager;
+import android.support.v4.content.CursorLoader;
+import android.support.v4.content.Loader;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemSelectedListener;
@@ -19,12 +24,13 @@ import android.widget.CompoundButton;
 import android.widget.Spinner;
 import android.widget.TextView;
 
+import com.freshair.android.knestadisticas.database.DataBaseManager;
 import com.freshair.android.knestadisticas.dtos.KNChart;
 import com.freshair.android.knestadisticas.dtos.KNConfigChart;
 import com.freshair.android.knestadisticas.utils.ColorPickerDialog;
 import com.freshair.android.knestadisticas.utils.ConstantsAdmin;
 
-public class ConfigChartActivity extends Activity {
+public class ConfigChartActivity extends Activity  implements LoaderManager.LoaderCallbacks<Cursor> {
    	
 	private KNChart mChartSeleccionado = null;
 	private KNConfigChart mConfig = null;
@@ -53,6 +59,9 @@ public class ConfigChartActivity extends Activity {
 	private static final int COLOR_GRID_DIALOG_ID = 2;
 	private static final int COLOR_LABELS_DIALOG_ID = 3;
 	private ArrayList<Cursor> allMyCursors = null;
+	private final int CONFIG_CURSOR = 1;
+
+	public static CursorLoader cursorGraficos = null;
 	
     @Override
 	public void startManagingCursor(Cursor c) {
@@ -195,8 +204,36 @@ public class ConfigChartActivity extends Activity {
     		timeFormatSpinner.setSelection(j);
     	}
     }
-    
-    class seleccionSpinnerStylePointListener implements OnItemSelectedListener {
+
+	@NonNull
+	@Override
+	public Loader<Cursor> onCreateLoader(int id, @Nullable Bundle args) {
+		DataBaseManager mDBManager = DataBaseManager.getInstance(this);
+		CursorLoader cl = null;
+		switch(id) {
+			case CONFIG_CURSOR:
+				cl = mDBManager.cursorLoaderConfig(this, -1);
+				ConstantsAdmin.cursorConfig = cl;
+				break; // optional
+			default : // Optional
+				// Statements
+		}
+
+		return cl;
+
+	}
+
+	@Override
+	public void onLoadFinished(@NonNull Loader<Cursor> loader, Cursor data) {
+
+	}
+
+	@Override
+	public void onLoaderReset(@NonNull Loader<Cursor> loader) {
+
+	}
+
+	class seleccionSpinnerStylePointListener implements OnItemSelectedListener {
         public void onItemSelected(AdapterView<?> parent, View v, int pos, long row) {
         	mPointSelected = pos;
         }

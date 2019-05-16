@@ -78,6 +78,50 @@ public class DataBaseManager {
 	}
 
 
+	public Cursor fetchConfig(long id) {
+		Cursor result = null;
+		try{
+			result = mDb.query(ConstantsAdmin.TABLE_CONFIG, null, ConstantsAdmin.KEY_ROWID  + "= '" + id + "'", null, null, null, null);
+			if (result != null) {
+				result.moveToFirst();
+			}
+		}catch (Exception e) {
+			// TODO: handle exception
+			e.getMessage();
+		}
+
+
+		return result;
+	}
+
+	public CursorLoader cursorLoaderConfig(Context context, long id) {
+		final String selection = ConstantsAdmin.KEY_ROWID  + "= '" + id + "'";
+
+		return new CursorLoader( context, null, null, selection, null, null)
+		{
+			@Override
+			public Cursor loadInBackground()
+			{
+				// You better know how to get your database.
+				// You can use any query that returns a cursor.
+				Cursor result = null;
+				try{
+					result = mDb.query(ConstantsAdmin.TABLE_CONFIG, null, selection, null, null, null, null);
+					if (result != null) {
+						result.moveToFirst();
+					}
+				}catch (Exception e) {
+					// TODO: handle exception
+					e.getMessage();
+				}
+
+
+				return result;
+			}
+		};
+
+	}
+
 
 	public long createOrUpdateChart(KNChart chart) {
     	 long returnValue = -1;
@@ -289,21 +333,7 @@ public class DataBaseManager {
          return result;
      }
      
-     public Cursor fetchConfig(long id) {
-    	 Cursor result = null;
-		 try{
-			 result = mDb.query(ConstantsAdmin.TABLE_CONFIG, null, ConstantsAdmin.KEY_ROWID  + "= '" + id + "'", null, null, null, null);
-			 if (result != null) {
-				 result.moveToFirst();
-			 }
-		 }catch (Exception e) {
-			// TODO: handle exception
-			 e.getMessage();
-		 }
-    	
-    	 
-         return result;
-     }
+
      
      public Cursor fetchChartsForId(long id) {
     	 Cursor result = null;
@@ -320,7 +350,9 @@ public class DataBaseManager {
     	 
          return result;
      }
-     
+
+
+
      public Cursor fetchItemForId(long id) {
     	 Cursor result = null;
 		 try{

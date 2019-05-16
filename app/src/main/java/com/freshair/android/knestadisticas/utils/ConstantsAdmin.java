@@ -39,6 +39,7 @@ public class ConstantsAdmin {
 	
 	private static DataBaseManager mDBManager = null;
 	public static CursorLoader cursorGraficos = null;
+	public static CursorLoader cursorConfig = null;
 
 	
 	public static DataBaseManager getmDBManager() {
@@ -49,19 +50,18 @@ public class ConstantsAdmin {
 		ConstantsAdmin.mDBManager = mDBManager;
 	}
 	
-    public static void inicializarBD(Activity act){
-    	if(mDBManager == null){
+    public static void inicializarBD(DataBaseManager mDBManager){
+    /*	if(mDBManager == null){
     		mDBManager = new DataBaseManager(act);	
-    	}
+    	}*/
     	mDBManager.open();
     }
-    
-    
-    public static void finalizarBD(){
-    	if(mDBManager != null){
-    		mDBManager.close();
-    	}
-    }
+
+	public static void finalizarBD(DataBaseManager mDBManager){
+		if(mDBManager != null){
+			mDBManager.close();
+		}
+	}
     
     public static void upgradeBD(){
     	mDBManager.upgradeDB();
@@ -92,25 +92,25 @@ public class ConstantsAdmin {
 	public static KNChart obtenerChartId(Activity context, long idChart){
     	KNChart chart;
     	Cursor chartCursor;
-		inicializarBD(context);
+		inicializarBD(mDBManager);
 		chartCursor = mDBManager.fetchChartsForId(idChart);
-		context.startManagingCursor(chartCursor);
+	//	context.startManagingCursor(chartCursor);
 		chart = cursorToChartDto(chartCursor);
-    	finalizarBD();
+    	finalizarBD(mDBManager);
     	return chart;
     }
     
     private static KNChart obtenerChartNamed(Activity context, String chartName){
     	KNChart chart = null;
     	Cursor chartCursor = null;
-		inicializarBD(context);
+		inicializarBD(mDBManager);
 		chartCursor = mDBManager.fetchChartsForName(chartName);
-		context.startManagingCursor(chartCursor);
+	//	context.startManagingCursor(chartCursor);
 		if(chartCursor.getCount() > 0){
 			chartCursor.moveToFirst();
 			chart = cursorToChartDto(chartCursor);
 		}
-    	finalizarBD();
+    	finalizarBD(mDBManager);
     	return chart;
     }
     
@@ -119,19 +119,19 @@ public class ConstantsAdmin {
     public static KNConfigChart obtenerConfigChart(Activity context){
     	KNConfigChart config = new KNConfigChart();
     	Cursor c = null;
-		inicializarBD(context);
+		inicializarBD(mDBManager);f
 		c = mDBManager.fetchConfig(1);
 		context.startManagingCursor(c);
 		config = cursorToConfigDto(c);
-    	finalizarBD();
+    	finalizarBD(mDBManager);
     	return config;
     }
     
     public static long obtenerTablaConfigSize(Activity context){
     	long result = 0;
-    	inicializarBD(context);
+    	inicializarBD(mDBManager);
     	result = mDBManager.tablaConfigSize();
-    	finalizarBD();
+    	finalizarBD(mDBManager);
     	return result;
     }
     
@@ -139,19 +139,19 @@ public class ConstantsAdmin {
     public static KNItemChart obtenerItemId(Activity context, long idItem){
     	KNItemChart item = new KNItemChart();
     	Cursor itemCursor = null;
-		inicializarBD(context);
+		inicializarBD(mDBManager);
 		itemCursor = mDBManager.fetchItemForId(idItem);
 		context.startManagingCursor(itemCursor);
 		item = cursorToItemDto(itemCursor);
-    	finalizarBD();
+    	finalizarBD(mDBManager);
     	return item;
     }
     
     public static Cursor obtenerAllChartCursor(Activity context){
     	Cursor chartCursor = null;
-    	inicializarBD(context);
+    	inicializarBD(mDBManager);
 		chartCursor = mDBManager.fetchChartsForName(null);
-		finalizarBD();
+		finalizarBD(mDBManager);
 		return chartCursor;
     }
     
@@ -182,7 +182,7 @@ public class ConstantsAdmin {
     	ArrayList<KNItemChart> items = new ArrayList<>();
     	KNItemChart item = null;
     	Cursor itemsCursor = null;
-    	inicializarBD(context);
+    	inicializarBD(mDBManager);
     	itemsCursor = mDBManager.fetchItemsForChart(chart);
     	context.startManagingCursor(itemsCursor);
     	itemsCursor.moveToFirst();
@@ -200,7 +200,7 @@ public class ConstantsAdmin {
     	ArrayList<KNItemChart> items = new ArrayList<>();
     	KNItemChart item = null;
     	Cursor itemsCursor = null;
-    	inicializarBD(context);
+    	inicializarBD(mDBManager);
     	itemsCursor = mDBManager.fetchItemsForChart(idChartSelected, yearSelected, monthSelected);
     	context.startManagingCursor(itemsCursor);
     	itemsCursor.moveToFirst();
@@ -218,7 +218,7 @@ public class ConstantsAdmin {
     	ArrayList<KNItemChart> items = new ArrayList<>();
     	KNItemChart item = null;
     	Cursor itemsCursor = null;
-    	inicializarBD(context);
+    	inicializarBD(mDBManager);
     	itemsCursor = mDBManager.fetchItemsForChartOrderBYearAndMonth(chart);
     	context.startManagingCursor(itemsCursor);
     	itemsCursor.moveToFirst();
@@ -236,7 +236,7 @@ public class ConstantsAdmin {
     	ArrayList<KNChart> allChart = new ArrayList<>();
     	KNChart chart = null;
     	Cursor chartCursor = null;
-		inicializarBD(context);
+		inicializarBD(mDBManager);
 		chartCursor = mDBManager.fetchChartsForName(null);
 		context.startManagingCursor(chartCursor);
 		chartCursor.moveToFirst();
@@ -246,52 +246,52 @@ public class ConstantsAdmin {
         	chartCursor.moveToNext();
           }
 
-	  	finalizarBD();
+	  	finalizarBD(mDBManager);
     	return allChart;
     }
     
     public static void eliminarChart(long idChart, Activity context){
-    	inicializarBD(context);
+    	inicializarBD(mDBManager);
     	mDBManager.removeChart(idChart);
-    	finalizarBD();
+    	finalizarBD(mDBManager);
     }
     
     public static void eliminarItemChart(long idItem, Activity context){
-    	inicializarBD(context);
+    	inicializarBD(mDBManager);
     	mDBManager.removeItemChart(idItem);
-    	finalizarBD();
+    	finalizarBD(mDBManager);
     }
     
     public static void eliminarItemsCharts(String idChart, String year, Activity context){
-    	inicializarBD(context);
+    	inicializarBD(mDBManager);
     	mDBManager.removeItemsCharts(idChart, year);
-    	finalizarBD();
+    	finalizarBD(mDBManager);
     }
     
     public static void eliminarItemsCharts(String idChart, String year, String month, Activity context){
-    	inicializarBD(context);
+    	inicializarBD(mDBManager);
     	mDBManager.removeItemsCharts(idChart, year, month);
-    	finalizarBD();
+    	finalizarBD(mDBManager);
     }
     
     public static long agregarChart(KNChart chartSelec, Activity context){
     	long id = -1;
-		ConstantsAdmin.inicializarBD(context);
+		ConstantsAdmin.inicializarBD(mDBManager);
 		id = ConstantsAdmin.mDBManager.createOrUpdateChart(chartSelec);
-		ConstantsAdmin.finalizarBD();
+		ConstantsAdmin.finalizarBD(mDBManager);
 		return id;
     }
     
     public static void agregarConfigChart(KNConfigChart config, Activity context){
-		ConstantsAdmin.inicializarBD(context);
+		ConstantsAdmin.inicializarBD(mDBManager);
 		ConstantsAdmin.mDBManager.createOrUpdateConfigChart(config);
-		ConstantsAdmin.finalizarBD();
+		ConstantsAdmin.finalizarBD(mDBManager);
     }
 
     public static void agregarItem(KNItemChart item, Activity context){
     	KNItemChart auxItem = new KNItemChart();
     	Cursor cur = null;
-		inicializarBD(context);
+		inicializarBD(mDBManager);
 		cur = mDBManager.fetchItemsForChartAndDateTime(item.getChartId(), item.getYear(), item.getMonth(), item.getDay(), item.getHour(), item.getMin());
 		if(cur.getCount() > 0){
 			cur.moveToFirst();
@@ -304,7 +304,7 @@ public class ConstantsAdmin {
 			mDBManager.createOrUpdateItemChart(auxItem);
 		}
 		                    
-		ConstantsAdmin.finalizarBD();
+		ConstantsAdmin.finalizarBD(mDBManager);
     }
 
     
