@@ -17,6 +17,7 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.ListView;
 
+import com.freshair.android.knestadisticas.database.DataBaseManager;
 import com.freshair.android.knestadisticas.dtos.KNChart;
 import com.freshair.android.knestadisticas.dtos.KNItemChart;
 import com.freshair.android.knestadisticas.utils.ConstantsAdmin;
@@ -102,7 +103,8 @@ public class ListadoCompararChartsActivity extends ListActivity {
 
 	
 	private void configurarList(ListView listView){
-		List<KNChart> charts = ConstantsAdmin.obtenerAllChart(this);
+		DataBaseManager mDBManager = DataBaseManager.getInstance(this);
+		List<KNChart> charts = ConstantsAdmin.obtenerAllChart(this, mDBManager);
 		this.filtrarChartsSinItems(charts);
 		if(charts.size() > 1){
 			posSelected = new ArrayList<>();
@@ -128,11 +130,12 @@ public class ListadoCompararChartsActivity extends ListActivity {
 	
 	private void filtrarChartsSinItems(List<KNChart> charts){
 		Iterator<KNChart> it = charts.iterator();
+		DataBaseManager mDBManager = DataBaseManager.getInstance(this);
         List<KNItemChart> items;
 		KNChart chrt;
 		while(it.hasNext()){
 			chrt = it.next();
-			items = ConstantsAdmin.obtenerItemsDeChart(chrt, this);
+			items = ConstantsAdmin.obtenerItemsDeChart(chrt, this, mDBManager);
 			if(items.size() == 0){
 				it.remove();
 			}

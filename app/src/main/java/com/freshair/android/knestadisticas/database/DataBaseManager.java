@@ -20,6 +20,8 @@ public class DataBaseManager {
 	 private DataBaseHelper mDbHelper;
 	 private SQLiteDatabase mDb;
 	 private Context mCtx;
+	 private boolean isOpened = false;
+
 	 private static final DataBaseManager instanciaUnica = new DataBaseManager();
 	 
 	 public DataBaseManager(Context ctx) {
@@ -30,15 +32,20 @@ public class DataBaseManager {
 		super();
 	}
 
-	 	 
-     public void open() throws SQLException {
-	      mDbHelper = new DataBaseHelper(mCtx);
-	      mDb = mDbHelper.getWritableDatabase();
-	 }
-     
-     public void close() {
-         mDbHelper.close();
-     }
+	public void open() throws SQLException {
+		if(!this.isOpened) {
+			mDbHelper = new DataBaseHelper(mCtx);
+			mDb = mDbHelper.getWritableDatabase();
+			this.isOpened = true;
+		}
+	}
+
+	public void close() {
+		if(this.isOpened) {
+			mDbHelper.close();
+			this.isOpened = false;
+		}
+	}
 
 	public static DataBaseManager getInstance(Context ctx) {
 		instanciaUnica.setmCtx(ctx);

@@ -25,6 +25,7 @@ import android.widget.ImageView;
 import android.widget.SimpleExpandableListAdapter;
 import android.widget.TextView;
 
+import com.freshair.android.knestadisticas.database.DataBaseManager;
 import com.freshair.android.knestadisticas.dtos.KNChart;
 import com.freshair.android.knestadisticas.utils.ConstantsAdmin;
 
@@ -84,6 +85,7 @@ public class MainActivity extends ExpandableListActivity {
     
 	private void eliminarChartDialog(int chartPosition){
 		try {
+            final DataBaseManager mDBManager = DataBaseManager.getInstance(this);
 			final KNChart chrt = myCharts.get(chartPosition);
 			String chrtStr = chrt.getName();
 			AlertDialog.Builder builder = new AlertDialog.Builder(this);
@@ -91,7 +93,7 @@ public class MainActivity extends ExpandableListActivity {
 	    	       .setCancelable(false)
 	    	       .setPositiveButton(R.string.label_si, new DialogInterface.OnClickListener() {
 	    	           public void onClick(DialogInterface dialog, int id) {
-	    	        	   ConstantsAdmin.eliminarChart(chrt.getId(), me);
+	    	        	   ConstantsAdmin.eliminarChart(chrt.getId(), me, mDBManager);
 	    	        	   mGroupSelected = -1;
 	    	        	   recargarLista();
 	    	           }
@@ -184,8 +186,9 @@ public class MainActivity extends ExpandableListActivity {
             protected Integer doInBackground(Long... params) {
 
                 try {
+                    DataBaseManager mDBManager = DataBaseManager.getInstance(me);
                     publishProgress(1);
-                    ConstantsAdmin.importarCSVs(me,selectedFormatImport);
+                    ConstantsAdmin.importarCSVs(me,selectedFormatImport, mDBManager);
 
 
                 } catch (Exception e) {
@@ -253,9 +256,10 @@ public class MainActivity extends ExpandableListActivity {
 	}
     
     private void recargarLista(){
+        DataBaseManager mDBManager = DataBaseManager.getInstance(this);
         List<Map<String, String>> groupData = new ArrayList<>();
         List<List<Map<String, String>>> childData = new ArrayList<>();
-        myCharts = ConstantsAdmin.obtenerAllChart(this);
+        myCharts = ConstantsAdmin.obtenerAllChart(this, mDBManager);
         Iterator<KNChart> it = myCharts.iterator();
         KNChart chart;
         Map<String, String> curGroupMap;

@@ -17,6 +17,7 @@ import android.widget.TextView;
 import android.widget.TimePicker;
 import android.widget.Toast;
 
+import com.freshair.android.knestadisticas.database.DataBaseManager;
 import com.freshair.android.knestadisticas.dtos.KNItemChart;
 import com.freshair.android.knestadisticas.utils.ConstantsAdmin;
 
@@ -213,11 +214,12 @@ public class AltaItemChartActivity extends Activity {
  	
 	private void guardarItemChartSeleccionado(Intent intent){
 		String idItemString;
+		DataBaseManager mDBManager = DataBaseManager.getInstance(this);
 		mChartId = (String)intent.getExtras().get(ConstantsAdmin.CHART_SELECCIONADO);
 		if(intent.hasExtra(ConstantsAdmin.ITEM_CHART_SELECCIONADO)){
 			idItemString = (String)intent.getExtras().get(ConstantsAdmin.ITEM_CHART_SELECCIONADO);
 			int idItem = Integer.valueOf(idItemString);
-			mItemChartSeleccionado = ConstantsAdmin.obtenerItemId(this, idItem);
+			mItemChartSeleccionado = ConstantsAdmin.obtenerItemId(this, idItem, mDBManager);
 			this.cargarEntriesConItemDto();
 		}else{
 			mItemChartSeleccionado = new KNItemChart();
@@ -265,7 +267,7 @@ public class AltaItemChartActivity extends Activity {
     
 	private void registrarItem(){
 		try {
-
+			DataBaseManager mDBManager = DataBaseManager.getInstance(this);
 			if(mItemChartSeleccionado == null){
 				mItemChartSeleccionado = new KNItemChart();
 			}
@@ -276,7 +278,7 @@ public class AltaItemChartActivity extends Activity {
 			mItemChartSeleccionado.setHour(String.valueOf(mHour));
 			mItemChartSeleccionado.setMin(String.valueOf(mMin));
 			mItemChartSeleccionado.setChartId(mChartId);
-			ConstantsAdmin.agregarItem(mItemChartSeleccionado, this);
+			ConstantsAdmin.agregarItem(mItemChartSeleccionado, this, mDBManager);
 			ConstantsAdmin.mDay = mDay;
 			ConstantsAdmin.mMonth = mMonth;
 			ConstantsAdmin.mYear = mYear;

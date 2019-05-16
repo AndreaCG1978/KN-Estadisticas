@@ -10,6 +10,7 @@ import android.graphics.Color;
 import android.os.Bundle;
 import android.view.MotionEvent;
 
+import com.freshair.android.knestadisticas.database.DataBaseManager;
 import com.freshair.android.knestadisticas.dtos.KNConfigChart;
 import com.freshair.android.knestadisticas.utils.ConstantsAdmin;
 
@@ -18,19 +19,19 @@ public class InitActivity extends Activity {
     private boolean _active = true;
     private final int _splashTime = 1200;
     private Activity me = null;  
-	private ArrayList<Cursor> allMyCursors = null;
-	
+//	private ArrayList<Cursor> allMyCursors = null;
+/*
     @Override
 	public void startManagingCursor(Cursor c) {
 		allMyCursors.add(c);
 	    super.startManagingCursor(c);
 	}	
-    
+    */
     protected void onActivityResult(int requestCode, int resultCode, Intent intent) {
     	super.onActivityResult(requestCode, resultCode, intent);
-    	this.resetAllMyCursors();
+    //	this.resetAllMyCursors();
     }
-    
+    /*
     private void resetAllMyCursors(){
     	Cursor cur;
         for (Cursor allMyCursor : allMyCursors) {
@@ -39,11 +40,11 @@ public class InitActivity extends Activity {
         }
     	allMyCursors = new ArrayList<>();
     }
-    
+    */
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        allMyCursors = new ArrayList<>();
+     //   allMyCursors = new ArrayList<>();
                 try{
                	
                 	inicializarBD();
@@ -86,24 +87,26 @@ public class InitActivity extends Activity {
     
 	private void inicializarBD(){
 		long configSize = 0;
-    	ConstantsAdmin.inicializarBD(this);
-    	ConstantsAdmin.createBD();
-    	configSize = ConstantsAdmin.obtenerTablaConfigSize(this);
+        DataBaseManager mDBManager = DataBaseManager.getInstance(this);
+    	ConstantsAdmin.inicializarBD(mDBManager);
+    	ConstantsAdmin.createBD(mDBManager);
+    	configSize = ConstantsAdmin.obtenerTablaConfigSize(this, mDBManager);
     	if(configSize == 0){
     		this.createConfigChart();
     	}
-    	ConstantsAdmin.finalizarBD();
+    	ConstantsAdmin.finalizarBD(mDBManager);
 	}
 	
 	private void createConfigChart(){
 		KNConfigChart config = new KNConfigChart();
+        DataBaseManager mDBManager = DataBaseManager.getInstance(this);
 		config.setBackground(String.valueOf(Color.DKGRAY));
 		config.setGrid(String.valueOf(Color.LTGRAY));
 		config.setLabel(String.valueOf(Color.LTGRAY));
 		config.setPoint("2");
 		config.setLine(String.valueOf(Color.BLUE));
 		config.setTime(ConstantsAdmin.formatTime[0]);
-		ConstantsAdmin.agregarConfigChart(config, this);
+		ConstantsAdmin.agregarConfigChart(config, this, mDBManager);
 	}
 	
     public boolean onTouchEvent(MotionEvent event) {

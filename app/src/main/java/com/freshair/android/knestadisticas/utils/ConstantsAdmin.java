@@ -20,6 +20,7 @@ import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.database.Cursor;
+import android.database.DatabaseErrorHandler;
 import android.graphics.Bitmap;
 import android.os.Environment;
 import android.provider.MediaStore;
@@ -37,11 +38,11 @@ import com.freshair.android.knestadisticas.dtos.KNItemChart;
 public class ConstantsAdmin {
 	
 	
-	private static DataBaseManager mDBManager = null;
+//	private static DataBaseManager mDBManager = null;
 	public static CursorLoader cursorGraficos = null;
 	public static CursorLoader cursorConfig = null;
 
-	
+	/*
 	public static DataBaseManager getmDBManager() {
 		return mDBManager;
 	}
@@ -49,7 +50,7 @@ public class ConstantsAdmin {
 	public static void setmDBManager(DataBaseManager mDBManager) {
 		ConstantsAdmin.mDBManager = mDBManager;
 	}
-	
+	*/
     public static void inicializarBD(DataBaseManager mDBManager){
     /*	if(mDBManager == null){
     		mDBManager = new DataBaseManager(act);	
@@ -62,15 +63,15 @@ public class ConstantsAdmin {
 			mDBManager.close();
 		}
 	}
-    
-    public static void upgradeBD(){
+
+	public static void upgradeBD(DataBaseManager mDBManager){
     	mDBManager.upgradeDB();
-    }
-    
-    public static void createBD(){
+	}
+
+	public static void createBD(DataBaseManager mDBManager){
     	mDBManager.createBD();
     }
-    
+
     public static void mostrarMensajeAplicacion(Context context, String message){
     	mostrarMensajeAplicacion(context, message, 4);
     }
@@ -89,7 +90,7 @@ public class ConstantsAdmin {
 	}
 
 
-	public static KNChart obtenerChartId(Activity context, long idChart){
+	public static KNChart obtenerChartId(Activity context, long idChart, DataBaseManager mDBManager){
     	KNChart chart;
     	Cursor chartCursor;
 		inicializarBD(mDBManager);
@@ -100,7 +101,7 @@ public class ConstantsAdmin {
     	return chart;
     }
     
-    private static KNChart obtenerChartNamed(Activity context, String chartName){
+    private static KNChart obtenerChartNamed(Activity context, String chartName, DataBaseManager mDBManager){
     	KNChart chart = null;
     	Cursor chartCursor = null;
 		inicializarBD(mDBManager);
@@ -116,10 +117,10 @@ public class ConstantsAdmin {
     
     
     
-    public static KNConfigChart obtenerConfigChart(Activity context){
+    public static KNConfigChart obtenerConfigChart(Activity context, DataBaseManager mDBManager){
     	KNConfigChart config = new KNConfigChart();
     	Cursor c = null;
-		inicializarBD(mDBManager);f
+		inicializarBD(mDBManager);
 		c = mDBManager.fetchConfig(1);
 		context.startManagingCursor(c);
 		config = cursorToConfigDto(c);
@@ -127,7 +128,7 @@ public class ConstantsAdmin {
     	return config;
     }
     
-    public static long obtenerTablaConfigSize(Activity context){
+    public static long obtenerTablaConfigSize(Activity context, DataBaseManager mDBManager){
     	long result = 0;
     	inicializarBD(mDBManager);
     	result = mDBManager.tablaConfigSize();
@@ -136,7 +137,7 @@ public class ConstantsAdmin {
     }
     
     
-    public static KNItemChart obtenerItemId(Activity context, long idItem){
+    public static KNItemChart obtenerItemId(Activity context, long idItem, DataBaseManager mDBManager){
     	KNItemChart item = new KNItemChart();
     	Cursor itemCursor = null;
 		inicializarBD(mDBManager);
@@ -147,7 +148,7 @@ public class ConstantsAdmin {
     	return item;
     }
     
-    public static Cursor obtenerAllChartCursor(Activity context){
+    public static Cursor obtenerAllChartCursor(Activity context, DataBaseManager mDBManager){
     	Cursor chartCursor = null;
     	inicializarBD(mDBManager);
 		chartCursor = mDBManager.fetchChartsForName(null);
@@ -155,11 +156,11 @@ public class ConstantsAdmin {
 		return chartCursor;
     }
     
-    public static String[] obtenerAllChartNames(Activity context){
+    public static String[] obtenerAllChartNames(Activity context, DataBaseManager mdbManager){
     	String[] result = null;
     	try {
  
-    		List<KNChart> charts = obtenerAllChart(context);
+    		List<KNChart> charts = obtenerAllChart(context, mdbManager);
     		Iterator<KNChart> it = charts.iterator();
     		result = new String[charts.size()];
     		KNChart chart = null;
@@ -178,7 +179,7 @@ public class ConstantsAdmin {
     }
 
     
-    public static ArrayList<KNItemChart> obtenerItemsDeChart(KNChart chart, Activity context){
+    public static ArrayList<KNItemChart> obtenerItemsDeChart(KNChart chart, Activity context, DataBaseManager mDBManager){
     	ArrayList<KNItemChart> items = new ArrayList<>();
     	KNItemChart item = null;
     	Cursor itemsCursor = null;
@@ -196,7 +197,7 @@ public class ConstantsAdmin {
     	return items;
     }
     
-    public static ArrayList<KNItemChart> obtenerItemsDeChart(String idChartSelected, String yearSelected, String monthSelected, Activity context){
+    public static ArrayList<KNItemChart> obtenerItemsDeChart(String idChartSelected, String yearSelected, String monthSelected, Activity context, DataBaseManager mDBManager){
     	ArrayList<KNItemChart> items = new ArrayList<>();
     	KNItemChart item = null;
     	Cursor itemsCursor = null;
@@ -214,7 +215,7 @@ public class ConstantsAdmin {
     	return items;
     }
     
-    public static ArrayList<KNItemChart> obtenerItemsDeChartOrdenadosPorAnioYMes(KNChart chart, Activity context){
+    public static ArrayList<KNItemChart> obtenerItemsDeChartOrdenadosPorAnioYMes(KNChart chart, Activity context, DataBaseManager mDBManager){
     	ArrayList<KNItemChart> items = new ArrayList<>();
     	KNItemChart item = null;
     	Cursor itemsCursor = null;
@@ -232,7 +233,7 @@ public class ConstantsAdmin {
     	return items;
     }
     
-    public static ArrayList<KNChart> obtenerAllChart(Activity context){
+    public static ArrayList<KNChart> obtenerAllChart(Activity context, DataBaseManager mDBManager){
     	ArrayList<KNChart> allChart = new ArrayList<>();
     	KNChart chart = null;
     	Cursor chartCursor = null;
@@ -250,45 +251,45 @@ public class ConstantsAdmin {
     	return allChart;
     }
     
-    public static void eliminarChart(long idChart, Activity context){
+    public static void eliminarChart(long idChart, Activity context, DataBaseManager mDBManager){
     	inicializarBD(mDBManager);
     	mDBManager.removeChart(idChart);
     	finalizarBD(mDBManager);
     }
     
-    public static void eliminarItemChart(long idItem, Activity context){
+    public static void eliminarItemChart(long idItem, Activity context, DataBaseManager mDBManager){
     	inicializarBD(mDBManager);
     	mDBManager.removeItemChart(idItem);
     	finalizarBD(mDBManager);
     }
     
-    public static void eliminarItemsCharts(String idChart, String year, Activity context){
+    public static void eliminarItemsCharts(String idChart, String year, Activity context, DataBaseManager mDBManager){
     	inicializarBD(mDBManager);
     	mDBManager.removeItemsCharts(idChart, year);
     	finalizarBD(mDBManager);
     }
     
-    public static void eliminarItemsCharts(String idChart, String year, String month, Activity context){
+    public static void eliminarItemsCharts(String idChart, String year, String month, Activity context, DataBaseManager mDBManager){
     	inicializarBD(mDBManager);
     	mDBManager.removeItemsCharts(idChart, year, month);
     	finalizarBD(mDBManager);
     }
     
-    public static long agregarChart(KNChart chartSelec, Activity context){
+    public static long agregarChart(KNChart chartSelec, Activity context, DataBaseManager mDBManager){
     	long id = -1;
 		ConstantsAdmin.inicializarBD(mDBManager);
-		id = ConstantsAdmin.mDBManager.createOrUpdateChart(chartSelec);
+		id = mDBManager.createOrUpdateChart(chartSelec);
 		ConstantsAdmin.finalizarBD(mDBManager);
 		return id;
     }
     
-    public static void agregarConfigChart(KNConfigChart config, Activity context){
+    public static void agregarConfigChart(KNConfigChart config, Activity context, DataBaseManager mDBManager){
 		ConstantsAdmin.inicializarBD(mDBManager);
-		ConstantsAdmin.mDBManager.createOrUpdateConfigChart(config);
+		mDBManager.createOrUpdateConfigChart(config);
 		ConstantsAdmin.finalizarBD(mDBManager);
     }
 
-    public static void agregarItem(KNItemChart item, Activity context){
+    public static void agregarItem(KNItemChart item, Activity context, DataBaseManager mDBManager){
     	KNItemChart auxItem = new KNItemChart();
     	Cursor cur = null;
 		inicializarBD(mDBManager);
@@ -864,7 +865,7 @@ public class ConstantsAdmin {
     	return result;
     }
     
-    public static void importarCSVs(Activity context, int formatInput){
+    public static void importarCSVs(Activity context, int formatInput, DataBaseManager mdbManager){
         String body = null;
         File file = null;
         KNChart chart = null;
@@ -881,7 +882,7 @@ public class ConstantsAdmin {
 	            while(it.hasNext()){
 	                file = it.next();
 	                body = obtenerContenidoArchivo(file, context);
-	                chart = crearChartDesdeArchivo(file.getName(), context);
+	                chart = crearChartDesdeArchivo(file.getName(), context, mdbManager);
 	                items = obtenerItemsDeString(body, chart, formatInput);
 	                itItems = items.iterator();
 	                if(items.size() > 0){
@@ -892,7 +893,7 @@ public class ConstantsAdmin {
 	                while (itItems.hasNext()){
 	                    item = itItems.next();
 	                    //ACA GUARDAR EN LA BASE EL ITEM, ACORDATE DE MODIFICAR EL ALTA PARA QUE SI COINCIDE EN FECHA Y HORA SOBREESCRIBA
-	                    agregarItem(item, context);
+	                    agregarItem(item, context, mdbManager);
 	                }
 	
 	            }
@@ -908,7 +909,7 @@ public class ConstantsAdmin {
 
     }
 
-    private static KNChart crearChartDesdeArchivo(String filename, Activity context){
+    private static KNChart crearChartDesdeArchivo(String filename, Activity context, DataBaseManager mdbM){
         KNChart chart = new KNChart();
         KNChart oldChart = null;
         long idNuevoChart = -1;
@@ -921,9 +922,9 @@ public class ConstantsAdmin {
             chart.setName(chart.getName().substring(0, maxChartNameLength - 1));
         }
         // ACA TENGO QUE RECUPERAR DESDE LA BASE EL CHART CON ESTE NAME
-        oldChart = obtenerChartNamed(context, chart.getName());
+        oldChart = obtenerChartNamed(context, chart.getName(), mdbM);
         if(oldChart == null){
-            idNuevoChart = agregarChart(chart, context);
+            idNuevoChart = agregarChart(chart, context, mdbM);
 //             ACA REGISTRAR EL NUEVO CHART
             chart.setId(idNuevoChart);
         }else{

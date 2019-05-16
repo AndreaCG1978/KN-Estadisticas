@@ -57,17 +57,17 @@ public class ItemChartManagerActivity extends ExpandableListFragment implements 
 
 	private final int GRAFICOS_CURSOR = 1;
 	
-    @Override
+ /*   @Override
 	public void startManagingCursor(Cursor c) {
 		allMyCursors.add(c);
 	    super.startManagingCursor(c);
 	}	
-    
+    */
     protected void onActivityResult(int requestCode, int resultCode, Intent intent) {
     	super.onActivityResult(requestCode, resultCode, intent);
-    	this.resetAllMyCursors();
+    //	this.resetAllMyCursors();
     }
-    
+   /*
     private void resetAllMyCursors(){
     	Cursor cur;
 		for (Cursor allMyCursor : allMyCursors) {
@@ -76,10 +76,11 @@ public class ItemChartManagerActivity extends ExpandableListFragment implements 
 		}
     	allMyCursors = new ArrayList<>();
     }
-	
+	*/
 	
 	public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+		this.cargarLoaders();
         allMyCursors = new ArrayList<>();
         this.setContentView(R.layout.items_manager);
         this.registrarWidgets();
@@ -150,8 +151,8 @@ public class ItemChartManagerActivity extends ExpandableListFragment implements 
 	}
 
     private void recargarLista(){
-
-    	List<KNItemChart> items = ConstantsAdmin.obtenerItemsDeChart(mChartSeleccionado, this);
+		DataBaseManager mDBManager = DataBaseManager.getInstance(this);
+    	List<KNItemChart> items = ConstantsAdmin.obtenerItemsDeChart(mChartSeleccionado, this, mDBManager);
     	List<Map<String, String>> groupData = new ArrayList<>();
         List<List<Map<String, String>>> childData = new ArrayList<>();
         Iterator it = items.iterator();
@@ -349,11 +350,13 @@ public class ItemChartManagerActivity extends ExpandableListFragment implements 
 	}	
 	
 	private void eliminarYearItems(String year){
-		ConstantsAdmin.eliminarItemsCharts(String.valueOf(mChartSeleccionado.getId()), year, me);
+		DataBaseManager mDBManager = DataBaseManager.getInstance(this);
+		ConstantsAdmin.eliminarItemsCharts(String.valueOf(mChartSeleccionado.getId()), year, me, mDBManager);
 	}
 	
 	private void eliminarMonthItems(String year, String month){
-		ConstantsAdmin.eliminarItemsCharts(String.valueOf(mChartSeleccionado.getId()), year, month, me);
+		DataBaseManager mDBManager = DataBaseManager.getInstance(this);
+		ConstantsAdmin.eliminarItemsCharts(String.valueOf(mChartSeleccionado.getId()), year, month, me, mDBManager);
 	}
     
     private void openItemPerMonthView(){
@@ -374,7 +377,8 @@ public class ItemChartManagerActivity extends ExpandableListFragment implements 
  	}
 	
 	private void recargarChart(long idChart){
-		mChartSeleccionado = ConstantsAdmin.obtenerChartId(this, idChart);
+		DataBaseManager mDBManager = DataBaseManager.getInstance(this);
+		mChartSeleccionado = ConstantsAdmin.obtenerChartId(this, idChart, mDBManager);
 	}
 	
 	@Override
@@ -444,13 +448,14 @@ public class ItemChartManagerActivity extends ExpandableListFragment implements 
     
 	private void eliminarChartDialog(){
 		try {
+			final DataBaseManager mDBManager = DataBaseManager.getInstance(this);
 			String chrtStr = mChartSeleccionado.getName();
 			AlertDialog.Builder builder = new AlertDialog.Builder(this);
 	    	builder.setMessage(chrtStr + getString(R.string.mensaje_borrar_chart))
 	    	       .setCancelable(false)
 	    	       .setPositiveButton(R.string.label_si, new DialogInterface.OnClickListener() {
 	    	           public void onClick(DialogInterface dialog, int id) {
-	    	        	   ConstantsAdmin.eliminarChart(mChartSeleccionado.getId(), me);
+	    	        	   ConstantsAdmin.eliminarChart(mChartSeleccionado.getId(), me, mDBManager);
 	    	        	   finish();
 	    	           }
 	    	       })
@@ -480,6 +485,11 @@ public class ItemChartManagerActivity extends ExpandableListFragment implements 
         this.recargarLista();
         this.actualizarWidgets();
     }
+
+	private void cargarLoaders() {
+		this.getSupportLoaderManager().initLoader(GRAFICOS_CURSOR, null, this);
+
+	}
 
 
 	@NonNull

@@ -30,6 +30,7 @@ import android.view.ViewGroup.LayoutParams;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 
+import com.freshair.android.knestadisticas.database.DataBaseManager;
 import com.freshair.android.knestadisticas.dtos.KNChart;
 import com.freshair.android.knestadisticas.dtos.KNConfigChart;
 import com.freshair.android.knestadisticas.dtos.KNItemChart;
@@ -128,7 +129,8 @@ public class ComparisonChartActivity extends Activity {
   
   private void drawChart() {
 	    KNChart chrt;
-	    KNConfigChart config = ConstantsAdmin.obtenerConfigChart(this);
+	  	DataBaseManager mDBManager = DataBaseManager.getInstance(this);//{ PointStyle.POINT, PointStyle.POINT };
+	    KNConfigChart config = ConstantsAdmin.obtenerConfigChart(this, mDBManager);
 	    KNItemChart item;
 	    List<KNItemChart> items;
 	    String[] titles = new String[ConstantsAdmin.chartsParaComparar.size()];
@@ -145,14 +147,15 @@ public class ComparisonChartActivity extends Activity {
     	int a = 0;
     	StringBuilder unitString = new StringBuilder();
 	    int[] colors = new int[ConstantsAdmin.chartsParaComparar.size()]; //{ Color.BLUE, Color.GREEN };
-	    PointStyle[] styles = new PointStyle[ConstantsAdmin.chartsParaComparar.size()]; //{ PointStyle.POINT, PointStyle.POINT };
-	  for (KNChart aChartsParaComparar : ConstantsAdmin.chartsParaComparar) {
+	    PointStyle[] styles = new PointStyle[ConstantsAdmin.chartsParaComparar.size()];
+
+	  	for (KNChart aChartsParaComparar : ConstantsAdmin.chartsParaComparar) {
 		  chrt = aChartsParaComparar;
 		  colors[a] = myColors.get(a);
 		  titles[a] = chrt.getName();
 		  unitString.append("-").append(chrt.getUnit());
 		  styles[a] = ConstantsAdmin.tiposPuntos[Integer.valueOf(config.getPoint())];
-		  items = ConstantsAdmin.obtenerItemsDeChart(chrt, this);
+		  items = ConstantsAdmin.obtenerItemsDeChart(chrt, this, mDBManager);
 		  if (!sobrePuestos) {
 			  dates.add(new Date[items.size()]);
 		  } else {

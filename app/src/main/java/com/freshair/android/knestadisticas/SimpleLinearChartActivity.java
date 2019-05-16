@@ -35,6 +35,7 @@ import android.view.ViewGroup.LayoutParams;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 
+import com.freshair.android.knestadisticas.database.DataBaseManager;
 import com.freshair.android.knestadisticas.dtos.KNChart;
 import com.freshair.android.knestadisticas.dtos.KNItemChart;
 import com.freshair.android.knestadisticas.utils.ConstantsAdmin;
@@ -136,16 +137,18 @@ public class SimpleLinearChartActivity extends Activity {
   
   private void recuperarChart(){
 	  int idChart = Integer.valueOf(idChartSelect);
-	  mChart = ConstantsAdmin.obtenerChartId(this, idChart); 	 
+	  DataBaseManager mDBManager = DataBaseManager.getInstance(this);
+	  mChart = ConstantsAdmin.obtenerChartId(this, idChart, mDBManager);
   }
   
 
   private void drawChart() {
 	this.recuperarChart();
+	DataBaseManager mDBManager = DataBaseManager.getInstance(this);
     String[] titles = new String[] {mChart.getName()};
     List<Date[]> dates = new ArrayList<>();
     List<double[]> values = new ArrayList<>();
-    items = ConstantsAdmin.obtenerItemsDeChart(mChart, this);
+    items = ConstantsAdmin.obtenerItemsDeChart(mChart, this, mDBManager);
     if(items.size()>0){
 	    if(items != null && items.size() > 0){
 		    Iterator<KNItemChart> it = items.iterator();

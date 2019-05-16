@@ -11,6 +11,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.freshair.android.knestadisticas.database.DataBaseManager;
 import com.freshair.android.knestadisticas.dtos.KNChart;
 import com.freshair.android.knestadisticas.utils.ConstantsAdmin;
 
@@ -61,14 +62,14 @@ public class AltaChartActivity extends Activity {
     
 	private void registrarChart(){
 		try {
-
+			DataBaseManager mDBManager = DataBaseManager.getInstance(this);
 			if(mChartSeleccionado == null){
 				mChartSeleccionado = new KNChart();
 			}
 			mChartSeleccionado.setName(mNombreChart.getText().toString());
 			mChartSeleccionado.setDescription(mDescripcionChart.getText().toString());
 			mChartSeleccionado.setUnit(mUnidadChart.getText().toString());
-			ConstantsAdmin.agregarChart(mChartSeleccionado, this);
+			ConstantsAdmin.agregarChart(mChartSeleccionado, this, mDBManager);
 
 		} catch (Exception e) {
 			if(mChartSeleccionado.getId() == 0){
@@ -91,10 +92,11 @@ public class AltaChartActivity extends Activity {
 	
 	private void guardarChartSeleccionado(Intent intent){
 		String idChartString = null;
+		DataBaseManager mDBManager = DataBaseManager.getInstance(this);
 		if(intent.hasExtra(ConstantsAdmin.CHART_SELECCIONADO)){
 			idChartString = (String)intent.getExtras().get(ConstantsAdmin.CHART_SELECCIONADO);
 			int idChart = Integer.valueOf(idChartString);
-			mChartSeleccionado = ConstantsAdmin.obtenerChartId(this, idChart);
+			mChartSeleccionado = ConstantsAdmin.obtenerChartId(this, idChart, mDBManager);
 			this.cargarEntriesConChartDto();
 		}else{
 			mChartSeleccionado = new KNChart();

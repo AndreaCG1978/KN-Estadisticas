@@ -11,6 +11,7 @@ import android.graphics.Color;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
+import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.LoaderManager;
 import android.support.v4.content.CursorLoader;
 import android.support.v4.content.Loader;
@@ -30,7 +31,7 @@ import com.freshair.android.knestadisticas.dtos.KNConfigChart;
 import com.freshair.android.knestadisticas.utils.ColorPickerDialog;
 import com.freshair.android.knestadisticas.utils.ConstantsAdmin;
 
-public class ConfigChartActivity extends Activity  implements LoaderManager.LoaderCallbacks<Cursor> {
+public class ConfigChartActivity extends FragmentActivity implements LoaderManager.LoaderCallbacks<Cursor> {
    	
 	private KNChart mChartSeleccionado = null;
 	private KNConfigChart mConfig = null;
@@ -103,6 +104,7 @@ public class ConfigChartActivity extends Activity  implements LoaderManager.Load
         this.configurarSpinnerTimeFormat();
         this.configurarChecksBox();
         this.configurarTitulo();
+        this.cargarLoaders();
        
     }
     
@@ -223,6 +225,11 @@ public class ConfigChartActivity extends Activity  implements LoaderManager.Load
 
 	}
 
+	private void cargarLoaders() {
+		this.getSupportLoaderManager().initLoader(CONFIG_CURSOR, null, this);
+
+	}
+
 	@Override
 	public void onLoadFinished(@NonNull Loader<Cursor> loader, Cursor data) {
 
@@ -310,6 +317,7 @@ public class ConfigChartActivity extends Activity  implements LoaderManager.Load
     
     private void guardarChart(){
     	try {
+			DataBaseManager mDBManager = DataBaseManager.getInstance(this);
     		if(mChartSeleccionado.getId() != -1){
         		mChartSeleccionado.setBackgroundColor(String.valueOf(mColorSeleccionadoBackground));
     	    	mChartSeleccionado.setLineColor(String.valueOf(mColorSeleccionadoLine));
@@ -317,7 +325,7 @@ public class ConfigChartActivity extends Activity  implements LoaderManager.Load
     	    	mChartSeleccionado.setLabelColor(String.valueOf(mColorSeleccionadoLabels));
     	    	mChartSeleccionado.setFormatTime(ConstantsAdmin.formatTime[mTimeSelected]);
     	    	mChartSeleccionado.setPointStyle(String.valueOf(mPointSelected));
-    	    	ConstantsAdmin.agregarChart(mChartSeleccionado, this);
+    	    	ConstantsAdmin.agregarChart(mChartSeleccionado, this, mDBManager);
         	}else{
         		mConfig.setBackground(String.valueOf(mColorSeleccionadoBackground));
         		mConfig.setGrid(String.valueOf(mColorSeleccionadoGrid));
@@ -327,7 +335,7 @@ public class ConfigChartActivity extends Activity  implements LoaderManager.Load
         		mConfig.setShowGrid(checkShowGrid.isChecked());
         		mConfig.setShowValue(checkShowValues.isChecked());
         		mConfig.setTime(ConstantsAdmin.formatTime[mTimeSelected]);
-        		ConstantsAdmin.agregarConfigChart(mConfig, this);
+        		ConstantsAdmin.agregarConfigChart(mConfig, this, mDBManager);
         	}
 		} catch (Exception e) {
 			ConstantsAdmin.mostrarMensajeAplicacion(this, this.getString(R.string.mensaje_error_guardar));
@@ -407,7 +415,8 @@ public class ConfigChartActivity extends Activity  implements LoaderManager.Load
 	
 	private void recuperarConfig(){
 		mChartSeleccionado = new KNChart();
-		mConfig = ConstantsAdmin.obtenerConfigChart(this);
+		DataBaseManager mDBManager = DataBaseManager.getInstance(this);
+		mConfig = ConstantsAdmin.obtenerConfigChart(this, mDBManager);
 		mChartSeleccionado.setBackgroundColor(mConfig.getBackground());
 		mChartSeleccionado.setFormatTime(mConfig.getTime());
 		mChartSeleccionado.setGridColor(mConfig.getGrid());
@@ -460,7 +469,8 @@ public class ConfigChartActivity extends Activity  implements LoaderManager.Load
 
  	
 	private void recargarChart(long idChart){
-		mChartSeleccionado = ConstantsAdmin.obtenerChartId(this, idChart);
+		DataBaseManager mDBManager = DataBaseManager.getInstance(this);
+		mChartSeleccionado = ConstantsAdmin.obtenerChartId(this, idChart, mDBManager);
 	}
 
 }

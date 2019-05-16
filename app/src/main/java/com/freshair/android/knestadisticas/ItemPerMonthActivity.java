@@ -16,6 +16,7 @@ import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 
+import com.freshair.android.knestadisticas.database.DataBaseManager;
 import com.freshair.android.knestadisticas.dtos.KNChart;
 import com.freshair.android.knestadisticas.dtos.KNItemChart;
 import com.freshair.android.knestadisticas.utils.ConstantsAdmin;
@@ -116,7 +117,8 @@ public class ItemPerMonthActivity extends ListActivity {
 	}
 	
 	private void recargarChart(){
-		mChartSeleccionado = ConstantsAdmin.obtenerChartId(this, Long.valueOf(idChartSelected));
+		DataBaseManager mDBManager = DataBaseManager.getInstance(this);
+		mChartSeleccionado = ConstantsAdmin.obtenerChartId(this, Long.valueOf(idChartSelected), mDBManager);
 	}
 	
 	private void guardarDatosSeleccionado(Intent intent){
@@ -128,7 +130,8 @@ public class ItemPerMonthActivity extends ListActivity {
 	
 	
 	private void recargarLista(){
-        List<KNItemChart> items = ConstantsAdmin.obtenerItemsDeChart(idChartSelected, mYearSelected, mMonthSelecetd, this);
+		DataBaseManager mDBManager = DataBaseManager.getInstance(this);
+        List<KNItemChart> items = ConstantsAdmin.obtenerItemsDeChart(idChartSelected, mYearSelected, mMonthSelecetd, this, mDBManager);
         if(items != null && items.size() > 0){
         	setListAdapter(new KNItemChartArrayAdapter(this, R.layout.row_item, items));	
         }else{
@@ -229,9 +232,10 @@ public class ItemPerMonthActivity extends ListActivity {
 	
 	private void eliminarItemSeleccionado(){
 		KNItemChart itemSelect = (KNItemChart)this.getListAdapter().getItem(Integer.valueOf(String.valueOf(mItemIdSelect)));
-		ConstantsAdmin.inicializarBD(this);
-		ConstantsAdmin.eliminarItemChart(itemSelect.getId(), this);
-		ConstantsAdmin.finalizarBD();
+		DataBaseManager mDBManager = DataBaseManager.getInstance(this);
+		ConstantsAdmin.inicializarBD(mDBManager);
+		ConstantsAdmin.eliminarItemChart(itemSelect.getId(), this, mDBManager);
+		ConstantsAdmin.finalizarBD(mDBManager);
 	}
 	
    
