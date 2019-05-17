@@ -29,15 +29,16 @@ public class ItemPerMonthActivity extends ListActivity {
 	private String idChartSelected = null;
 	private long mItemIdSelect = -1;
 	private KNChart mChartSeleccionado = null;
-	private ArrayList<Cursor> allMyCursors = null;
-	
+//	private ArrayList<Cursor> allMyCursors = null;
+
+	/*
     @Override
 	public void startManagingCursor(Cursor c) {
 		allMyCursors.add(c);
 	    super.startManagingCursor(c);
 	}	
-    
-    
+    */
+   /*
     private void resetAllMyCursors(){
     	Cursor cur;
 		for (Cursor allMyCursor : allMyCursors) {
@@ -46,10 +47,10 @@ public class ItemPerMonthActivity extends ListActivity {
 		}
     	allMyCursors = new ArrayList<>();
     }
-	
+	*/
 	public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        allMyCursors = new ArrayList<>();
+     //   allMyCursors = new ArrayList<>();
         this.setContentView(R.layout.list_items);
         this.guardarDatosSeleccionado(this.getIntent());
         this.configurarList(getListView()); 
@@ -181,7 +182,7 @@ public class ItemPerMonthActivity extends ListActivity {
     
     protected void onActivityResult(int requestCode, int resultCode, Intent intent) {
     	super.onActivityResult(requestCode, resultCode, intent);
-    	this.resetAllMyCursors();
+    	//this.resetAllMyCursors();
     	switch (requestCode) {
 		case ConstantsAdmin.ACTIVITY_EJECUTAR_ALTA_ITEM_CHART:
 			if(!(String.valueOf(ConstantsAdmin.mYear).equals(mYearSelected) && ConstantsAdmin.mMonth.equals(mMonthSelecetd))&& ConstantsAdmin.guardoItem){

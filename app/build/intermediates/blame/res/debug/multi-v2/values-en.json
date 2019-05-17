@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "/home/andrea/AndroidStudioProjects/KN-Estadisticas-Full/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-en/values-en.xml",
+            "outputFile": "C:\\Users\\a.grassano.spb\\ProyectosAndroid\\KN-Estadisticas\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-en\\values-en.xml",
             "map": [
                 {
-                    "source": "/home/andrea/AndroidStudioProjects/KN-Estadisticas-Full/app/src/main/res/values-en/strings.xml",
+                    "source": "C:\\Users\\a.grassano.spb\\ProyectosAndroid\\KN-Estadisticas\\app\\src\\main\\res\\values-en\\strings.xml",
                     "from": {
                         "startLines": "2,144,6,10,5,9,7,12,14,13,4,8,11,16,18,19,17,15,95,94,93,132,130,126,128,136,131,135,137,127,129,133,134,36,35,34,55,50,46,47,49,58,33,23,52,56,28,53,38,25,30,39,37,51,32,42,43,27,22,48,45,57,44,26,41,40,59,24,29,60,31,98,99,101,100,111,108,112,115,116,117,114,118,119,104,106,105,107,123,122,109,110,124,121,102,103,76,64,65,69,70,71,72,67,68,66,73,78,74,75,77,140,139,141,142,86,84,88,85,87,83,81,82,90",
                         "startColumns": "4,1,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,2,5,5,5,2,5,2,2,5,2,2,5,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,1,4,4,4,4,4,4,4,4,2,2,2,5,5,5,2,5,5,4,5,5,5,5,5,5,5,5,5,5,5,5,5,5,4,1,1,4,4,4,4,1,4,1,4,4,4,4,4,4,4,4,4,1,4,4,1,4,1,1,1,1",

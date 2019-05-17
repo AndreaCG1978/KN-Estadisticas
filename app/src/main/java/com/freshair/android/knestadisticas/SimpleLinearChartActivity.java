@@ -47,22 +47,22 @@ public class SimpleLinearChartActivity extends Activity {
   private KNChart mChart = null;
   private GraphicalView mChartView = null;
   private String idChartSelect = null;	
-  private ArrayList<Cursor> allMyCursors = null;
+//  private ArrayList<Cursor> allMyCursors = null;
   private List<KNItemChart> items = null;
   private int selectedFormatImport = -1;
   private SimpleLinearChartActivity me = null;
-  
+/*
   @Override
 	public void startManagingCursor(Cursor c) {
 		allMyCursors.add(c);
 	    super.startManagingCursor(c);
 	}	
-  
+  */
   @Override
   public void onCreate(Bundle savedInstanceState) {
       super.onCreate(savedInstanceState);
       me = this;
-      allMyCursors = new ArrayList<>();
+   //   allMyCursors = new ArrayList<>();
       this.setContentView(R.layout.chart_view);
       this.guardarChartSeleccionado();
       this.configurarBotones();
@@ -70,9 +70,9 @@ public class SimpleLinearChartActivity extends Activity {
   
   protected void onActivityResult(int requestCode, int resultCode, Intent intent) {
   	super.onActivityResult(requestCode, resultCode, intent);
-  	this.resetAllMyCursors();
+  	//this.resetAllMyCursors();
   }
-  
+ /*
   private void resetAllMyCursors(){
   	Cursor cur;
 	  for (Cursor allMyCursor : allMyCursors) {
@@ -81,7 +81,7 @@ public class SimpleLinearChartActivity extends Activity {
 	  }
   	allMyCursors = new ArrayList<>();
   }
-  
+  */
   @Override
   protected void onResume() {
       super.onResume();

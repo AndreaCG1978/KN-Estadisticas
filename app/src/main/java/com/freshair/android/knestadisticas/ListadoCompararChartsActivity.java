@@ -28,19 +28,19 @@ public class ListadoCompararChartsActivity extends ListActivity {
 	
 	// --Commented out by Inspection (14/11/18 19:16):String tipoCompSelected = null;
 	private int cantSeleccionados = 0;
-	private ArrayList<Cursor> allMyCursors = null;
+//	private ArrayList<Cursor> allMyCursors = null;
 	
-    @Override
+  /*  @Override
 	public void startManagingCursor(Cursor c) {
 		allMyCursors.add(c);
 	    super.startManagingCursor(c);
 	}	
-    
+    */
     protected void onActivityResult(int requestCode, int resultCode, Intent intent) {
     	super.onActivityResult(requestCode, resultCode, intent);
-    	this.resetAllMyCursors();
+    	//this.resetAllMyCursors();
     }
-    
+  /*
     private void resetAllMyCursors(){
     	Cursor cur;
 		for (Cursor allMyCursor : allMyCursors) {
@@ -49,11 +49,11 @@ public class ListadoCompararChartsActivity extends ListActivity {
 		}
     	allMyCursors = new ArrayList<>();
     }
-	
+	*/
 	
 	public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        allMyCursors = new ArrayList<>();
+        //allMyCursors = new ArrayList<>();
         this.setContentView(R.layout.list_comparar_charts);
         this.configurarList(getListView());    
         this.configurarWidgets();

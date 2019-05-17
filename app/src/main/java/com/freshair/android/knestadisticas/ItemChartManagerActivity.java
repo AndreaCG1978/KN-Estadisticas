@@ -53,7 +53,7 @@ public class ItemChartManagerActivity extends ExpandableListFragment implements 
     private TextView mDescChart = null;
     private Activity me = null;
     private Map<String,Map<String,List<KNItemChart>>> allItems = null;
-	private ArrayList<Cursor> allMyCursors = null;
+//	private ArrayList<Cursor> allMyCursors = null;
 
 	private final int GRAFICOS_CURSOR = 1;
 	
@@ -81,7 +81,7 @@ public class ItemChartManagerActivity extends ExpandableListFragment implements 
 	public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 		this.cargarLoaders();
-        allMyCursors = new ArrayList<>();
+        //allMyCursors = new ArrayList<>();
         this.setContentView(R.layout.items_manager);
         this.registrarWidgets();
         me = this;

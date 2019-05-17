@@ -59,23 +59,23 @@ public class ConfigChartActivity extends FragmentActivity implements LoaderManag
 	private static final int COLOR_LINE_DIALOG_ID = 1;
 	private static final int COLOR_GRID_DIALOG_ID = 2;
 	private static final int COLOR_LABELS_DIALOG_ID = 3;
-	private ArrayList<Cursor> allMyCursors = null;
+	//private ArrayList<Cursor> allMyCursors = null;
 	private final int CONFIG_CURSOR = 1;
 
 	public static CursorLoader cursorGraficos = null;
-	
+/*
     @Override
 	public void startManagingCursor(Cursor c) {
 		allMyCursors.add(c);
 	    super.startManagingCursor(c);
 	}	
-    
+    */
     protected void onActivityResult(int requestCode, int resultCode, Intent intent) {
     	super.onActivityResult(requestCode, resultCode, intent);
-    	this.resetAllMyCursors();
+    //	this.resetAllMyCursors();
     }
     
-    private void resetAllMyCursors(){
+   /* private void resetAllMyCursors(){
     	Cursor cur;
 		for (Cursor allMyCursor : allMyCursors) {
 			cur = allMyCursor;
@@ -83,13 +83,13 @@ public class ConfigChartActivity extends FragmentActivity implements LoaderManag
 		}
     	allMyCursors = new ArrayList<>();
     }
-	
+	*/
 
 	
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        allMyCursors = new ArrayList<>();
+   //     allMyCursors = new ArrayList<>();
 		ConfigChartActivity me = this;
        	this.setContentView(R.layout.chart_config);
         this.registrarWidgets();

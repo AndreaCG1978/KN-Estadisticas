@@ -35,21 +35,21 @@ public class MainActivity extends ExpandableListActivity {
     private LayoutInflater layoutInflater = null;
     private ArrayList<KNChart> myCharts = null;
     private int mGroupSelected = -1;
-	private ArrayList<Cursor> allMyCursors = null;
+//	private ArrayList<Cursor> allMyCursors = null;
 	private MainActivity me = null;
 	private int selectedFormatImport = -1;
-	
+	/*
     @Override
 	public void startManagingCursor(Cursor c) {
 		allMyCursors.add(c);
 	    super.startManagingCursor(c);
 	}	
-    
+    */
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         me = this;
-        allMyCursors = new ArrayList<>();
+  //      allMyCursors = new ArrayList<>();
         this.setContentView(R.layout.main);
         me = this;
         layoutInflater = (LayoutInflater) this.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
@@ -61,7 +61,7 @@ public class MainActivity extends ExpandableListActivity {
     
     protected void onActivityResult(int requestCode, int resultCode, Intent intent) {
     	super.onActivityResult(requestCode, resultCode, intent);
-    	this.resetAllMyCursors();
+    //	this.resetAllMyCursors();
     	switch (requestCode) {
 		case ConstantsAdmin.ACTIVITY_EJECUTAR_ALTA_CHART:
 			mGroupSelected = -1;
@@ -72,7 +72,7 @@ public class MainActivity extends ExpandableListActivity {
 		}    	
     }
     
-    
+/*
     private void resetAllMyCursors(){
     	Cursor cur;
         for (Cursor allMyCursor : allMyCursors) {
@@ -81,7 +81,7 @@ public class MainActivity extends ExpandableListActivity {
         }
     	allMyCursors = new ArrayList<>();
     }
-	
+	*/
     
 	private void eliminarChartDialog(int chartPosition){
 		try {

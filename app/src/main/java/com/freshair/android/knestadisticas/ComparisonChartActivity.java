@@ -45,19 +45,20 @@ public class ComparisonChartActivity extends Activity {
 	private List<Integer> myColors = null;
 	private boolean sobrePuestos = false;
 	private GraphicalView mChartView = null;
-	private ArrayList<Cursor> allMyCursors = null;
-	
+//	private ArrayList<Cursor> allMyCursors = null;
+
+	/*
     @Override
 	public void startManagingCursor(Cursor c) {
 		allMyCursors.add(c);
 	    super.startManagingCursor(c);
 	}	
-    
+    */
     protected void onActivityResult(int requestCode, int resultCode, Intent intent) {
     	super.onActivityResult(requestCode, resultCode, intent);
-    	this.resetAllMyCursors();
+  //  	this.resetAllMyCursors();
     }
-    
+   /*
     private void resetAllMyCursors(){
     	Cursor cur;
 		for (Cursor allMyCursor : allMyCursors) {
@@ -67,7 +68,7 @@ public class ComparisonChartActivity extends Activity {
     	allMyCursors = new ArrayList<>();
     }
     
-    
+    */
 	
   private void configurarColores(){
 	    myColors = new ArrayList<Integer>();
@@ -87,7 +88,7 @@ public class ComparisonChartActivity extends Activity {
   @Override
   public void onCreate(Bundle savedInstanceState) {
       super.onCreate(savedInstanceState);
-      allMyCursors = new ArrayList<Cursor>();
+      //allMyCursors = new ArrayList<Cursor>();
       this.setContentView(R.layout.chart_view);
       this.configurarBotones();
       this.configurarColores();
