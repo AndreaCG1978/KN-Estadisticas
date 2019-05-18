@@ -15,6 +15,11 @@ import android.content.Intent;
 import android.database.Cursor;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
+import android.support.annotation.Nullable;
+import android.support.v4.app.LoaderManager;
+import android.support.v4.content.CursorLoader;
+import android.support.v4.content.Loader;
 import android.view.ContextMenu;
 import android.view.LayoutInflater;
 import android.view.Menu;
@@ -28,8 +33,9 @@ import android.widget.TextView;
 import com.freshair.android.knestadisticas.database.DataBaseManager;
 import com.freshair.android.knestadisticas.dtos.KNChart;
 import com.freshair.android.knestadisticas.utils.ConstantsAdmin;
+import com.freshair.android.knestadisticas.utils.ExpandableListFragment;
 
-public class MainActivity extends ExpandableListActivity {
+public class MainActivity extends ExpandableListFragment implements LoaderManager.LoaderCallbacks<Cursor> {
     private static final String NAME = "NAME";
 
     private LayoutInflater layoutInflater = null;
@@ -38,6 +44,7 @@ public class MainActivity extends ExpandableListActivity {
 //	private ArrayList<Cursor> allMyCursors = null;
 	private MainActivity me = null;
 	private int selectedFormatImport = -1;
+    private final int GRAFICOS_CURSOR = 1;
 	/*
     @Override
 	public void startManagingCursor(Cursor c) {
@@ -49,6 +56,7 @@ public class MainActivity extends ExpandableListActivity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         me = this;
+        this.cargarLoaders();
   //      allMyCursors = new ArrayList<>();
         this.setContentView(R.layout.main);
         me = this;
@@ -178,9 +186,41 @@ public class MainActivity extends ExpandableListActivity {
         }
         return super.onMenuItemSelected(featureId, item);
     }
-	
-		     
-        private class ImportCSVTask extends AsyncTask<Long, Integer, Integer>{
+
+    @NonNull
+    @Override
+    public Loader<Cursor> onCreateLoader(int id, @Nullable Bundle args) {
+        DataBaseManager mDBManager = DataBaseManager.getInstance(this);
+        CursorLoader cl = null;
+        switch(id) {
+            case GRAFICOS_CURSOR:
+                cl = mDBManager.cursorLoaderGraficosPorNombre(null, this);
+                ConstantsAdmin.cursorGraficos = cl;
+                break; // optional
+            default : // Optional
+                // Statements
+        }
+
+        return cl;
+    }
+
+    private void cargarLoaders() {
+        this.getSupportLoaderManager().initLoader(GRAFICOS_CURSOR, null, this);
+
+    }
+
+    @Override
+    public void onLoadFinished(@NonNull Loader<Cursor> loader, Cursor data) {
+
+    }
+
+    @Override
+    public void onLoaderReset(@NonNull Loader<Cursor> loader) {
+
+    }
+
+
+    private class ImportCSVTask extends AsyncTask<Long, Integer, Integer>{
         	ProgressDialog dialog = null;
             @Override
             protected Integer doInBackground(Long... params) {
@@ -259,7 +299,9 @@ public class MainActivity extends ExpandableListActivity {
         DataBaseManager mDBManager = DataBaseManager.getInstance(this);
         List<Map<String, String>> groupData = new ArrayList<>();
         List<List<Map<String, String>>> childData = new ArrayList<>();
+        ConstantsAdmin.inicializarBD(mDBManager);
         myCharts = ConstantsAdmin.obtenerAllChart(this, mDBManager);
+        ConstantsAdmin.finalizarBD(mDBManager);
         Iterator<KNChart> it = myCharts.iterator();
         KNChart chart;
         Map<String, String> curGroupMap;

@@ -235,6 +235,10 @@ public class ConstantsAdmin {
     
     public static ArrayList<KNChart> obtenerAllChart(Activity context, DataBaseManager mDBManager){
     	ArrayList<KNChart> allChart = new ArrayList<>();
+
+    	/*
+
+
     	KNChart chart = null;
     	Cursor chartCursor = null;
 		inicializarBD(mDBManager);
@@ -248,7 +252,27 @@ public class ConstantsAdmin {
           }
 
 	  	finalizarBD(mDBManager);
-    	return allChart;
+
+*/
+		KNChart chart = null;
+		Cursor chartCursor = null;
+
+		CursorLoader cursorLoader = null;
+		cursorLoader = mDBManager.cursorLoaderGraficosPorNombre(null, context);
+			//		cursor = mDBManager.fetchCategoriasActivasPorNombre(null);
+		if(cursorLoader != null){
+			//	startManagingCursor(cursor);
+			chartCursor = cursorLoader.loadInBackground();
+			chartCursor.moveToFirst();
+			while(!chartCursor.isAfterLast()){
+				chart = cursorToChartDto(chartCursor);
+				allChart.add(chart);
+				chartCursor.moveToNext();
+			}
+
+		}
+
+        return allChart;
     }
     
     public static void eliminarChart(long idChart, Activity context, DataBaseManager mDBManager){

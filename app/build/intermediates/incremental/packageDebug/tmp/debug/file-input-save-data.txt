@@ -1,7 +1,7 @@
 #Internal package file, do not edit.
-#Fri May 17 08:29:45 ART 2019
+#Sat May 18 10:21:00 ART 2019
 0.baseType=DIRECTORY
-0.base=C\:\\Users\\a.grassano.spb\\ProyectosAndroid\\KN-Estadisticas\\app\\build\\intermediates\\dex\\debug\\mergeDexDebug\\out
+0.base=/home/andrea/AndroidStudioProjects/KN-Estadisticas/app/build/intermediates/dex/debug/mergeDexDebug/out
 0.path=classes.dex
 0.set=DEX
 count=1

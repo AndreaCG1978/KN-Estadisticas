@@ -62,7 +62,10 @@ public class DataBaseManager {
 	}
 
 	private CursorLoader cursorLoaderGraficosPorCampo(String column, Object value, Context context) {
-		String selection = ConstantsAdmin.querySelectionColumnByValue(column, value);
+		String selection = null;
+		if(value != null){
+			selection = ConstantsAdmin.querySelectionColumnByValue(column, value);
+		}
 
 		return new CursorLoader( context, null, null, selection, null, null)
 		{
