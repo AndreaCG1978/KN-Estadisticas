@@ -91,6 +91,7 @@ public class ConfigChartActivity extends FragmentActivity implements LoaderManag
         super.onCreate(savedInstanceState);
    //     allMyCursors = new ArrayList<>();
 		ConfigChartActivity me = this;
+		this.cargarLoaders();
        	this.setContentView(R.layout.chart_config);
         this.registrarWidgets();
         this.guardarChartSeleccionado(this.getIntent());
@@ -104,7 +105,7 @@ public class ConfigChartActivity extends FragmentActivity implements LoaderManag
         this.configurarSpinnerTimeFormat();
         this.configurarChecksBox();
         this.configurarTitulo();
-        this.cargarLoaders();
+
        
     }
     

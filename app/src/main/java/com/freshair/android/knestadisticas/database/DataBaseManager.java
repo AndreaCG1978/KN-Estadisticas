@@ -61,6 +61,33 @@ public class DataBaseManager {
 	 	return cursorLoaderGraficosPorCampo(ConstantsAdmin.KEY_CHART_NAME, value, context);
 	}
 
+
+	public CursorLoader cursorLoaderItemChart(Context context, Object value){
+		String selection = null;
+		if(value != null){
+			selection = ConstantsAdmin.querySelectionColumnByValue(ConstantsAdmin.KEY_ROWID, value);
+		}
+		return new CursorLoader( context, null, null, selection, null, null)
+		{
+			@Override
+			public Cursor loadInBackground()
+			{
+				// You better know how to get your database.
+				// You can use any query that returns a cursor.
+				Cursor c = null;
+				if(mDb.isOpen()){
+					c = mDb.query(ConstantsAdmin.TABLE_ITEM_CHART, getProjection(), getSelection(), getSelectionArgs(), null, null, getSortOrder(), null );
+					if (c != null) {
+						c.moveToFirst();
+					}
+				}
+				return c;
+			}
+		};
+
+	}
+
+
 	private CursorLoader cursorLoaderGraficosPorCampo(String column, Object value, Context context) {
 		String selection = null;
 		if(value != null){

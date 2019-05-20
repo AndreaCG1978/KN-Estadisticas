@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "/home/andrea/AndroidStudioProjects/KN-Estadisticas/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-th/values-th.xml",
+            "outputFile": "C:\\Users\\a.grassano.spb\\ProyectosAndroid\\KN-Estadisticas\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-th\\values-th.xml",
             "map": [
                 {
-                    "source": "/home/andrea/.gradle/caches/transforms-2/files-2.1/3e33f18aa36992dcdee15821dc4b4e3e/res/values-th/values-th.xml",
+                    "source": "C:\\Users\\a.grassano.spb\\.gradle\\caches\\transforms-2\\files-2.1\\1b89259178ef779b1768aa5f02abf547\\res\\values-th\\values-th.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

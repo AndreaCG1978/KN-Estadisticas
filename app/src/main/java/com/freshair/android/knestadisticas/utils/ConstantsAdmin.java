@@ -41,6 +41,7 @@ public class ConstantsAdmin {
 //	private static DataBaseManager mDBManager = null;
 	public static CursorLoader cursorGraficos = null;
 	public static CursorLoader cursorConfig = null;
+	public static CursorLoader cursorItemChart = null;
 
 	/*
 	public static DataBaseManager getmDBManager() {
@@ -121,10 +122,16 @@ public class ConstantsAdmin {
     	KNConfigChart config = new KNConfigChart();
     	Cursor c = null;
 		inicializarBD(mDBManager);
-		c = mDBManager.fetchConfig(1);
-		context.startManagingCursor(c);
-		config = cursorToConfigDto(c);
-    	finalizarBD(mDBManager);
+		CursorLoader cursorLoader = null;
+		cursorLoader = mDBManager.cursorLoaderConfig(context, 1);
+		if(cursorLoader != null){
+			//	startManagingCursor(cursor);
+			c = cursorLoader.loadInBackground();
+			c.moveToFirst();
+			config = cursorToConfigDto(c);
+
+		}
+		finalizarBD(mDBManager);
     	return config;
     }
     
@@ -141,9 +148,18 @@ public class ConstantsAdmin {
     	KNItemChart item = new KNItemChart();
     	Cursor itemCursor = null;
 		inicializarBD(mDBManager);
-		itemCursor = mDBManager.fetchItemForId(idItem);
-		context.startManagingCursor(itemCursor);
-		item = cursorToItemDto(itemCursor);
+
+		CursorLoader cursorLoader = null;
+		cursorLoader = mDBManager.cursorLoaderItemChart(context, idItem);
+		//		cursor = mDBManager.fetchCategoriasActivasPorNombre(null);
+		if(cursorLoader != null){
+			//	startManagingCursor(cursor);
+			itemCursor = cursorLoader.loadInBackground();
+			itemCursor.moveToFirst();
+			item = cursorToItemDto(itemCursor);
+
+		}
+
     	finalizarBD(mDBManager);
     	return item;
     }

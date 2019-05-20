@@ -8,7 +8,14 @@ import android.app.Dialog;
 import android.app.TimePickerDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.database.Cursor;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
+import android.support.annotation.Nullable;
+import android.support.v4.app.FragmentActivity;
+import android.support.v4.app.LoaderManager;
+import android.support.v4.content.CursorLoader;
+import android.support.v4.content.Loader;
 import android.view.View;
 import android.widget.Button;
 import android.widget.DatePicker;
@@ -21,7 +28,7 @@ import com.freshair.android.knestadisticas.database.DataBaseManager;
 import com.freshair.android.knestadisticas.dtos.KNItemChart;
 import com.freshair.android.knestadisticas.utils.ConstantsAdmin;
 
-public class AltaItemChartActivity extends Activity {
+public class AltaItemChartActivity extends FragmentActivity implements LoaderManager.LoaderCallbacks<Cursor> {
 	
 	private Dialog dialog = null;
 	private KNItemChart mItemChartSeleccionado = null;
@@ -40,9 +47,11 @@ public class AltaItemChartActivity extends Activity {
 	
 	private static final int DATE_DIALOG_ID = 0;
 	private static final int TIME_DIALOG_ID = 1;
+	private final int ITEM_CHART_CURSOR = 1;
 	
 	public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+		this.cargarLoaders();
         this.configurarDialog();
         this.registrarWidgets();
         this.guardarItemChartSeleccionado(this.getIntent());
@@ -294,6 +303,37 @@ public class AltaItemChartActivity extends Activity {
 		}
 
 	}
-	
 
+
+	@NonNull
+	@Override
+	public Loader<Cursor> onCreateLoader(int id, @Nullable Bundle args) {
+		DataBaseManager mDBManager = DataBaseManager.getInstance(this);
+		CursorLoader cl = null;
+		switch(id) {
+			case ITEM_CHART_CURSOR:
+				cl = mDBManager.cursorLoaderItemChart(this, -1);
+				ConstantsAdmin.cursorItemChart = cl;
+				break; // optional
+			default : // Optional
+				// Statements
+		}
+
+		return cl;
+	}
+
+	private void cargarLoaders() {
+		this.getSupportLoaderManager().initLoader(ITEM_CHART_CURSOR, null, this);
+
+	}
+
+	@Override
+	public void onLoadFinished(@NonNull Loader<Cursor> loader, Cursor data) {
+
+	}
+
+	@Override
+	public void onLoaderReset(@NonNull Loader<Cursor> loader) {
+
+	}
 }
