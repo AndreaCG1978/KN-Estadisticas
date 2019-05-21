@@ -56,6 +56,8 @@ public class ItemChartManagerActivity extends ExpandableListFragment implements 
 //	private ArrayList<Cursor> allMyCursors = null;
 
 	private final int GRAFICOS_CURSOR = 1;
+	private final int ITEM_CHART_CURSOR = 2;
+
 	
  /*   @Override
 	public void startManagingCursor(Cursor c) {
@@ -488,6 +490,7 @@ public class ItemChartManagerActivity extends ExpandableListFragment implements 
 
 	private void cargarLoaders() {
 		this.getSupportLoaderManager().initLoader(GRAFICOS_CURSOR, null, this);
+		this.getSupportLoaderManager().initLoader(ITEM_CHART_CURSOR, null, this);
 
 	}
 
@@ -501,6 +504,10 @@ public class ItemChartManagerActivity extends ExpandableListFragment implements 
 			case GRAFICOS_CURSOR:
 				cl = mDBManager.cursorLoaderGraficosPorNombre(null, this);
 				ConstantsAdmin.cursorGraficos = cl;
+				break; // optional
+			case ITEM_CHART_CURSOR:
+				cl = mDBManager.cursorLoaderItemChart(this, null);
+				ConstantsAdmin.cursorItemChart = cl;
 				break; // optional
 			default : // Optional
 				// Statements

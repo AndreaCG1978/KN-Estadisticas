@@ -200,16 +200,34 @@ public class ConstantsAdmin {
     	KNItemChart item = null;
     	Cursor itemsCursor = null;
     	inicializarBD(mDBManager);
-    	itemsCursor = mDBManager.fetchItemsForChart(chart);
-    	context.startManagingCursor(itemsCursor);
-    	itemsCursor.moveToFirst();
+   // 	itemsCursor = mDBManager.fetchItemsForChart(chart);
+
+        CursorLoader cursorLoader = null;
+        cursorLoader = mDBManager.cursorLoaderItemChart(context, chart.getId());
+        //		cursor = mDBManager.fetchCategoriasActivasPorNombre(null);
+        if(cursorLoader != null){
+            //	startManagingCursor(cursor);
+            itemsCursor = cursorLoader.loadInBackground();
+            itemsCursor.moveToFirst();
+            while(!itemsCursor.isAfterLast()){
+                item = cursorToItemDto(itemsCursor);
+                item.setChartId(String.valueOf(chart.getId()));
+                items.add(item);
+                itemsCursor.moveToNext();
+
+            }
+
+        }
+
+    //	context.startManagingCursor(itemsCursor);
+    /*	itemsCursor.moveToFirst();
     	while(!itemsCursor.isAfterLast()){
     		item = cursorToItemDto(itemsCursor);
     		item.setChartId(String.valueOf(chart.getId()));
     		items.add(item);
     		itemsCursor.moveToNext();
     		
-    	}
+    	}*/
     	return items;
     }
     
@@ -217,7 +235,24 @@ public class ConstantsAdmin {
     	ArrayList<KNItemChart> items = new ArrayList<>();
     	KNItemChart item = null;
     	Cursor itemsCursor = null;
+    	CursorLoader cursorLoader = null;
     	inicializarBD(mDBManager);
+
+    	cursorLoader = mDBManager.cursorLoaderItemChart(context, idChartSelected, yearSelected, monthSelected);
+    	if(cursorLoader != null) {
+			itemsCursor = cursorLoader.loadInBackground();
+			itemsCursor.moveToFirst();
+			while (!itemsCursor.isAfterLast()) {
+				item = cursorToItemDto(itemsCursor);
+				item.setChartId(idChartSelected);
+				items.add(item);
+				itemsCursor.moveToNext();
+
+			}
+		}
+		return items;
+
+    	/*
     	itemsCursor = mDBManager.fetchItemsForChart(idChartSelected, yearSelected, monthSelected);
     	context.startManagingCursor(itemsCursor);
     	itemsCursor.moveToFirst();
@@ -228,10 +263,10 @@ public class ConstantsAdmin {
     		itemsCursor.moveToNext();
     		
     	}
-    	return items;
+    	return items;*/
     }
     
-    public static ArrayList<KNItemChart> obtenerItemsDeChartOrdenadosPorAnioYMes(KNChart chart, Activity context, DataBaseManager mDBManager){
+  /*  public static ArrayList<KNItemChart> obtenerItemsDeChartOrdenadosPorAnioYMes(KNChart chart, Activity context, DataBaseManager mDBManager){
     	ArrayList<KNItemChart> items = new ArrayList<>();
     	KNItemChart item = null;
     	Cursor itemsCursor = null;
@@ -248,7 +283,7 @@ public class ConstantsAdmin {
     	}
     	return items;
     }
-    
+    */
     public static ArrayList<KNChart> obtenerAllChart(Activity context, DataBaseManager mDBManager){
     	ArrayList<KNChart> allChart = new ArrayList<>();
 

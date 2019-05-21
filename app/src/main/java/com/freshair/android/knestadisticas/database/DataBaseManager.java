@@ -88,6 +88,30 @@ public class DataBaseManager {
 	}
 
 
+	public CursorLoader cursorLoaderItemChart(Context context, Object idChart, Object year, Object month){
+		String sortOrder = ConstantsAdmin.KEY_ITEMCHART_YEAR + ", " + ConstantsAdmin.KEY_ITEMCHART_MONTH + ", " + ConstantsAdmin.KEY_ITEMCHART_DAY + ", " + ConstantsAdmin.KEY_ITEMCHART_HOUR + ", " + ConstantsAdmin.KEY_ITEMCHART_MIN  + " COLLATE LOCALIZED ASC";
+		Cursor result = null;
+		String selection = ConstantsAdmin.KEY_ITEMCHART_CHARTID + "= '" + idChart + "' AND " + ConstantsAdmin.KEY_ITEMCHART_YEAR + " = '" + year + "' AND " + ConstantsAdmin.KEY_ITEMCHART_MONTH + " = '" + month + "'";
+		return new CursorLoader( context, null, null, selection, null, sortOrder)
+		{
+			@Override
+			public Cursor loadInBackground()
+			{
+				// You better know how to get your database.
+				// You can use any query that returns a cursor.
+				Cursor c = null;
+				if(mDb.isOpen()){
+					c = mDb.query(ConstantsAdmin.TABLE_ITEM_CHART, getProjection(), getSelection(), getSelectionArgs(), null, null, getSortOrder(), null );
+					if (c != null) {
+						c.moveToFirst();
+					}
+				}
+				return c;
+			}
+		};
+
+	}
+
 	private CursorLoader cursorLoaderGraficosPorCampo(String column, Object value, Context context) {
 		String selection = null;
 		if(value != null){
