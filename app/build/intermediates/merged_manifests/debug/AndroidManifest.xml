@@ -50,6 +50,16 @@
         <activity android:name="com.freshair.android.knestadisticas.AboutUsActivity" >
         </activity>
         <activity android:name="org.achartengine.GraphicalActivity" />
+
+        <provider
+            android:name="com.freshair.android.knestadisticas.utils.GenericFileProvider"
+            android:authorities="com.freshair.android.knestadisticas.provider"
+            android:exported="false"
+            android:grantUriPermissions="true" >
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths" />
+        </provider>
     </application>
 
 </manifest>
