@@ -166,6 +166,9 @@ public class ComparisonChartActivity extends Activity {
 		  for (int k = 0; k < items.size(); k++) {
 			  item = items.get(k);
 			  if (!sobrePuestos) {
+
+			  	
+
 				  dates.get(a)[k] = new Date(Integer.valueOf(item.getYear()) - 1900, Integer.valueOf(item.getMonth()) - 1, Integer.valueOf(item.getDay()), Integer.valueOf(item.getHour()), Integer.valueOf(item.getMin()));
 				  valX = dates.get(a)[k].getTime();
 

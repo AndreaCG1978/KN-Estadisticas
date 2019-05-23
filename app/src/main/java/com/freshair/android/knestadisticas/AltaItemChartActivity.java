@@ -84,36 +84,77 @@ public class AltaItemChartActivity extends FragmentActivity implements LoaderMan
 	}
 	
 	private void configurarDatePicker(){
-		 int month;
-		 int day;
-
+		 final int month;
+		 final int day;
+/*
          mPickDate.setOnClickListener(new View.OnClickListener() {
 	         public void onClick(View v) {
 	             showDialog(DATE_DIALOG_ID);
 	         }
 	     });
-	
-	     final Calendar c = Calendar.getInstance();
+	*/
+
+		final Calendar c = Calendar.getInstance();
+		mYear = c.get(Calendar.YEAR);
+		month = c.get(Calendar.MONTH);
+		day = c.get(Calendar.DAY_OF_MONTH);
+
+		mPickDate.setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View v) {
+
+				DatePickerDialog dpd = new DatePickerDialog(AltaItemChartActivity.this,
+						new DatePickerDialog.OnDateSetListener() {
+							@Override
+							public void onDateSet(DatePicker view, int year, int month, int day) {
+								c.set(year, month , day);
+								//		String date = new SimpleDateFormat("MM/dd/yyyy").format(c.getTime());
+								//mDateDisplay.setText(date);
+								mYear = c.get(Calendar.YEAR);
+								month = c.get(Calendar.MONTH) + 1;
+								day = c.get(Calendar.DAY_OF_MONTH);
+								//updateDisplay();
+							}
+						}, mYear, month - 1, day);
+				/*dpd.getDatePicker().setMinDate(System.currentTimeMillis());
+
+				Calendar d = Calendar.getInstance();
+				d.add(Calendar.MONTH,1);
+
+				dpd.getDatePicker().setMaxDate(d.getTimeInMillis());*/
+				dpd.show();
+
+
+			}
+
+		});
+
+
+		int monthTemp = month;
+		int dayTemp = day;
+
+
+	 //    final Calendar c = Calendar.getInstance();
 	     if(mItemChartSeleccionado == null || mItemChartSeleccionado.getDay() == null){
 	    	    if(ConstantsAdmin.mDay != null){
-	    	    	month = Integer.valueOf(ConstantsAdmin.mMonth);
-		    	    day = Integer.valueOf(ConstantsAdmin.mDay);
+					monthTemp = Integer.valueOf(ConstantsAdmin.mMonth);
+					dayTemp = Integer.valueOf(ConstantsAdmin.mDay);
 		    	    mYear = ConstantsAdmin.mYear;
 	    	    }else{
-	    	    	month = c.get(Calendar.MONTH) + 1;
-			    	day = c.get(Calendar.DAY_OF_MONTH);
+					monthTemp = c.get(Calendar.MONTH) + 1;
+					dayTemp = c.get(Calendar.DAY_OF_MONTH);
 			     	mYear = c.get(Calendar.YEAR);
 	    	    }
 	    	    
-		     	if(month < 10){
-		     		mMonth = "0" + String.valueOf(month);
+		     	if(monthTemp < 10){
+		     		mMonth = "0" + String.valueOf(monthTemp);
 		     	}else{
-		     		mMonth = String.valueOf(month);
+		     		mMonth = String.valueOf(monthTemp);
 		     	}
-		     	if(day < 10){
-		     		mDay = "0" +  String.valueOf(day);
+		     	if(dayTemp < 10){
+		     		mDay = "0" +  String.valueOf(dayTemp);
 		     	}else{
-		     		mDay = String.valueOf(day);
+		     		mDay = String.valueOf(dayTemp);
 		     	}
 	     }else{
 	     	this.cargarVariablesDeFecha();
@@ -196,7 +237,7 @@ public class AltaItemChartActivity extends FragmentActivity implements LoaderMan
     	mTime.setText(hora);
     }
        
-    protected Dialog onCreateDialog(int id) {
+   /* protected Dialog onCreateDialog(int id) {
         switch (id) {
         case DATE_DIALOG_ID:
             return new DatePickerDialog(this,
@@ -207,7 +248,7 @@ public class AltaItemChartActivity extends FragmentActivity implements LoaderMan
         	return new TimePickerDialog(this, mTimeSetListener, Integer.valueOf(mHour), Integer.valueOf(mMin), true);
         }
         return null;
-    }
+    }*/
 	
  	private void cargarVariablesDeFecha(){
 		mDay = mItemChartSeleccionado.getDay();
