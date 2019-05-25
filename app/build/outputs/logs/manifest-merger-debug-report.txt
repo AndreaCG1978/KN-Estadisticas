@@ -1,168 +1,168 @@
 -- Merging decision tree log ---
 provider#com.freshair.android.knestadisticas.utils.GenericFileProvider
-INJECTED from C:\Users\a.grassano.spb\ProyectosAndroid\KN-Estadisticas\app\src\main\AndroidManifest.xml:47:9-55:20
+INJECTED from /home/andrea/AndroidStudioProjects/KN-Estadisticas/app/src/main/AndroidManifest.xml:47:9-55:20
 	android:grantUriPermissions
-		ADDED from C:\Users\a.grassano.spb\ProyectosAndroid\KN-Estadisticas\app\src\main\AndroidManifest.xml:51:13-47
+		ADDED from /home/andrea/AndroidStudioProjects/KN-Estadisticas/app/src/main/AndroidManifest.xml:51:13-47
 	android:authorities
-		INJECTED from C:\Users\a.grassano.spb\ProyectosAndroid\KN-Estadisticas\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\a.grassano.spb\ProyectosAndroid\KN-Estadisticas\app\src\main\AndroidManifest.xml:49:13-60
+		INJECTED from /home/andrea/AndroidStudioProjects/KN-Estadisticas/app/src/main/AndroidManifest.xml
+		ADDED from /home/andrea/AndroidStudioProjects/KN-Estadisticas/app/src/main/AndroidManifest.xml:49:13-60
 	android:exported
-		ADDED from C:\Users\a.grassano.spb\ProyectosAndroid\KN-Estadisticas\app\src\main\AndroidManifest.xml:50:13-37
+		ADDED from /home/andrea/AndroidStudioProjects/KN-Estadisticas/app/src/main/AndroidManifest.xml:50:13-37
 	android:name
-		ADDED from C:\Users\a.grassano.spb\ProyectosAndroid\KN-Estadisticas\app\src\main\AndroidManifest.xml:48:13-89
+		ADDED from /home/andrea/AndroidStudioProjects/KN-Estadisticas/app/src/main/AndroidManifest.xml:48:13-89
 manifest
-ADDED from C:\Users\a.grassano.spb\ProyectosAndroid\KN-Estadisticas\app\src\main\AndroidManifest.xml:2:1-60:12
-INJECTED from C:\Users\a.grassano.spb\ProyectosAndroid\KN-Estadisticas\app\src\main\AndroidManifest.xml:2:1-60:12
-INJECTED from C:\Users\a.grassano.spb\ProyectosAndroid\KN-Estadisticas\app\src\main\AndroidManifest.xml:2:1-60:12
-INJECTED from C:\Users\a.grassano.spb\ProyectosAndroid\KN-Estadisticas\app\src\main\AndroidManifest.xml:2:1-60:12
-MERGED from [com.android.support:support-v4:27.1.1] C:\Users\a.grassano.spb\.gradle\caches\transforms-2\files-2.1\52c1b9ac0064ba5a2ca422ada11b9741\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:support-media-compat:27.1.1] C:\Users\a.grassano.spb\.gradle\caches\transforms-2\files-2.1\e5f10cb6e3e9a994651b7a701ee00836\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:support-fragment:27.1.1] C:\Users\a.grassano.spb\.gradle\caches\transforms-2\files-2.1\4ddef94a50bb1d19844ae5c36fc3725b\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:support-core-ui:27.1.1] C:\Users\a.grassano.spb\.gradle\caches\transforms-2\files-2.1\565e5e58a384415d2df04014314153f0\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:support-core-utils:27.1.1] C:\Users\a.grassano.spb\.gradle\caches\transforms-2\files-2.1\b463f7b46c09d7f1746048b0906ac5bc\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:support-compat:27.1.1] C:\Users\a.grassano.spb\.gradle\caches\transforms-2\files-2.1\1b89259178ef779b1768aa5f02abf547\AndroidManifest.xml:17:1-22:12
-MERGED from [android.arch.lifecycle:runtime:1.1.0] C:\Users\a.grassano.spb\.gradle\caches\transforms-2\files-2.1\43dc7769e7a970b963506bbde6ff6437\AndroidManifest.xml:17:1-22:12
-MERGED from [android.arch.lifecycle:livedata-core:1.1.0] C:\Users\a.grassano.spb\.gradle\caches\transforms-2\files-2.1\a14c5fba2876d3e58105227d2215afc9\AndroidManifest.xml:17:1-22:12
-MERGED from [android.arch.lifecycle:viewmodel:1.1.0] C:\Users\a.grassano.spb\.gradle\caches\transforms-2\files-2.1\74c218d0df4314cf1a8ebdfb8028b236\AndroidManifest.xml:17:1-22:12
-MERGED from [android.arch.core:runtime:1.1.0] C:\Users\a.grassano.spb\.gradle\caches\transforms-2\files-2.1\75d5e45a6cd7fa9f42e13bb6c421d221\AndroidManifest.xml:17:1-22:12
-INJECTED from C:\Users\a.grassano.spb\ProyectosAndroid\KN-Estadisticas\app\src\main\AndroidManifest.xml:2:1-60:12
-INJECTED from C:\Users\a.grassano.spb\ProyectosAndroid\KN-Estadisticas\app\src\main\AndroidManifest.xml:2:1-60:12
-INJECTED from C:\Users\a.grassano.spb\ProyectosAndroid\KN-Estadisticas\app\src\main\AndroidManifest.xml:2:1-60:12
+ADDED from /home/andrea/AndroidStudioProjects/KN-Estadisticas/app/src/main/AndroidManifest.xml:2:1-60:12
+INJECTED from /home/andrea/AndroidStudioProjects/KN-Estadisticas/app/src/main/AndroidManifest.xml:2:1-60:12
+INJECTED from /home/andrea/AndroidStudioProjects/KN-Estadisticas/app/src/main/AndroidManifest.xml:2:1-60:12
+INJECTED from /home/andrea/AndroidStudioProjects/KN-Estadisticas/app/src/main/AndroidManifest.xml:2:1-60:12
+MERGED from [com.android.support:support-v4:27.1.1] /home/andrea/.gradle/caches/transforms-2/files-2.1/3e330173f403199a498ce07dc5fc331d/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-media-compat:27.1.1] /home/andrea/.gradle/caches/transforms-2/files-2.1/a882bb62ba3406e88e072deec96a42e2/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-fragment:27.1.1] /home/andrea/.gradle/caches/transforms-2/files-2.1/c5539e82507a0375b4c4d4dab39b7f20/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-core-ui:27.1.1] /home/andrea/.gradle/caches/transforms-2/files-2.1/e2b2d2f0873a9330c83804d080af353f/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-core-utils:27.1.1] /home/andrea/.gradle/caches/transforms-2/files-2.1/05fa0492bfe3dfc7970d32c9a13e5666/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-compat:27.1.1] /home/andrea/.gradle/caches/transforms-2/files-2.1/90ad557a22b636b5a708311fa19d5fe7/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:runtime:1.1.0] /home/andrea/.gradle/caches/transforms-2/files-2.1/67dc17798294d65819d73faaa8755a90/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:livedata-core:1.1.0] /home/andrea/.gradle/caches/transforms-2/files-2.1/078266ba0a6418034ea7956186997b7b/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:viewmodel:1.1.0] /home/andrea/.gradle/caches/transforms-2/files-2.1/998eb919c5c2ca5229fe859d98e2420f/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.core:runtime:1.1.0] /home/andrea/.gradle/caches/transforms-2/files-2.1/e320696360778e286e3fccb786f644ec/AndroidManifest.xml:17:1-22:12
+INJECTED from /home/andrea/AndroidStudioProjects/KN-Estadisticas/app/src/main/AndroidManifest.xml:2:1-60:12
+INJECTED from /home/andrea/AndroidStudioProjects/KN-Estadisticas/app/src/main/AndroidManifest.xml:2:1-60:12
+INJECTED from /home/andrea/AndroidStudioProjects/KN-Estadisticas/app/src/main/AndroidManifest.xml:2:1-60:12
 	package
-		ADDED from C:\Users\a.grassano.spb\ProyectosAndroid\KN-Estadisticas\app\src\main\AndroidManifest.xml:3:7-52
-		INJECTED from C:\Users\a.grassano.spb\ProyectosAndroid\KN-Estadisticas\app\src\main\AndroidManifest.xml
-		INJECTED from C:\Users\a.grassano.spb\ProyectosAndroid\KN-Estadisticas\app\src\main\AndroidManifest.xml
+		ADDED from /home/andrea/AndroidStudioProjects/KN-Estadisticas/app/src/main/AndroidManifest.xml:3:7-52
+		INJECTED from /home/andrea/AndroidStudioProjects/KN-Estadisticas/app/src/main/AndroidManifest.xml
+		INJECTED from /home/andrea/AndroidStudioProjects/KN-Estadisticas/app/src/main/AndroidManifest.xml
 	android:versionName
-		ADDED from C:\Users\a.grassano.spb\ProyectosAndroid\KN-Estadisticas\app\src\main\AndroidManifest.xml:5:7-32
-		INJECTED from C:\Users\a.grassano.spb\ProyectosAndroid\KN-Estadisticas\app\src\main\AndroidManifest.xml
-		INJECTED from C:\Users\a.grassano.spb\ProyectosAndroid\KN-Estadisticas\app\src\main\AndroidManifest.xml
+		ADDED from /home/andrea/AndroidStudioProjects/KN-Estadisticas/app/src/main/AndroidManifest.xml:5:7-32
+		INJECTED from /home/andrea/AndroidStudioProjects/KN-Estadisticas/app/src/main/AndroidManifest.xml
+		INJECTED from /home/andrea/AndroidStudioProjects/KN-Estadisticas/app/src/main/AndroidManifest.xml
 	xmlns:android
-		ADDED from C:\Users\a.grassano.spb\ProyectosAndroid\KN-Estadisticas\app\src\main\AndroidManifest.xml:2:11-69
+		ADDED from /home/andrea/AndroidStudioProjects/KN-Estadisticas/app/src/main/AndroidManifest.xml:2:11-69
 	android:versionCode
-		ADDED from C:\Users\a.grassano.spb\ProyectosAndroid\KN-Estadisticas\app\src\main\AndroidManifest.xml:4:7-30
-		INJECTED from C:\Users\a.grassano.spb\ProyectosAndroid\KN-Estadisticas\app\src\main\AndroidManifest.xml
-		INJECTED from C:\Users\a.grassano.spb\ProyectosAndroid\KN-Estadisticas\app\src\main\AndroidManifest.xml
+		ADDED from /home/andrea/AndroidStudioProjects/KN-Estadisticas/app/src/main/AndroidManifest.xml:4:7-30
+		INJECTED from /home/andrea/AndroidStudioProjects/KN-Estadisticas/app/src/main/AndroidManifest.xml
+		INJECTED from /home/andrea/AndroidStudioProjects/KN-Estadisticas/app/src/main/AndroidManifest.xml
 uses-permission#android.permission.INTERNET
-ADDED from C:\Users\a.grassano.spb\ProyectosAndroid\KN-Estadisticas\app\src\main\AndroidManifest.xml:7:5-67
+ADDED from /home/andrea/AndroidStudioProjects/KN-Estadisticas/app/src/main/AndroidManifest.xml:7:5-67
 	android:name
-		ADDED from C:\Users\a.grassano.spb\ProyectosAndroid\KN-Estadisticas\app\src\main\AndroidManifest.xml:7:22-64
+		ADDED from /home/andrea/AndroidStudioProjects/KN-Estadisticas/app/src/main/AndroidManifest.xml:7:22-64
 uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
-ADDED from C:\Users\a.grassano.spb\ProyectosAndroid\KN-Estadisticas\app\src\main\AndroidManifest.xml:8:5-81
+ADDED from /home/andrea/AndroidStudioProjects/KN-Estadisticas/app/src/main/AndroidManifest.xml:8:5-81
 	android:name
-		ADDED from C:\Users\a.grassano.spb\ProyectosAndroid\KN-Estadisticas\app\src\main\AndroidManifest.xml:8:22-78
+		ADDED from /home/andrea/AndroidStudioProjects/KN-Estadisticas/app/src/main/AndroidManifest.xml:8:22-78
 application
-ADDED from C:\Users\a.grassano.spb\ProyectosAndroid\KN-Estadisticas\app\src\main\AndroidManifest.xml:10:5-58:19
+ADDED from /home/andrea/AndroidStudioProjects/KN-Estadisticas/app/src/main/AndroidManifest.xml:10:5-58:19
 	android:supportsRtl
-		ADDED from C:\Users\a.grassano.spb\ProyectosAndroid\KN-Estadisticas\app\src\main\AndroidManifest.xml:13:9-35
+		ADDED from /home/andrea/AndroidStudioProjects/KN-Estadisticas/app/src/main/AndroidManifest.xml:13:9-35
 	android:label
-		ADDED from C:\Users\a.grassano.spb\ProyectosAndroid\KN-Estadisticas\app\src\main\AndroidManifest.xml:10:48-80
+		ADDED from /home/andrea/AndroidStudioProjects/KN-Estadisticas/app/src/main/AndroidManifest.xml:10:48-80
 	android:fullBackupContent
-		ADDED from C:\Users\a.grassano.spb\ProyectosAndroid\KN-Estadisticas\app\src\main\AndroidManifest.xml:11:9-59
+		ADDED from /home/andrea/AndroidStudioProjects/KN-Estadisticas/app/src/main/AndroidManifest.xml:11:9-59
 	android:icon
-		ADDED from C:\Users\a.grassano.spb\ProyectosAndroid\KN-Estadisticas\app\src\main\AndroidManifest.xml:10:18-47
+		ADDED from /home/andrea/AndroidStudioProjects/KN-Estadisticas/app/src/main/AndroidManifest.xml:10:18-47
 	android:allowBackup
-		ADDED from C:\Users\a.grassano.spb\ProyectosAndroid\KN-Estadisticas\app\src\main\AndroidManifest.xml:12:9-35
+		ADDED from /home/andrea/AndroidStudioProjects/KN-Estadisticas/app/src/main/AndroidManifest.xml:12:9-35
 activity#com.freshair.android.knestadisticas.InitActivity
-ADDED from C:\Users\a.grassano.spb\ProyectosAndroid\KN-Estadisticas\app\src\main\AndroidManifest.xml:14:9-20:20
+ADDED from /home/andrea/AndroidStudioProjects/KN-Estadisticas/app/src/main/AndroidManifest.xml:14:9-20:20
 	android:label
-		ADDED from C:\Users\a.grassano.spb\ProyectosAndroid\KN-Estadisticas\app\src\main\AndroidManifest.xml:15:19-51
+		ADDED from /home/andrea/AndroidStudioProjects/KN-Estadisticas/app/src/main/AndroidManifest.xml:15:19-51
 	android:name
-		ADDED from C:\Users\a.grassano.spb\ProyectosAndroid\KN-Estadisticas\app\src\main\AndroidManifest.xml:14:19-82
+		ADDED from /home/andrea/AndroidStudioProjects/KN-Estadisticas/app/src/main/AndroidManifest.xml:14:19-82
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from C:\Users\a.grassano.spb\ProyectosAndroid\KN-Estadisticas\app\src\main\AndroidManifest.xml:16:13-19:29
+ADDED from /home/andrea/AndroidStudioProjects/KN-Estadisticas/app/src/main/AndroidManifest.xml:16:13-19:29
 action#android.intent.action.MAIN
-ADDED from C:\Users\a.grassano.spb\ProyectosAndroid\KN-Estadisticas\app\src\main\AndroidManifest.xml:17:17-69
+ADDED from /home/andrea/AndroidStudioProjects/KN-Estadisticas/app/src/main/AndroidManifest.xml:17:17-69
 	android:name
-		ADDED from C:\Users\a.grassano.spb\ProyectosAndroid\KN-Estadisticas\app\src\main\AndroidManifest.xml:17:25-66
+		ADDED from /home/andrea/AndroidStudioProjects/KN-Estadisticas/app/src/main/AndroidManifest.xml:17:25-66
 category#android.intent.category.LAUNCHER
-ADDED from C:\Users\a.grassano.spb\ProyectosAndroid\KN-Estadisticas\app\src\main\AndroidManifest.xml:18:17-77
+ADDED from /home/andrea/AndroidStudioProjects/KN-Estadisticas/app/src/main/AndroidManifest.xml:18:17-77
 	android:name
-		ADDED from C:\Users\a.grassano.spb\ProyectosAndroid\KN-Estadisticas\app\src\main\AndroidManifest.xml:18:27-74
+		ADDED from /home/andrea/AndroidStudioProjects/KN-Estadisticas/app/src/main/AndroidManifest.xml:18:27-74
 activity#com.freshair.android.knestadisticas.MainActivity
-ADDED from C:\Users\a.grassano.spb\ProyectosAndroid\KN-Estadisticas\app\src\main\AndroidManifest.xml:23:9-24:20
+ADDED from /home/andrea/AndroidStudioProjects/KN-Estadisticas/app/src/main/AndroidManifest.xml:23:9-24:20
 	android:name
-		ADDED from C:\Users\a.grassano.spb\ProyectosAndroid\KN-Estadisticas\app\src\main\AndroidManifest.xml:23:19-82
+		ADDED from /home/andrea/AndroidStudioProjects/KN-Estadisticas/app/src/main/AndroidManifest.xml:23:19-82
 activity#com.freshair.android.knestadisticas.AltaChartActivity
-ADDED from C:\Users\a.grassano.spb\ProyectosAndroid\KN-Estadisticas\app\src\main\AndroidManifest.xml:25:9-26:20
+ADDED from /home/andrea/AndroidStudioProjects/KN-Estadisticas/app/src/main/AndroidManifest.xml:25:9-26:20
 	android:name
-		ADDED from C:\Users\a.grassano.spb\ProyectosAndroid\KN-Estadisticas\app\src\main\AndroidManifest.xml:25:19-87
+		ADDED from /home/andrea/AndroidStudioProjects/KN-Estadisticas/app/src/main/AndroidManifest.xml:25:19-87
 activity#com.freshair.android.knestadisticas.ItemChartManagerActivity
-ADDED from C:\Users\a.grassano.spb\ProyectosAndroid\KN-Estadisticas\app\src\main\AndroidManifest.xml:27:9-28:20
+ADDED from /home/andrea/AndroidStudioProjects/KN-Estadisticas/app/src/main/AndroidManifest.xml:27:9-28:20
 	android:name
-		ADDED from C:\Users\a.grassano.spb\ProyectosAndroid\KN-Estadisticas\app\src\main\AndroidManifest.xml:27:19-94
+		ADDED from /home/andrea/AndroidStudioProjects/KN-Estadisticas/app/src/main/AndroidManifest.xml:27:19-94
 activity#com.freshair.android.knestadisticas.AltaItemChartActivity
-ADDED from C:\Users\a.grassano.spb\ProyectosAndroid\KN-Estadisticas\app\src\main\AndroidManifest.xml:29:9-30:20
+ADDED from /home/andrea/AndroidStudioProjects/KN-Estadisticas/app/src/main/AndroidManifest.xml:29:9-30:20
 	android:name
-		ADDED from C:\Users\a.grassano.spb\ProyectosAndroid\KN-Estadisticas\app\src\main\AndroidManifest.xml:29:19-91
+		ADDED from /home/andrea/AndroidStudioProjects/KN-Estadisticas/app/src/main/AndroidManifest.xml:29:19-91
 activity#com.freshair.android.knestadisticas.ItemPerMonthActivity
-ADDED from C:\Users\a.grassano.spb\ProyectosAndroid\KN-Estadisticas\app\src\main\AndroidManifest.xml:31:9-32:20
+ADDED from /home/andrea/AndroidStudioProjects/KN-Estadisticas/app/src/main/AndroidManifest.xml:31:9-32:20
 	android:name
-		ADDED from C:\Users\a.grassano.spb\ProyectosAndroid\KN-Estadisticas\app\src\main\AndroidManifest.xml:31:19-90
+		ADDED from /home/andrea/AndroidStudioProjects/KN-Estadisticas/app/src/main/AndroidManifest.xml:31:19-90
 activity#com.freshair.android.knestadisticas.ListadoCompararChartsActivity
-ADDED from C:\Users\a.grassano.spb\ProyectosAndroid\KN-Estadisticas\app\src\main\AndroidManifest.xml:33:9-34:20
+ADDED from /home/andrea/AndroidStudioProjects/KN-Estadisticas/app/src/main/AndroidManifest.xml:33:9-34:20
 	android:name
-		ADDED from C:\Users\a.grassano.spb\ProyectosAndroid\KN-Estadisticas\app\src\main\AndroidManifest.xml:33:19-99
+		ADDED from /home/andrea/AndroidStudioProjects/KN-Estadisticas/app/src/main/AndroidManifest.xml:33:19-99
 activity#com.freshair.android.knestadisticas.ConfigChartActivity
-ADDED from C:\Users\a.grassano.spb\ProyectosAndroid\KN-Estadisticas\app\src\main\AndroidManifest.xml:35:9-36:20
+ADDED from /home/andrea/AndroidStudioProjects/KN-Estadisticas/app/src/main/AndroidManifest.xml:35:9-36:20
 	android:name
-		ADDED from C:\Users\a.grassano.spb\ProyectosAndroid\KN-Estadisticas\app\src\main\AndroidManifest.xml:35:19-89
+		ADDED from /home/andrea/AndroidStudioProjects/KN-Estadisticas/app/src/main/AndroidManifest.xml:35:19-89
 activity#com.freshair.android.knestadisticas.SimpleLinearChartActivity
-ADDED from C:\Users\a.grassano.spb\ProyectosAndroid\KN-Estadisticas\app\src\main\AndroidManifest.xml:37:9-38:20
+ADDED from /home/andrea/AndroidStudioProjects/KN-Estadisticas/app/src/main/AndroidManifest.xml:37:9-38:20
 	android:name
-		ADDED from C:\Users\a.grassano.spb\ProyectosAndroid\KN-Estadisticas\app\src\main\AndroidManifest.xml:37:19-95
+		ADDED from /home/andrea/AndroidStudioProjects/KN-Estadisticas/app/src/main/AndroidManifest.xml:37:19-95
 activity#com.freshair.android.knestadisticas.ComparisonChartActivity
-ADDED from C:\Users\a.grassano.spb\ProyectosAndroid\KN-Estadisticas\app\src\main\AndroidManifest.xml:39:9-40:20
+ADDED from /home/andrea/AndroidStudioProjects/KN-Estadisticas/app/src/main/AndroidManifest.xml:39:9-40:20
 	android:name
-		ADDED from C:\Users\a.grassano.spb\ProyectosAndroid\KN-Estadisticas\app\src\main\AndroidManifest.xml:39:19-93
+		ADDED from /home/andrea/AndroidStudioProjects/KN-Estadisticas/app/src/main/AndroidManifest.xml:39:19-93
 activity#com.freshair.android.knestadisticas.HelpActivity
-ADDED from C:\Users\a.grassano.spb\ProyectosAndroid\KN-Estadisticas\app\src\main\AndroidManifest.xml:41:9-42:20
+ADDED from /home/andrea/AndroidStudioProjects/KN-Estadisticas/app/src/main/AndroidManifest.xml:41:9-42:20
 	android:name
-		ADDED from C:\Users\a.grassano.spb\ProyectosAndroid\KN-Estadisticas\app\src\main\AndroidManifest.xml:41:19-82
+		ADDED from /home/andrea/AndroidStudioProjects/KN-Estadisticas/app/src/main/AndroidManifest.xml:41:19-82
 activity#com.freshair.android.knestadisticas.AboutUsActivity
-ADDED from C:\Users\a.grassano.spb\ProyectosAndroid\KN-Estadisticas\app\src\main\AndroidManifest.xml:43:9-44:20
+ADDED from /home/andrea/AndroidStudioProjects/KN-Estadisticas/app/src/main/AndroidManifest.xml:43:9-44:20
 	android:name
-		ADDED from C:\Users\a.grassano.spb\ProyectosAndroid\KN-Estadisticas\app\src\main\AndroidManifest.xml:43:19-85
+		ADDED from /home/andrea/AndroidStudioProjects/KN-Estadisticas/app/src/main/AndroidManifest.xml:43:19-85
 activity#org.achartengine.GraphicalActivity
-ADDED from C:\Users\a.grassano.spb\ProyectosAndroid\KN-Estadisticas\app\src\main\AndroidManifest.xml:45:9-71
+ADDED from /home/andrea/AndroidStudioProjects/KN-Estadisticas/app/src/main/AndroidManifest.xml:45:9-71
 	android:name
-		ADDED from C:\Users\a.grassano.spb\ProyectosAndroid\KN-Estadisticas\app\src\main\AndroidManifest.xml:45:19-68
+		ADDED from /home/andrea/AndroidStudioProjects/KN-Estadisticas/app/src/main/AndroidManifest.xml:45:19-68
 uses-sdk
-INJECTED from C:\Users\a.grassano.spb\ProyectosAndroid\KN-Estadisticas\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
-INJECTED from C:\Users\a.grassano.spb\ProyectosAndroid\KN-Estadisticas\app\src\main\AndroidManifest.xml
-INJECTED from C:\Users\a.grassano.spb\ProyectosAndroid\KN-Estadisticas\app\src\main\AndroidManifest.xml
-MERGED from [com.android.support:support-v4:27.1.1] C:\Users\a.grassano.spb\.gradle\caches\transforms-2\files-2.1\52c1b9ac0064ba5a2ca422ada11b9741\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-v4:27.1.1] C:\Users\a.grassano.spb\.gradle\caches\transforms-2\files-2.1\52c1b9ac0064ba5a2ca422ada11b9741\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-media-compat:27.1.1] C:\Users\a.grassano.spb\.gradle\caches\transforms-2\files-2.1\e5f10cb6e3e9a994651b7a701ee00836\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-media-compat:27.1.1] C:\Users\a.grassano.spb\.gradle\caches\transforms-2\files-2.1\e5f10cb6e3e9a994651b7a701ee00836\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-fragment:27.1.1] C:\Users\a.grassano.spb\.gradle\caches\transforms-2\files-2.1\4ddef94a50bb1d19844ae5c36fc3725b\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-fragment:27.1.1] C:\Users\a.grassano.spb\.gradle\caches\transforms-2\files-2.1\4ddef94a50bb1d19844ae5c36fc3725b\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-core-ui:27.1.1] C:\Users\a.grassano.spb\.gradle\caches\transforms-2\files-2.1\565e5e58a384415d2df04014314153f0\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-core-ui:27.1.1] C:\Users\a.grassano.spb\.gradle\caches\transforms-2\files-2.1\565e5e58a384415d2df04014314153f0\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-core-utils:27.1.1] C:\Users\a.grassano.spb\.gradle\caches\transforms-2\files-2.1\b463f7b46c09d7f1746048b0906ac5bc\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-core-utils:27.1.1] C:\Users\a.grassano.spb\.gradle\caches\transforms-2\files-2.1\b463f7b46c09d7f1746048b0906ac5bc\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-compat:27.1.1] C:\Users\a.grassano.spb\.gradle\caches\transforms-2\files-2.1\1b89259178ef779b1768aa5f02abf547\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-compat:27.1.1] C:\Users\a.grassano.spb\.gradle\caches\transforms-2\files-2.1\1b89259178ef779b1768aa5f02abf547\AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:runtime:1.1.0] C:\Users\a.grassano.spb\.gradle\caches\transforms-2\files-2.1\43dc7769e7a970b963506bbde6ff6437\AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:runtime:1.1.0] C:\Users\a.grassano.spb\.gradle\caches\transforms-2\files-2.1\43dc7769e7a970b963506bbde6ff6437\AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:livedata-core:1.1.0] C:\Users\a.grassano.spb\.gradle\caches\transforms-2\files-2.1\a14c5fba2876d3e58105227d2215afc9\AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:livedata-core:1.1.0] C:\Users\a.grassano.spb\.gradle\caches\transforms-2\files-2.1\a14c5fba2876d3e58105227d2215afc9\AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:viewmodel:1.1.0] C:\Users\a.grassano.spb\.gradle\caches\transforms-2\files-2.1\74c218d0df4314cf1a8ebdfb8028b236\AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:viewmodel:1.1.0] C:\Users\a.grassano.spb\.gradle\caches\transforms-2\files-2.1\74c218d0df4314cf1a8ebdfb8028b236\AndroidManifest.xml:20:5-44
-MERGED from [android.arch.core:runtime:1.1.0] C:\Users\a.grassano.spb\.gradle\caches\transforms-2\files-2.1\75d5e45a6cd7fa9f42e13bb6c421d221\AndroidManifest.xml:20:5-44
-MERGED from [android.arch.core:runtime:1.1.0] C:\Users\a.grassano.spb\.gradle\caches\transforms-2\files-2.1\75d5e45a6cd7fa9f42e13bb6c421d221\AndroidManifest.xml:20:5-44
-INJECTED from C:\Users\a.grassano.spb\ProyectosAndroid\KN-Estadisticas\app\src\main\AndroidManifest.xml
-INJECTED from C:\Users\a.grassano.spb\ProyectosAndroid\KN-Estadisticas\app\src\main\AndroidManifest.xml
+INJECTED from /home/andrea/AndroidStudioProjects/KN-Estadisticas/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from /home/andrea/AndroidStudioProjects/KN-Estadisticas/app/src/main/AndroidManifest.xml
+INJECTED from /home/andrea/AndroidStudioProjects/KN-Estadisticas/app/src/main/AndroidManifest.xml
+MERGED from [com.android.support:support-v4:27.1.1] /home/andrea/.gradle/caches/transforms-2/files-2.1/3e330173f403199a498ce07dc5fc331d/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-v4:27.1.1] /home/andrea/.gradle/caches/transforms-2/files-2.1/3e330173f403199a498ce07dc5fc331d/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-media-compat:27.1.1] /home/andrea/.gradle/caches/transforms-2/files-2.1/a882bb62ba3406e88e072deec96a42e2/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-media-compat:27.1.1] /home/andrea/.gradle/caches/transforms-2/files-2.1/a882bb62ba3406e88e072deec96a42e2/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-fragment:27.1.1] /home/andrea/.gradle/caches/transforms-2/files-2.1/c5539e82507a0375b4c4d4dab39b7f20/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-fragment:27.1.1] /home/andrea/.gradle/caches/transforms-2/files-2.1/c5539e82507a0375b4c4d4dab39b7f20/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:27.1.1] /home/andrea/.gradle/caches/transforms-2/files-2.1/e2b2d2f0873a9330c83804d080af353f/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:27.1.1] /home/andrea/.gradle/caches/transforms-2/files-2.1/e2b2d2f0873a9330c83804d080af353f/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:27.1.1] /home/andrea/.gradle/caches/transforms-2/files-2.1/05fa0492bfe3dfc7970d32c9a13e5666/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:27.1.1] /home/andrea/.gradle/caches/transforms-2/files-2.1/05fa0492bfe3dfc7970d32c9a13e5666/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:27.1.1] /home/andrea/.gradle/caches/transforms-2/files-2.1/90ad557a22b636b5a708311fa19d5fe7/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:27.1.1] /home/andrea/.gradle/caches/transforms-2/files-2.1/90ad557a22b636b5a708311fa19d5fe7/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:runtime:1.1.0] /home/andrea/.gradle/caches/transforms-2/files-2.1/67dc17798294d65819d73faaa8755a90/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:runtime:1.1.0] /home/andrea/.gradle/caches/transforms-2/files-2.1/67dc17798294d65819d73faaa8755a90/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata-core:1.1.0] /home/andrea/.gradle/caches/transforms-2/files-2.1/078266ba0a6418034ea7956186997b7b/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata-core:1.1.0] /home/andrea/.gradle/caches/transforms-2/files-2.1/078266ba0a6418034ea7956186997b7b/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:viewmodel:1.1.0] /home/andrea/.gradle/caches/transforms-2/files-2.1/998eb919c5c2ca5229fe859d98e2420f/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:viewmodel:1.1.0] /home/andrea/.gradle/caches/transforms-2/files-2.1/998eb919c5c2ca5229fe859d98e2420f/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.core:runtime:1.1.0] /home/andrea/.gradle/caches/transforms-2/files-2.1/e320696360778e286e3fccb786f644ec/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.core:runtime:1.1.0] /home/andrea/.gradle/caches/transforms-2/files-2.1/e320696360778e286e3fccb786f644ec/AndroidManifest.xml:20:5-44
+INJECTED from /home/andrea/AndroidStudioProjects/KN-Estadisticas/app/src/main/AndroidManifest.xml
+INJECTED from /home/andrea/AndroidStudioProjects/KN-Estadisticas/app/src/main/AndroidManifest.xml
 	android:targetSdkVersion
-		INJECTED from C:\Users\a.grassano.spb\ProyectosAndroid\KN-Estadisticas\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\a.grassano.spb\ProyectosAndroid\KN-Estadisticas\app\src\main\AndroidManifest.xml
-		INJECTED from C:\Users\a.grassano.spb\ProyectosAndroid\KN-Estadisticas\app\src\main\AndroidManifest.xml
+		INJECTED from /home/andrea/AndroidStudioProjects/KN-Estadisticas/app/src/main/AndroidManifest.xml
+		ADDED from /home/andrea/AndroidStudioProjects/KN-Estadisticas/app/src/main/AndroidManifest.xml
+		INJECTED from /home/andrea/AndroidStudioProjects/KN-Estadisticas/app/src/main/AndroidManifest.xml
 	android:minSdkVersion
-		INJECTED from C:\Users\a.grassano.spb\ProyectosAndroid\KN-Estadisticas\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\a.grassano.spb\ProyectosAndroid\KN-Estadisticas\app\src\main\AndroidManifest.xml
-		INJECTED from C:\Users\a.grassano.spb\ProyectosAndroid\KN-Estadisticas\app\src\main\AndroidManifest.xml
+		INJECTED from /home/andrea/AndroidStudioProjects/KN-Estadisticas/app/src/main/AndroidManifest.xml
+		ADDED from /home/andrea/AndroidStudioProjects/KN-Estadisticas/app/src/main/AndroidManifest.xml
+		INJECTED from /home/andrea/AndroidStudioProjects/KN-Estadisticas/app/src/main/AndroidManifest.xml
 meta-data#android.support.FILE_PROVIDER_PATHS
-ADDED from C:\Users\a.grassano.spb\ProyectosAndroid\KN-Estadisticas\app\src\main\AndroidManifest.xml:52:13-54:57
+ADDED from /home/andrea/AndroidStudioProjects/KN-Estadisticas/app/src/main/AndroidManifest.xml:52:13-54:57
 	android:resource
-		ADDED from C:\Users\a.grassano.spb\ProyectosAndroid\KN-Estadisticas\app\src\main\AndroidManifest.xml:54:17-55
+		ADDED from /home/andrea/AndroidStudioProjects/KN-Estadisticas/app/src/main/AndroidManifest.xml:54:17-55
 	android:name
-		ADDED from C:\Users\a.grassano.spb\ProyectosAndroid\KN-Estadisticas\app\src\main\AndroidManifest.xml:53:17-67
+		ADDED from /home/andrea/AndroidStudioProjects/KN-Estadisticas/app/src/main/AndroidManifest.xml:53:17-67

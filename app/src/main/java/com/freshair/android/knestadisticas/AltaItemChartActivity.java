@@ -96,6 +96,9 @@ public class AltaItemChartActivity extends FragmentActivity implements LoaderMan
 
 		final Calendar c = Calendar.getInstance();
 		mYear = c.get(Calendar.YEAR);
+		mMonth = String.valueOf(c.get(Calendar.MONTH));
+		mDay = String.valueOf(c.get(Calendar.DAY_OF_MONTH));
+
 		month = c.get(Calendar.MONTH);
 		day = c.get(Calendar.DAY_OF_MONTH);
 
@@ -111,9 +114,9 @@ public class AltaItemChartActivity extends FragmentActivity implements LoaderMan
 								//		String date = new SimpleDateFormat("MM/dd/yyyy").format(c.getTime());
 								//mDateDisplay.setText(date);
 								mYear = c.get(Calendar.YEAR);
-								month = c.get(Calendar.MONTH) + 1;
-								day = c.get(Calendar.DAY_OF_MONTH);
-								//updateDisplay();
+								mMonth = String.valueOf(c.get(Calendar.MONTH) + 1);
+								mDay = String.valueOf(c.get(Calendar.DAY_OF_MONTH));
+								actualizarFecha();
 							}
 						}, mYear, month - 1, day);
 				/*dpd.getDatePicker().setMinDate(System.currentTimeMillis());
@@ -163,11 +166,36 @@ public class AltaItemChartActivity extends FragmentActivity implements LoaderMan
 	}
      
 	private void configurarTimePicker(){
-	     mPickTime.setOnClickListener(new View.OnClickListener() {
+	   /*  mPickTime.setOnClickListener(new View.OnClickListener() {
 	         public void onClick(View v) {
 	             showDialog(TIME_DIALOG_ID);
 	         }
 	     });
+*/
+
+	     mPickTime.setOnClickListener(new View.OnClickListener() {
+
+			 @Override
+			 public void onClick(View v) {
+				 // TODO Auto-generated method stub
+				 Calendar mcurrentTime = Calendar.getInstance();
+				 int hour = mcurrentTime.get(Calendar.HOUR_OF_DAY);
+				 int minute = mcurrentTime.get(Calendar.MINUTE);
+				 TimePickerDialog mTimePicker;
+				 mTimePicker = new TimePickerDialog(AltaItemChartActivity.this, new TimePickerDialog.OnTimeSetListener() {
+					 @Override
+					 public void onTimeSet(TimePicker timePicker, int selectedHour, int selectedMinute) {
+						 //eReminderTime.setText( selectedHour + ":" + selectedMinute);
+						 mHour = String.valueOf(selectedHour);
+						 mMin = String.valueOf(selectedMinute);
+						 actualizarHora();
+					 }
+				 }, hour, minute, true);//Yes 24 hour time
+				 mTimePicker.show();
+
+			 }
+		 });
+
 	     if(mItemChartSeleccionado == null || mItemChartSeleccionado.getHour() == null){
 	     	 if(ConstantsAdmin.mHour != null){
 	    		 mHour = ConstantsAdmin.mHour;

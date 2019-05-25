@@ -1,6 +1,7 @@
 package com.freshair.android.knestadisticas;
 
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
 
@@ -167,9 +168,17 @@ public class ComparisonChartActivity extends Activity {
 			  item = items.get(k);
 			  if (!sobrePuestos) {
 
-			  	
+				  Calendar calendar=Calendar.getInstance();
+				  //calendar.setTime(YOUR_DATE_OBJECT);
+				  calendar.set(Integer.valueOf(item.getYear()) - 1900, Integer.valueOf(item.getMonth()) - 1, Integer.valueOf(item.getDay()));
+				  calendar.set(Calendar.HOUR_OF_DAY, Integer.valueOf(item.getHour()));
+				  calendar.set(Calendar.MINUTE,Integer.valueOf(item.getMin()));
 
-				  dates.get(a)[k] = new Date(Integer.valueOf(item.getYear()) - 1900, Integer.valueOf(item.getMonth()) - 1, Integer.valueOf(item.getDay()), Integer.valueOf(item.getHour()), Integer.valueOf(item.getMin()));
+				  Date date=calendar.getTime();
+
+				  dates.get(a)[k] = date;
+				  //dates.get(a)[k] = new Date(Integer.valueOf(item.getYear()) - 1900, Integer.valueOf(item.getMonth()) - 1, Integer.valueOf(item.getDay()), Integer.valueOf(item.getHour()), Integer.valueOf(item.getMin()));
+
 				  valX = dates.get(a)[k].getTime();
 
 			  } else {
