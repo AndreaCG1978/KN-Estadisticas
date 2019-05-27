@@ -79,7 +79,7 @@ public class MultiSpinner extends Spinner implements
 	        setAdapter(adapter);*/
     }
 
-    public interface MultiSpinnerListener {
+    interface MultiSpinnerListener {
         void onItemsSelected(boolean[] selected);
     }
 

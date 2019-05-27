@@ -69,7 +69,7 @@ public class AltaChartActivity extends Activity {
 			mChartSeleccionado.setName(mNombreChart.getText().toString());
 			mChartSeleccionado.setDescription(mDescripcionChart.getText().toString());
 			mChartSeleccionado.setUnit(mUnidadChart.getText().toString());
-			ConstantsAdmin.agregarChart(mChartSeleccionado, this, mDBManager);
+			ConstantsAdmin.agregarChart(mChartSeleccionado, mDBManager);
 
 		} catch (Exception e) {
 			if(mChartSeleccionado.getId() == 0){

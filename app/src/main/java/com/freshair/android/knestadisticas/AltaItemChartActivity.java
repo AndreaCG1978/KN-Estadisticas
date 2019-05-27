@@ -2,7 +2,6 @@ package com.freshair.android.knestadisticas;
 
 import java.util.Calendar;
 
-import android.app.Activity;
 import android.app.DatePickerDialog;
 import android.app.Dialog;
 import android.app.TimePickerDialog;
@@ -45,8 +44,8 @@ public class AltaItemChartActivity extends FragmentActivity implements LoaderMan
 	private String mMin = null;
 	private String mChartId = null; 
 	
-	private static final int DATE_DIALOG_ID = 0;
-	private static final int TIME_DIALOG_ID = 1;
+	// --Commented out by Inspection (27/5/2019 08:13):private static final int DATE_DIALOG_ID = 0;
+	// --Commented out by Inspection (27/5/2019 08:13):private static final int TIME_DIALOG_ID = 1;
 	private final int ITEM_CHART_CURSOR = 1;
 	
 	public void onCreate(Bundle savedInstanceState) {
@@ -150,12 +149,12 @@ public class AltaItemChartActivity extends FragmentActivity implements LoaderMan
 	    	    }
 	    	    
 		     	if(monthTemp < 10){
-		     		mMonth = "0" + String.valueOf(monthTemp);
+		     		mMonth = "0" + monthTemp;
 		     	}else{
 		     		mMonth = String.valueOf(monthTemp);
 		     	}
 		     	if(dayTemp < 10){
-		     		mDay = "0" +  String.valueOf(dayTemp);
+		     		mDay = "0" + dayTemp;
 		     	}else{
 		     		mDay = String.valueOf(dayTemp);
 		     	}
@@ -219,12 +218,12 @@ public class AltaItemChartActivity extends FragmentActivity implements LoaderMan
                                   int monthOfYear, int dayOfMonth) {
             	mYear = year;
             	if(monthOfYear < 9){
-            		mMonth = "0" + String.valueOf(monthOfYear + 1);
+            		mMonth = "0" + (monthOfYear + 1);
             	}else{
             		mMonth = String.valueOf(monthOfYear + 1);
             	}
                 if(dayOfMonth < 10){
-                	mDay = "0" + String.valueOf(dayOfMonth);
+                	mDay = "0" + dayOfMonth;
                 }else{
                 	mDay = String.valueOf(dayOfMonth);
                 }
@@ -240,12 +239,12 @@ public class AltaItemChartActivity extends FragmentActivity implements LoaderMan
 			public void onTimeSet(TimePicker view, int hourOfDay, int minute) {
 				// TODO Auto-generated method stub
 				if(hourOfDay < 10){
-					mHour = "0" + String.valueOf(hourOfDay);
+					mHour = "0" + hourOfDay;
 				}else{
 					mHour = String.valueOf(hourOfDay);
 				}
 				if(minute < 10){
-					mMin = "0" + String.valueOf(minute);
+					mMin = "0" + minute;
 				}else{
 					mMin = String.valueOf(minute);
 				}
@@ -309,7 +308,7 @@ public class AltaItemChartActivity extends FragmentActivity implements LoaderMan
 	}
 	
 	private String obtenerFecha(){
-		return String.valueOf(mYear) + "-" + mMonth + "-" + mDay;
+		return mYear + "-" + mMonth + "-" + mDay;
 	}
 	
 	private String obtenerHora(){
@@ -356,7 +355,7 @@ public class AltaItemChartActivity extends FragmentActivity implements LoaderMan
 			mItemChartSeleccionado.setHour(String.valueOf(mHour));
 			mItemChartSeleccionado.setMin(String.valueOf(mMin));
 			mItemChartSeleccionado.setChartId(mChartId);
-			ConstantsAdmin.agregarItem(mItemChartSeleccionado, this, mDBManager);
+			ConstantsAdmin.agregarItem(mItemChartSeleccionado, mDBManager);
 			ConstantsAdmin.mDay = mDay;
 			ConstantsAdmin.mMonth = mMonth;
 			ConstantsAdmin.mYear = mYear;

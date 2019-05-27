@@ -3,7 +3,6 @@ package com.freshair.android.knestadisticas;
 import java.util.ArrayList;
 import java.util.List;
 
-import android.app.Activity;
 import android.app.Dialog;
 import android.content.Intent;
 import android.database.Cursor;
@@ -62,7 +61,7 @@ public class ConfigChartActivity extends FragmentActivity implements LoaderManag
 	//private ArrayList<Cursor> allMyCursors = null;
 	private final int CONFIG_CURSOR = 1;
 
-	public static CursorLoader cursorGraficos = null;
+	// --Commented out by Inspection (27/5/2019 08:15):public static CursorLoader cursorGraficos = null;
 /*
     @Override
 	public void startManagingCursor(Cursor c) {
@@ -90,7 +89,7 @@ public class ConfigChartActivity extends FragmentActivity implements LoaderManag
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
    //     allMyCursors = new ArrayList<>();
-		ConfigChartActivity me = this;
+	//	ConfigChartActivity me = this;
 		this.cargarLoaders();
        	this.setContentView(R.layout.chart_config);
         this.registrarWidgets();
@@ -326,7 +325,7 @@ public class ConfigChartActivity extends FragmentActivity implements LoaderManag
     	    	mChartSeleccionado.setLabelColor(String.valueOf(mColorSeleccionadoLabels));
     	    	mChartSeleccionado.setFormatTime(ConstantsAdmin.formatTime[mTimeSelected]);
     	    	mChartSeleccionado.setPointStyle(String.valueOf(mPointSelected));
-    	    	ConstantsAdmin.agregarChart(mChartSeleccionado, this, mDBManager);
+    	    	ConstantsAdmin.agregarChart(mChartSeleccionado, mDBManager);
         	}else{
         		mConfig.setBackground(String.valueOf(mColorSeleccionadoBackground));
         		mConfig.setGrid(String.valueOf(mColorSeleccionadoGrid));
@@ -336,7 +335,7 @@ public class ConfigChartActivity extends FragmentActivity implements LoaderManag
         		mConfig.setShowGrid(checkShowGrid.isChecked());
         		mConfig.setShowValue(checkShowValues.isChecked());
         		mConfig.setTime(ConstantsAdmin.formatTime[mTimeSelected]);
-        		ConstantsAdmin.agregarConfigChart(mConfig, this, mDBManager);
+        		ConstantsAdmin.agregarConfigChart(mConfig, mDBManager);
         	}
 		} catch (Exception e) {
 			ConstantsAdmin.mostrarMensajeAplicacion(this, this.getString(R.string.mensaje_error_guardar));
@@ -359,21 +358,63 @@ public class ConfigChartActivity extends FragmentActivity implements LoaderManag
 	}
 	
 	private void configurarMostrarBackground(){
-		labelBackground.setOnClickListener(new View.OnClickListener() {
+	/*	labelBackground.setOnClickListener(new View.OnClickListener() {
 	         public void onClick(View v) {
 	              showDialog(COLOR_BACKGROUND_DIALOG_ID);
 	        	 
 	         }
 	     });
+*/
+
+		labelBackground.setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View v) {
+
+				ColorPickerDialog cpd = new ColorPickerDialog(ConfigChartActivity.this,
+						mColorListenerLabels,
+						mColorSeleccionadoLabels);
+				cpd.show();
+			}
+		});
+
+
+
+
+
+
+
+
+
+
+
+
+
 	}
 	
 	private void configurarMostrarLine(){
 		if(mChartSeleccionado.getId() != -1){
-			labelLine.setOnClickListener(new View.OnClickListener() {
+		/*	labelLine.setOnClickListener(new View.OnClickListener() {
 		         public void onClick(View v) {
 		             showDialog(COLOR_LINE_DIALOG_ID);
 		         }
-		     });
+		     });*/
+
+			labelLine.setOnClickListener(new View.OnClickListener() {
+				@Override
+				public void onClick(View v) {
+
+					ColorPickerDialog cpd = new ColorPickerDialog(ConfigChartActivity.this,
+							mColorListenerLine,
+							mColorSeleccionadoLine);
+					cpd.show();
+				}
+			});
+
+
+
+
+
+
 		}else{
 			labelLine.setVisibility(View.GONE);
 			this.findViewById(R.id.labelColorLine).setVisibility(View.GONE);
@@ -383,20 +424,42 @@ public class ConfigChartActivity extends FragmentActivity implements LoaderManag
 	}
 	
 	private void configurarMostrarGrid(){
-		labelGrid.setOnClickListener(new View.OnClickListener() {
+		/*labelGrid.setOnClickListener(new View.OnClickListener() {
 	         public void onClick(View v) {
 	             showDialog(COLOR_GRID_DIALOG_ID);
 	         }
 	     });
-		
+*/
+
+		labelGrid.setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View v) {
+
+				ColorPickerDialog cpd = new ColorPickerDialog(ConfigChartActivity.this,
+						mColorListenerGrid,
+						mColorSeleccionadoGrid);
+				cpd.show();
+			}
+		});
 	}
 	
 	private void configurarMostrarLabels(){
-		labelLabels.setOnClickListener(new View.OnClickListener() {
+	/*	labelLabels.setOnClickListener(new View.OnClickListener() {
 	         public void onClick(View v) {
 	             showDialog(COLOR_LABELS_DIALOG_ID);
 	         }
-	     });
+	     });*/
+
+		labelLabels.setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View v) {
+
+				ColorPickerDialog cpd = new ColorPickerDialog(ConfigChartActivity.this,
+						mColorListenerLabels,
+						mColorSeleccionadoLabels);
+				cpd.show();
+			}
+		});
 		
 	}
     

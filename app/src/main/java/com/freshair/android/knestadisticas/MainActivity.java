@@ -7,7 +7,6 @@ import java.util.List;
 import java.util.Map;
 
 import android.app.AlertDialog;
-import android.app.ExpandableListActivity;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.DialogInterface;
@@ -101,7 +100,7 @@ public class MainActivity extends ExpandableListFragment implements LoaderManage
 	    	       .setCancelable(false)
 	    	       .setPositiveButton(R.string.label_si, new DialogInterface.OnClickListener() {
 	    	           public void onClick(DialogInterface dialog, int id) {
-	    	        	   ConstantsAdmin.eliminarChart(chrt.getId(), me, mDBManager);
+	    	        	   ConstantsAdmin.eliminarChart(chrt.getId(), mDBManager);
 	    	        	   mGroupSelected = -1;
 	    	        	   recargarLista();
 	    	           }

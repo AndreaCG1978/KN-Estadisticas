@@ -1,10 +1,8 @@
 package com.freshair.android.knestadisticas;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import android.app.AlertDialog;
-import android.app.ListActivity;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.database.Cursor;
@@ -244,7 +242,7 @@ public class ItemPerMonthActivity extends KNListFragment implements LoaderManage
 		KNItemChart itemSelect = (KNItemChart)this.getListAdapter().getItem(Integer.valueOf(String.valueOf(mItemIdSelect)));
 		DataBaseManager mDBManager = DataBaseManager.getInstance(this);
 		ConstantsAdmin.inicializarBD(mDBManager);
-		ConstantsAdmin.eliminarItemChart(itemSelect.getId(), this, mDBManager);
+		ConstantsAdmin.eliminarItemChart(itemSelect.getId(), mDBManager);
 		ConstantsAdmin.finalizarBD(mDBManager);
 	}
 	

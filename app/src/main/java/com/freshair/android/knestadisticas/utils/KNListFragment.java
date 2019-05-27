@@ -112,7 +112,7 @@ public abstract class KNListFragment extends FragmentActivity implements OnCreat
      * @param position The position of the view in the list
      * @param id The row id of the item that was clicked
      */
-    public void onListItemClick(ListView l, View v, int position, long id) {
+    private void onListItemClick(ListView l, View v, int position, long id) {
     }
 
     /**
@@ -151,7 +151,7 @@ public abstract class KNListFragment extends FragmentActivity implements OnCreat
         return mList.getSelectedItemId();
     }
 
-    public ListView getListView() {
+    protected ListView getListView() {
         ensureList();
         return mList;
     }

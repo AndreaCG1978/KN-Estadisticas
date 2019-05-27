@@ -1,11 +1,8 @@
 package com.freshair.android.knestadisticas;
 
 
-import java.util.ArrayList;
-
 import android.app.Activity;
 import android.content.Intent;
-import android.database.Cursor;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.view.MotionEvent;
@@ -90,7 +87,7 @@ public class InitActivity extends Activity {
         DataBaseManager mDBManager = DataBaseManager.getInstance(this);
     	ConstantsAdmin.inicializarBD(mDBManager);
     	ConstantsAdmin.createBD(mDBManager);
-    	configSize = ConstantsAdmin.obtenerTablaConfigSize(this, mDBManager);
+    	configSize = ConstantsAdmin.obtenerTablaConfigSize(mDBManager);
     	if(configSize == 0){
     		this.createConfigChart();
     	}
@@ -106,7 +103,7 @@ public class InitActivity extends Activity {
 		config.setPoint("2");
 		config.setLine(String.valueOf(Color.BLUE));
 		config.setTime(ConstantsAdmin.formatTime[0]);
-		ConstantsAdmin.agregarConfigChart(config, this, mDBManager);
+		ConstantsAdmin.agregarConfigChart(config, mDBManager);
 	}
 	
     public boolean onTouchEvent(MotionEvent event) {

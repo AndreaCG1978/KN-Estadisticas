@@ -259,11 +259,11 @@ public class DataBaseManager {
      }
      
      public void removeChart(long idChart){
-         mDb.delete(ConstantsAdmin.TABLE_CHART, ConstantsAdmin.KEY_ROWID + "=" + String.valueOf(idChart), null);
+         mDb.delete(ConstantsAdmin.TABLE_CHART, ConstantsAdmin.KEY_ROWID + "=" + idChart, null);
      }
      
      public void removeItemChart(long idItem){
-         mDb.delete(ConstantsAdmin.TABLE_ITEM_CHART, ConstantsAdmin.KEY_ROWID + "=" + String.valueOf(idItem), null);
+         mDb.delete(ConstantsAdmin.TABLE_ITEM_CHART, ConstantsAdmin.KEY_ROWID + "=" + idItem, null);
      }
      
      public void removeItemsCharts(String idChart, String year){

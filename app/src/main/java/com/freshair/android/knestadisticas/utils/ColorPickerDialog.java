@@ -99,7 +99,7 @@ public class ColorPickerDialog extends Dialog {
             return s + java.lang.Math.round(p * (d - s));
         }
 
-        private int interpColor(int colors[], float unit) {
+        private int interpColor(int[] colors, float unit) {
             if (unit <= 0) {
                 return colors[0];
             }
@@ -124,11 +124,6 @@ public class ColorPickerDialog extends Dialog {
 
 
         private static final float PI = 3.1415926f;
-
-        @Override
-        public boolean performClick() {
-            return super.performClick();
-        }
 
         @Override
         public boolean onTouchEvent(MotionEvent event) {

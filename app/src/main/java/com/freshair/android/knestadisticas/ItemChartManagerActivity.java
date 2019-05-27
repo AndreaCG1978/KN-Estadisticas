@@ -9,7 +9,6 @@ import java.util.TreeMap;
 
 import android.app.Activity;
 import android.app.AlertDialog;
-import android.app.ExpandableListActivity;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -229,7 +228,7 @@ public class ItemChartManagerActivity extends ExpandableListFragment implements 
 
                 text.setText(mes);                   
                 text = v.findViewById(R.id.cantDiasRegistrados);
-                text.setText(getString(R.string.label_cant_dias_reg) + " " + String.valueOf(cantItems));
+                text.setText(getString(R.string.label_cant_dias_reg) + " " + cantItems);
                 ImageView btn = v.findViewById(R.id.btnRemove);
                 btn.setOnClickListener(new View.OnClickListener() {
                     public void onClick(View v) {
@@ -253,7 +252,7 @@ public class ItemChartManagerActivity extends ExpandableListFragment implements 
                 int cantMeses = allItems.get(year).size();
                 text.setText(year);                   
                 text = v.findViewById(R.id.cantMesesRegistrados);
-                text.setText(getString(R.string.label_cant_meses_reg) + " " + String.valueOf(cantMeses));
+                text.setText(getString(R.string.label_cant_meses_reg) + " " + cantMeses);
                 ImageView btn = v.findViewById(R.id.btnRemove);
                 btn.setOnClickListener(new View.OnClickListener() {
                     public void onClick(View v) {
@@ -353,12 +352,12 @@ public class ItemChartManagerActivity extends ExpandableListFragment implements 
 	
 	private void eliminarYearItems(String year){
 		DataBaseManager mDBManager = DataBaseManager.getInstance(this);
-		ConstantsAdmin.eliminarItemsCharts(String.valueOf(mChartSeleccionado.getId()), year, me, mDBManager);
+		ConstantsAdmin.eliminarItemsCharts(String.valueOf(mChartSeleccionado.getId()), year, mDBManager);
 	}
 	
 	private void eliminarMonthItems(String year, String month){
 		DataBaseManager mDBManager = DataBaseManager.getInstance(this);
-		ConstantsAdmin.eliminarItemsCharts(String.valueOf(mChartSeleccionado.getId()), year, month, me, mDBManager);
+		ConstantsAdmin.eliminarItemsCharts(String.valueOf(mChartSeleccionado.getId()), year, month, mDBManager);
 	}
     
     private void openItemPerMonthView(){
@@ -457,7 +456,7 @@ public class ItemChartManagerActivity extends ExpandableListFragment implements 
 	    	       .setCancelable(false)
 	    	       .setPositiveButton(R.string.label_si, new DialogInterface.OnClickListener() {
 	    	           public void onClick(DialogInterface dialog, int id) {
-	    	        	   ConstantsAdmin.eliminarChart(mChartSeleccionado.getId(), me, mDBManager);
+	    	        	   ConstantsAdmin.eliminarChart(mChartSeleccionado.getId(), mDBManager);
 	    	        	   finish();
 	    	           }
 	    	       })

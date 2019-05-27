@@ -20,7 +20,6 @@ import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.database.Cursor;
-import android.database.DatabaseErrorHandler;
 import android.graphics.Bitmap;
 import android.os.Environment;
 import android.provider.MediaStore;
@@ -102,7 +101,7 @@ public class ConstantsAdmin {
     	return chart;
     }
     
-    private static KNChart obtenerChartNamed(Activity context, String chartName, DataBaseManager mDBManager){
+    private static KNChart obtenerChartNamed(String chartName, DataBaseManager mDBManager){
     	KNChart chart = null;
     	Cursor chartCursor = null;
 		inicializarBD(mDBManager);
@@ -135,7 +134,7 @@ public class ConstantsAdmin {
     	return config;
     }
     
-    public static long obtenerTablaConfigSize(Activity context, DataBaseManager mDBManager){
+    public static long obtenerTablaConfigSize(DataBaseManager mDBManager){
     	long result = 0;
     	inicializarBD(mDBManager);
     	result = mDBManager.tablaConfigSize();
@@ -164,35 +163,39 @@ public class ConstantsAdmin {
     	return item;
     }
     
-    public static Cursor obtenerAllChartCursor(Activity context, DataBaseManager mDBManager){
-    	Cursor chartCursor = null;
-    	inicializarBD(mDBManager);
-		chartCursor = mDBManager.fetchChartsForName(null);
-		finalizarBD(mDBManager);
-		return chartCursor;
-    }
-    
-    public static String[] obtenerAllChartNames(Activity context, DataBaseManager mdbManager){
-    	String[] result = null;
-    	try {
- 
-    		List<KNChart> charts = obtenerAllChart(context, mdbManager);
-    		Iterator<KNChart> it = charts.iterator();
-    		result = new String[charts.size()];
-    		KNChart chart = null;
-    		int i = 0;
-         	while(it.hasNext()){
-         		chart = it.next();
-    			result[i] = chart.getName();
-    			i = i + 1;
-    		}
-			
-		} catch (Exception e) {
-			e.getMessage();
-		}
+// --Commented out by Inspection START (27/5/2019 08:19):
+//    public static Cursor obtenerAllChartCursor(Activity context, DataBaseManager mDBManager){
+//    	Cursor chartCursor = null;
+//    	inicializarBD(mDBManager);
+//		chartCursor = mDBManager.fetchChartsForName(null);
+//		finalizarBD(mDBManager);
+//		return chartCursor;
+//    }
+// --Commented out by Inspection STOP (27/5/2019 08:19)
 
-    	return result;
-    }
+// --Commented out by Inspection START (27/5/2019 08:20):
+//    public static String[] obtenerAllChartNames(Activity context, DataBaseManager mdbManager){
+//    	String[] result = null;
+//    	try {
+//
+//    		List<KNChart> charts = obtenerAllChart(context, mdbManager);
+//    		Iterator<KNChart> it = charts.iterator();
+//    		result = new String[charts.size()];
+//    		KNChart chart = null;
+//    		int i = 0;
+//         	while(it.hasNext()){
+//         		chart = it.next();
+//    			result[i] = chart.getName();
+//    			i = i + 1;
+//    		}
+//
+//		} catch (Exception e) {
+//			e.getMessage();
+//		}
+//
+//    	return result;
+//    }
+// --Commented out by Inspection STOP (27/5/2019 08:20)
 
     
     public static ArrayList<KNItemChart> obtenerItemsDeChart(KNChart chart, Activity context, DataBaseManager mDBManager){
@@ -326,31 +329,31 @@ public class ConstantsAdmin {
         return allChart;
     }
     
-    public static void eliminarChart(long idChart, Activity context, DataBaseManager mDBManager){
+    public static void eliminarChart(long idChart, DataBaseManager mDBManager){
     	inicializarBD(mDBManager);
     	mDBManager.removeChart(idChart);
     	finalizarBD(mDBManager);
     }
     
-    public static void eliminarItemChart(long idItem, Activity context, DataBaseManager mDBManager){
+    public static void eliminarItemChart(long idItem, DataBaseManager mDBManager){
     	inicializarBD(mDBManager);
     	mDBManager.removeItemChart(idItem);
     	finalizarBD(mDBManager);
     }
     
-    public static void eliminarItemsCharts(String idChart, String year, Activity context, DataBaseManager mDBManager){
+    public static void eliminarItemsCharts(String idChart, String year, DataBaseManager mDBManager){
     	inicializarBD(mDBManager);
     	mDBManager.removeItemsCharts(idChart, year);
     	finalizarBD(mDBManager);
     }
     
-    public static void eliminarItemsCharts(String idChart, String year, String month, Activity context, DataBaseManager mDBManager){
+    public static void eliminarItemsCharts(String idChart, String year, String month, DataBaseManager mDBManager){
     	inicializarBD(mDBManager);
     	mDBManager.removeItemsCharts(idChart, year, month);
     	finalizarBD(mDBManager);
     }
     
-    public static long agregarChart(KNChart chartSelec, Activity context, DataBaseManager mDBManager){
+    public static long agregarChart(KNChart chartSelec, DataBaseManager mDBManager){
     	long id = -1;
 		ConstantsAdmin.inicializarBD(mDBManager);
 		id = mDBManager.createOrUpdateChart(chartSelec);
@@ -358,13 +361,13 @@ public class ConstantsAdmin {
 		return id;
     }
     
-    public static void agregarConfigChart(KNConfigChart config, Activity context, DataBaseManager mDBManager){
+    public static void agregarConfigChart(KNConfigChart config, DataBaseManager mDBManager){
 		ConstantsAdmin.inicializarBD(mDBManager);
 		mDBManager.createOrUpdateConfigChart(config);
 		ConstantsAdmin.finalizarBD(mDBManager);
     }
 
-    public static void agregarItem(KNItemChart item, Activity context, DataBaseManager mDBManager){
+    public static void agregarItem(KNItemChart item, DataBaseManager mDBManager){
     	KNItemChart auxItem = new KNItemChart();
     	Cursor cur = null;
 		inicializarBD(mDBManager);
@@ -968,7 +971,7 @@ public class ConstantsAdmin {
 	                while (itItems.hasNext()){
 	                    item = itItems.next();
 	                    //ACA GUARDAR EN LA BASE EL ITEM, ACORDATE DE MODIFICAR EL ALTA PARA QUE SI COINCIDE EN FECHA Y HORA SOBREESCRIBA
-	                    agregarItem(item, context, mdbManager);
+	                    agregarItem(item, mdbManager);
 	                }
 	
 	            }
@@ -997,9 +1000,9 @@ public class ConstantsAdmin {
             chart.setName(chart.getName().substring(0, maxChartNameLength - 1));
         }
         // ACA TENGO QUE RECUPERAR DESDE LA BASE EL CHART CON ESTE NAME
-        oldChart = obtenerChartNamed(context, chart.getName(), mdbM);
+        oldChart = obtenerChartNamed(chart.getName(), mdbM);
         if(oldChart == null){
-            idNuevoChart = agregarChart(chart, context, mdbM);
+            idNuevoChart = agregarChart(chart, mdbM);
 //             ACA REGISTRAR EL NUEVO CHART
             chart.setId(idNuevoChart);
         }else{

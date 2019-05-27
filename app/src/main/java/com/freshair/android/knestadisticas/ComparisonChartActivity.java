@@ -401,52 +401,58 @@ public class ComparisonChartActivity extends Activity {
 		  }
 
 
-		  protected CategorySeries buildCategoryDataset(String title, double[] values) {
-		    CategorySeries series = new CategorySeries(title);
-		    int k = 0;
-		    for (double value : values) {
-		      series.add("Project " + ++k, value);
-		    }
+// --Commented out by Inspection START (27/5/2019 08:15):
+//		  protected CategorySeries buildCategoryDataset(String title, double[] values) {
+//		    CategorySeries series = new CategorySeries(title);
+//		    int k = 0;
+//		    for (double value : values) {
+//		      series.add("Project " + ++k, value);
+//		    }
+//
+//		    return series;
+//		  }
+// --Commented out by Inspection STOP (27/5/2019 08:15)
 
-		    return series;
-		  }
+// --Commented out by Inspection START (27/5/2019 08:15):
+//		  /**
+//		   * Builds a multiple category series using the provided values.
+//		   *
+//		   * @param titles the series titles
+//		   * @param values the values
+//		   * @return the category series
+//		   */
+//		  protected MultipleCategorySeries buildMultipleCategoryDataset(String title,
+//		      List<String[]> titles, List<double[]> values) {
+//		    MultipleCategorySeries series = new MultipleCategorySeries(title);
+//		    int k = 0;
+//		    for (double[] value : values) {
+//		      series.add(2007 + k + "", titles.get(k), value);
+//		      k++;
+//		    }
+//		    return series;
+//		  }
+// --Commented out by Inspection STOP (27/5/2019 08:15)
 
-		  /**
-		   * Builds a multiple category series using the provided values.
-		   * 
-		   * @param titles the series titles
-		   * @param values the values
-		   * @return the category series
-		   */
-		  protected MultipleCategorySeries buildMultipleCategoryDataset(String title,
-		      List<String[]> titles, List<double[]> values) {
-		    MultipleCategorySeries series = new MultipleCategorySeries(title);
-		    int k = 0;
-		    for (double[] value : values) {
-		      series.add(2007 + k + "", titles.get(k), value);
-		      k++;
-		    }
-		    return series;
-		  }
-
-		  /**
-		   * Builds a category renderer to use the provided colors.
-		   * 
-		   * @param colors the colors
-		   * @return the category renderer
-		   */
-		  protected DefaultRenderer buildCategoryRenderer(int[] colors) {
-		    DefaultRenderer renderer = new DefaultRenderer();
-		    renderer.setLabelsTextSize(15);
-		    renderer.setLegendTextSize(15);
-		    renderer.setMargins(new int[] { 20, 30, 15, 0 });
-		    for (int color : colors) {
-		      SimpleSeriesRenderer r = new SimpleSeriesRenderer();
-		      r.setColor(color);
-		      renderer.addSeriesRenderer(r);
-		    }
-		    return renderer;
-		  }
+// --Commented out by Inspection START (27/5/2019 08:15):
+//		  /**
+//		   * Builds a category renderer to use the provided colors.
+//		   *
+//		   * @param colors the colors
+//		   * @return the category renderer
+//		   */
+//		  protected DefaultRenderer buildCategoryRenderer(int[] colors) {
+//		    DefaultRenderer renderer = new DefaultRenderer();
+//		    renderer.setLabelsTextSize(15);
+//		    renderer.setLegendTextSize(15);
+//		    renderer.setMargins(new int[] { 20, 30, 15, 0 });
+//		    for (int color : colors) {
+//		      SimpleSeriesRenderer r = new SimpleSeriesRenderer();
+//		      r.setColor(color);
+//		      renderer.addSeriesRenderer(r);
+//		    }
+//		    return renderer;
+//		  }
+// --Commented out by Inspection STOP (27/5/2019 08:15)
 
 // --Commented out by Inspection START (14/11/18 19:14):
 //		  /**
@@ -472,27 +478,29 @@ public class ComparisonChartActivity extends Activity {
 //		  }
 // --Commented out by Inspection STOP (14/11/18 19:14)
 
-		  /**
-		   * Builds a bar multiple series renderer to use the provided colors.
-		   * 
-		   * @param colors the series renderers colors
-		   * @return the bar multiple series renderer
-		   */
-		  protected XYMultipleSeriesRenderer buildBarRenderer(int[] colors) {
-		    XYMultipleSeriesRenderer renderer = new XYMultipleSeriesRenderer();
-		    renderer.setAxisTitleTextSize(16);
-		    renderer.setChartTitleTextSize(20);
-		    renderer.setLabelsTextSize(15);
-		    renderer.setLegendTextSize(15);
-		    int length = colors.length;
-			  for (int color : colors) {
-				  SimpleSeriesRenderer r = new SimpleSeriesRenderer();
-				  r.setColor(color);
-				  renderer.addSeriesRenderer(r);
-			  }
-		    return renderer;
-		  }
-	  
+// --Commented out by Inspection START (27/5/2019 08:15):
+//		  /**
+//		   * Builds a bar multiple series renderer to use the provided colors.
+//		   *
+//		   * @param colors the series renderers colors
+//		   * @return the bar multiple series renderer
+//		   */
+//		  protected XYMultipleSeriesRenderer buildBarRenderer(int[] colors) {
+//		    XYMultipleSeriesRenderer renderer = new XYMultipleSeriesRenderer();
+//		    renderer.setAxisTitleTextSize(16);
+//		    renderer.setChartTitleTextSize(20);
+//		    renderer.setLabelsTextSize(15);
+//		    renderer.setLegendTextSize(15);
+//		    int length = colors.length;
+//			  for (int color : colors) {
+//				  SimpleSeriesRenderer r = new SimpleSeriesRenderer();
+//				  r.setColor(color);
+//				  renderer.addSeriesRenderer(r);
+//			  }
+//		    return renderer;
+//		  }
+// --Commented out by Inspection STOP (27/5/2019 08:15)
+
 	
   
 }
