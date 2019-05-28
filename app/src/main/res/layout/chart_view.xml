@@ -1,59 +1,62 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
-    >
-    
-    <LinearLayout
-        android:orientation="horizontal"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:layout_marginLeft="14dp"
-    android:layout_marginTop="10dp"
-    android:layout_marginBottom="10dp"
-        android:layout_marginStart="14dp">
-	    <ImageView android:id="@+id/btnExport" 
-		    android:layout_width="wrap_content"
-		    android:layout_height="wrap_content"
-		    android:src="@drawable/export_main"
-			android:contentDescription="@string/menu_export_chart" />
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 
-	    <ImageView android:id="@+id/btnTxt" 
-		    android:layout_width="wrap_content"
-		    android:layout_height="wrap_content"
-		    android:src="@drawable/export_txt"
-		    android:layout_marginLeft="17dp"
-		    android:visibility="gone"
-			android:contentDescription="@string/menu_export_text"
-            android:layout_marginStart="17dp" />
-		    
-	    <ImageView android:id="@+id/btnCsv" 
-		    android:layout_width="wrap_content"
-		    android:layout_height="wrap_content"
-		    android:src="@drawable/export_csv"
-		    android:layout_marginLeft="17dp"
-		    android:visibility="gone"
-			android:contentDescription="@string/menu_export_chart"
-            android:layout_marginStart="17dp" />
-		    
-		<ImageView android:id="@+id/btnConfig"
-		    android:layout_width="wrap_content"
-		    android:layout_height="wrap_content"
-		    android:src="@drawable/setting_chart_main"
-		    android:layout_marginLeft="17dp"
-			android:contentDescription="@string/menu_configurar_chart"
-            android:layout_marginStart="17dp" />
-	</LinearLayout>
-	
-	<LinearLayout
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="14dp"
+        android:layout_marginLeft="14dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/btnExport"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/menu_export_chart"
+            android:src="@drawable/export_main" />
+
+        <ImageView
+            android:id="@+id/btnTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="17dp"
+            android:layout_marginLeft="17dp"
+            android:contentDescription="@string/menu_export_text"
+            android:src="@drawable/export_txt"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/btnCsv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="17dp"
+            android:layout_marginLeft="17dp"
+            android:contentDescription="@string/menu_export_chart"
+            android:src="@drawable/export_csv"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/btnConfig"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="17dp"
+            android:layout_marginLeft="17dp"
+            android:contentDescription="@string/menu_configurar_chart"
+            android:src="@drawable/setting_chart_main" />
+    </LinearLayout>
+
+    <LinearLayout
         android:id="@+id/chart"
-	    android:orientation="horizontal"
-	    android:layout_width="wrap_content"
-	    android:layout_height="wrap_content"
-	    >
-  
-	</LinearLayout>
-	
-	
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+    </LinearLayout>
+
+
 </LinearLayout>

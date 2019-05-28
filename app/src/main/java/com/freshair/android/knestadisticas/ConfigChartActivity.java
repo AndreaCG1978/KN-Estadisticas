@@ -138,7 +138,7 @@ public class ConfigChartActivity extends FragmentActivity implements LoaderManag
 			}
 		});       
     }
-    
+    /*
     protected Dialog onCreateDialog(int id) {
     	
         switch (id) {
@@ -162,7 +162,7 @@ public class ConfigChartActivity extends FragmentActivity implements LoaderManag
 
         	}
         return null;
-    }
+    }*/
     
     private void configurarSpinnerStylePoint(){
     	List<String> stylePoints = new ArrayList<>();

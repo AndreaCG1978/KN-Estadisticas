@@ -1,59 +1,57 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<RelativeLayout
-  xmlns:android="http://schemas.android.com/apk/res/android"
-  android:layout_width="fill_parent"
-  android:layout_height="fill_parent"
-  android:background="@color/color_gris_oscuro"
-  android:padding="8dp">
-  
-  	    <ImageView android:id="@+id/btnRemove"
-	    android:layout_width="wrap_content"
-	    android:layout_height="wrap_content"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:layout_margin="3dp"
+    android:background="@color/color_gris_oscuro"
+    android:padding="8dp">
+
+
+
+    <TextView
+        android:id="@+id/labelYear"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginLeft="15dp"
+        android:text="@string/label_year"
+        android:textColor="@color/color_blanco"
+        android:textSize="11sp" />
+
+
+    <TextView
+        android:id="@+id/yearDesc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:paddingStart="6dp"
+        android:paddingLeft="6dp"
+        android:paddingEnd="6dp"
+        android:paddingRight="6dp"
+        android:textSize="17sp"
+        android:textColor="@color/color_blanco"
+        android:textStyle="bold" />
+
+
+    <TextView
+        android:id="@+id/cantMesesRegistrados"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/color_blanco"
+        android:textSize="12sp" />
+
+
+    <ImageView
+        android:id="@+id/btnRemove"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
         android:layout_marginLeft="40dp"
-	    android:src="@drawable/remove_icon"
-			android:contentDescription="@string/menu_eliminar_itemchart"
-            android:layout_marginStart="40dp">
-	    </ImageView>
-  
-    
-	    <TextView android:id="@+id/labelYear"
-	    android:layout_width="wrap_content"
-	    android:layout_height="wrap_content"
-	    android:text="@string/label_year"
-	    android:layout_marginLeft="15dp"
-	    android:textSize="11sp"
-	    android:layout_alignBottom="@id/btnRemove"
-	    android:layout_toRightOf="@id/btnRemove"
-            android:layout_toEndOf="@id/btnRemove"
-            android:layout_marginStart="15dp" />
-  
-
-	    <TextView android:id="@+id/yearDesc"
-	    android:layout_width="wrap_content"
-	    android:layout_height="wrap_content"
-	    android:paddingLeft="6dp"
-	    android:textSize="17sp"
-	    android:textStyle="bold"
-	    android:layout_toRightOf="@id/labelYear"
-	    android:layout_alignBaseline="@id/labelYear"
-	    android:layout_marginRight="8dp"
-            android:layout_toEndOf="@id/labelYear"
-            android:paddingStart="6dp"
-            android:layout_marginEnd="8dp"
-			android:paddingRight="6dp"
-			android:paddingEnd="6dp"/>
-	    
-	    
-	    <TextView android:id="@+id/cantMesesRegistrados"
-	    android:layout_width="wrap_content"
-	    android:layout_height="wrap_content"
-	    android:textSize="12sp"
-	    android:layout_toRightOf="@id/yearDesc"
-	    android:layout_alignBaseline="@id/yearDesc"
-            android:layout_toEndOf="@id/yearDesc" />
-	    
+        android:contentDescription="@string/menu_eliminar_itemchart"
+        android:src="@drawable/remove_icon"></ImageView>
 
 
-
-</RelativeLayout>
+</LinearLayout>

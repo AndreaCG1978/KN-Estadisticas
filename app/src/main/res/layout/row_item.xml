@@ -1,97 +1,97 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-	<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        android:layout_width="fill_parent"
-    	android:layout_height="wrap_content"
-		android:orientation="horizontal"
-		android:background="@color/color_gris_claro"
-		android:padding="5dp"
-    	>
-		
-		<ImageView android:id="@+id/btnRemove"
-	    android:layout_width="wrap_content"
-	    android:layout_height="wrap_content"
-	    android:src="@drawable/remove_icon"
-	    android:layout_marginLeft="8dp"
-		android:contentDescription="@string/menu_eliminar_itemchart"
-            android:layout_marginStart="8dp" />
-	    
-	    <ImageView android:id="@+id/btnEdit"
-	    android:layout_width="wrap_content"
-	    android:layout_height="wrap_content"
-	    android:src="@drawable/edit_icon"
-	    android:layout_marginLeft="14dp"
-		android:contentDescription="@string/menu_editar_chart"
-			android:layout_marginStart="14dp" />
-	    
-	     <TextView
-			 android:layout_width="wrap_content"
-			  android:layout_height="wrap_content"
-			  android:paddingLeft="18dp"
-			  android:textColor="@color/color_gris_oscuro"
-			  android:textSize="11sp"
-			  android:text="@string/label_day"
-			 android:paddingStart="18dp"
-			 android:paddingRight="18dp"
-			 android:paddingEnd="18dp">
-			  
-		</TextView>
-		
-		<TextView 
-			  android:id="@+id/item_day"
-			  android:layout_width="wrap_content"
-			  android:layout_height="wrap_content"
-			  android:paddingLeft="3dp"
-			  android:textColor="@color/color_gris_oscuro"
-			  android:textSize="16sp"
-			  android:textStyle="bold"
-			android:paddingStart="3dp"
-			android:paddingRight="3dp"
-			android:paddingEnd="3dp">
-			  
-		</TextView>
-		
-		<TextView 
-			  android:id="@+id/item_hour"
-			  android:layout_width="wrap_content"
-			  android:layout_height="wrap_content"
-			  android:paddingLeft="5dp"
-			  android:textColor="@color/color_gris_oscuro"
-			  android:textSize="13sp"
-			  android:textStyle="bold"
-			android:paddingStart="5dp"
-			android:paddingRight="5dp"
-			android:paddingEnd="5dp">
-			  
-		</TextView>
-		
-		<TextView
-			android:layout_width="wrap_content"
-			  android:layout_height="wrap_content"
-			  android:paddingLeft="3dp"
-			  android:textColor="@color/color_gris_oscuro"
-			  android:textSize="11sp"
-			  android:text="@string/label_valor"
-			android:paddingStart="3dp"
-			android:paddingRight="3dp"
-			android:paddingEnd="3dp">
-			  
-		</TextView>
-		
-		<TextView 
-			  android:id="@+id/item_value"
-			  android:layout_width="wrap_content"
-			  android:layout_height="wrap_content"
-			  android:paddingLeft="5dp"
-			  android:textColor="@color/color_gris_oscuro"
-			  android:textSize="16sp"
-			  android:textStyle="bold"
-			android:paddingStart="5dp"
-			android:paddingRight="5dp"
-			android:paddingEnd="5dp">
-			  
-		</TextView>
-		
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/color_gris_claro"
+    android:orientation="horizontal"
+    android:padding="5dp">
+
+    <ImageView
+        android:id="@+id/btnRemove"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:contentDescription="@string/menu_eliminar_itemchart"
+        android:src="@drawable/remove_icon" />
+
+    <ImageView
+        android:id="@+id/btnEdit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="14dp"
+        android:layout_marginLeft="14dp"
+        android:contentDescription="@string/menu_editar_chart"
+        android:src="@drawable/edit_icon" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingStart="18dp"
+        android:paddingLeft="18dp"
+        android:paddingEnd="18dp"
+        android:paddingRight="18dp"
+        android:text="@string/label_day"
+        android:textColor="@color/color_gris_oscuro"
+        android:textSize="11sp">
+
+    </TextView>
+
+    <TextView
+        android:id="@+id/item_day"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingStart="3dp"
+        android:paddingLeft="3dp"
+        android:paddingEnd="3dp"
+        android:paddingRight="3dp"
+        android:textColor="@color/color_gris_oscuro"
+        android:textSize="16sp"
+        android:textStyle="bold">
+
+    </TextView>
+
+    <TextView
+        android:id="@+id/item_hour"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingStart="5dp"
+        android:paddingLeft="5dp"
+        android:paddingEnd="5dp"
+        android:paddingRight="5dp"
+        android:textColor="@color/color_gris_oscuro"
+        android:textSize="13sp"
+        android:textStyle="bold">
+
+    </TextView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingStart="3dp"
+        android:paddingLeft="3dp"
+        android:paddingEnd="3dp"
+        android:paddingRight="3dp"
+        android:text="@string/label_valor"
+        android:textColor="@color/color_gris_oscuro"
+        android:textSize="11sp">
+
+    </TextView>
+
+    <TextView
+        android:id="@+id/item_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingStart="5dp"
+        android:paddingLeft="5dp"
+        android:paddingEnd="5dp"
+        android:paddingRight="5dp"
+        android:textColor="@color/color_gris_oscuro"
+        android:textSize="16sp"
+        android:textStyle="bold">
+
+    </TextView>
 
 
 </LinearLayout>

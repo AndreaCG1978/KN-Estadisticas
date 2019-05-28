@@ -1,267 +1,265 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <merge xmlns:android="http://schemas.android.com/apk/res/android"
-	android:layout_width="fill_parent"
-  	android:layout_height="fill_parent"
-  	>
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
 
-	<ScrollView 
-	android:layout_width="fill_parent"
- 	android:layout_height="fill_parent"
- 	android:layout_marginBottom="60dp"
- 	>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="60dp">
 
-		<RelativeLayout
-	 	 android:layout_width="fill_parent"
-	 	 android:layout_height="wrap_content">
-	  
-
-			
-		   <TextView android:id="@+id/titleBackground"
-				android:layout_width="fill_parent"
-			    android:layout_height="wrap_content"
-				android:background="@color/color_gris_oscuro"
-				android:textSize="13sp"
-				android:textStyle="bold"
-			    android:padding="4dp"
-			    android:layout_marginTop="40dp"
-			    android:text="@string/label_background"
-			/>
-	
-		   <TextView android:id="@+id/labelColorBackground"
-		  	android:layout_width="wrap_content"
-		  	android:layout_height="wrap_content"
-		  	android:text="@string/label_selectColor"
-		  	android:layout_below="@id/titleBackground"
-		  	android:layout_marginTop="20dp"
-		  	android:layout_marginLeft="15dp"
-               android:layout_marginStart="15dp">
-		   </TextView>
-  
-		  <Button android:id="@+id/labelBackground"
-		  	android:layout_width="fill_parent"
-		  	android:layout_height="25dp"
-		  	android:layout_below="@id/titleBackground"
-		  	android:layout_toRightOf="@id/labelColorBackground"
-		  	android:layout_marginLeft="15dp"
-		  	android:layout_marginRight="15dp"
-		  	android:textSize="8sp"
-		  	android:padding="1dp"
-		  	android:text="@string/label_pickColor"
-		  	android:layout_alignBaseline="@id/labelColorBackground"
-              android:layout_toEndOf="@id/labelColorBackground">
-		  </Button>
-		  
-	     <TextView android:id="@+id/titleLine"
-			android:layout_width="fill_parent"
-		    android:layout_height="wrap_content"
-			android:background="@color/color_gris_oscuro"
-			android:textSize="13sp"
-			android:textStyle="bold"
-		    android:padding="4dp"
-		    android:layout_marginTop="25dp"
-		    android:layout_below="@id/labelColorBackground"
-		    android:text="@string/label_line"
-		/>
-
-		 <CheckBox android:id="@+id/checkShowValues"  
-			   android:layout_width="wrap_content"
-		       android:layout_height="wrap_content"
-		       android:layout_below="@id/titleLine"
-		       android:layout_marginLeft="10dp"
-		       android:layout_marginTop="10dp"
-		       android:textSize="14sp"
-		       android:text="@string/label_mostrar_valores"
-
-             android:layout_marginStart="10dp" />
-		  
-		 
-		  <TextView android:id="@+id/labelColorLine"
-		  	android:layout_width="wrap_content"
-		  	android:layout_height="wrap_content"
-		  	android:text="@string/label_selectColor"
-		  	android:layout_below="@id/checkShowValues"
-		  	android:layout_marginTop="10dp"
-		  	android:layout_marginLeft="15dp"
-              android:layout_marginStart="15dp">
-		  </TextView>
- 
-		  <Button android:id="@+id/labelLine"
-		  	android:layout_width="fill_parent"
-		  	android:layout_height="25dp"
-		  	android:layout_marginLeft="15dp"
-		  	android:layout_marginRight="15dp"
-		  	android:textSize="8sp"
-		  	android:padding="1dp"
-		  	android:text="@string/label_pickColor"  	
-		  	android:layout_toRightOf="@id/labelColorLine"
-		  	android:layout_below="@id/checkShowValues"
-		  	android:layout_alignBaseline="@id/labelColorLine"
-
-              android:layout_toEndOf="@id/labelColorLine">
-		  </Button>
-		  
-		    <TextView android:id="@+id/titleLabels"
-				android:layout_width="fill_parent"
-			    android:layout_height="wrap_content"
-				android:background="@color/color_gris_oscuro"
-				android:textSize="13sp"
-				android:textStyle="bold"
-			    android:padding="4dp"
-			    android:layout_marginTop="25dp"
-			    android:layout_below="@id/labelColorLine"
-			    android:text="@string/label_labels"
-			/>
-	
-			  <TextView android:id="@+id/labelColorLabels"
-			  	android:layout_width="wrap_content"
-			  	android:layout_height="wrap_content"
-			  	android:text="@string/label_selectColor"
-			  	android:layout_below="@id/titleLabels"
-			  	android:layout_marginTop="20dp"
-			  	android:layout_marginLeft="15dp"
-                  android:layout_marginStart="15dp">
-			  </TextView>
-  
-			  <Button android:id="@+id/labelLabels"
-			  	android:layout_width="fill_parent"
-			  	android:layout_height="25dp"
-		  	    android:layout_marginLeft="15dp"
-		  	    android:layout_marginRight="15dp"
-			  	android:textSize="8sp"
-			  	android:padding="1dp"
-			  	android:text="@string/label_pickColor" 
-			  	android:layout_alignBaseline="@id/labelColorLabels" 	
-			  	android:layout_toRightOf="@id/labelColorLabels"
-			  	android:layout_below="@id/titleLabels"
-                  android:layout_toEndOf="@id/labelColorLabels">
-			  </Button>
-			  
-		     <TextView android:id="@+id/titleGrid"
-				android:layout_width="fill_parent"
-			    android:layout_height="wrap_content"
-				android:background="@color/color_gris_oscuro"
-				android:textSize="13sp"
-				android:textStyle="bold"
-			    android:padding="4dp"
-			    android:layout_marginTop="25dp"
-			    android:layout_below="@id/labelColorLabels"
-			    android:text="@string/label_grid"
-			/>
-		
-		   	<CheckBox android:id="@+id/checkShowGrid"  
-			   android:layout_width="wrap_content"
-		       android:layout_height="wrap_content"
-		       android:layout_below="@id/titleGrid"
-		       android:text="@string/label_mostrar_grilla"
-		       android:layout_marginLeft="10dp"
-		       android:layout_marginTop="10dp"
-		       android:textSize="14sp"
-                android:layout_marginStart="10dp" />
-		      
-			  <TextView android:id="@+id/labelColorGrid"
-			  	android:layout_width="wrap_content"
-			  	android:layout_height="wrap_content"
-			  	android:text="@string/label_selectColor"
-			  	android:layout_below="@id/checkShowGrid"
-			  	android:layout_marginTop="10dp"
-			  	android:layout_marginLeft="15dp"
-                  android:layout_marginStart="15dp">
-			  </TextView>
-			  
-			  <Button android:id="@+id/labelGrid"
-			  	android:layout_width="fill_parent"
-			  	android:layout_height="25dp"
-			  	android:layout_marginLeft="10dp"
-			  	android:layout_marginRight="10dp"
-			  	android:textSize="8sp"
-			  	android:padding="1dp"
-			  	android:text="@string/label_pickColor" 
-			  	android:layout_alignBaseline="@id/labelColorGrid" 	
-			  	android:layout_toRightOf="@id/labelColorGrid"
-			  	android:layout_below="@id/checkShowGrid"
-                  android:layout_toEndOf="@id/labelColorGrid">
-			  </Button>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
 
 
- 			  <TextView android:id="@+id/titlePoint"
-				android:layout_width="fill_parent"
-			    android:layout_height="wrap_content"
-				android:background="@color/color_gris_oscuro"
-				android:textSize="13sp"
-				android:textStyle="bold"
-			    android:padding="4dp"
-			    android:layout_marginTop="25dp"
-			    android:layout_below="@id/labelColorGrid"
-			    android:text="@string/label_stylepoint"
-			 />
-			 
-			<Spinner 
-		       android:id="@+id/spinnerStylePoint"
-		       android:layout_width="wrap_content"
-			   android:layout_height="40dp"     
-		       android:layout_marginLeft="15dp"  
-		       android:layout_marginTop="15dp"
-		       android:layout_below="@id/titlePoint"
-                android:layout_marginStart="15dp" />
-		           
-		     <TextView android:id="@+id/titleTime"
-				android:layout_width="fill_parent"
-			    android:layout_height="wrap_content"
-				android:background="@color/color_gris_oscuro"
-				android:textSize="13sp"
-				android:textStyle="bold"
-			    android:padding="4dp"
-			    android:layout_marginTop="15dp"
-			    android:layout_below="@id/spinnerStylePoint"
-			    android:text="@string/label_timeformat"
-			 />       
-		  
-			<Spinner 
-		       android:id="@+id/spinnerTimeFormat"
-		       android:layout_width="wrap_content"
-			   android:layout_height="40dp"     
-		       android:layout_marginLeft="15dp"  
-		       android:layout_marginTop="15dp"
-		       android:layout_below="@id/titleTime"
-                android:layout_marginStart="15dp" />
+            <TextView
+                android:id="@+id/titleBackground"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:background="@color/color_gris_oscuro"
+                android:padding="4dp"
+                android:text="@string/label_background"
+                android:textSize="13sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/labelColorBackground"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/titleBackground"
+                android:layout_marginStart="15dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="20dp"
+                android:text="@string/label_selectColor"></TextView>
+
+            <Button
+                android:id="@+id/labelBackground"
+                android:layout_width="match_parent"
+                android:layout_height="25dp"
+                android:layout_below="@id/titleBackground"
+                android:layout_alignBaseline="@id/labelColorBackground"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_toEndOf="@id/labelColorBackground"
+                android:layout_toRightOf="@id/labelColorBackground"
+                android:padding="1dp"
+                android:text="@string/label_pickColor"
+                android:textSize="8sp"></Button>
+
+            <TextView
+                android:id="@+id/titleLine"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/labelColorBackground"
+                android:layout_marginTop="25dp"
+                android:background="@color/color_gris_oscuro"
+                android:padding="4dp"
+                android:text="@string/label_line"
+                android:textSize="13sp"
+                android:textStyle="bold" />
+
+            <CheckBox
+                android:id="@+id/checkShowValues"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/titleLine"
+                android:layout_marginStart="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:text="@string/label_mostrar_valores"
+
+                android:textSize="14sp" />
 
 
-		</RelativeLayout>
- 	</ScrollView>
+            <TextView
+                android:id="@+id/labelColorLine"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/checkShowValues"
+                android:layout_marginStart="15dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="10dp"
+                android:text="@string/label_selectColor"></TextView>
 
-	<RelativeLayout
-  	 android:layout_width="fill_parent"
- 	 android:layout_height="wrap_content"
-	 android:layout_gravity="bottom"
-	 android:gravity="end"
-	 >
+            <Button
+                android:id="@+id/labelLine"
+                android:layout_width="match_parent"
+                android:layout_height="25dp"
+                android:layout_below="@id/checkShowValues"
+                android:layout_alignBaseline="@id/labelColorLine"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_toEndOf="@id/labelColorLine"
+                android:layout_toRightOf="@id/labelColorLine"
+                android:padding="1dp"
+                android:text="@string/label_pickColor"
 
-  	   
-  	    <Button android:id="@+id/buttonGuardarChart" 
-			android:layout_width="wrap_content"
-			android:layout_height="40dp"
-			android:text="@string/label_guardar"
-			android:textSize="15sp"
-		/>
-    </RelativeLayout>
+                android:textSize="8sp"></Button>
+
+            <TextView
+                android:id="@+id/titleLabels"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/labelColorLine"
+                android:layout_marginTop="25dp"
+                android:background="@color/color_gris_oscuro"
+                android:padding="4dp"
+                android:text="@string/label_labels"
+                android:textSize="13sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/labelColorLabels"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/titleLabels"
+                android:layout_marginStart="15dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="20dp"
+                android:text="@string/label_selectColor"></TextView>
+
+            <Button
+                android:id="@+id/labelLabels"
+                android:layout_width="match_parent"
+                android:layout_height="25dp"
+                android:layout_below="@id/titleLabels"
+                android:layout_alignBaseline="@id/labelColorLabels"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_toEndOf="@id/labelColorLabels"
+                android:layout_toRightOf="@id/labelColorLabels"
+                android:padding="1dp"
+                android:text="@string/label_pickColor"
+                android:textSize="8sp"></Button>
+
+            <TextView
+                android:id="@+id/titleGrid"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/labelColorLabels"
+                android:layout_marginTop="25dp"
+                android:background="@color/color_gris_oscuro"
+                android:padding="4dp"
+                android:text="@string/label_grid"
+                android:textSize="13sp"
+                android:textStyle="bold" />
+
+            <CheckBox
+                android:id="@+id/checkShowGrid"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/titleGrid"
+                android:layout_marginStart="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:text="@string/label_mostrar_grilla"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/labelColorGrid"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/checkShowGrid"
+                android:layout_marginStart="15dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="10dp"
+                android:text="@string/label_selectColor"></TextView>
+
+            <Button
+                android:id="@+id/labelGrid"
+                android:layout_width="match_parent"
+                android:layout_height="25dp"
+                android:layout_below="@id/checkShowGrid"
+                android:layout_alignBaseline="@id/labelColorGrid"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_toEndOf="@id/labelColorGrid"
+                android:layout_toRightOf="@id/labelColorGrid"
+                android:padding="1dp"
+                android:text="@string/label_pickColor"
+                android:textSize="8sp"></Button>
+
+
+            <TextView
+                android:id="@+id/titlePoint"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/labelColorGrid"
+                android:layout_marginTop="25dp"
+                android:background="@color/color_gris_oscuro"
+                android:padding="4dp"
+                android:text="@string/label_stylepoint"
+                android:textSize="13sp"
+                android:textStyle="bold" />
+
+            <Spinner
+                android:id="@+id/spinnerStylePoint"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_below="@id/titlePoint"
+                android:layout_marginStart="15dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="15dp" />
+
+            <TextView
+                android:id="@+id/titleTime"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/spinnerStylePoint"
+                android:layout_marginTop="15dp"
+                android:background="@color/color_gris_oscuro"
+                android:padding="4dp"
+                android:text="@string/label_timeformat"
+                android:textSize="13sp"
+                android:textStyle="bold" />
+
+            <Spinner
+                android:id="@+id/spinnerTimeFormat"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_below="@id/titleTime"
+                android:layout_marginStart="15dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="15dp" />
+
+
+        </RelativeLayout>
+    </ScrollView>
+
     <RelativeLayout
-  	 android:layout_width="fill_parent"
- 	 android:layout_height="wrap_content"
-	 android:layout_gravity="top"
-	 
-	 >
-    
-     	 	<TextView android:id="@+id/titleChartName"
-			android:layout_width="fill_parent"
-		    android:layout_height="wrap_content"
-			android:background="@color/color_gris"
-			android:textSize="12sp"
-			android:textStyle="bold"
-		    android:padding="4dp"
-		    android:gravity="end"
-			>
-		    </TextView>
-     </RelativeLayout>
-   
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:gravity="end">
+
+
+        <Button
+            android:id="@+id/buttonGuardarChart"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:text="@string/label_guardar"
+            android:textSize="15sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top"
+
+        >
+
+        <TextView
+            android:id="@+id/titleChartName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/color_gris"
+            android:gravity="end"
+            android:padding="4dp"
+            android:textSize="12sp"
+            android:textStyle="bold"></TextView>
+    </RelativeLayout>
+
 </merge>
