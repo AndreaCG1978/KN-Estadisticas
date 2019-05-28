@@ -9,12 +9,9 @@ import java.util.List;
 import org.achartengine.ChartFactory;
 import org.achartengine.GraphicalView;
 import org.achartengine.chart.PointStyle;
-import org.achartengine.model.CategorySeries;
-import org.achartengine.model.MultipleCategorySeries;
 import org.achartengine.model.TimeSeries;
 import org.achartengine.model.XYMultipleSeriesDataset;
 import org.achartengine.model.XYSeries;
-import org.achartengine.renderer.DefaultRenderer;
 import org.achartengine.renderer.SimpleSeriesRenderer;
 import org.achartengine.renderer.XYMultipleSeriesRenderer;
 import org.achartengine.renderer.XYSeriesRenderer;
@@ -24,7 +21,6 @@ import android.app.AlertDialog;
 import android.app.ProgressDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.database.Cursor;
 import android.graphics.Color;
 import android.graphics.Paint.Align;
 import android.os.AsyncTask;
@@ -139,7 +135,7 @@ public class SimpleLinearChartActivity extends Activity {
   private void recuperarChart(){
 	  int idChart = Integer.valueOf(idChartSelect);
 	  DataBaseManager mDBManager = DataBaseManager.getInstance(this);
-	  mChart = ConstantsAdmin.obtenerChartId(this, idChart, mDBManager);
+	  mChart = ConstantsAdmin.obtenerChartId(idChart, mDBManager);
   }
   
 
@@ -229,7 +225,7 @@ public class SimpleLinearChartActivity extends Activity {
 		    max = max * 1.1;
 		    minTime = dateValues[0].getTime();
 		    maxTime = dateValues[dateValues.length - 1].getTime();
-		    setChartSettings(renderer, mChart.getName(), "", mChart.getUnit(), minTime, maxTime, min, max, labelColor, labelColor);
+		    setChartSettings(renderer, mChart.getName(), mChart.getUnit(), minTime, maxTime, min, max, labelColor, labelColor);
 		   	  
 		    this.configurarPropiedadesRender(renderer);
 
@@ -387,17 +383,19 @@ public class SimpleLinearChartActivity extends Activity {
       }
   }  
   
-  protected XYMultipleSeriesDataset buildDataset(String[] titles, List<double[]> xValues, List<double[]> yValues) {
-	    XYMultipleSeriesDataset dataset = new XYMultipleSeriesDataset();
-	    addXYSeries(dataset, titles, xValues, yValues, 0);
-	    return dataset;
-	 }
+// --Commented out by Inspection START (28/5/2019 07:36):
+//  protected XYMultipleSeriesDataset buildDataset(String[] titles, List<double[]> xValues, List<double[]> yValues) {
+//	    XYMultipleSeriesDataset dataset = new XYMultipleSeriesDataset();
+//	    addXYSeries(dataset, titles, xValues, yValues, 0);
+//	    return dataset;
+//	 }
+// --Commented out by Inspection STOP (28/5/2019 07:36)
 
 	  private void addXYSeries(XYMultipleSeriesDataset dataset, String[] titles, List<double[]> xValues,
-							   List<double[]> yValues, int scale) {
+							   List<double[]> yValues) {
 	    int length = titles.length;
 	    for (int i = 0; i < length; i++) {
-	      XYSeries series = new XYSeries(titles[i], scale);
+	      XYSeries series = new XYSeries(titles[i], 0);
 	      double[] xV = xValues.get(i);
 	      double[] yV = yValues.get(i);
 	      int seriesLength = xV.length;
@@ -439,10 +437,8 @@ public class SimpleLinearChartActivity extends Activity {
 
 	  /**
 	   * Sets a few of the series renderer settings.
-	   * 
-	   * @param renderer the renderer to set the properties to
+	   *  @param renderer the renderer to set the properties to
 	   * @param title the chart title
-	   * @param xTitle the title for the X axis
 	   * @param yTitle the title for the Y axis
 	   * @param xMin the minimum value on the X axis
 	   * @param xMax the maximum value on the X axis
@@ -451,11 +447,11 @@ public class SimpleLinearChartActivity extends Activity {
 	   * @param axesColor the axes color
 	   * @param labelsColor the labels color
 	   */
-	  private void setChartSettings(XYMultipleSeriesRenderer renderer, String title, String xTitle,
+	  private void setChartSettings(XYMultipleSeriesRenderer renderer, String title,
 									String yTitle, double xMin, double xMax, double yMin, double yMax, int axesColor,
 									int labelsColor) {
 	    renderer.setChartTitle(title);
-	    renderer.setXTitle(xTitle);
+	    renderer.setXTitle("");
 	    renderer.setYTitle(yTitle);
 	    renderer.setXAxisMin(xMin);
 	    renderer.setXAxisMax(xMax);
@@ -491,46 +487,52 @@ public class SimpleLinearChartActivity extends Activity {
 	  }
 
 
-	  protected CategorySeries buildCategoryDataset(String title, double[] values) {
-	    CategorySeries series = new CategorySeries(title);
-	    int k = 0;
-	    for (double value : values) {
-	      series.add("Project " + ++k, value);
-	    }
+// --Commented out by Inspection START (28/5/2019 07:36):
+//	  protected CategorySeries buildCategoryDataset(String title, double[] values) {
+//	    CategorySeries series = new CategorySeries(title);
+//	    int k = 0;
+//	    for (double value : values) {
+//	      series.add("Project " + ++k, value);
+//	    }
+//
+//	    return series;
+//	  }
+// --Commented out by Inspection STOP (28/5/2019 07:36)
 
-	    return series;
-	  }
 
+// --Commented out by Inspection START (28/5/2019 07:36):
+//	  protected MultipleCategorySeries buildMultipleCategoryDataset(String title,
+//	      List<String[]> titles, List<double[]> values) {
+//	    MultipleCategorySeries series = new MultipleCategorySeries(title);
+//	    int k = 0;
+//	    for (double[] value : values) {
+//	      series.add(2007 + k + "", titles.get(k), value);
+//	      k++;
+//	    }
+//	    return series;
+//	  }
+// --Commented out by Inspection STOP (28/5/2019 07:36)
 
-	  protected MultipleCategorySeries buildMultipleCategoryDataset(String title,
-	      List<String[]> titles, List<double[]> values) {
-	    MultipleCategorySeries series = new MultipleCategorySeries(title);
-	    int k = 0;
-	    for (double[] value : values) {
-	      series.add(2007 + k + "", titles.get(k), value);
-	      k++;
-	    }
-	    return series;
-	  }
-
-	  /**
-	   * Builds a category renderer to use the provided colors.
-	   * 
-	   * @param colors the colors
-	   * @return the category renderer
-	   */
-	  protected DefaultRenderer buildCategoryRenderer(int[] colors) {
-	    DefaultRenderer renderer = new DefaultRenderer();
-	    renderer.setLabelsTextSize(15);
-	    renderer.setLegendTextSize(15);
-	    renderer.setMargins(new int[] { 20, 30, 15, 0 });
-	    for (int color : colors) {
-	      SimpleSeriesRenderer r = new SimpleSeriesRenderer();
-	      r.setColor(color);
-	      renderer.addSeriesRenderer(r);
-	    }
-	    return renderer;
-	  }
+// --Commented out by Inspection START (28/5/2019 07:36):
+//	  /**
+//	   * Builds a category renderer to use the provided colors.
+//	   *
+//	   * @param colors the colors
+//	   * @return the category renderer
+//	   */
+//	  protected DefaultRenderer buildCategoryRenderer(int[] colors) {
+//	    DefaultRenderer renderer = new DefaultRenderer();
+//	    renderer.setLabelsTextSize(15);
+//	    renderer.setLegendTextSize(15);
+//	    renderer.setMargins(new int[] { 20, 30, 15, 0 });
+//	    for (int color : colors) {
+//	      SimpleSeriesRenderer r = new SimpleSeriesRenderer();
+//	      r.setColor(color);
+//	      renderer.addSeriesRenderer(r);
+//	    }
+//	    return renderer;
+//	  }
+// --Commented out by Inspection STOP (28/5/2019 07:36)
 
 // --Commented out by Inspection START (14/11/18 19:16):
 //	  /**
@@ -556,25 +558,27 @@ public class SimpleLinearChartActivity extends Activity {
 //	  }
 // --Commented out by Inspection STOP (14/11/18 19:16)
 
-	  /**
-	   * Builds a bar multiple series renderer to use the provided colors.
-	   * 
-	   * @param colors the series renderers colors
-	   * @return the bar multiple series renderer
-	   */
-	  protected XYMultipleSeriesRenderer buildBarRenderer(int[] colors) {
-	    XYMultipleSeriesRenderer renderer = new XYMultipleSeriesRenderer();
-	    renderer.setAxisTitleTextSize(16);
-	    renderer.setChartTitleTextSize(20);
-	    renderer.setLabelsTextSize(15);
-	    renderer.setLegendTextSize(15);
-	    int length = colors.length;
-		  for (int color : colors) {
-			  SimpleSeriesRenderer r = new SimpleSeriesRenderer();
-			  r.setColor(color);
-			  renderer.addSeriesRenderer(r);
-		  }
-	    return renderer;
-	  }
-  
+// --Commented out by Inspection START (28/5/2019 07:35):
+//	  /**
+//	   * Builds a bar multiple series renderer to use the provided colors.
+//	   *
+//	   * @param colors the series renderers colors
+//	   * @return the bar multiple series renderer
+//	   */
+//	  protected XYMultipleSeriesRenderer buildBarRenderer(int[] colors) {
+//	    XYMultipleSeriesRenderer renderer = new XYMultipleSeriesRenderer();
+//	    renderer.setAxisTitleTextSize(16);
+//	    renderer.setChartTitleTextSize(20);
+//	    renderer.setLabelsTextSize(15);
+//	    renderer.setLegendTextSize(15);
+//	    int length = colors.length;
+//		  for (int color : colors) {
+//			  SimpleSeriesRenderer r = new SimpleSeriesRenderer();
+//			  r.setColor(color);
+//			  renderer.addSeriesRenderer(r);
+//		  }
+//	    return renderer;
+//	  }
+// --Commented out by Inspection STOP (28/5/2019 07:35)
+
 }

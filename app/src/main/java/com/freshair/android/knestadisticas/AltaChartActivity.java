@@ -91,12 +91,12 @@ public class AltaChartActivity extends Activity {
 	}
 	
 	private void guardarChartSeleccionado(Intent intent){
-		String idChartString = null;
+		String idChartString;
 		DataBaseManager mDBManager = DataBaseManager.getInstance(this);
 		if(intent.hasExtra(ConstantsAdmin.CHART_SELECCIONADO)){
 			idChartString = (String)intent.getExtras().get(ConstantsAdmin.CHART_SELECCIONADO);
 			int idChart = Integer.valueOf(idChartString);
-			mChartSeleccionado = ConstantsAdmin.obtenerChartId(this, idChart, mDBManager);
+			mChartSeleccionado = ConstantsAdmin.obtenerChartId(idChart, mDBManager);
 			this.cargarEntriesConChartDto();
 		}else{
 			mChartSeleccionado = new KNChart();

@@ -8,19 +8,15 @@ import java.util.List;
 import org.achartengine.ChartFactory;
 import org.achartengine.GraphicalView;
 import org.achartengine.chart.PointStyle;
-import org.achartengine.model.CategorySeries;
-import org.achartengine.model.MultipleCategorySeries;
 import org.achartengine.model.TimeSeries;
 import org.achartengine.model.XYMultipleSeriesDataset;
 import org.achartengine.model.XYSeries;
-import org.achartengine.renderer.DefaultRenderer;
 import org.achartengine.renderer.SimpleSeriesRenderer;
 import org.achartengine.renderer.XYMultipleSeriesRenderer;
 import org.achartengine.renderer.XYSeriesRenderer;
 
 import android.app.Activity;
 import android.content.Intent;
-import android.database.Cursor;
 import android.graphics.Color;
 import android.graphics.Paint.Align;
 import android.os.Bundle;
@@ -72,7 +68,7 @@ public class ComparisonChartActivity extends Activity {
     */
 	
   private void configurarColores(){
-	    myColors = new ArrayList<Integer>();
+	    myColors = new ArrayList<>();
 		myColors.add(Color.CYAN);
 		myColors.add(Color.GREEN);
 		myColors.add(Color.MAGENTA);
@@ -136,9 +132,9 @@ public class ComparisonChartActivity extends Activity {
 	    KNItemChart item;
 	    List<KNItemChart> items;
 	    String[] titles = new String[ConstantsAdmin.chartsParaComparar.size()];
-	    List<double[]> x = new ArrayList<double[]>();
-	    List<Date[]> dates = new ArrayList<Date[]>();
-	    List<double[]> values = new ArrayList<double[]>();
+	    List<double[]> x = new ArrayList<>();
+	    List<Date[]> dates = new ArrayList<>();
+	    List<double[]> values = new ArrayList<>();
 	    int length;
 	    double max = Double.MIN_VALUE;
 	    double min = Double.MAX_VALUE;
@@ -299,15 +295,15 @@ public class ComparisonChartActivity extends Activity {
   
 	 private XYMultipleSeriesDataset buildDataset(String[] titles, List<double[]> xValues, List<double[]> yValues) {
 		    XYMultipleSeriesDataset dataset = new XYMultipleSeriesDataset();
-		    addXYSeries(dataset, titles, xValues, yValues, 0);
+		    addXYSeries(dataset, titles, xValues, yValues);
 		    return dataset;
 	 }
 
 		  private void addXYSeries(XYMultipleSeriesDataset dataset, String[] titles, List<double[]> xValues,
-                                   List<double[]> yValues, int scale) {
+								   List<double[]> yValues) {
 			  int length = titles.length;
 			  for (int i = 0; i < length; i++) {
-			      XYSeries series = new XYSeries(titles[i], scale);
+			      XYSeries series = new XYSeries(titles[i], 0);
 			      double[] xV = xValues.get(i);
 			      double[] yV = yValues.get(i);
 			      int seriesLength = xV.length;

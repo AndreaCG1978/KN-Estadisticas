@@ -211,47 +211,51 @@ public class AltaItemChartActivity extends FragmentActivity implements LoaderMan
 	}
 
 	
-	private final DatePickerDialog.OnDateSetListener mDateSetListener =
-        new DatePickerDialog.OnDateSetListener() {
+// --Commented out by Inspection START (28/5/2019 07:26):
+//	private final DatePickerDialog.OnDateSetListener mDateSetListener =
+//        new DatePickerDialog.OnDateSetListener() {
+//
+//            public void onDateSet(DatePicker view, int year,
+//                                  int monthOfYear, int dayOfMonth) {
+//            	mYear = year;
+//            	if(monthOfYear < 9){
+//            		mMonth = "0" + (monthOfYear + 1);
+//            	}else{
+//            		mMonth = String.valueOf(monthOfYear + 1);
+//            	}
+//                if(dayOfMonth < 10){
+//                	mDay = "0" + dayOfMonth;
+//                }else{
+//                	mDay = String.valueOf(dayOfMonth);
+//                }
+//
+//                actualizarFecha();
+//            }
+//    };
+// --Commented out by Inspection STOP (28/5/2019 07:26)
 
-            public void onDateSet(DatePicker view, int year, 
-                                  int monthOfYear, int dayOfMonth) {
-            	mYear = year;
-            	if(monthOfYear < 9){
-            		mMonth = "0" + (monthOfYear + 1);
-            	}else{
-            		mMonth = String.valueOf(monthOfYear + 1);
-            	}
-                if(dayOfMonth < 10){
-                	mDay = "0" + dayOfMonth;
-                }else{
-                	mDay = String.valueOf(dayOfMonth);
-                }
-                
-                actualizarFecha();
-            }
-    };
-    
-    private final TimePickerDialog.OnTimeSetListener mTimeSetListener =
-    	new TimePickerDialog.OnTimeSetListener() {
-			
-			@Override
-			public void onTimeSet(TimePicker view, int hourOfDay, int minute) {
-				// TODO Auto-generated method stub
-				if(hourOfDay < 10){
-					mHour = "0" + hourOfDay;
-				}else{
-					mHour = String.valueOf(hourOfDay);
-				}
-				if(minute < 10){
-					mMin = "0" + minute;
-				}else{
-					mMin = String.valueOf(minute);
-				}
-                actualizarHora();
-			}
-		};
-    
+// --Commented out by Inspection START (28/5/2019 07:26):
+//    private final TimePickerDialog.OnTimeSetListener mTimeSetListener =
+//    	new TimePickerDialog.OnTimeSetListener() {
+//
+//			@Override
+//			public void onTimeSet(TimePicker view, int hourOfDay, int minute) {
+//				// TODO Auto-generated method stub
+//				if(hourOfDay < 10){
+//					mHour = "0" + hourOfDay;
+//				}else{
+//					mHour = String.valueOf(hourOfDay);
+//				}
+//				if(minute < 10){
+//					mMin = "0" + minute;
+//				}else{
+//					mMin = String.valueOf(minute);
+//				}
+//                actualizarHora();
+//			}
+//		};
+// --Commented out by Inspection STOP (28/5/2019 07:26)
+
     private void actualizarFecha(){
     	String fecha;
     	fecha = obtenerFecha();

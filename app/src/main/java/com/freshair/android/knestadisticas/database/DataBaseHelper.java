@@ -50,7 +50,7 @@ class DataBaseHelper extends SQLiteOpenHelper{
 
     public static final String SIZE_ITEM_CHART = "select count(" + ConstantsAdmin.KEY_ROWID +") from " + ConstantsAdmin.TABLE_ITEM_CHART + "  where " + ConstantsAdmin.KEY_ROWID + " > 0";
     
-    public static final String SIZE_CHART = "select count(" + ConstantsAdmin.KEY_ROWID +") from " + ConstantsAdmin.TABLE_CHART + "  where " + ConstantsAdmin.KEY_ROWID + " > 0";
+    // --Commented out by Inspection (28/5/2019 07:34):public static final String SIZE_CHART = "select count(" + ConstantsAdmin.KEY_ROWID +") from " + ConstantsAdmin.TABLE_CHART + "  where " + ConstantsAdmin.KEY_ROWID + " > 0";
     
     public static final String SIZE_CONFIG = "select count(" + ConstantsAdmin.KEY_ROWID +") from " + ConstantsAdmin.TABLE_CONFIG + "  where " + ConstantsAdmin.KEY_ROWID + " > 0";
     

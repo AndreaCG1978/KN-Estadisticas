@@ -16,8 +16,8 @@ import com.freshair.android.knestadisticas.dtos.KNItemChart;
 
 public class KNItemChartArrayAdapter extends ArrayAdapter<KNItemChart> {
 	
-	private LayoutInflater mInflater;
-	private ItemPerMonthActivity myContext;
+	private final LayoutInflater mInflater;
+	private final ItemPerMonthActivity myContext;
 
 	
 	public KNItemChartArrayAdapter(Context context, int textViewResourceId,

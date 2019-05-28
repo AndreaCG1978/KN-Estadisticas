@@ -534,7 +534,7 @@ public class ConfigChartActivity extends FragmentActivity implements LoaderManag
  	
 	private void recargarChart(long idChart){
 		DataBaseManager mDBManager = DataBaseManager.getInstance(this);
-		mChartSeleccionado = ConstantsAdmin.obtenerChartId(this, idChart, mDBManager);
+		mChartSeleccionado = ConstantsAdmin.obtenerChartId(idChart, mDBManager);
 	}
 
 }

@@ -64,9 +64,11 @@ public class ConstantsAdmin {
 		}
 	}
 
-	public static void upgradeBD(DataBaseManager mDBManager){
-    	mDBManager.upgradeDB();
-	}
+// --Commented out by Inspection START (28/5/2019 07:33):
+//	public static void upgradeBD(DataBaseManager mDBManager){
+//    	mDBManager.upgradeDB();
+//	}
+// --Commented out by Inspection STOP (28/5/2019 07:33)
 
 	public static void createBD(DataBaseManager mDBManager){
     	mDBManager.createBD();
@@ -90,7 +92,7 @@ public class ConstantsAdmin {
 	}
 
 
-	public static KNChart obtenerChartId(Activity context, long idChart, DataBaseManager mDBManager){
+	public static KNChart obtenerChartId(long idChart, DataBaseManager mDBManager){
     	KNChart chart;
     	Cursor chartCursor;
 		inicializarBD(mDBManager);
@@ -103,7 +105,7 @@ public class ConstantsAdmin {
     
     private static KNChart obtenerChartNamed(String chartName, DataBaseManager mDBManager){
     	KNChart chart = null;
-    	Cursor chartCursor = null;
+    	Cursor chartCursor;
 		inicializarBD(mDBManager);
 		chartCursor = mDBManager.fetchChartsForName(chartName);
 	//	context.startManagingCursor(chartCursor);
@@ -119,9 +121,9 @@ public class ConstantsAdmin {
     
     public static KNConfigChart obtenerConfigChart(Activity context, DataBaseManager mDBManager){
     	KNConfigChart config = new KNConfigChart();
-    	Cursor c = null;
+    	Cursor c;
 		inicializarBD(mDBManager);
-		CursorLoader cursorLoader = null;
+		CursorLoader cursorLoader;
 		cursorLoader = mDBManager.cursorLoaderConfig(context, 1);
 		if(cursorLoader != null){
 			//	startManagingCursor(cursor);
@@ -135,7 +137,7 @@ public class ConstantsAdmin {
     }
     
     public static long obtenerTablaConfigSize(DataBaseManager mDBManager){
-    	long result = 0;
+    	long result;
     	inicializarBD(mDBManager);
     	result = mDBManager.tablaConfigSize();
     	finalizarBD(mDBManager);
@@ -145,10 +147,10 @@ public class ConstantsAdmin {
     
     public static KNItemChart obtenerItemId(Activity context, long idItem, DataBaseManager mDBManager){
     	KNItemChart item = new KNItemChart();
-    	Cursor itemCursor = null;
+    	Cursor itemCursor;
 		inicializarBD(mDBManager);
 
-		CursorLoader cursorLoader = null;
+		CursorLoader cursorLoader;
 		cursorLoader = mDBManager.cursorLoaderItemChart(context, idItem);
 		//		cursor = mDBManager.fetchCategoriasActivasPorNombre(null);
 		if(cursorLoader != null){
@@ -200,12 +202,12 @@ public class ConstantsAdmin {
     
     public static ArrayList<KNItemChart> obtenerItemsDeChart(KNChart chart, Activity context, DataBaseManager mDBManager){
     	ArrayList<KNItemChart> items = new ArrayList<>();
-    	KNItemChart item = null;
-    	Cursor itemsCursor = null;
+    	KNItemChart item;
+    	Cursor itemsCursor;
     	inicializarBD(mDBManager);
    // 	itemsCursor = mDBManager.fetchItemsForChart(chart);
 
-        CursorLoader cursorLoader = null;
+        CursorLoader cursorLoader;
         cursorLoader = mDBManager.cursorLoaderItemChart(context, chart.getId());
         //		cursor = mDBManager.fetchCategoriasActivasPorNombre(null);
         if(cursorLoader != null){
@@ -236,9 +238,9 @@ public class ConstantsAdmin {
     
     public static ArrayList<KNItemChart> obtenerItemsDeChart(String idChartSelected, String yearSelected, String monthSelected, Activity context, DataBaseManager mDBManager){
     	ArrayList<KNItemChart> items = new ArrayList<>();
-    	KNItemChart item = null;
-    	Cursor itemsCursor = null;
-    	CursorLoader cursorLoader = null;
+    	KNItemChart item;
+    	Cursor itemsCursor;
+    	CursorLoader cursorLoader;
     	inicializarBD(mDBManager);
 
     	cursorLoader = mDBManager.cursorLoaderItemChart(context, idChartSelected, yearSelected, monthSelected);
@@ -308,10 +310,10 @@ public class ConstantsAdmin {
 	  	finalizarBD(mDBManager);
 
 */
-		KNChart chart = null;
-		Cursor chartCursor = null;
+		KNChart chart;
+		Cursor chartCursor;
 
-		CursorLoader cursorLoader = null;
+		CursorLoader cursorLoader;
 		cursorLoader = mDBManager.cursorLoaderGraficosPorNombre(null, context);
 			//		cursor = mDBManager.fetchCategoriasActivasPorNombre(null);
 		if(cursorLoader != null){
@@ -369,7 +371,7 @@ public class ConstantsAdmin {
 
     public static void agregarItem(KNItemChart item, DataBaseManager mDBManager){
     	KNItemChart auxItem = new KNItemChart();
-    	Cursor cur = null;
+    	Cursor cur;
 		inicializarBD(mDBManager);
 		cur = mDBManager.fetchItemsForChartAndDateTime(item.getChartId(), item.getYear(), item.getMonth(), item.getDay(), item.getHour(), item.getMin());
 		if(cur.getCount() > 0){
@@ -388,7 +390,7 @@ public class ConstantsAdmin {
 
     
     private static KNConfigChart cursorToConfigDto(Cursor c){
-    	String temp = null;
+    	String temp;
     	long id = -1;
     	KNConfigChart config = new KNConfigChart();
     	if(c != null){
@@ -426,7 +428,7 @@ public class ConstantsAdmin {
   
     
     private static KNChart cursorToChartDto(Cursor chartCursor){
-    	String temp = null;
+    	String temp;
     	int val = 0;
     	KNChart chart = new KNChart();
     	if(chartCursor != null){
@@ -470,7 +472,7 @@ public class ConstantsAdmin {
     }
     
     private static KNItemChart cursorToItemDto(Cursor itemsCursor){
-    	String temp = null;
+    	String temp;
     	long id = -1;
     	KNItemChart item = new KNItemChart();
     	if(itemsCursor != null){
@@ -564,7 +566,7 @@ public class ConstantsAdmin {
     public static final String ITEM_CHART_SELECCIONADO  = "itemChartSeleccionado";
     public static final String YEAR_SELECCIONADO  = "yearSeleccionado";
     public static final String MONTH_SELECCIONADO  = "monthSeleccionado";
-    public static final String TIPO_COMPARACION  = "tipoComparacion";
+    // --Commented out by Inspection (28/5/2019 07:33):public static final String TIPO_COMPARACION  = "tipoComparacion";
     public static final String COMPARACION_EN_TIEMPO  = "comparacionEnTiempo";
     public static final String COMPARACION_SOBREPUESTA  = "comparacionSobrepuesta";
 
@@ -594,7 +596,7 @@ public class ConstantsAdmin {
  
     
     private static Asociacion comprobarSDCard(Activity context){
-    	Asociacion map = null;
+    	Asociacion map;
         String auxSDCardStatus = Environment.getExternalStorageState();
         boolean sePuede = false;
         String msg = null;
@@ -663,9 +665,9 @@ public class ConstantsAdmin {
     
     
     public static void exportTxT(Activity context, List<KNItemChart> listaItems, KNChart chart){
-    	Asociacion canStore = null;
-    	Boolean boolValue = false;
-    	String msg = null;
+    	Asociacion canStore;
+    	Boolean boolValue;
+    	String msg;
     	String body = null;
         try
         {
@@ -701,9 +703,9 @@ public class ConstantsAdmin {
   	  //View v1 = relativeView.getRootView();
   	  chartView.setDrawingCacheEnabled(true);
   	  Bitmap bm = chartView.getDrawingCache();
-  	  Asociacion canStore = null;
-  	  Boolean boolValue = false;
-  	  String msg = null;
+  	  Asociacion canStore;
+  	  Boolean boolValue;
+  	  String msg;
   	  try {
   		  canStore = comprobarSDCard(context);
   		  boolValue = (Boolean)canStore.getKey();
@@ -737,7 +739,7 @@ public class ConstantsAdmin {
     
     private static void almacenarImagen(Activity context, String nombreDirectorio, String nombreArchivo, Bitmap bm) throws IOException {
     	  String path = obtenerPath(nombreDirectorio);
-	      OutputStream fOut = null;
+	      OutputStream fOut;
 	      File dir = new File(path);
 	      dir.mkdirs();
 	      
@@ -788,17 +790,17 @@ public class ConstantsAdmin {
     }
     
     private static String obtenerTxtDeItems(List<KNItemChart> list, KNChart chart, Activity context){
-        StringBuilder result = null;
+        StringBuilder result;
         Iterator<KNItemChart> it = list.iterator();
-        KNItemChart item = null;
-        String tab1, tab2, tab3 = null;
+        KNItemChart item;
+        String tab1, tab2, tab3;
         tab1 = "\t";
         tab2 = "\t\t";
         tab3 = "\t\t\t";
         result = new StringBuilder(chart.getName().toUpperCase());
         result.append(ENTER).append(ENTER);
         item = it.next();
-        String anio, mes, dia, anioAnt, mesAnt, diaAnt = null;
+        String anio, mes, dia, anioAnt, mesAnt, diaAnt;
         anio = item.getYear();
         anioAnt = item.getYear();
         mes = item.getMonth();
@@ -851,7 +853,7 @@ public class ConstantsAdmin {
     public static final int cantMaxComparacion = 6;
 
     
-    public static final String UrlBoxico = "http://www.boxico.com.ar";
+    // --Commented out by Inspection (28/5/2019 07:33):public static final String UrlBoxico = "http://www.boxico.com.ar";
     
 
     
@@ -862,10 +864,10 @@ public class ConstantsAdmin {
     
    
     public static void exportarCSV(Activity context, int formatInput, List<KNItemChart> listaItems, KNChart chart){
-    	Asociacion canStore = null;
-    	Boolean boolValue = false;
-    	String msg = null;
-    	String body = null;
+    	Asociacion canStore;
+    	Boolean boolValue;
+    	String msg;
+    	String body;
         try
         {
         	canStore = comprobarSDCard(context);
@@ -885,8 +887,7 @@ public class ConstantsAdmin {
 	  		  //mostrarMensajeAplicacion(context, e.toString(), 11);
 	  	 } catch (IOException e) {
 	  		  try {
-	  			  body = null;
-	  			  body = obtenerCsvDeItems(listaItems, formatInput);
+                  body = obtenerCsvDeItems(listaItems, formatInput);
 	  			  almacenarArchivo(folderCSV, chartName + csvExtension, body);
 	  			  mensaje = context.getString(R.string.mensaje_exito_exportar_csv);
 	  		  } catch (IOException e2) {
@@ -901,7 +902,7 @@ public class ConstantsAdmin {
     private static String obtenerCsvDeItemsAllSeparated(List<KNItemChart> list){
     	String result = "";
         Iterator<KNItemChart> it = list.iterator();
-        KNItemChart item = null;
+        KNItemChart item;
         while(it.hasNext()){
             item = it.next();
             result = result + item.getYear()+ COMA + item.getMonth() + COMA + item.getDay() + COMA + item.getHour() + COMA + item.getMin() + COMA + item.getValue() + ENTER;
@@ -912,7 +913,7 @@ public class ConstantsAdmin {
     private static String obtenerCsvDeItemsDateTime(List<KNItemChart> list){
     	String result = "";
         Iterator<KNItemChart> it = list.iterator();
-        KNItemChart item = null;
+        KNItemChart item;
         while(it.hasNext()){
             item = it.next();
             result = result + item.getYear()+ SEPARADOR_FECHA + item.getMonth() + SEPARADOR_FECHA + item.getDay() + " " + item.getHourMin() + COMA + item.getValue() + ENTER;
@@ -923,7 +924,7 @@ public class ConstantsAdmin {
     private static String obtenerCsvDeItemsDate(List<KNItemChart> list){
     	String result = "";
         Iterator<KNItemChart> it = list.iterator();
-        KNItemChart item = null;
+        KNItemChart item;
         while(it.hasNext()){
             item = it.next();
             result = result + item.getYear()+ SEPARADOR_FECHA + item.getMonth() + SEPARADOR_FECHA + item.getDay() + COMA + item.getValue() + ENTER;
@@ -944,23 +945,23 @@ public class ConstantsAdmin {
     }
     
     public static void importarCSVs(Activity context, int formatInput, DataBaseManager mdbManager){
-        String body = null;
-        File file = null;
-        KNChart chart = null;
-        KNItemChart item = null;
-        List<KNItemChart> items = null;
+        String body;
+        File file;
+        KNChart chart;
+        KNItemChart item;
+        List<KNItemChart> items;
         int cantChartsCompletos = 0;
         int cantChartsIncompletos = 0;
         try {
         	List<File> files = obtenerFilesCSVs(context);
         	if(files != null){
 	            Iterator<File> it = files.iterator();
-	            Iterator<KNItemChart> itItems = null;
+	            Iterator<KNItemChart> itItems;
 	
 	            while(it.hasNext()){
 	                file = it.next();
 	                body = obtenerContenidoArchivo(file, context);
-	                chart = crearChartDesdeArchivo(file.getName(), context, mdbManager);
+	                chart = crearChartDesdeArchivo(file.getName(), mdbManager);
 	                items = obtenerItemsDeString(body, chart, formatInput);
 	                itItems = items.iterator();
 	                if(items.size() > 0){
@@ -987,9 +988,9 @@ public class ConstantsAdmin {
 
     }
 
-    private static KNChart crearChartDesdeArchivo(String filename, Activity context, DataBaseManager mdbM){
+    private static KNChart crearChartDesdeArchivo(String filename, DataBaseManager mdbM){
         KNChart chart = new KNChart();
-        KNChart oldChart = null;
+        KNChart oldChart;
         long idNuevoChart = -1;
         String[] parts = filename.split(PUNTO);
         chart.setName(parts[parts.length -2]);
@@ -1017,10 +1018,10 @@ public class ConstantsAdmin {
     private static List<File> obtenerFilesCSVs(Activity context){
         // LEVANTAR TODOS LOS FILES QUE ESTAN EN LA CARPETA KN-CSVfiles
     	  ArrayList<File> files = null;
-    	  File[] arrayFiles = null;
-    	  File f = null;
-    	  boolean boolValue = true;
-    	  Asociacion canStore = null;
+    	  File[] arrayFiles;
+    	  File f;
+    	  boolean boolValue;
+    	  Asociacion canStore;
     	  canStore = comprobarSDCard(context);
    		  boolValue = (Boolean)canStore.getKey();
    		  String msg = (String)canStore.getValue();
@@ -1036,7 +1037,7 @@ public class ConstantsAdmin {
    		      if(arrayFiles != null){
 				  for (File arrayFile : arrayFiles) {
 					  f = arrayFile;
-					  if (hasExtension(f.getName(), csvExtension)) {
+					  if (hasExtension(f.getName())) {
 						  files.add(f);
 					  }
 
@@ -1048,8 +1049,8 @@ public class ConstantsAdmin {
    		  return files;
     }
     
-    private static boolean hasExtension(String filename, String ext){
-    	return filename.toLowerCase().endsWith(ext.toLowerCase());
+    private static boolean hasExtension(String filename){
+    	return filename.toLowerCase().endsWith(ConstantsAdmin.csvExtension.toLowerCase());
     }
 
     private static List<KNItemChart> obtenerItemsDeString(String body, KNChart chart, int inputFormat){
@@ -1067,10 +1068,10 @@ public class ConstantsAdmin {
     
     private static List<KNItemChart> obtenerItemsDeStringDateFormat(String body, KNChart chart){
         // PONER EN CONSTANTE EL ENTER Y LA COMA
-        KNItemChart item = null;
+        KNItemChart item;
         String[] items = body.split(ENTER);
-        String[] campos = null;
-        boolean esValido = false;
+        String[] campos;
+        boolean esValido;
         List<KNItemChart> itemList = new ArrayList<>();
 		for (String item1 : items) {
 			campos = item1.split(COMA);
@@ -1090,10 +1091,10 @@ public class ConstantsAdmin {
     
     private static List<KNItemChart> obtenerItemsDeStringDateTimeFormat(String body, KNChart chart){
         // PONER EN CONSTANTE EL ENTER Y LA COMA
-        KNItemChart item = null;
+        KNItemChart item;
         String[] items = body.split(ENTER);
-        String[] campos = null;
-        boolean esValido = false;
+        String[] campos;
+        boolean esValido;
         List<KNItemChart> itemList = new ArrayList<>();
 		for (String item1 : items) {
 			campos = item1.split(COMA);
@@ -1113,10 +1114,10 @@ public class ConstantsAdmin {
     
     private static List<KNItemChart> obtenerItemsDeStringAllSeparateFormat(String body, KNChart chart){
         // PONER EN CONSTANTE EL ENTER Y LA COMA
-        KNItemChart item = null;
+        KNItemChart item;
         String[] items = body.split(ENTER);
-        String[] campos = null;
-        boolean esValido = false;
+        String[] campos;
+        boolean esValido;
         List<KNItemChart> itemList = new ArrayList<>();
 		for (String item1 : items) {
 			campos = item1.split(COMA);
@@ -1145,7 +1146,7 @@ public class ConstantsAdmin {
 
     private static String obtenerContenidoArchivo(File file, Activity context)throws IOException{
         // ACA DEBERIA CARGAR EL CONTENIDO DEL ARCHIVO PASADO COMO PARAMETRO, HACER LOS CONTROLES DE LECTURA
-    	String line = null;
+    	String line;
     	Asociacion canStore = comprobarSDCard(context);
     	boolean boolValue = (Boolean)canStore.getKey();
     	String msg = (String) canStore.getValue();

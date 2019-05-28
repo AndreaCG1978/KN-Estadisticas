@@ -58,7 +58,7 @@ public class DataBaseManager {
 
 
 	public CursorLoader cursorLoaderGraficosPorNombre(Object value, Context context) {
-	 	return cursorLoaderGraficosPorCampo(ConstantsAdmin.KEY_CHART_NAME, value, context);
+	 	return cursorLoaderGraficosPorCampo(value, context);
 	}
 
 
@@ -90,7 +90,7 @@ public class DataBaseManager {
 
 	public CursorLoader cursorLoaderItemChart(Context context, Object idChart, Object year, Object month){
 		String sortOrder = ConstantsAdmin.KEY_ITEMCHART_YEAR + ", " + ConstantsAdmin.KEY_ITEMCHART_MONTH + ", " + ConstantsAdmin.KEY_ITEMCHART_DAY + ", " + ConstantsAdmin.KEY_ITEMCHART_HOUR + ", " + ConstantsAdmin.KEY_ITEMCHART_MIN  + " COLLATE LOCALIZED ASC";
-		Cursor result = null;
+	//	Cursor result = null;
 		String selection = ConstantsAdmin.KEY_ITEMCHART_CHARTID + "= '" + idChart + "' AND " + ConstantsAdmin.KEY_ITEMCHART_YEAR + " = '" + year + "' AND " + ConstantsAdmin.KEY_ITEMCHART_MONTH + " = '" + month + "'";
 		return new CursorLoader( context, null, null, selection, null, sortOrder)
 		{
@@ -112,10 +112,10 @@ public class DataBaseManager {
 
 	}
 
-	private CursorLoader cursorLoaderGraficosPorCampo(String column, Object value, Context context) {
+	private CursorLoader cursorLoaderGraficosPorCampo(Object value, Context context) {
 		String selection = null;
 		if(value != null){
-			selection = ConstantsAdmin.querySelectionColumnByValue(column, value);
+			selection = ConstantsAdmin.querySelectionColumnByValue(ConstantsAdmin.KEY_CHART_NAME, value);
 		}
 
 		return new CursorLoader( context, null, null, selection, null, null)
@@ -139,21 +139,23 @@ public class DataBaseManager {
 	}
 
 
-	public Cursor fetchConfig(long id) {
-		Cursor result = null;
-		try{
-			result = mDb.query(ConstantsAdmin.TABLE_CONFIG, null, ConstantsAdmin.KEY_ROWID  + "= '" + id + "'", null, null, null, null);
-			if (result != null) {
-				result.moveToFirst();
-			}
-		}catch (Exception e) {
-			// TODO: handle exception
-			e.getMessage();
-		}
-
-
-		return result;
-	}
+// --Commented out by Inspection START (28/5/2019 07:34):
+//	public Cursor fetchConfig(long id) {
+//		Cursor result = null;
+//		try{
+//			result = mDb.query(ConstantsAdmin.TABLE_CONFIG, null, ConstantsAdmin.KEY_ROWID  + "= '" + id + "'", null, null, null, null);
+//			if (result != null) {
+//				result.moveToFirst();
+//			}
+//		}catch (Exception e) {
+//			// TODO: handle exception
+//			e.getMessage();
+//		}
+//
+//
+//		return result;
+//	}
+// --Commented out by Inspection STOP (28/5/2019 07:34)
 
 	public CursorLoader cursorLoaderConfig(Context context, long id) {
 		final String selection = ConstantsAdmin.KEY_ROWID  + "= '" + id + "'";
@@ -294,14 +296,16 @@ public class DataBaseManager {
      }
      
      
-     public long tablaItemChartSize(){
-//       VER COMO AGREGAR EL WHERE
-    	 long result = 0;
-    	 SQLiteStatement s = mDb.compileStatement(DataBaseHelper.SIZE_ITEM_CHART);
-    	 result = s.simpleQueryForLong(); 
-    	 return result;
-     }
-     
+// --Commented out by Inspection START (28/5/2019 07:35):
+//     public long tablaItemChartSize(){
+////       VER COMO AGREGAR EL WHERE
+//    	 long result = 0;
+//    	 SQLiteStatement s = mDb.compileStatement(DataBaseHelper.SIZE_ITEM_CHART);
+//    	 result = s.simpleQueryForLong();
+//    	 return result;
+//     }
+// --Commented out by Inspection STOP (28/5/2019 07:35)
+
      public void createOrUpdateItemChart(KNItemChart item){
     	// long returnValue = -1;
     	 ContentValues initialValues = new ContentValues();
@@ -334,30 +338,34 @@ public class DataBaseManager {
     	 mDbHelper.onUpgrade(mDb, 1, 2);
      }
      
-     public Cursor fetchItemsForChart(KNChart chart) {
-    	 // ver aca de poder ordenar por varis campos (year, month, day)
-    	 String sortOrder = ConstantsAdmin.KEY_ITEMCHART_YEAR + ", " + ConstantsAdmin.KEY_ITEMCHART_MONTH + ", " + ConstantsAdmin.KEY_ITEMCHART_DAY + ", " + ConstantsAdmin.KEY_ITEMCHART_HOUR + ", " + ConstantsAdmin.KEY_ITEMCHART_MIN  + " COLLATE LOCALIZED ASC";
-    	 Cursor result = null;
-    	 try{
-    		 result = mDb.query(ConstantsAdmin.TABLE_ITEM_CHART, null, ConstantsAdmin.KEY_ITEMCHART_CHARTID + "= " + chart.getId(), null, null, null, sortOrder);
-    	 }catch (SQLiteException e) {
-			e.getMessage();
-		}
-    	 return result;
-    	 
-     }
-     
-     public Cursor fetchItemsForChart(String idChartSelected, String yearSelected, String monthSelected){
-       	 String sortOrder = ConstantsAdmin.KEY_ITEMCHART_YEAR + ", " + ConstantsAdmin.KEY_ITEMCHART_MONTH + ", " + ConstantsAdmin.KEY_ITEMCHART_DAY + ", " + ConstantsAdmin.KEY_ITEMCHART_HOUR + ", " + ConstantsAdmin.KEY_ITEMCHART_MIN  + " COLLATE LOCALIZED ASC";
-    	 Cursor result = null;
-    	 try{
-    		 result = mDb.query(ConstantsAdmin.TABLE_ITEM_CHART, null, ConstantsAdmin.KEY_ITEMCHART_CHARTID + "= '" + idChartSelected + "' AND " + ConstantsAdmin.KEY_ITEMCHART_YEAR + " = '" + yearSelected + "' AND " + ConstantsAdmin.KEY_ITEMCHART_MONTH + " = '" + monthSelected + "'" , null, null, null, sortOrder);
-    	 }catch (SQLiteException e) {
-			e.getMessage();
-		 }
-    	 return result;   	  
-     }
-     
+// --Commented out by Inspection START (28/5/2019 07:35):
+//     public Cursor fetchItemsForChart(KNChart chart) {
+//    	 // ver aca de poder ordenar por varis campos (year, month, day)
+//    	 String sortOrder = ConstantsAdmin.KEY_ITEMCHART_YEAR + ", " + ConstantsAdmin.KEY_ITEMCHART_MONTH + ", " + ConstantsAdmin.KEY_ITEMCHART_DAY + ", " + ConstantsAdmin.KEY_ITEMCHART_HOUR + ", " + ConstantsAdmin.KEY_ITEMCHART_MIN  + " COLLATE LOCALIZED ASC";
+//    	 Cursor result = null;
+//    	 try{
+//    		 result = mDb.query(ConstantsAdmin.TABLE_ITEM_CHART, null, ConstantsAdmin.KEY_ITEMCHART_CHARTID + "= " + chart.getId(), null, null, null, sortOrder);
+//    	 }catch (SQLiteException e) {
+//			e.getMessage();
+//		}
+//    	 return result;
+//
+//     }
+// --Commented out by Inspection STOP (28/5/2019 07:35)
+
+// --Commented out by Inspection START (28/5/2019 07:35):
+//     public Cursor fetchItemsForChart(String idChartSelected, String yearSelected, String monthSelected){
+//       	 String sortOrder = ConstantsAdmin.KEY_ITEMCHART_YEAR + ", " + ConstantsAdmin.KEY_ITEMCHART_MONTH + ", " + ConstantsAdmin.KEY_ITEMCHART_DAY + ", " + ConstantsAdmin.KEY_ITEMCHART_HOUR + ", " + ConstantsAdmin.KEY_ITEMCHART_MIN  + " COLLATE LOCALIZED ASC";
+//    	 Cursor result = null;
+//    	 try{
+//    		 result = mDb.query(ConstantsAdmin.TABLE_ITEM_CHART, null, ConstantsAdmin.KEY_ITEMCHART_CHARTID + "= '" + idChartSelected + "' AND " + ConstantsAdmin.KEY_ITEMCHART_YEAR + " = '" + yearSelected + "' AND " + ConstantsAdmin.KEY_ITEMCHART_MONTH + " = '" + monthSelected + "'" , null, null, null, sortOrder);
+//    	 }catch (SQLiteException e) {
+//			e.getMessage();
+//		 }
+//    	 return result;
+//     }
+// --Commented out by Inspection STOP (28/5/2019 07:35)
+
      public Cursor fetchItemsForChartAndDateTime(String idChart, String year, String month, String day, String hour, String min){
     	 Cursor result = null;
     	 try{
@@ -369,23 +377,25 @@ public class DataBaseManager {
      }
 
      
-     public Cursor fetchItemsForChartOrderBYearAndMonth(KNChart chart) {
-    	 // ver aca de poder ordenar por varis campos (year, month, day)
-    	 String sortOrder = ConstantsAdmin.KEY_ITEMCHART_YEAR + ", " + ConstantsAdmin.KEY_ITEMCHART_MONTH + ", " + ConstantsAdmin.KEY_ITEMCHART_DAY + ", " + ConstantsAdmin.KEY_ITEMCHART_HOUR + ", " + ConstantsAdmin.KEY_ITEMCHART_MIN  + " COLLATE LOCALIZED ASC";
-    	 String groupBy = ConstantsAdmin.KEY_ITEMCHART_YEAR + ", " + ConstantsAdmin.KEY_ITEMCHART_MONTH;
-    	 Cursor result = null;
-    	 try{
-    		 result = mDb.query(ConstantsAdmin.TABLE_ITEM_CHART, null, ConstantsAdmin.KEY_ITEMCHART_CHARTID + "= " + chart.getId(), null, groupBy, null, sortOrder);
-    	 }catch (SQLiteException e) {
-			e.getMessage();
-		}
-    	 return result;
-    	 
-     }
+// --Commented out by Inspection START (28/5/2019 07:35):
+//     public Cursor fetchItemsForChartOrderBYearAndMonth(KNChart chart) {
+//    	 // ver aca de poder ordenar por varis campos (year, month, day)
+//    	 String sortOrder = ConstantsAdmin.KEY_ITEMCHART_YEAR + ", " + ConstantsAdmin.KEY_ITEMCHART_MONTH + ", " + ConstantsAdmin.KEY_ITEMCHART_DAY + ", " + ConstantsAdmin.KEY_ITEMCHART_HOUR + ", " + ConstantsAdmin.KEY_ITEMCHART_MIN  + " COLLATE LOCALIZED ASC";
+//    	 String groupBy = ConstantsAdmin.KEY_ITEMCHART_YEAR + ", " + ConstantsAdmin.KEY_ITEMCHART_MONTH;
+//    	 Cursor result = null;
+//    	 try{
+//    		 result = mDb.query(ConstantsAdmin.TABLE_ITEM_CHART, null, ConstantsAdmin.KEY_ITEMCHART_CHARTID + "= " + chart.getId(), null, groupBy, null, sortOrder);
+//    	 }catch (SQLiteException e) {
+//			e.getMessage();
+//		}
+//    	 return result;
+//
+//     }
+// --Commented out by Inspection STOP (28/5/2019 07:35)
 
     
      public Cursor fetchChartsForName(String paramNombre) {
-    	 Cursor result = null;
+    	 Cursor result;
     	 if(paramNombre != null && !paramNombre.equals("")){
     		 result = mDb.query(ConstantsAdmin.TABLE_CHART, null, ConstantsAdmin.KEY_CHART_NAME + " LIKE '%" + paramNombre + "%'", null, null, null, null);
     	 }else{
@@ -414,20 +424,22 @@ public class DataBaseManager {
 
 
 
-     public Cursor fetchItemForId(long id) {
-    	 Cursor result = null;
-		 try{
-			 result = mDb.query(ConstantsAdmin.TABLE_ITEM_CHART, null, ConstantsAdmin.KEY_ROWID  + "= '" + id + "'", null, null, null, null);
-			 if (result != null) {
-				 result.moveToFirst();
-			 }
-		 }catch (Exception e) {
-			// TODO: handle exception
-			 e.getMessage();
-		 }
-    	
-    	 
-         return result;
-     }
-     
+// --Commented out by Inspection START (28/5/2019 07:34):
+//     public Cursor fetchItemForId(long id) {
+//    	 Cursor result = null;
+//		 try{
+//			 result = mDb.query(ConstantsAdmin.TABLE_ITEM_CHART, null, ConstantsAdmin.KEY_ROWID  + "= '" + id + "'", null, null, null, null);
+//			 if (result != null) {
+//				 result.moveToFirst();
+//			 }
+//		 }catch (Exception e) {
+//			// TODO: handle exception
+//			 e.getMessage();
+//		 }
+//
+//
+//         return result;
+//     }
+// --Commented out by Inspection STOP (28/5/2019 07:34)
+
 }

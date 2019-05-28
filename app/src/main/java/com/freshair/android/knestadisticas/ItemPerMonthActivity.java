@@ -126,7 +126,7 @@ public class ItemPerMonthActivity extends KNListFragment implements LoaderManage
 	
 	private void recargarChart(){
 		DataBaseManager mDBManager = DataBaseManager.getInstance(this);
-		mChartSeleccionado = ConstantsAdmin.obtenerChartId(this, Long.valueOf(idChartSelected), mDBManager);
+		mChartSeleccionado = ConstantsAdmin.obtenerChartId(Long.valueOf(idChartSelected), mDBManager);
 	}
 	
 	private void guardarDatosSeleccionado(Intent intent){

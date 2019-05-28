@@ -379,7 +379,7 @@ public class ItemChartManagerActivity extends ExpandableListFragment implements 
 	
 	private void recargarChart(long idChart){
 		DataBaseManager mDBManager = DataBaseManager.getInstance(this);
-		mChartSeleccionado = ConstantsAdmin.obtenerChartId(this, idChart, mDBManager);
+		mChartSeleccionado = ConstantsAdmin.obtenerChartId(idChart, mDBManager);
 	}
 	
 	@Override
