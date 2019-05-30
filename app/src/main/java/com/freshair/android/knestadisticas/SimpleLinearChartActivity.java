@@ -21,10 +21,17 @@ import android.app.AlertDialog;
 import android.app.ProgressDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.database.Cursor;
 import android.graphics.Color;
 import android.graphics.Paint.Align;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
+import android.support.annotation.Nullable;
+import android.support.v4.app.FragmentActivity;
+import android.support.v4.app.LoaderManager;
+import android.support.v4.content.CursorLoader;
+import android.support.v4.content.Loader;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -38,7 +45,7 @@ import com.freshair.android.knestadisticas.dtos.KNItemChart;
 import com.freshair.android.knestadisticas.utils.ConstantsAdmin;
 
 
-public class SimpleLinearChartActivity extends Activity {
+public class SimpleLinearChartActivity extends FragmentActivity implements LoaderManager.LoaderCallbacks<Cursor> {
  
 	
   private KNChart mChart = null;
@@ -48,6 +55,7 @@ public class SimpleLinearChartActivity extends Activity {
   private List<KNItemChart> items = null;
   private int selectedFormatImport = -1;
   private SimpleLinearChartActivity me = null;
+  private final int ITEM_CHART_CURSOR = 1;
 /*
   @Override
 	public void startManagingCursor(Cursor c) {
@@ -58,12 +66,17 @@ public class SimpleLinearChartActivity extends Activity {
   @Override
   public void onCreate(Bundle savedInstanceState) {
       super.onCreate(savedInstanceState);
+      this.cargarLoaders();
       me = this;
    //   allMyCursors = new ArrayList<>();
       this.setContentView(R.layout.chart_view);
       this.guardarChartSeleccionado();
       this.configurarBotones();
   }
+
+	private void cargarLoaders() {
+		this.getSupportLoaderManager().initLoader(ITEM_CHART_CURSOR, null, this);
+	}
   
   protected void onActivityResult(int requestCode, int resultCode, Intent intent) {
   	super.onActivityResult(requestCode, resultCode, intent);
@@ -145,7 +158,7 @@ public class SimpleLinearChartActivity extends Activity {
     String[] titles = new String[] {mChart.getName()};
     List<Date[]> dates = new ArrayList<>();
     List<double[]> values = new ArrayList<>();
-    items = ConstantsAdmin.obtenerItemsDeChart(mChart, this, mDBManager);
+    items = ConstantsAdmin.obtenerItemsDeChartSimpleLinear(mChart, this, mDBManager);
     if(items.size()>0){
 	    if(items != null && items.size() > 0){
 		    Iterator<KNItemChart> it = items.iterator();
@@ -351,8 +364,36 @@ public class SimpleLinearChartActivity extends Activity {
 		AlertDialog alert =  builder.create();
 	    alert.show();
   }
-  
-  private class ExportCSVTask extends AsyncTask<Long, Integer, Integer>{
+
+	@NonNull
+	@Override
+	public Loader<Cursor> onCreateLoader(int id, @Nullable Bundle args) {
+		DataBaseManager mDBManager = DataBaseManager.getInstance(this);
+		CursorLoader cl = null;
+		switch(id) {
+			case ITEM_CHART_CURSOR:
+				cl = mDBManager.cursorLoaderItemChart(this, -1);
+				//ConstantsAdmin.cursorItemChart = cl;
+				break; // optional
+			default : // Optional
+				// Statements
+		}
+
+		return cl;
+
+	}
+
+	@Override
+	public void onLoadFinished(@NonNull Loader<Cursor> loader, Cursor data) {
+
+	}
+
+	@Override
+	public void onLoaderReset(@NonNull Loader<Cursor> loader) {
+
+	}
+
+	private class ExportCSVTask extends AsyncTask<Long, Integer, Integer>{
   	ProgressDialog dialog = null;
       @Override
       protected Integer doInBackground(Long... params) {

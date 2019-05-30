@@ -17,9 +17,16 @@ import org.achartengine.renderer.XYSeriesRenderer;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.database.Cursor;
 import android.graphics.Color;
 import android.graphics.Paint.Align;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
+import android.support.annotation.Nullable;
+import android.support.v4.app.FragmentActivity;
+import android.support.v4.app.LoaderManager;
+import android.support.v4.content.CursorLoader;
+import android.support.v4.content.Loader;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -36,12 +43,13 @@ import com.freshair.android.knestadisticas.utils.ConstantsAdmin;
 /**
  * Sales comparison demo chart.
  */
-public class ComparisonChartActivity extends Activity {
+public class ComparisonChartActivity extends FragmentActivity implements LoaderManager.LoaderCallbacks<Cursor> {
 
 	
 	private List<Integer> myColors = null;
 	private boolean sobrePuestos = false;
 	private GraphicalView mChartView = null;
+	private final int ITEM_CHART_CURSOR = 1;
 //	private ArrayList<Cursor> allMyCursors = null;
 
 	/*
@@ -55,6 +63,11 @@ public class ComparisonChartActivity extends Activity {
     	super.onActivityResult(requestCode, resultCode, intent);
   //  	this.resetAllMyCursors();
     }
+
+
+	private void cargarLoaders() {
+		this.getSupportLoaderManager().initLoader(ITEM_CHART_CURSOR, null, this);
+	}
    /*
     private void resetAllMyCursors(){
     	Cursor cur;
@@ -85,6 +98,7 @@ public class ComparisonChartActivity extends Activity {
   @Override
   public void onCreate(Bundle savedInstanceState) {
       super.onCreate(savedInstanceState);
+	  this.cargarLoaders();
       //allMyCursors = new ArrayList<Cursor>();
       this.setContentView(R.layout.chart_view);
       this.configurarBotones();
@@ -153,7 +167,7 @@ public class ComparisonChartActivity extends Activity {
 		  titles[a] = chrt.getName();
 		  unitString.append("-").append(chrt.getUnit());
 		  styles[a] = ConstantsAdmin.tiposPuntos[Integer.valueOf(config.getPoint())];
-		  items = ConstantsAdmin.obtenerItemsDeChart(chrt, this, mDBManager);
+		  items = ConstantsAdmin.obtenerItemsDeChartComparisonChart(chrt, this, mDBManager);
 		  if (!sobrePuestos) {
 			  dates.add(new Date[items.size()]);
 		  } else {
@@ -395,6 +409,34 @@ public class ComparisonChartActivity extends Activity {
 		    }
 		    return dataset;
 		  }
+
+	@NonNull
+	@Override
+	public Loader<Cursor> onCreateLoader(int id, @Nullable Bundle args) {
+		DataBaseManager mDBManager = DataBaseManager.getInstance(this);
+		CursorLoader cl = null;
+		switch(id) {
+			case ITEM_CHART_CURSOR:
+				cl = mDBManager.cursorLoaderItemChart(this, -1);
+				//ConstantsAdmin.cursorItemChart = cl;
+				break; // optional
+			default : // Optional
+				// Statements
+		}
+
+		return cl;
+
+	}
+
+	@Override
+	public void onLoadFinished(@NonNull Loader<Cursor> loader, Cursor data) {
+
+	}
+
+	@Override
+	public void onLoaderReset(@NonNull Loader<Cursor> loader) {
+
+	}
 
 
 // --Commented out by Inspection START (27/5/2019 08:15):

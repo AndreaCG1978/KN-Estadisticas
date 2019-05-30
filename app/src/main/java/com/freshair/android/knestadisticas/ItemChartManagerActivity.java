@@ -153,7 +153,7 @@ public class ItemChartManagerActivity extends ExpandableListFragment implements 
 
     private void recargarLista(){
 		DataBaseManager mDBManager = DataBaseManager.getInstance(this);
-    	List<KNItemChart> items = ConstantsAdmin.obtenerItemsDeChart(mChartSeleccionado, this, mDBManager);
+    	List<KNItemChart> items = ConstantsAdmin.obtenerItemsDeChartChartManager(mChartSeleccionado, this, mDBManager);
     	List<Map<String, String>> groupData = new ArrayList<>();
         List<List<Map<String, String>>> childData = new ArrayList<>();
         Iterator it = items.iterator();

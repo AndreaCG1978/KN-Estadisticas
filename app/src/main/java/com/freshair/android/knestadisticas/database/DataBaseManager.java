@@ -62,6 +62,8 @@ public class DataBaseManager {
 	}
 
 
+
+
 	public CursorLoader cursorLoaderItemChart(Context context, Object value){
 		String selection = null;
 		if(value != null){
@@ -77,16 +79,15 @@ public class DataBaseManager {
 				Cursor c = null;
 				if(mDb.isOpen()){
 					c = mDb.query(ConstantsAdmin.TABLE_ITEM_CHART, getProjection(), getSelection(), getSelectionArgs(), null, null, getSortOrder(), null );
-					if (c != null) {
+					/*if (c != null) {
 						c.moveToFirst();
-					}
+					}*/
 				}
 				return c;
 			}
 		};
 
 	}
-
 
 	public CursorLoader cursorLoaderItemChart(Context context, Object idChart, Object year, Object month){
 		String sortOrder = ConstantsAdmin.KEY_ITEMCHART_YEAR + ", " + ConstantsAdmin.KEY_ITEMCHART_MONTH + ", " + ConstantsAdmin.KEY_ITEMCHART_DAY + ", " + ConstantsAdmin.KEY_ITEMCHART_HOUR + ", " + ConstantsAdmin.KEY_ITEMCHART_MIN  + " COLLATE LOCALIZED ASC";

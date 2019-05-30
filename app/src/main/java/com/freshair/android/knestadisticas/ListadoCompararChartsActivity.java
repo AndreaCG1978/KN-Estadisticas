@@ -134,7 +134,7 @@ public class ListadoCompararChartsActivity extends ListActivity {
 		KNChart chrt;
 		while(it.hasNext()){
 			chrt = it.next();
-			items = ConstantsAdmin.obtenerItemsDeChart(chrt, this, mDBManager);
+			items = ConstantsAdmin.obtenerItemsDeChartListadoComparar(chrt, this, mDBManager);
 			if(items.size() == 0){
 				it.remove();
 			}

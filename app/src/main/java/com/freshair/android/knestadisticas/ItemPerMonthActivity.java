@@ -139,7 +139,9 @@ public class ItemPerMonthActivity extends KNListFragment implements LoaderManage
 	
 	private void recargarLista(){
 		DataBaseManager mDBManager = DataBaseManager.getInstance(this);
+		ConstantsAdmin.inicializarBD(mDBManager);
         List<KNItemChart> items = ConstantsAdmin.obtenerItemsDeChart(idChartSelected, mYearSelected, mMonthSelecetd, this, mDBManager);
+        ConstantsAdmin.finalizarBD(mDBManager);
         if(items != null && items.size() > 0){
         	setListAdapter(new KNItemChartArrayAdapter(this, R.layout.row_item, items));	
         }else{

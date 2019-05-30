@@ -199,49 +199,83 @@ public class ConstantsAdmin {
 //    }
 // --Commented out by Inspection STOP (27/5/2019 08:20)
 
-    
-    public static ArrayList<KNItemChart> obtenerItemsDeChart(KNChart chart, Activity context, DataBaseManager mDBManager){
-    	ArrayList<KNItemChart> items = new ArrayList<>();
-    	KNItemChart item;
-    	Cursor itemsCursor;
+
+	public static ArrayList<KNItemChart> obtenerItemsDeChart(CursorLoader cl, KNChart chart, Activity context, DataBaseManager mDBManager){
+		ArrayList<KNItemChart> items = new ArrayList<>();
+		KNItemChart item;
+		Cursor itemsCursor;
+		if(cl != null){
+			//	startManagingCursor(cursor);
+			itemsCursor = cl.loadInBackground();
+			itemsCursor.moveToFirst();
+			while(!itemsCursor.isAfterLast()){
+				item = cursorToItemDto(itemsCursor);
+				item.setChartId(String.valueOf(chart.getId()));
+				items.add(item);
+				itemsCursor.moveToNext();
+
+			}
+
+		}
+
+		return items;
+	}
+
+    public static ArrayList<KNItemChart> obtenerItemsDeChartAltaItem(KNChart chart, Activity context, DataBaseManager mDBManager){
+    	ArrayList<KNItemChart> items = null;
     	inicializarBD(mDBManager);
-   // 	itemsCursor = mDBManager.fetchItemsForChart(chart);
-
-        CursorLoader cursorLoader;
-        cursorLoader = mDBManager.cursorLoaderItemChart(context, chart.getId());
-        //		cursor = mDBManager.fetchCategoriasActivasPorNombre(null);
-        if(cursorLoader != null){
-            //	startManagingCursor(cursor);
-            itemsCursor = cursorLoader.loadInBackground();
-            itemsCursor.moveToFirst();
-            while(!itemsCursor.isAfterLast()){
-                item = cursorToItemDto(itemsCursor);
-                item.setChartId(String.valueOf(chart.getId()));
-                items.add(item);
-                itemsCursor.moveToNext();
-
-            }
-
-        }
-
-    //	context.startManagingCursor(itemsCursor);
-    /*	itemsCursor.moveToFirst();
-    	while(!itemsCursor.isAfterLast()){
-    		item = cursorToItemDto(itemsCursor);
-    		item.setChartId(String.valueOf(chart.getId()));
-    		items.add(item);
-    		itemsCursor.moveToNext();
-    		
-    	}*/
+        CursorLoader cursorLoader = mDBManager.cursorLoaderItemChart(context, chart.getId());
+        items = obtenerItemsDeChart(cursorLoader, chart, context, mDBManager);
+        finalizarBD(mDBManager);
     	return items;
     }
-    
+
+	public static ArrayList<KNItemChart> obtenerItemsDeChartSimpleLinear(KNChart chart, Activity context, DataBaseManager mDBManager){
+		ArrayList<KNItemChart> items = null;
+		inicializarBD(mDBManager);
+		CursorLoader cursorLoader = mDBManager.cursorLoaderItemChart(context, chart.getId());
+		items = obtenerItemsDeChart(cursorLoader, chart, context, mDBManager);
+		finalizarBD(mDBManager);
+		return items;
+	}
+
+	public static ArrayList<KNItemChart> obtenerItemsDeChartComparisonChart(KNChart chart, Activity context, DataBaseManager mDBManager){
+		ArrayList<KNItemChart> items = null;
+		inicializarBD(mDBManager);
+		CursorLoader cursorLoader = mDBManager.cursorLoaderItemChart(context, chart.getId());
+		items = obtenerItemsDeChart(cursorLoader, chart, context, mDBManager);
+		finalizarBD(mDBManager);
+		return items;
+	}
+
+
+	public static ArrayList<KNItemChart> obtenerItemsDeChartListadoComparar(KNChart chart, Activity context, DataBaseManager mDBManager){
+		ArrayList<KNItemChart> items = null;
+		inicializarBD(mDBManager);
+		CursorLoader cursorLoader = mDBManager.cursorLoaderItemChart(context, chart.getId());
+		items = obtenerItemsDeChart(cursorLoader, chart, context, mDBManager);
+		finalizarBD(mDBManager);
+		return items;
+	}
+
+	public static ArrayList<KNItemChart> obtenerItemsDeChartChartManager(KNChart chart, Activity context, DataBaseManager mDBManager){
+		ArrayList<KNItemChart> items = null;
+		inicializarBD(mDBManager);
+		CursorLoader cursorLoader = mDBManager.cursorLoaderItemChart(context, chart.getId());
+		items = obtenerItemsDeChart(cursorLoader, chart, context, mDBManager);
+		finalizarBD(mDBManager);
+		return items;
+	}
+
+
+
+
     public static ArrayList<KNItemChart> obtenerItemsDeChart(String idChartSelected, String yearSelected, String monthSelected, Activity context, DataBaseManager mDBManager){
     	ArrayList<KNItemChart> items = new ArrayList<>();
     	KNItemChart item;
     	Cursor itemsCursor;
     	CursorLoader cursorLoader;
-    	inicializarBD(mDBManager);
+    	//inicializarBD(mDBManager);
 
     	cursorLoader = mDBManager.cursorLoaderItemChart(context, idChartSelected, yearSelected, monthSelected);
     	if(cursorLoader != null) {

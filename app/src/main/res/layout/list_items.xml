@@ -28,7 +28,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/color_gris_oscuro"
+            android:background="@color/color_gris"
             android:orientation="horizontal">
 
             <TextView
@@ -42,7 +42,8 @@
                 android:paddingRight="10dp"
                 android:paddingBottom="6dp"
                 android:text="@string/label_year"
-                android:textSize="12sp" />
+                android:textSize="12sp"
+                android:textColor="@color/color_blanco"/>
 
             <TextView
                 android:id="@+id/descYear"
@@ -55,7 +56,8 @@
                 android:paddingRight="4dp"
                 android:paddingBottom="6dp"
                 android:textSize="15sp"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                android:textColor="@color/color_blanco"/>
 
             <TextView
                 android:id="@+id/labelMonth"
@@ -68,7 +70,8 @@
                 android:paddingRight="10dp"
                 android:paddingBottom="6dp"
                 android:text="@string/label_month"
-                android:textSize="12sp" />
+                android:textSize="12sp"
+                android:textColor="@color/color_blanco"/>
 
             <TextView
                 android:id="@+id/descMonth"
@@ -81,7 +84,8 @@
                 android:paddingRight="4dp"
                 android:paddingBottom="6dp"
                 android:textSize="15sp"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                android:textColor="@color/color_blanco"/>
 
         </LinearLayout>
 
