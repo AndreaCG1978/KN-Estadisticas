@@ -1,630 +1,630 @@
 [
     {
-        "merged": "C:\\Users\\a.grassano.spb\\ProyectosAndroid\\KN-Estadisticas\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_notification_bg_low_normal.9.png.flat",
-        "source": "C:\\Users\\a.grassano.spb\\.gradle\\caches\\transforms-2\\files-2.1\\1b89259178ef779b1768aa5f02abf547\\res\\drawable-hdpi-v4\\notification_bg_low_normal.9.png"
+        "merged": "/home/andrea/AndroidStudioProjects/KN-Estadisticas/app/build/intermediates/res/merged/debug/drawable-xhdpi_compare_charts_menubar.png.flat",
+        "source": "/home/andrea/AndroidStudioProjects/KN-Estadisticas/app/src/main/res/drawable-xhdpi/compare_charts_menubar.png"
     },
     {
-        "merged": "C:\\Users\\a.grassano.spb\\ProyectosAndroid\\KN-Estadisticas\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi_csv_menbar.png.flat",
-        "source": "C:\\Users\\a.grassano.spb\\ProyectosAndroid\\KN-Estadisticas\\app\\src\\main\\res\\drawable-ldpi\\csv_menbar.png"
+        "merged": "/home/andrea/AndroidStudioProjects/KN-Estadisticas/app/build/intermediates/res/merged/debug/drawable-ldpi_remove_icon.png.flat",
+        "source": "/home/andrea/AndroidStudioProjects/KN-Estadisticas/app/src/main/res/drawable-ldpi/remove_icon.png"
     },
     {
-        "merged": "C:\\Users\\a.grassano.spb\\ProyectosAndroid\\KN-Estadisticas\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_notification_bg_normal_pressed.9.png.flat",
-        "source": "C:\\Users\\a.grassano.spb\\.gradle\\caches\\transforms-2\\files-2.1\\1b89259178ef779b1768aa5f02abf547\\res\\drawable-xhdpi-v4\\notification_bg_normal_pressed.9.png"
+        "merged": "/home/andrea/AndroidStudioProjects/KN-Estadisticas/app/build/intermediates/res/merged/debug/drawable-hdpi_export_menbar.png.flat",
+        "source": "/home/andrea/AndroidStudioProjects/KN-Estadisticas/app/src/main/res/drawable-hdpi/export_menbar.png"
     },
     {
-        "merged": "C:\\Users\\a.grassano.spb\\ProyectosAndroid\\KN-Estadisticas\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_export_csv.png.flat",
-        "source": "C:\\Users\\a.grassano.spb\\ProyectosAndroid\\KN-Estadisticas\\app\\src\\main\\res\\drawable-xhdpi\\export_csv.png"
+        "merged": "/home/andrea/AndroidStudioProjects/KN-Estadisticas/app/build/intermediates/res/merged/debug/layout_notification_template_media_custom.xml.flat",
+        "source": "/home/andrea/.gradle/caches/transforms-2/files-2.1/a882bb62ba3406e88e072deec96a42e2/res/layout/notification_template_media_custom.xml"
     },
     {
-        "merged": "C:\\Users\\a.grassano.spb\\ProyectosAndroid\\KN-Estadisticas\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_notification_bg_normal.9.png.flat",
-        "source": "C:\\Users\\a.grassano.spb\\.gradle\\caches\\transforms-2\\files-2.1\\1b89259178ef779b1768aa5f02abf547\\res\\drawable-mdpi-v4\\notification_bg_normal.9.png"
+        "merged": "/home/andrea/AndroidStudioProjects/KN-Estadisticas/app/build/intermediates/res/merged/debug/drawable-ldpi_manage_item.png.flat",
+        "source": "/home/andrea/AndroidStudioProjects/KN-Estadisticas/app/src/main/res/drawable-ldpi/manage_item.png"
     },
     {
-        "merged": "C:\\Users\\a.grassano.spb\\ProyectosAndroid\\KN-Estadisticas\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_draw_chart_menubar.png.flat",
-        "source": "C:\\Users\\a.grassano.spb\\ProyectosAndroid\\KN-Estadisticas\\app\\src\\main\\res\\drawable-xhdpi\\draw_chart_menubar.png"
+        "merged": "/home/andrea/AndroidStudioProjects/KN-Estadisticas/app/build/intermediates/res/merged/debug/drawable-xhdpi_help_menubar.png.flat",
+        "source": "/home/andrea/AndroidStudioProjects/KN-Estadisticas/app/src/main/res/drawable-xhdpi/help_menubar.png"
     },
     {
-        "merged": "C:\\Users\\a.grassano.spb\\ProyectosAndroid\\KN-Estadisticas\\app\\build\\intermediates\\res\\merged\\debug\\layout_notification_template_big_media_narrow.xml.flat",
-        "source": "C:\\Users\\a.grassano.spb\\.gradle\\caches\\transforms-2\\files-2.1\\e5f10cb6e3e9a994651b7a701ee00836\\res\\layout\\notification_template_big_media_narrow.xml"
+        "merged": "/home/andrea/AndroidStudioProjects/KN-Estadisticas/app/build/intermediates/res/merged/debug/drawable-ldpi_edit_chart_menubar.png.flat",
+        "source": "/home/andrea/AndroidStudioProjects/KN-Estadisticas/app/src/main/res/drawable-ldpi/edit_chart_menubar.png"
     },
     {
-        "merged": "C:\\Users\\a.grassano.spb\\ProyectosAndroid\\KN-Estadisticas\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_remove_icon.png.flat",
-        "source": "C:\\Users\\a.grassano.spb\\ProyectosAndroid\\KN-Estadisticas\\app\\src\\main\\res\\drawable-xhdpi\\remove_icon.png"
+        "merged": "/home/andrea/AndroidStudioProjects/KN-Estadisticas/app/build/intermediates/res/merged/debug/drawable-mdpi_draw_chart_menubar.png.flat",
+        "source": "/home/andrea/AndroidStudioProjects/KN-Estadisticas/app/src/main/res/drawable-mdpi/draw_chart_menubar.png"
     },
     {
-        "merged": "C:\\Users\\a.grassano.spb\\ProyectosAndroid\\KN-Estadisticas\\app\\build\\intermediates\\res\\merged\\debug\\layout_notification_action_tombstone.xml.flat",
-        "source": "C:\\Users\\a.grassano.spb\\.gradle\\caches\\transforms-2\\files-2.1\\1b89259178ef779b1768aa5f02abf547\\res\\layout\\notification_action_tombstone.xml"
+        "merged": "/home/andrea/AndroidStudioProjects/KN-Estadisticas/app/build/intermediates/res/merged/debug/drawable-ldpi_csv_menbar.png.flat",
+        "source": "/home/andrea/AndroidStudioProjects/KN-Estadisticas/app/src/main/res/drawable-ldpi/csv_menbar.png"
     },
     {
-        "merged": "C:\\Users\\a.grassano.spb\\ProyectosAndroid\\KN-Estadisticas\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_manage_item.png.flat",
-        "source": "C:\\Users\\a.grassano.spb\\ProyectosAndroid\\KN-Estadisticas\\app\\src\\main\\res\\drawable-xhdpi\\manage_item.png"
+        "merged": "/home/andrea/AndroidStudioProjects/KN-Estadisticas/app/build/intermediates/res/merged/debug/drawable-hdpi-v4_notification_bg_low_pressed.9.png.flat",
+        "source": "/home/andrea/.gradle/caches/transforms-2/files-2.1/90ad557a22b636b5a708311fa19d5fe7/res/drawable-hdpi-v4/notification_bg_low_pressed.9.png"
     },
     {
-        "merged": "C:\\Users\\a.grassano.spb\\ProyectosAndroid\\KN-Estadisticas\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_notification_bg_low_normal.9.png.flat",
-        "source": "C:\\Users\\a.grassano.spb\\.gradle\\caches\\transforms-2\\files-2.1\\1b89259178ef779b1768aa5f02abf547\\res\\drawable-xhdpi-v4\\notification_bg_low_normal.9.png"
+        "merged": "/home/andrea/AndroidStudioProjects/KN-Estadisticas/app/build/intermediates/res/merged/debug/layout_row_item.xml.flat",
+        "source": "/home/andrea/AndroidStudioProjects/KN-Estadisticas/app/src/main/res/layout/row_item.xml"
     },
     {
-        "merged": "C:\\Users\\a.grassano.spb\\ProyectosAndroid\\KN-Estadisticas\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi_about_us_menubar.png.flat",
-        "source": "C:\\Users\\a.grassano.spb\\ProyectosAndroid\\KN-Estadisticas\\app\\src\\main\\res\\drawable-ldpi\\about_us_menubar.png"
+        "merged": "/home/andrea/AndroidStudioProjects/KN-Estadisticas/app/build/intermediates/res/merged/debug/drawable-hdpi-v4_notification_bg_normal_pressed.9.png.flat",
+        "source": "/home/andrea/.gradle/caches/transforms-2/files-2.1/90ad557a22b636b5a708311fa19d5fe7/res/drawable-hdpi-v4/notification_bg_normal_pressed.9.png"
     },
     {
-        "merged": "C:\\Users\\a.grassano.spb\\ProyectosAndroid\\KN-Estadisticas\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_txt_menbar.png.flat",
-        "source": "C:\\Users\\a.grassano.spb\\ProyectosAndroid\\KN-Estadisticas\\app\\src\\main\\res\\drawable-xhdpi\\txt_menbar.png"
+        "merged": "/home/andrea/AndroidStudioProjects/KN-Estadisticas/app/build/intermediates/res/merged/debug/layout_notification_template_big_media_narrow.xml.flat",
+        "source": "/home/andrea/.gradle/caches/transforms-2/files-2.1/a882bb62ba3406e88e072deec96a42e2/res/layout/notification_template_big_media_narrow.xml"
     },
     {
-        "merged": "C:\\Users\\a.grassano.spb\\ProyectosAndroid\\KN-Estadisticas\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi_txt_menbar.png.flat",
-        "source": "C:\\Users\\a.grassano.spb\\ProyectosAndroid\\KN-Estadisticas\\app\\src\\main\\res\\drawable-ldpi\\txt_menbar.png"
+        "merged": "/home/andrea/AndroidStudioProjects/KN-Estadisticas/app/build/intermediates/res/merged/debug/drawable_splash.png.flat",
+        "source": "/home/andrea/AndroidStudioProjects/KN-Estadisticas/app/src/main/res/drawable/splash.png"
     },
     {
-        "merged": "C:\\Users\\a.grassano.spb\\ProyectosAndroid\\KN-Estadisticas\\app\\build\\intermediates\\res\\merged\\debug\\layout-v16_notification_template_custom_big.xml.flat",
-        "source": "C:\\Users\\a.grassano.spb\\.gradle\\caches\\transforms-2\\files-2.1\\1b89259178ef779b1768aa5f02abf547\\res\\layout-v16\\notification_template_custom_big.xml"
+        "merged": "/home/andrea/AndroidStudioProjects/KN-Estadisticas/app/build/intermediates/res/merged/debug/drawable-mdpi_add_item_main.png.flat",
+        "source": "/home/andrea/AndroidStudioProjects/KN-Estadisticas/app/src/main/res/drawable-mdpi/add_item_main.png"
     },
     {
-        "merged": "C:\\Users\\a.grassano.spb\\ProyectosAndroid\\KN-Estadisticas\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_edit_icon.png.flat",
-        "source": "C:\\Users\\a.grassano.spb\\ProyectosAndroid\\KN-Estadisticas\\app\\src\\main\\res\\drawable-mdpi\\edit_icon.png"
+        "merged": "/home/andrea/AndroidStudioProjects/KN-Estadisticas/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4_notify_panel_notification_icon_bg.png.flat",
+        "source": "/home/andrea/.gradle/caches/transforms-2/files-2.1/90ad557a22b636b5a708311fa19d5fe7/res/drawable-xhdpi-v4/notify_panel_notification_icon_bg.png"
     },
     {
-        "merged": "C:\\Users\\a.grassano.spb\\ProyectosAndroid\\KN-Estadisticas\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_import_menubar.png.flat",
-        "source": "C:\\Users\\a.grassano.spb\\ProyectosAndroid\\KN-Estadisticas\\app\\src\\main\\res\\drawable-hdpi\\import_menubar.png"
+        "merged": "/home/andrea/AndroidStudioProjects/KN-Estadisticas/app/build/intermediates/res/merged/debug/drawable-mdpi_setting_chart_main.png.flat",
+        "source": "/home/andrea/AndroidStudioProjects/KN-Estadisticas/app/src/main/res/drawable-mdpi/setting_chart_main.png"
     },
     {
-        "merged": "C:\\Users\\a.grassano.spb\\ProyectosAndroid\\KN-Estadisticas\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_config_menubar.png.flat",
-        "source": "C:\\Users\\a.grassano.spb\\ProyectosAndroid\\KN-Estadisticas\\app\\src\\main\\res\\drawable-xhdpi\\config_menubar.png"
+        "merged": "/home/andrea/AndroidStudioProjects/KN-Estadisticas/app/build/intermediates/res/merged/debug/drawable-hdpi_remove_icon.png.flat",
+        "source": "/home/andrea/AndroidStudioProjects/KN-Estadisticas/app/src/main/res/drawable-hdpi/remove_icon.png"
     },
     {
-        "merged": "C:\\Users\\a.grassano.spb\\ProyectosAndroid\\KN-Estadisticas\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_delete_chart_menubar.png.flat",
-        "source": "C:\\Users\\a.grassano.spb\\ProyectosAndroid\\KN-Estadisticas\\app\\src\\main\\res\\drawable-mdpi\\delete_chart_menubar.png"
+        "merged": "/home/andrea/AndroidStudioProjects/KN-Estadisticas/app/build/intermediates/res/merged/debug/layout_list_items.xml.flat",
+        "source": "/home/andrea/AndroidStudioProjects/KN-Estadisticas/app/src/main/res/layout/list_items.xml"
     },
     {
-        "merged": "C:\\Users\\a.grassano.spb\\ProyectosAndroid\\KN-Estadisticas\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_export_txt.png.flat",
-        "source": "C:\\Users\\a.grassano.spb\\ProyectosAndroid\\KN-Estadisticas\\app\\src\\main\\res\\drawable-hdpi\\export_txt.png"
+        "merged": "/home/andrea/AndroidStudioProjects/KN-Estadisticas/app/build/intermediates/res/merged/debug/xml_backup_descriptor.xml.flat",
+        "source": "/home/andrea/AndroidStudioProjects/KN-Estadisticas/app/src/main/res/xml/backup_descriptor.xml"
     },
     {
-        "merged": "C:\\Users\\a.grassano.spb\\ProyectosAndroid\\KN-Estadisticas\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_edit_chart_menubar.png.flat",
-        "source": "C:\\Users\\a.grassano.spb\\ProyectosAndroid\\KN-Estadisticas\\app\\src\\main\\res\\drawable-hdpi\\edit_chart_menubar.png"
+        "merged": "/home/andrea/AndroidStudioProjects/KN-Estadisticas/app/build/intermediates/res/merged/debug/drawable-ldpi_draw_chart_menubar.png.flat",
+        "source": "/home/andrea/AndroidStudioProjects/KN-Estadisticas/app/src/main/res/drawable-ldpi/draw_chart_menubar.png"
     },
     {
-        "merged": "C:\\Users\\a.grassano.spb\\ProyectosAndroid\\KN-Estadisticas\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi_add_item_main.png.flat",
-        "source": "C:\\Users\\a.grassano.spb\\ProyectosAndroid\\KN-Estadisticas\\app\\src\\main\\res\\drawable-ldpi\\add_item_main.png"
+        "merged": "/home/andrea/AndroidStudioProjects/KN-Estadisticas/app/build/intermediates/res/merged/debug/drawable-ldpi_help_menubar.png.flat",
+        "source": "/home/andrea/AndroidStudioProjects/KN-Estadisticas/app/src/main/res/drawable-ldpi/help_menubar.png"
     },
     {
-        "merged": "C:\\Users\\a.grassano.spb\\ProyectosAndroid\\KN-Estadisticas\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_import_menubar.png.flat",
-        "source": "C:\\Users\\a.grassano.spb\\ProyectosAndroid\\KN-Estadisticas\\app\\src\\main\\res\\drawable-mdpi\\import_menubar.png"
+        "merged": "/home/andrea/AndroidStudioProjects/KN-Estadisticas/app/build/intermediates/res/merged/debug/drawable-ldpi_add_menubar.png.flat",
+        "source": "/home/andrea/AndroidStudioProjects/KN-Estadisticas/app/src/main/res/drawable-ldpi/add_menubar.png"
     },
     {
-        "merged": "C:\\Users\\a.grassano.spb\\ProyectosAndroid\\KN-Estadisticas\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi_export_csv.png.flat",
-        "source": "C:\\Users\\a.grassano.spb\\ProyectosAndroid\\KN-Estadisticas\\app\\src\\main\\res\\drawable-ldpi\\export_csv.png"
+        "merged": "/home/andrea/AndroidStudioProjects/KN-Estadisticas/app/build/intermediates/res/merged/debug/drawable-mdpi-v4_notification_bg_low_pressed.9.png.flat",
+        "source": "/home/andrea/.gradle/caches/transforms-2/files-2.1/90ad557a22b636b5a708311fa19d5fe7/res/drawable-mdpi-v4/notification_bg_low_pressed.9.png"
     },
     {
-        "merged": "C:\\Users\\a.grassano.spb\\ProyectosAndroid\\KN-Estadisticas\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_manage_item_main.png.flat",
-        "source": "C:\\Users\\a.grassano.spb\\ProyectosAndroid\\KN-Estadisticas\\app\\src\\main\\res\\drawable-mdpi\\manage_item_main.png"
+        "merged": "/home/andrea/AndroidStudioProjects/KN-Estadisticas/app/build/intermediates/res/merged/debug/drawable-ldpi_txt_menbar.png.flat",
+        "source": "/home/andrea/AndroidStudioProjects/KN-Estadisticas/app/src/main/res/drawable-ldpi/txt_menbar.png"
     },
     {
-        "merged": "C:\\Users\\a.grassano.spb\\ProyectosAndroid\\KN-Estadisticas\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_edit_chart_main.png.flat",
-        "source": "C:\\Users\\a.grassano.spb\\ProyectosAndroid\\KN-Estadisticas\\app\\src\\main\\res\\drawable-mdpi\\edit_chart_main.png"
+        "merged": "/home/andrea/AndroidStudioProjects/KN-Estadisticas/app/build/intermediates/res/merged/debug/drawable-mdpi_edit_chart_main.png.flat",
+        "source": "/home/andrea/AndroidStudioProjects/KN-Estadisticas/app/src/main/res/drawable-mdpi/edit_chart_main.png"
     },
     {
-        "merged": "C:\\Users\\a.grassano.spb\\ProyectosAndroid\\KN-Estadisticas\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_edit_chart_menubar.png.flat",
-        "source": "C:\\Users\\a.grassano.spb\\ProyectosAndroid\\KN-Estadisticas\\app\\src\\main\\res\\drawable-xhdpi\\edit_chart_menubar.png"
+        "merged": "/home/andrea/AndroidStudioProjects/KN-Estadisticas/app/build/intermediates/res/merged/debug/layout_notification_template_big_media_narrow_custom.xml.flat",
+        "source": "/home/andrea/.gradle/caches/transforms-2/files-2.1/a882bb62ba3406e88e072deec96a42e2/res/layout/notification_template_big_media_narrow_custom.xml"
     },
     {
-        "merged": "C:\\Users\\a.grassano.spb\\ProyectosAndroid\\KN-Estadisticas\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_export_txt.png.flat",
-        "source": "C:\\Users\\a.grassano.spb\\ProyectosAndroid\\KN-Estadisticas\\app\\src\\main\\res\\drawable-mdpi\\export_txt.png"
+        "merged": "/home/andrea/AndroidStudioProjects/KN-Estadisticas/app/build/intermediates/res/merged/debug/drawable-xhdpi_txt_menbar.png.flat",
+        "source": "/home/andrea/AndroidStudioProjects/KN-Estadisticas/app/src/main/res/drawable-xhdpi/txt_menbar.png"
     },
     {
-        "merged": "C:\\Users\\a.grassano.spb\\ProyectosAndroid\\KN-Estadisticas\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_add_menubar.png.flat",
-        "source": "C:\\Users\\a.grassano.spb\\ProyectosAndroid\\KN-Estadisticas\\app\\src\\main\\res\\drawable-xhdpi\\add_menubar.png"
+        "merged": "/home/andrea/AndroidStudioProjects/KN-Estadisticas/app/build/intermediates/res/merged/debug/drawable-xhdpi_config_menubar.png.flat",
+        "source": "/home/andrea/AndroidStudioProjects/KN-Estadisticas/app/src/main/res/drawable-xhdpi/config_menubar.png"
     },
     {
-        "merged": "C:\\Users\\a.grassano.spb\\ProyectosAndroid\\KN-Estadisticas\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi_delete_chart_menubar.png.flat",
-        "source": "C:\\Users\\a.grassano.spb\\ProyectosAndroid\\KN-Estadisticas\\app\\src\\main\\res\\drawable-ldpi\\delete_chart_menubar.png"
+        "merged": "/home/andrea/AndroidStudioProjects/KN-Estadisticas/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4_notification_bg_low_pressed.9.png.flat",
+        "source": "/home/andrea/.gradle/caches/transforms-2/files-2.1/90ad557a22b636b5a708311fa19d5fe7/res/drawable-xhdpi-v4/notification_bg_low_pressed.9.png"
     },
     {
-        "merged": "C:\\Users\\a.grassano.spb\\ProyectosAndroid\\KN-Estadisticas\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_import_menubar.png.flat",
-        "source": "C:\\Users\\a.grassano.spb\\ProyectosAndroid\\KN-Estadisticas\\app\\src\\main\\res\\drawable-xhdpi\\import_menubar.png"
+        "merged": "/home/andrea/AndroidStudioProjects/KN-Estadisticas/app/build/intermediates/res/merged/debug/drawable-mdpi_export_main.png.flat",
+        "source": "/home/andrea/AndroidStudioProjects/KN-Estadisticas/app/src/main/res/drawable-mdpi/export_main.png"
     },
     {
-        "merged": "C:\\Users\\a.grassano.spb\\ProyectosAndroid\\KN-Estadisticas\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi_edit_chart_main.png.flat",
-        "source": "C:\\Users\\a.grassano.spb\\ProyectosAndroid\\KN-Estadisticas\\app\\src\\main\\res\\drawable-ldpi\\edit_chart_main.png"
+        "merged": "/home/andrea/AndroidStudioProjects/KN-Estadisticas/app/build/intermediates/res/merged/debug/drawable-mdpi_about_us_menubar.png.flat",
+        "source": "/home/andrea/AndroidStudioProjects/KN-Estadisticas/app/src/main/res/drawable-mdpi/about_us_menubar.png"
     },
     {
-        "merged": "C:\\Users\\a.grassano.spb\\ProyectosAndroid\\KN-Estadisticas\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_manage_item_main.png.flat",
-        "source": "C:\\Users\\a.grassano.spb\\ProyectosAndroid\\KN-Estadisticas\\app\\src\\main\\res\\drawable-xhdpi\\manage_item_main.png"
+        "merged": "/home/andrea/AndroidStudioProjects/KN-Estadisticas/app/build/intermediates/res/merged/debug/layout_notification_template_big_media_custom.xml.flat",
+        "source": "/home/andrea/.gradle/caches/transforms-2/files-2.1/a882bb62ba3406e88e072deec96a42e2/res/layout/notification_template_big_media_custom.xml"
     },
     {
-        "merged": "C:\\Users\\a.grassano.spb\\ProyectosAndroid\\KN-Estadisticas\\app\\build\\intermediates\\res\\merged\\debug\\layout_chart_row_label.xml.flat",
-        "source": "C:\\Users\\a.grassano.spb\\ProyectosAndroid\\KN-Estadisticas\\app\\src\\main\\res\\layout\\chart_row_label.xml"
+        "merged": "/home/andrea/AndroidStudioProjects/KN-Estadisticas/app/build/intermediates/res/merged/debug/drawable-xhdpi_setting_chart_main.png.flat",
+        "source": "/home/andrea/AndroidStudioProjects/KN-Estadisticas/app/src/main/res/drawable-xhdpi/setting_chart_main.png"
     },
     {
-        "merged": "C:\\Users\\a.grassano.spb\\ProyectosAndroid\\KN-Estadisticas\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_add_menubar.png.flat",
-        "source": "C:\\Users\\a.grassano.spb\\ProyectosAndroid\\KN-Estadisticas\\app\\src\\main\\res\\drawable-mdpi\\add_menubar.png"
+        "merged": "/home/andrea/AndroidStudioProjects/KN-Estadisticas/app/build/intermediates/res/merged/debug/drawable-hdpi-v4_notification_bg_normal.9.png.flat",
+        "source": "/home/andrea/.gradle/caches/transforms-2/files-2.1/90ad557a22b636b5a708311fa19d5fe7/res/drawable-hdpi-v4/notification_bg_normal.9.png"
     },
     {
-        "merged": "C:\\Users\\a.grassano.spb\\ProyectosAndroid\\KN-Estadisticas\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_help_menubar.png.flat",
-        "source": "C:\\Users\\a.grassano.spb\\ProyectosAndroid\\KN-Estadisticas\\app\\src\\main\\res\\drawable-mdpi\\help_menubar.png"
+        "merged": "/home/andrea/AndroidStudioProjects/KN-Estadisticas/app/build/intermediates/res/merged/debug/drawable-xhdpi_import_menubar.png.flat",
+        "source": "/home/andrea/AndroidStudioProjects/KN-Estadisticas/app/src/main/res/drawable-xhdpi/import_menubar.png"
     },
     {
-        "merged": "C:\\Users\\a.grassano.spb\\ProyectosAndroid\\KN-Estadisticas\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_trash_chart_main.png.flat",
-        "source": "C:\\Users\\a.grassano.spb\\ProyectosAndroid\\KN-Estadisticas\\app\\src\\main\\res\\drawable-mdpi\\trash_chart_main.png"
+        "merged": "/home/andrea/AndroidStudioProjects/KN-Estadisticas/app/build/intermediates/res/merged/debug/layout-v16_notification_template_custom_big.xml.flat",
+        "source": "/home/andrea/.gradle/caches/transforms-2/files-2.1/90ad557a22b636b5a708311fa19d5fe7/res/layout-v16/notification_template_custom_big.xml"
     },
     {
-        "merged": "C:\\Users\\a.grassano.spb\\ProyectosAndroid\\KN-Estadisticas\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_manage_item.png.flat",
-        "source": "C:\\Users\\a.grassano.spb\\ProyectosAndroid\\KN-Estadisticas\\app\\src\\main\\res\\drawable-hdpi\\manage_item.png"
+        "merged": "/home/andrea/AndroidStudioProjects/KN-Estadisticas/app/build/intermediates/res/merged/debug/layout_notification_media_action.xml.flat",
+        "source": "/home/andrea/.gradle/caches/transforms-2/files-2.1/a882bb62ba3406e88e072deec96a42e2/res/layout/notification_media_action.xml"
     },
     {
-        "merged": "C:\\Users\\a.grassano.spb\\ProyectosAndroid\\KN-Estadisticas\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_export_main.png.flat",
-        "source": "C:\\Users\\a.grassano.spb\\ProyectosAndroid\\KN-Estadisticas\\app\\src\\main\\res\\drawable-hdpi\\export_main.png"
+        "merged": "/home/andrea/AndroidStudioProjects/KN-Estadisticas/app/build/intermediates/res/merged/debug/drawable-hdpi_icon.png.flat",
+        "source": "/home/andrea/AndroidStudioProjects/KN-Estadisticas/app/src/main/res/drawable-hdpi/icon.png"
     },
     {
-        "merged": "C:\\Users\\a.grassano.spb\\ProyectosAndroid\\KN-Estadisticas\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_notification_bg_low_pressed.9.png.flat",
-        "source": "C:\\Users\\a.grassano.spb\\.gradle\\caches\\transforms-2\\files-2.1\\1b89259178ef779b1768aa5f02abf547\\res\\drawable-xhdpi-v4\\notification_bg_low_pressed.9.png"
+        "merged": "/home/andrea/AndroidStudioProjects/KN-Estadisticas/app/build/intermediates/res/merged/debug/layout-v21_notification_action.xml.flat",
+        "source": "/home/andrea/.gradle/caches/transforms-2/files-2.1/90ad557a22b636b5a708311fa19d5fe7/res/layout-v21/notification_action.xml"
     },
     {
-        "merged": "C:\\Users\\a.grassano.spb\\ProyectosAndroid\\KN-Estadisticas\\app\\build\\intermediates\\res\\merged\\debug\\drawable_notification_bg_low.xml.flat",
-        "source": "C:\\Users\\a.grassano.spb\\.gradle\\caches\\transforms-2\\files-2.1\\1b89259178ef779b1768aa5f02abf547\\res\\drawable\\notification_bg_low.xml"
+        "merged": "/home/andrea/AndroidStudioProjects/KN-Estadisticas/app/build/intermediates/res/merged/debug/drawable-ldpi_edit_icon.png.flat",
+        "source": "/home/andrea/AndroidStudioProjects/KN-Estadisticas/app/src/main/res/drawable-ldpi/edit_icon.png"
     },
     {
-        "merged": "C:\\Users\\a.grassano.spb\\ProyectosAndroid\\KN-Estadisticas\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi_compare_charts_menubar.png.flat",
-        "source": "C:\\Users\\a.grassano.spb\\ProyectosAndroid\\KN-Estadisticas\\app\\src\\main\\res\\drawable-ldpi\\compare_charts_menubar.png"
+        "merged": "/home/andrea/AndroidStudioProjects/KN-Estadisticas/app/build/intermediates/res/merged/debug/drawable-xhdpi_manage_item_main.png.flat",
+        "source": "/home/andrea/AndroidStudioProjects/KN-Estadisticas/app/src/main/res/drawable-xhdpi/manage_item_main.png"
     },
     {
-        "merged": "C:\\Users\\a.grassano.spb\\ProyectosAndroid\\KN-Estadisticas\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_setting_chart_main.png.flat",
-        "source": "C:\\Users\\a.grassano.spb\\ProyectosAndroid\\KN-Estadisticas\\app\\src\\main\\res\\drawable-hdpi\\setting_chart_main.png"
+        "merged": "/home/andrea/AndroidStudioProjects/KN-Estadisticas/app/build/intermediates/res/merged/debug/layout_alta_chart.xml.flat",
+        "source": "/home/andrea/AndroidStudioProjects/KN-Estadisticas/app/src/main/res/layout/alta_chart.xml"
     },
     {
-        "merged": "C:\\Users\\a.grassano.spb\\ProyectosAndroid\\KN-Estadisticas\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi_icon.png.flat",
-        "source": "C:\\Users\\a.grassano.spb\\ProyectosAndroid\\KN-Estadisticas\\app\\src\\main\\res\\drawable-ldpi\\icon.png"
+        "merged": "/home/andrea/AndroidStudioProjects/KN-Estadisticas/app/build/intermediates/res/merged/debug/layout_chart_row.xml.flat",
+        "source": "/home/andrea/AndroidStudioProjects/KN-Estadisticas/app/src/main/res/layout/chart_row.xml"
     },
     {
-        "merged": "C:\\Users\\a.grassano.spb\\ProyectosAndroid\\KN-Estadisticas\\app\\build\\intermediates\\res\\merged\\debug\\layout_notification_template_part_time.xml.flat",
-        "source": "C:\\Users\\a.grassano.spb\\.gradle\\caches\\transforms-2\\files-2.1\\1b89259178ef779b1768aa5f02abf547\\res\\layout\\notification_template_part_time.xml"
+        "merged": "/home/andrea/AndroidStudioProjects/KN-Estadisticas/app/build/intermediates/res/merged/debug/drawable_notification_tile_bg.xml.flat",
+        "source": "/home/andrea/.gradle/caches/transforms-2/files-2.1/90ad557a22b636b5a708311fa19d5fe7/res/drawable/notification_tile_bg.xml"
     },
     {
-        "merged": "C:\\Users\\a.grassano.spb\\ProyectosAndroid\\KN-Estadisticas\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_notify_panel_notification_icon_bg.png.flat",
-        "source": "C:\\Users\\a.grassano.spb\\.gradle\\caches\\transforms-2\\files-2.1\\1b89259178ef779b1768aa5f02abf547\\res\\drawable-mdpi-v4\\notify_panel_notification_icon_bg.png"
+        "merged": "/home/andrea/AndroidStudioProjects/KN-Estadisticas/app/build/intermediates/res/merged/debug/drawable-xhdpi_draw_chart_menubar.png.flat",
+        "source": "/home/andrea/AndroidStudioProjects/KN-Estadisticas/app/src/main/res/drawable-xhdpi/draw_chart_menubar.png"
     },
     {
-        "merged": "C:\\Users\\a.grassano.spb\\ProyectosAndroid\\KN-Estadisticas\\app\\build\\intermediates\\res\\merged\\debug\\layout-v21_notification_template_icon_group.xml.flat",
-        "source": "C:\\Users\\a.grassano.spb\\.gradle\\caches\\transforms-2\\files-2.1\\1b89259178ef779b1768aa5f02abf547\\res\\layout-v21\\notification_template_icon_group.xml"
+        "merged": "/home/andrea/AndroidStudioProjects/KN-Estadisticas/app/build/intermediates/res/merged/debug/layout_month_row.xml.flat",
+        "source": "/home/andrea/AndroidStudioProjects/KN-Estadisticas/app/src/main/res/layout/month_row.xml"
     },
     {
-        "merged": "C:\\Users\\a.grassano.spb\\ProyectosAndroid\\KN-Estadisticas\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_about_us_menubar.png.flat",
-        "source": "C:\\Users\\a.grassano.spb\\ProyectosAndroid\\KN-Estadisticas\\app\\src\\main\\res\\drawable-xhdpi\\about_us_menubar.png"
+        "merged": "/home/andrea/AndroidStudioProjects/KN-Estadisticas/app/build/intermediates/res/merged/debug/drawable_notification_bg_low.xml.flat",
+        "source": "/home/andrea/.gradle/caches/transforms-2/files-2.1/90ad557a22b636b5a708311fa19d5fe7/res/drawable/notification_bg_low.xml"
     },
     {
-        "merged": "C:\\Users\\a.grassano.spb\\ProyectosAndroid\\KN-Estadisticas\\app\\build\\intermediates\\res\\merged\\debug\\layout_list_items.xml.flat",
-        "source": "C:\\Users\\a.grassano.spb\\ProyectosAndroid\\KN-Estadisticas\\app\\src\\main\\res\\layout\\list_items.xml"
+        "merged": "/home/andrea/AndroidStudioProjects/KN-Estadisticas/app/build/intermediates/res/merged/debug/drawable_notification_icon_background.xml.flat",
+        "source": "/home/andrea/.gradle/caches/transforms-2/files-2.1/90ad557a22b636b5a708311fa19d5fe7/res/drawable/notification_icon_background.xml"
     },
     {
-        "merged": "C:\\Users\\a.grassano.spb\\ProyectosAndroid\\KN-Estadisticas\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_edit_chart_menubar.png.flat",
-        "source": "C:\\Users\\a.grassano.spb\\ProyectosAndroid\\KN-Estadisticas\\app\\src\\main\\res\\drawable-mdpi\\edit_chart_menubar.png"
+        "merged": "/home/andrea/AndroidStudioProjects/KN-Estadisticas/app/build/intermediates/res/merged/debug/drawable-xhdpi_icon.png.flat",
+        "source": "/home/andrea/AndroidStudioProjects/KN-Estadisticas/app/src/main/res/drawable-xhdpi/icon.png"
     },
     {
-        "merged": "C:\\Users\\a.grassano.spb\\ProyectosAndroid\\KN-Estadisticas\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_export_main.png.flat",
-        "source": "C:\\Users\\a.grassano.spb\\ProyectosAndroid\\KN-Estadisticas\\app\\src\\main\\res\\drawable-mdpi\\export_main.png"
+        "merged": "/home/andrea/AndroidStudioProjects/KN-Estadisticas/app/build/intermediates/res/merged/debug/drawable-mdpi_draw_chart_main.png.flat",
+        "source": "/home/andrea/AndroidStudioProjects/KN-Estadisticas/app/src/main/res/drawable-mdpi/draw_chart_main.png"
     },
     {
-        "merged": "C:\\Users\\a.grassano.spb\\ProyectosAndroid\\KN-Estadisticas\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_setting_chart_main.png.flat",
-        "source": "C:\\Users\\a.grassano.spb\\ProyectosAndroid\\KN-Estadisticas\\app\\src\\main\\res\\drawable-xhdpi\\setting_chart_main.png"
+        "merged": "/home/andrea/AndroidStudioProjects/KN-Estadisticas/app/build/intermediates/res/merged/debug/drawable-xhdpi_draw_chart_main.png.flat",
+        "source": "/home/andrea/AndroidStudioProjects/KN-Estadisticas/app/src/main/res/drawable-xhdpi/draw_chart_main.png"
     },
     {
-        "merged": "C:\\Users\\a.grassano.spb\\ProyectosAndroid\\KN-Estadisticas\\app\\build\\intermediates\\res\\merged\\debug\\layout-v21_notification_template_custom_big.xml.flat",
-        "source": "C:\\Users\\a.grassano.spb\\.gradle\\caches\\transforms-2\\files-2.1\\1b89259178ef779b1768aa5f02abf547\\res\\layout-v21\\notification_template_custom_big.xml"
+        "merged": "/home/andrea/AndroidStudioProjects/KN-Estadisticas/app/build/intermediates/res/merged/debug/drawable-hdpi-v4_notify_panel_notification_icon_bg.png.flat",
+        "source": "/home/andrea/.gradle/caches/transforms-2/files-2.1/90ad557a22b636b5a708311fa19d5fe7/res/drawable-hdpi-v4/notify_panel_notification_icon_bg.png"
     },
     {
-        "merged": "C:\\Users\\a.grassano.spb\\ProyectosAndroid\\KN-Estadisticas\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi_draw_chart_main.png.flat",
-        "source": "C:\\Users\\a.grassano.spb\\ProyectosAndroid\\KN-Estadisticas\\app\\src\\main\\res\\drawable-ldpi\\draw_chart_main.png"
+        "merged": "/home/andrea/AndroidStudioProjects/KN-Estadisticas/app/build/intermediates/res/merged/debug/drawable-ldpi_icon.png.flat",
+        "source": "/home/andrea/AndroidStudioProjects/KN-Estadisticas/app/src/main/res/drawable-ldpi/icon.png"
     },
     {
-        "merged": "C:\\Users\\a.grassano.spb\\ProyectosAndroid\\KN-Estadisticas\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi_export_main.png.flat",
-        "source": "C:\\Users\\a.grassano.spb\\ProyectosAndroid\\KN-Estadisticas\\app\\src\\main\\res\\drawable-ldpi\\export_main.png"
+        "merged": "/home/andrea/AndroidStudioProjects/KN-Estadisticas/app/build/intermediates/res/merged/debug/drawable-xhdpi_export_txt.png.flat",
+        "source": "/home/andrea/AndroidStudioProjects/KN-Estadisticas/app/src/main/res/drawable-xhdpi/export_txt.png"
     },
     {
-        "merged": "C:\\Users\\a.grassano.spb\\ProyectosAndroid\\KN-Estadisticas\\app\\build\\intermediates\\res\\merged\\debug\\layout_notification_template_big_media_narrow_custom.xml.flat",
-        "source": "C:\\Users\\a.grassano.spb\\.gradle\\caches\\transforms-2\\files-2.1\\e5f10cb6e3e9a994651b7a701ee00836\\res\\layout\\notification_template_big_media_narrow_custom.xml"
+        "merged": "/home/andrea/AndroidStudioProjects/KN-Estadisticas/app/build/intermediates/res/merged/debug/drawable-hdpi_draw_chart_menubar.png.flat",
+        "source": "/home/andrea/AndroidStudioProjects/KN-Estadisticas/app/src/main/res/drawable-hdpi/draw_chart_menubar.png"
     },
     {
-        "merged": "C:\\Users\\a.grassano.spb\\ProyectosAndroid\\KN-Estadisticas\\app\\build\\intermediates\\res\\merged\\debug\\layout_chart_view.xml.flat",
-        "source": "C:\\Users\\a.grassano.spb\\ProyectosAndroid\\KN-Estadisticas\\app\\src\\main\\res\\layout\\chart_view.xml"
+        "merged": "/home/andrea/AndroidStudioProjects/KN-Estadisticas/app/build/intermediates/res/merged/debug/drawable-mdpi_trash_chart_main.png.flat",
+        "source": "/home/andrea/AndroidStudioProjects/KN-Estadisticas/app/src/main/res/drawable-mdpi/trash_chart_main.png"
     },
     {
-        "merged": "C:\\Users\\a.grassano.spb\\ProyectosAndroid\\KN-Estadisticas\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi_trash_chart_main.png.flat",
-        "source": "C:\\Users\\a.grassano.spb\\ProyectosAndroid\\KN-Estadisticas\\app\\src\\main\\res\\drawable-ldpi\\trash_chart_main.png"
+        "merged": "/home/andrea/AndroidStudioProjects/KN-Estadisticas/app/build/intermediates/res/merged/debug/drawable-mdpi-v4_notification_bg_normal_pressed.9.png.flat",
+        "source": "/home/andrea/.gradle/caches/transforms-2/files-2.1/90ad557a22b636b5a708311fa19d5fe7/res/drawable-mdpi-v4/notification_bg_normal_pressed.9.png"
     },
     {
-        "merged": "C:\\Users\\a.grassano.spb\\ProyectosAndroid\\KN-Estadisticas\\app\\build\\intermediates\\res\\merged\\debug\\drawable_notification_tile_bg.xml.flat",
-        "source": "C:\\Users\\a.grassano.spb\\.gradle\\caches\\transforms-2\\files-2.1\\1b89259178ef779b1768aa5f02abf547\\res\\drawable\\notification_tile_bg.xml"
+        "merged": "/home/andrea/AndroidStudioProjects/KN-Estadisticas/app/build/intermediates/res/merged/debug/drawable-ldpi_manage_item_main.png.flat",
+        "source": "/home/andrea/AndroidStudioProjects/KN-Estadisticas/app/src/main/res/drawable-ldpi/manage_item_main.png"
     },
     {
-        "merged": "C:\\Users\\a.grassano.spb\\ProyectosAndroid\\KN-Estadisticas\\app\\build\\intermediates\\res\\merged\\debug\\layout_help.xml.flat",
-        "source": "C:\\Users\\a.grassano.spb\\ProyectosAndroid\\KN-Estadisticas\\app\\src\\main\\res\\layout\\help.xml"
+        "merged": "/home/andrea/AndroidStudioProjects/KN-Estadisticas/app/build/intermediates/res/merged/debug/layout-v21_notification_template_icon_group.xml.flat",
+        "source": "/home/andrea/.gradle/caches/transforms-2/files-2.1/90ad557a22b636b5a708311fa19d5fe7/res/layout-v21/notification_template_icon_group.xml"
     },
     {
-        "merged": "C:\\Users\\a.grassano.spb\\ProyectosAndroid\\KN-Estadisticas\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi_help_menubar.png.flat",
-        "source": "C:\\Users\\a.grassano.spb\\ProyectosAndroid\\KN-Estadisticas\\app\\src\\main\\res\\drawable-ldpi\\help_menubar.png"
+        "merged": "/home/andrea/AndroidStudioProjects/KN-Estadisticas/app/build/intermediates/res/merged/debug/drawable-ldpi_draw_chart_main.png.flat",
+        "source": "/home/andrea/AndroidStudioProjects/KN-Estadisticas/app/src/main/res/drawable-ldpi/draw_chart_main.png"
     },
     {
-        "merged": "C:\\Users\\a.grassano.spb\\ProyectosAndroid\\KN-Estadisticas\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi_edit_icon.png.flat",
-        "source": "C:\\Users\\a.grassano.spb\\ProyectosAndroid\\KN-Estadisticas\\app\\src\\main\\res\\drawable-ldpi\\edit_icon.png"
+        "merged": "/home/andrea/AndroidStudioProjects/KN-Estadisticas/app/build/intermediates/res/merged/debug/drawable-xhdpi_manage_item.png.flat",
+        "source": "/home/andrea/AndroidStudioProjects/KN-Estadisticas/app/src/main/res/drawable-xhdpi/manage_item.png"
     },
     {
-        "merged": "C:\\Users\\a.grassano.spb\\ProyectosAndroid\\KN-Estadisticas\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_compare_charts_menubar.png.flat",
-        "source": "C:\\Users\\a.grassano.spb\\ProyectosAndroid\\KN-Estadisticas\\app\\src\\main\\res\\drawable-xhdpi\\compare_charts_menubar.png"
+        "merged": "/home/andrea/AndroidStudioProjects/KN-Estadisticas/app/build/intermediates/res/merged/debug/drawable-mdpi-v4_notification_bg_normal.9.png.flat",
+        "source": "/home/andrea/.gradle/caches/transforms-2/files-2.1/90ad557a22b636b5a708311fa19d5fe7/res/drawable-mdpi-v4/notification_bg_normal.9.png"
     },
     {
-        "merged": "C:\\Users\\a.grassano.spb\\ProyectosAndroid\\KN-Estadisticas\\app\\build\\intermediates\\res\\merged\\debug\\layout_notification_media_cancel_action.xml.flat",
-        "source": "C:\\Users\\a.grassano.spb\\.gradle\\caches\\transforms-2\\files-2.1\\e5f10cb6e3e9a994651b7a701ee00836\\res\\layout\\notification_media_cancel_action.xml"
+        "merged": "/home/andrea/AndroidStudioProjects/KN-Estadisticas/app/build/intermediates/res/merged/debug/layout_year_row.xml.flat",
+        "source": "/home/andrea/AndroidStudioProjects/KN-Estadisticas/app/src/main/res/layout/year_row.xml"
     },
     {
-        "merged": "C:\\Users\\a.grassano.spb\\ProyectosAndroid\\KN-Estadisticas\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi_edit_chart_menubar.png.flat",
-        "source": "C:\\Users\\a.grassano.spb\\ProyectosAndroid\\KN-Estadisticas\\app\\src\\main\\res\\drawable-ldpi\\edit_chart_menubar.png"
+        "merged": "/home/andrea/AndroidStudioProjects/KN-Estadisticas/app/build/intermediates/res/merged/debug/drawable-mdpi_edit_icon.png.flat",
+        "source": "/home/andrea/AndroidStudioProjects/KN-Estadisticas/app/src/main/res/drawable-mdpi/edit_icon.png"
     },
     {
-        "merged": "C:\\Users\\a.grassano.spb\\ProyectosAndroid\\KN-Estadisticas\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_notification_bg_low_pressed.9.png.flat",
-        "source": "C:\\Users\\a.grassano.spb\\.gradle\\caches\\transforms-2\\files-2.1\\1b89259178ef779b1768aa5f02abf547\\res\\drawable-hdpi-v4\\notification_bg_low_pressed.9.png"
+        "merged": "/home/andrea/AndroidStudioProjects/KN-Estadisticas/app/build/intermediates/res/merged/debug/drawable-mdpi_manage_item.png.flat",
+        "source": "/home/andrea/AndroidStudioProjects/KN-Estadisticas/app/src/main/res/drawable-mdpi/manage_item.png"
     },
     {
-        "merged": "C:\\Users\\a.grassano.spb\\ProyectosAndroid\\KN-Estadisticas\\app\\build\\intermediates\\res\\merged\\debug\\layout_chart_config.xml.flat",
-        "source": "C:\\Users\\a.grassano.spb\\ProyectosAndroid\\KN-Estadisticas\\app\\src\\main\\res\\layout\\chart_config.xml"
+        "merged": "/home/andrea/AndroidStudioProjects/KN-Estadisticas/app/build/intermediates/res/merged/debug/drawable-mdpi_export_menbar.png.flat",
+        "source": "/home/andrea/AndroidStudioProjects/KN-Estadisticas/app/src/main/res/drawable-mdpi/export_menbar.png"
     },
     {
-        "merged": "C:\\Users\\a.grassano.spb\\ProyectosAndroid\\KN-Estadisticas\\app\\build\\intermediates\\res\\merged\\debug\\layout_row_item.xml.flat",
-        "source": "C:\\Users\\a.grassano.spb\\ProyectosAndroid\\KN-Estadisticas\\app\\src\\main\\res\\layout\\row_item.xml"
+        "merged": "/home/andrea/AndroidStudioProjects/KN-Estadisticas/app/build/intermediates/res/merged/debug/layout-v21_notification_template_custom_big.xml.flat",
+        "source": "/home/andrea/.gradle/caches/transforms-2/files-2.1/90ad557a22b636b5a708311fa19d5fe7/res/layout-v21/notification_template_custom_big.xml"
     },
     {
-        "merged": "C:\\Users\\a.grassano.spb\\ProyectosAndroid\\KN-Estadisticas\\app\\build\\intermediates\\res\\merged\\debug\\layout_about_us.xml.flat",
-        "source": "C:\\Users\\a.grassano.spb\\ProyectosAndroid\\KN-Estadisticas\\app\\src\\main\\res\\layout\\about_us.xml"
+        "merged": "/home/andrea/AndroidStudioProjects/KN-Estadisticas/app/build/intermediates/res/merged/debug/drawable-hdpi_help_menubar.png.flat",
+        "source": "/home/andrea/AndroidStudioProjects/KN-Estadisticas/app/src/main/res/drawable-hdpi/help_menubar.png"
     },
     {
-        "merged": "C:\\Users\\a.grassano.spb\\ProyectosAndroid\\KN-Estadisticas\\app\\build\\intermediates\\res\\merged\\debug\\layout_notification_media_action.xml.flat",
-        "source": "C:\\Users\\a.grassano.spb\\.gradle\\caches\\transforms-2\\files-2.1\\e5f10cb6e3e9a994651b7a701ee00836\\res\\layout\\notification_media_action.xml"
+        "merged": "/home/andrea/AndroidStudioProjects/KN-Estadisticas/app/build/intermediates/res/merged/debug/drawable-xhdpi_edit_chart_main.png.flat",
+        "source": "/home/andrea/AndroidStudioProjects/KN-Estadisticas/app/src/main/res/drawable-xhdpi/edit_chart_main.png"
     },
     {
-        "merged": "C:\\Users\\a.grassano.spb\\ProyectosAndroid\\KN-Estadisticas\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_help_menubar.png.flat",
-        "source": "C:\\Users\\a.grassano.spb\\ProyectosAndroid\\KN-Estadisticas\\app\\src\\main\\res\\drawable-xhdpi\\help_menubar.png"
+        "merged": "/home/andrea/AndroidStudioProjects/KN-Estadisticas/app/build/intermediates/res/merged/debug/drawable-mdpi_export_txt.png.flat",
+        "source": "/home/andrea/AndroidStudioProjects/KN-Estadisticas/app/src/main/res/drawable-mdpi/export_txt.png"
     },
     {
-        "merged": "C:\\Users\\a.grassano.spb\\ProyectosAndroid\\KN-Estadisticas\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_manage_item.png.flat",
-        "source": "C:\\Users\\a.grassano.spb\\ProyectosAndroid\\KN-Estadisticas\\app\\src\\main\\res\\drawable-mdpi\\manage_item.png"
+        "merged": "/home/andrea/AndroidStudioProjects/KN-Estadisticas/app/build/intermediates/res/merged/debug/drawable-hdpi_delete_chart_menubar.png.flat",
+        "source": "/home/andrea/AndroidStudioProjects/KN-Estadisticas/app/src/main/res/drawable-hdpi/delete_chart_menubar.png"
     },
     {
-        "merged": "C:\\Users\\a.grassano.spb\\ProyectosAndroid\\KN-Estadisticas\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_edit_chart_main.png.flat",
-        "source": "C:\\Users\\a.grassano.spb\\ProyectosAndroid\\KN-Estadisticas\\app\\src\\main\\res\\drawable-hdpi\\edit_chart_main.png"
+        "merged": "/home/andrea/AndroidStudioProjects/KN-Estadisticas/app/build/intermediates/res/merged/debug/drawable-hdpi_manage_item.png.flat",
+        "source": "/home/andrea/AndroidStudioProjects/KN-Estadisticas/app/src/main/res/drawable-hdpi/manage_item.png"
     },
     {
-        "merged": "C:\\Users\\a.grassano.spb\\ProyectosAndroid\\KN-Estadisticas\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_export_txt.png.flat",
-        "source": "C:\\Users\\a.grassano.spb\\ProyectosAndroid\\KN-Estadisticas\\app\\src\\main\\res\\drawable-xhdpi\\export_txt.png"
+        "merged": "/home/andrea/AndroidStudioProjects/KN-Estadisticas/app/build/intermediates/res/merged/debug/layout_list_comparar_charts.xml.flat",
+        "source": "/home/andrea/AndroidStudioProjects/KN-Estadisticas/app/src/main/res/layout/list_comparar_charts.xml"
     },
     {
-        "merged": "C:\\Users\\a.grassano.spb\\ProyectosAndroid\\KN-Estadisticas\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_setting_chart_main.png.flat",
-        "source": "C:\\Users\\a.grassano.spb\\ProyectosAndroid\\KN-Estadisticas\\app\\src\\main\\res\\drawable-mdpi\\setting_chart_main.png"
+        "merged": "/home/andrea/AndroidStudioProjects/KN-Estadisticas/app/build/intermediates/res/merged/debug/drawable-hdpi_export_txt.png.flat",
+        "source": "/home/andrea/AndroidStudioProjects/KN-Estadisticas/app/src/main/res/drawable-hdpi/export_txt.png"
     },
     {
-        "merged": "C:\\Users\\a.grassano.spb\\ProyectosAndroid\\KN-Estadisticas\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_trash_chart_main.png.flat",
-        "source": "C:\\Users\\a.grassano.spb\\ProyectosAndroid\\KN-Estadisticas\\app\\src\\main\\res\\drawable-hdpi\\trash_chart_main.png"
+        "merged": "/home/andrea/AndroidStudioProjects/KN-Estadisticas/app/build/intermediates/res/merged/debug/drawable-ldpi_setting_chart_main.png.flat",
+        "source": "/home/andrea/AndroidStudioProjects/KN-Estadisticas/app/src/main/res/drawable-ldpi/setting_chart_main.png"
     },
     {
-        "merged": "C:\\Users\\a.grassano.spb\\ProyectosAndroid\\KN-Estadisticas\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_delete_chart_menubar.png.flat",
-        "source": "C:\\Users\\a.grassano.spb\\ProyectosAndroid\\KN-Estadisticas\\app\\src\\main\\res\\drawable-xhdpi\\delete_chart_menubar.png"
+        "merged": "/home/andrea/AndroidStudioProjects/KN-Estadisticas/app/build/intermediates/res/merged/debug/drawable-hdpi_add_item_main.png.flat",
+        "source": "/home/andrea/AndroidStudioProjects/KN-Estadisticas/app/src/main/res/drawable-hdpi/add_item_main.png"
     },
     {
-        "merged": "C:\\Users\\a.grassano.spb\\ProyectosAndroid\\KN-Estadisticas\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_notification_bg_normal.9.png.flat",
-        "source": "C:\\Users\\a.grassano.spb\\.gradle\\caches\\transforms-2\\files-2.1\\1b89259178ef779b1768aa5f02abf547\\res\\drawable-hdpi-v4\\notification_bg_normal.9.png"
+        "merged": "/home/andrea/AndroidStudioProjects/KN-Estadisticas/app/build/intermediates/res/merged/debug/layout_notification_template_media.xml.flat",
+        "source": "/home/andrea/.gradle/caches/transforms-2/files-2.1/a882bb62ba3406e88e072deec96a42e2/res/layout/notification_template_media.xml"
     },
     {
-        "merged": "C:\\Users\\a.grassano.spb\\ProyectosAndroid\\KN-Estadisticas\\app\\build\\intermediates\\res\\merged\\debug\\layout_main.xml.flat",
-        "source": "C:\\Users\\a.grassano.spb\\ProyectosAndroid\\KN-Estadisticas\\app\\src\\main\\res\\layout\\main.xml"
+        "merged": "/home/andrea/AndroidStudioProjects/KN-Estadisticas/app/build/intermediates/res/merged/debug/drawable-hdpi-v4_notification_bg_low_normal.9.png.flat",
+        "source": "/home/andrea/.gradle/caches/transforms-2/files-2.1/90ad557a22b636b5a708311fa19d5fe7/res/drawable-hdpi-v4/notification_bg_low_normal.9.png"
     },
     {
-        "merged": "C:\\Users\\a.grassano.spb\\ProyectosAndroid\\KN-Estadisticas\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi_add_menubar.png.flat",
-        "source": "C:\\Users\\a.grassano.spb\\ProyectosAndroid\\KN-Estadisticas\\app\\src\\main\\res\\drawable-ldpi\\add_menubar.png"
+        "merged": "/home/andrea/AndroidStudioProjects/KN-Estadisticas/app/build/intermediates/res/merged/debug/layout_notification_media_cancel_action.xml.flat",
+        "source": "/home/andrea/.gradle/caches/transforms-2/files-2.1/a882bb62ba3406e88e072deec96a42e2/res/layout/notification_media_cancel_action.xml"
     },
     {
-        "merged": "C:\\Users\\a.grassano.spb\\ProyectosAndroid\\KN-Estadisticas\\app\\build\\intermediates\\res\\merged\\debug\\drawable_splash.png.flat",
-        "source": "C:\\Users\\a.grassano.spb\\ProyectosAndroid\\KN-Estadisticas\\app\\src\\main\\res\\drawable\\splash.png"
+        "merged": "/home/andrea/AndroidStudioProjects/KN-Estadisticas/app/build/intermediates/res/merged/debug/drawable-xhdpi_remove_icon.png.flat",
+        "source": "/home/andrea/AndroidStudioProjects/KN-Estadisticas/app/src/main/res/drawable-xhdpi/remove_icon.png"
     },
     {
-        "merged": "C:\\Users\\a.grassano.spb\\ProyectosAndroid\\KN-Estadisticas\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_export_main.png.flat",
-        "source": "C:\\Users\\a.grassano.spb\\ProyectosAndroid\\KN-Estadisticas\\app\\src\\main\\res\\drawable-xhdpi\\export_main.png"
+        "merged": "/home/andrea/AndroidStudioProjects/KN-Estadisticas/app/build/intermediates/res/merged/debug/layout_notification_template_big_media.xml.flat",
+        "source": "/home/andrea/.gradle/caches/transforms-2/files-2.1/a882bb62ba3406e88e072deec96a42e2/res/layout/notification_template_big_media.xml"
     },
     {
-        "merged": "C:\\Users\\a.grassano.spb\\ProyectosAndroid\\KN-Estadisticas\\app\\build\\intermediates\\res\\merged\\debug\\layout-v21_notification_action.xml.flat",
-        "source": "C:\\Users\\a.grassano.spb\\.gradle\\caches\\transforms-2\\files-2.1\\1b89259178ef779b1768aa5f02abf547\\res\\layout-v21\\notification_action.xml"
+        "merged": "/home/andrea/AndroidStudioProjects/KN-Estadisticas/app/build/intermediates/res/merged/debug/drawable-ldpi_about_us_menubar.png.flat",
+        "source": "/home/andrea/AndroidStudioProjects/KN-Estadisticas/app/src/main/res/drawable-ldpi/about_us_menubar.png"
     },
     {
-        "merged": "C:\\Users\\a.grassano.spb\\ProyectosAndroid\\KN-Estadisticas\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_manage_item_main.png.flat",
-        "source": "C:\\Users\\a.grassano.spb\\ProyectosAndroid\\KN-Estadisticas\\app\\src\\main\\res\\drawable-hdpi\\manage_item_main.png"
+        "merged": "/home/andrea/AndroidStudioProjects/KN-Estadisticas/app/build/intermediates/res/merged/debug/drawable-ldpi_edit_chart_main.png.flat",
+        "source": "/home/andrea/AndroidStudioProjects/KN-Estadisticas/app/src/main/res/drawable-ldpi/edit_chart_main.png"
     },
     {
-        "merged": "C:\\Users\\a.grassano.spb\\ProyectosAndroid\\KN-Estadisticas\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_draw_chart_menubar.png.flat",
-        "source": "C:\\Users\\a.grassano.spb\\ProyectosAndroid\\KN-Estadisticas\\app\\src\\main\\res\\drawable-mdpi\\draw_chart_menubar.png"
+        "merged": "/home/andrea/AndroidStudioProjects/KN-Estadisticas/app/build/intermediates/res/merged/debug/drawable-hdpi_trash_chart_main.png.flat",
+        "source": "/home/andrea/AndroidStudioProjects/KN-Estadisticas/app/src/main/res/drawable-hdpi/trash_chart_main.png"
     },
     {
-        "merged": "C:\\Users\\a.grassano.spb\\ProyectosAndroid\\KN-Estadisticas\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_notification_bg_low_pressed.9.png.flat",
-        "source": "C:\\Users\\a.grassano.spb\\.gradle\\caches\\transforms-2\\files-2.1\\1b89259178ef779b1768aa5f02abf547\\res\\drawable-mdpi-v4\\notification_bg_low_pressed.9.png"
+        "merged": "/home/andrea/AndroidStudioProjects/KN-Estadisticas/app/build/intermediates/res/merged/debug/drawable-mdpi_config_menubar.png.flat",
+        "source": "/home/andrea/AndroidStudioProjects/KN-Estadisticas/app/src/main/res/drawable-mdpi/config_menubar.png"
     },
     {
-        "merged": "C:\\Users\\a.grassano.spb\\ProyectosAndroid\\KN-Estadisticas\\app\\build\\intermediates\\res\\merged\\debug\\layout_notification_template_part_chronometer.xml.flat",
-        "source": "C:\\Users\\a.grassano.spb\\.gradle\\caches\\transforms-2\\files-2.1\\1b89259178ef779b1768aa5f02abf547\\res\\layout\\notification_template_part_chronometer.xml"
+        "merged": "/home/andrea/AndroidStudioProjects/KN-Estadisticas/app/build/intermediates/res/merged/debug/layout_chart_view.xml.flat",
+        "source": "/home/andrea/AndroidStudioProjects/KN-Estadisticas/app/src/main/res/layout/chart_view.xml"
     },
     {
-        "merged": "C:\\Users\\a.grassano.spb\\ProyectosAndroid\\KN-Estadisticas\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_config_menubar.png.flat",
-        "source": "C:\\Users\\a.grassano.spb\\ProyectosAndroid\\KN-Estadisticas\\app\\src\\main\\res\\drawable-mdpi\\config_menubar.png"
+        "merged": "/home/andrea/AndroidStudioProjects/KN-Estadisticas/app/build/intermediates/res/merged/debug/drawable-xhdpi_about_us_menubar.png.flat",
+        "source": "/home/andrea/AndroidStudioProjects/KN-Estadisticas/app/src/main/res/drawable-xhdpi/about_us_menubar.png"
     },
     {
-        "merged": "C:\\Users\\a.grassano.spb\\ProyectosAndroid\\KN-Estadisticas\\app\\build\\intermediates\\res\\merged\\debug\\layout_chart_row.xml.flat",
-        "source": "C:\\Users\\a.grassano.spb\\ProyectosAndroid\\KN-Estadisticas\\app\\src\\main\\res\\layout\\chart_row.xml"
+        "merged": "/home/andrea/AndroidStudioProjects/KN-Estadisticas/app/build/intermediates/res/merged/debug/layout_help.xml.flat",
+        "source": "/home/andrea/AndroidStudioProjects/KN-Estadisticas/app/src/main/res/layout/help.xml"
     },
     {
-        "merged": "C:\\Users\\a.grassano.spb\\ProyectosAndroid\\KN-Estadisticas\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi_draw_chart_menubar.png.flat",
-        "source": "C:\\Users\\a.grassano.spb\\ProyectosAndroid\\KN-Estadisticas\\app\\src\\main\\res\\drawable-ldpi\\draw_chart_menubar.png"
+        "merged": "/home/andrea/AndroidStudioProjects/KN-Estadisticas/app/build/intermediates/res/merged/debug/drawable-mdpi_manage_item_main.png.flat",
+        "source": "/home/andrea/AndroidStudioProjects/KN-Estadisticas/app/src/main/res/drawable-mdpi/manage_item_main.png"
     },
     {
-        "merged": "C:\\Users\\a.grassano.spb\\ProyectosAndroid\\KN-Estadisticas\\app\\build\\intermediates\\res\\merged\\debug\\layout_items_manager.xml.flat",
-        "source": "C:\\Users\\a.grassano.spb\\ProyectosAndroid\\KN-Estadisticas\\app\\src\\main\\res\\layout\\items_manager.xml"
+        "merged": "/home/andrea/AndroidStudioProjects/KN-Estadisticas/app/build/intermediates/res/merged/debug/drawable-ldpi_import_menubar.png.flat",
+        "source": "/home/andrea/AndroidStudioProjects/KN-Estadisticas/app/src/main/res/drawable-ldpi/import_menubar.png"
     },
     {
-        "merged": "C:\\Users\\a.grassano.spb\\ProyectosAndroid\\KN-Estadisticas\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_help_menubar.png.flat",
-        "source": "C:\\Users\\a.grassano.spb\\ProyectosAndroid\\KN-Estadisticas\\app\\src\\main\\res\\drawable-hdpi\\help_menubar.png"
+        "merged": "/home/andrea/AndroidStudioProjects/KN-Estadisticas/app/build/intermediates/res/merged/debug/drawable-mdpi_delete_chart_menubar.png.flat",
+        "source": "/home/andrea/AndroidStudioProjects/KN-Estadisticas/app/src/main/res/drawable-mdpi/delete_chart_menubar.png"
     },
     {
-        "merged": "C:\\Users\\a.grassano.spb\\ProyectosAndroid\\KN-Estadisticas\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_delete_chart_menubar.png.flat",
-        "source": "C:\\Users\\a.grassano.spb\\ProyectosAndroid\\KN-Estadisticas\\app\\src\\main\\res\\drawable-hdpi\\delete_chart_menubar.png"
+        "merged": "/home/andrea/AndroidStudioProjects/KN-Estadisticas/app/build/intermediates/res/merged/debug/drawable-hdpi_export_main.png.flat",
+        "source": "/home/andrea/AndroidStudioProjects/KN-Estadisticas/app/src/main/res/drawable-hdpi/export_main.png"
     },
     {
-        "merged": "C:\\Users\\a.grassano.spb\\ProyectosAndroid\\KN-Estadisticas\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_config_menubar.png.flat",
-        "source": "C:\\Users\\a.grassano.spb\\ProyectosAndroid\\KN-Estadisticas\\app\\src\\main\\res\\drawable-hdpi\\config_menubar.png"
+        "merged": "/home/andrea/AndroidStudioProjects/KN-Estadisticas/app/build/intermediates/res/merged/debug/drawable-hdpi_export_csv.png.flat",
+        "source": "/home/andrea/AndroidStudioProjects/KN-Estadisticas/app/src/main/res/drawable-hdpi/export_csv.png"
     },
     {
-        "merged": "C:\\Users\\a.grassano.spb\\ProyectosAndroid\\KN-Estadisticas\\app\\build\\intermediates\\res\\merged\\debug\\xml_backup_descriptor.xml.flat",
-        "source": "C:\\Users\\a.grassano.spb\\ProyectosAndroid\\KN-Estadisticas\\app\\src\\main\\res\\xml\\backup_descriptor.xml"
+        "merged": "/home/andrea/AndroidStudioProjects/KN-Estadisticas/app/build/intermediates/res/merged/debug/drawable-hdpi_config_menubar.png.flat",
+        "source": "/home/andrea/AndroidStudioProjects/KN-Estadisticas/app/src/main/res/drawable-hdpi/config_menubar.png"
     },
     {
-        "merged": "C:\\Users\\a.grassano.spb\\ProyectosAndroid\\KN-Estadisticas\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_trash_chart_main.png.flat",
-        "source": "C:\\Users\\a.grassano.spb\\ProyectosAndroid\\KN-Estadisticas\\app\\src\\main\\res\\drawable-xhdpi\\trash_chart_main.png"
+        "merged": "/home/andrea/AndroidStudioProjects/KN-Estadisticas/app/build/intermediates/res/merged/debug/drawable-xhdpi_edit_chart_menubar.png.flat",
+        "source": "/home/andrea/AndroidStudioProjects/KN-Estadisticas/app/src/main/res/drawable-xhdpi/edit_chart_menubar.png"
     },
     {
-        "merged": "C:\\Users\\a.grassano.spb\\ProyectosAndroid\\KN-Estadisticas\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_add_menubar.png.flat",
-        "source": "C:\\Users\\a.grassano.spb\\ProyectosAndroid\\KN-Estadisticas\\app\\src\\main\\res\\drawable-hdpi\\add_menubar.png"
+        "merged": "/home/andrea/AndroidStudioProjects/KN-Estadisticas/app/build/intermediates/res/merged/debug/drawable-mdpi_help_menubar.png.flat",
+        "source": "/home/andrea/AndroidStudioProjects/KN-Estadisticas/app/src/main/res/drawable-mdpi/help_menubar.png"
     },
     {
-        "merged": "C:\\Users\\a.grassano.spb\\ProyectosAndroid\\KN-Estadisticas\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_draw_chart_main.png.flat",
-        "source": "C:\\Users\\a.grassano.spb\\ProyectosAndroid\\KN-Estadisticas\\app\\src\\main\\res\\drawable-hdpi\\draw_chart_main.png"
+        "merged": "/home/andrea/AndroidStudioProjects/KN-Estadisticas/app/build/intermediates/res/merged/debug/drawable-ldpi_trash_chart_main.png.flat",
+        "source": "/home/andrea/AndroidStudioProjects/KN-Estadisticas/app/src/main/res/drawable-ldpi/trash_chart_main.png"
     },
     {
-        "merged": "C:\\Users\\a.grassano.spb\\ProyectosAndroid\\KN-Estadisticas\\app\\build\\intermediates\\res\\merged\\debug\\layout_alta_item.xml.flat",
-        "source": "C:\\Users\\a.grassano.spb\\ProyectosAndroid\\KN-Estadisticas\\app\\src\\main\\res\\layout\\alta_item.xml"
+        "merged": "/home/andrea/AndroidStudioProjects/KN-Estadisticas/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4_notification_bg_normal.9.png.flat",
+        "source": "/home/andrea/.gradle/caches/transforms-2/files-2.1/90ad557a22b636b5a708311fa19d5fe7/res/drawable-xhdpi-v4/notification_bg_normal.9.png"
     },
     {
-        "merged": "C:\\Users\\a.grassano.spb\\ProyectosAndroid\\KN-Estadisticas\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi_export_menbar.png.flat",
-        "source": "C:\\Users\\a.grassano.spb\\ProyectosAndroid\\KN-Estadisticas\\app\\src\\main\\res\\drawable-ldpi\\export_menbar.png"
+        "merged": "/home/andrea/AndroidStudioProjects/KN-Estadisticas/app/build/intermediates/res/merged/debug/layout_notification_template_icon_group.xml.flat",
+        "source": "/home/andrea/.gradle/caches/transforms-2/files-2.1/90ad557a22b636b5a708311fa19d5fe7/res/layout/notification_template_icon_group.xml"
     },
     {
-        "merged": "C:\\Users\\a.grassano.spb\\ProyectosAndroid\\KN-Estadisticas\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_draw_chart_main.png.flat",
-        "source": "C:\\Users\\a.grassano.spb\\ProyectosAndroid\\KN-Estadisticas\\app\\src\\main\\res\\drawable-mdpi\\draw_chart_main.png"
+        "merged": "/home/andrea/AndroidStudioProjects/KN-Estadisticas/app/build/intermediates/res/merged/debug/drawable-ldpi_export_main.png.flat",
+        "source": "/home/andrea/AndroidStudioProjects/KN-Estadisticas/app/src/main/res/drawable-ldpi/export_main.png"
     },
     {
-        "merged": "C:\\Users\\a.grassano.spb\\ProyectosAndroid\\KN-Estadisticas\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_compare_charts_menubar.png.flat",
-        "source": "C:\\Users\\a.grassano.spb\\ProyectosAndroid\\KN-Estadisticas\\app\\src\\main\\res\\drawable-mdpi\\compare_charts_menubar.png"
+        "merged": "/home/andrea/AndroidStudioProjects/KN-Estadisticas/app/build/intermediates/res/merged/debug/drawable-xhdpi_trash_chart_main.png.flat",
+        "source": "/home/andrea/AndroidStudioProjects/KN-Estadisticas/app/src/main/res/drawable-xhdpi/trash_chart_main.png"
     },
     {
-        "merged": "C:\\Users\\a.grassano.spb\\ProyectosAndroid\\KN-Estadisticas\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_export_menbar.png.flat",
-        "source": "C:\\Users\\a.grassano.spb\\ProyectosAndroid\\KN-Estadisticas\\app\\src\\main\\res\\drawable-xhdpi\\export_menbar.png"
+        "merged": "/home/andrea/AndroidStudioProjects/KN-Estadisticas/app/build/intermediates/res/merged/debug/drawable-xhdpi_delete_chart_menubar.png.flat",
+        "source": "/home/andrea/AndroidStudioProjects/KN-Estadisticas/app/src/main/res/drawable-xhdpi/delete_chart_menubar.png"
     },
     {
-        "merged": "C:\\Users\\a.grassano.spb\\ProyectosAndroid\\KN-Estadisticas\\app\\build\\intermediates\\res\\merged\\debug\\layout_alta_chart.xml.flat",
-        "source": "C:\\Users\\a.grassano.spb\\ProyectosAndroid\\KN-Estadisticas\\app\\src\\main\\res\\layout\\alta_chart.xml"
+        "merged": "/home/andrea/AndroidStudioProjects/KN-Estadisticas/app/build/intermediates/res/merged/debug/layout_notification_template_part_time.xml.flat",
+        "source": "/home/andrea/.gradle/caches/transforms-2/files-2.1/90ad557a22b636b5a708311fa19d5fe7/res/layout/notification_template_part_time.xml"
     },
     {
-        "merged": "C:\\Users\\a.grassano.spb\\ProyectosAndroid\\KN-Estadisticas\\app\\build\\intermediates\\res\\merged\\debug\\drawable_notification_icon_background.xml.flat",
-        "source": "C:\\Users\\a.grassano.spb\\.gradle\\caches\\transforms-2\\files-2.1\\1b89259178ef779b1768aa5f02abf547\\res\\drawable\\notification_icon_background.xml"
+        "merged": "/home/andrea/AndroidStudioProjects/KN-Estadisticas/app/build/intermediates/res/merged/debug/layout_notification_action.xml.flat",
+        "source": "/home/andrea/.gradle/caches/transforms-2/files-2.1/90ad557a22b636b5a708311fa19d5fe7/res/layout/notification_action.xml"
     },
     {
-        "merged": "C:\\Users\\a.grassano.spb\\ProyectosAndroid\\KN-Estadisticas\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_compare_charts_menubar.png.flat",
-        "source": "C:\\Users\\a.grassano.spb\\ProyectosAndroid\\KN-Estadisticas\\app\\src\\main\\res\\drawable-hdpi\\compare_charts_menubar.png"
+        "merged": "/home/andrea/AndroidStudioProjects/KN-Estadisticas/app/build/intermediates/res/merged/debug/layout_main.xml.flat",
+        "source": "/home/andrea/AndroidStudioProjects/KN-Estadisticas/app/src/main/res/layout/main.xml"
     },
     {
-        "merged": "C:\\Users\\a.grassano.spb\\ProyectosAndroid\\KN-Estadisticas\\app\\build\\intermediates\\res\\merged\\debug\\layout_notification_template_big_media_custom.xml.flat",
-        "source": "C:\\Users\\a.grassano.spb\\.gradle\\caches\\transforms-2\\files-2.1\\e5f10cb6e3e9a994651b7a701ee00836\\res\\layout\\notification_template_big_media_custom.xml"
+        "merged": "/home/andrea/AndroidStudioProjects/KN-Estadisticas/app/build/intermediates/res/merged/debug/drawable-hdpi_edit_chart_menubar.png.flat",
+        "source": "/home/andrea/AndroidStudioProjects/KN-Estadisticas/app/src/main/res/drawable-hdpi/edit_chart_menubar.png"
     },
     {
-        "merged": "C:\\Users\\a.grassano.spb\\ProyectosAndroid\\KN-Estadisticas\\app\\build\\intermediates\\res\\merged\\debug\\layout_notification_template_media.xml.flat",
-        "source": "C:\\Users\\a.grassano.spb\\.gradle\\caches\\transforms-2\\files-2.1\\e5f10cb6e3e9a994651b7a701ee00836\\res\\layout\\notification_template_media.xml"
+        "merged": "/home/andrea/AndroidStudioProjects/KN-Estadisticas/app/build/intermediates/res/merged/debug/drawable-hdpi_edit_chart_main.png.flat",
+        "source": "/home/andrea/AndroidStudioProjects/KN-Estadisticas/app/src/main/res/drawable-hdpi/edit_chart_main.png"
     },
     {
-        "merged": "C:\\Users\\a.grassano.spb\\ProyectosAndroid\\KN-Estadisticas\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_about_us_menubar.png.flat",
-        "source": "C:\\Users\\a.grassano.spb\\ProyectosAndroid\\KN-Estadisticas\\app\\src\\main\\res\\drawable-hdpi\\about_us_menubar.png"
+        "merged": "/home/andrea/AndroidStudioProjects/KN-Estadisticas/app/build/intermediates/res/merged/debug/drawable-mdpi_add_menubar.png.flat",
+        "source": "/home/andrea/AndroidStudioProjects/KN-Estadisticas/app/src/main/res/drawable-mdpi/add_menubar.png"
     },
     {
-        "merged": "C:\\Users\\a.grassano.spb\\ProyectosAndroid\\KN-Estadisticas\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi_manage_item_main.png.flat",
-        "source": "C:\\Users\\a.grassano.spb\\ProyectosAndroid\\KN-Estadisticas\\app\\src\\main\\res\\drawable-ldpi\\manage_item_main.png"
+        "merged": "/home/andrea/AndroidStudioProjects/KN-Estadisticas/app/build/intermediates/res/merged/debug/drawable-ldpi_export_txt.png.flat",
+        "source": "/home/andrea/AndroidStudioProjects/KN-Estadisticas/app/src/main/res/drawable-ldpi/export_txt.png"
     },
     {
-        "merged": "C:\\Users\\a.grassano.spb\\ProyectosAndroid\\KN-Estadisticas\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi_remove_icon.png.flat",
-        "source": "C:\\Users\\a.grassano.spb\\ProyectosAndroid\\KN-Estadisticas\\app\\src\\main\\res\\drawable-ldpi\\remove_icon.png"
+        "merged": "/home/andrea/AndroidStudioProjects/KN-Estadisticas/app/build/intermediates/res/merged/debug/drawable-v21_notification_action_background.xml.flat",
+        "source": "/home/andrea/.gradle/caches/transforms-2/files-2.1/90ad557a22b636b5a708311fa19d5fe7/res/drawable-v21/notification_action_background.xml"
     },
     {
-        "merged": "C:\\Users\\a.grassano.spb\\ProyectosAndroid\\KN-Estadisticas\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_notification_bg_low_normal.9.png.flat",
-        "source": "C:\\Users\\a.grassano.spb\\.gradle\\caches\\transforms-2\\files-2.1\\1b89259178ef779b1768aa5f02abf547\\res\\drawable-mdpi-v4\\notification_bg_low_normal.9.png"
+        "merged": "/home/andrea/AndroidStudioProjects/KN-Estadisticas/app/build/intermediates/res/merged/debug/drawable-hdpi_draw_chart_main.png.flat",
+        "source": "/home/andrea/AndroidStudioProjects/KN-Estadisticas/app/src/main/res/drawable-hdpi/draw_chart_main.png"
     },
     {
-        "merged": "C:\\Users\\a.grassano.spb\\ProyectosAndroid\\KN-Estadisticas\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_export_menbar.png.flat",
-        "source": "C:\\Users\\a.grassano.spb\\ProyectosAndroid\\KN-Estadisticas\\app\\src\\main\\res\\drawable-mdpi\\export_menbar.png"
+        "merged": "/home/andrea/AndroidStudioProjects/KN-Estadisticas/app/build/intermediates/res/merged/debug/drawable_notification_bg.xml.flat",
+        "source": "/home/andrea/.gradle/caches/transforms-2/files-2.1/90ad557a22b636b5a708311fa19d5fe7/res/drawable/notification_bg.xml"
     },
     {
-        "merged": "C:\\Users\\a.grassano.spb\\ProyectosAndroid\\KN-Estadisticas\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi_manage_item.png.flat",
-        "source": "C:\\Users\\a.grassano.spb\\ProyectosAndroid\\KN-Estadisticas\\app\\src\\main\\res\\drawable-ldpi\\manage_item.png"
+        "merged": "/home/andrea/AndroidStudioProjects/KN-Estadisticas/app/build/intermediates/res/merged/debug/layout_notification_template_part_chronometer.xml.flat",
+        "source": "/home/andrea/.gradle/caches/transforms-2/files-2.1/90ad557a22b636b5a708311fa19d5fe7/res/layout/notification_template_part_chronometer.xml"
     },
     {
-        "merged": "C:\\Users\\a.grassano.spb\\ProyectosAndroid\\KN-Estadisticas\\app\\build\\intermediates\\res\\merged\\debug\\xml_provider_paths.xml.flat",
-        "source": "C:\\Users\\a.grassano.spb\\ProyectosAndroid\\KN-Estadisticas\\app\\src\\main\\res\\xml\\provider_paths.xml"
+        "merged": "/home/andrea/AndroidStudioProjects/KN-Estadisticas/app/build/intermediates/res/merged/debug/drawable-ldpi_add_item_main.png.flat",
+        "source": "/home/andrea/AndroidStudioProjects/KN-Estadisticas/app/src/main/res/drawable-ldpi/add_item_main.png"
     },
     {
-        "merged": "C:\\Users\\a.grassano.spb\\ProyectosAndroid\\KN-Estadisticas\\app\\build\\intermediates\\res\\merged\\debug\\layout_notification_template_media_custom.xml.flat",
-        "source": "C:\\Users\\a.grassano.spb\\.gradle\\caches\\transforms-2\\files-2.1\\e5f10cb6e3e9a994651b7a701ee00836\\res\\layout\\notification_template_media_custom.xml"
+        "merged": "/home/andrea/AndroidStudioProjects/KN-Estadisticas/app/build/intermediates/res/merged/debug/drawable-ldpi_compare_charts_menubar.png.flat",
+        "source": "/home/andrea/AndroidStudioProjects/KN-Estadisticas/app/src/main/res/drawable-ldpi/compare_charts_menubar.png"
     },
     {
-        "merged": "C:\\Users\\a.grassano.spb\\ProyectosAndroid\\KN-Estadisticas\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_csv_menbar.png.flat",
-        "source": "C:\\Users\\a.grassano.spb\\ProyectosAndroid\\KN-Estadisticas\\app\\src\\main\\res\\drawable-hdpi\\csv_menbar.png"
+        "merged": "/home/andrea/AndroidStudioProjects/KN-Estadisticas/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4_notification_bg_normal_pressed.9.png.flat",
+        "source": "/home/andrea/.gradle/caches/transforms-2/files-2.1/90ad557a22b636b5a708311fa19d5fe7/res/drawable-xhdpi-v4/notification_bg_normal_pressed.9.png"
     },
     {
-        "merged": "C:\\Users\\a.grassano.spb\\ProyectosAndroid\\KN-Estadisticas\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_add_item_main.png.flat",
-        "source": "C:\\Users\\a.grassano.spb\\ProyectosAndroid\\KN-Estadisticas\\app\\src\\main\\res\\drawable-xhdpi\\add_item_main.png"
+        "merged": "/home/andrea/AndroidStudioProjects/KN-Estadisticas/app/build/intermediates/res/merged/debug/drawable-hdpi_edit_icon.png.flat",
+        "source": "/home/andrea/AndroidStudioProjects/KN-Estadisticas/app/src/main/res/drawable-hdpi/edit_icon.png"
     },
     {
-        "merged": "C:\\Users\\a.grassano.spb\\ProyectosAndroid\\KN-Estadisticas\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_txt_menbar.png.flat",
-        "source": "C:\\Users\\a.grassano.spb\\ProyectosAndroid\\KN-Estadisticas\\app\\src\\main\\res\\drawable-mdpi\\txt_menbar.png"
+        "merged": "/home/andrea/AndroidStudioProjects/KN-Estadisticas/app/build/intermediates/res/merged/debug/drawable-mdpi-v4_notify_panel_notification_icon_bg.png.flat",
+        "source": "/home/andrea/.gradle/caches/transforms-2/files-2.1/90ad557a22b636b5a708311fa19d5fe7/res/drawable-mdpi-v4/notify_panel_notification_icon_bg.png"
     },
     {
-        "merged": "C:\\Users\\a.grassano.spb\\ProyectosAndroid\\KN-Estadisticas\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_draw_chart_main.png.flat",
-        "source": "C:\\Users\\a.grassano.spb\\ProyectosAndroid\\KN-Estadisticas\\app\\src\\main\\res\\drawable-xhdpi\\draw_chart_main.png"
+        "merged": "/home/andrea/AndroidStudioProjects/KN-Estadisticas/app/build/intermediates/res/merged/debug/drawable-hdpi_import_menubar.png.flat",
+        "source": "/home/andrea/AndroidStudioProjects/KN-Estadisticas/app/src/main/res/drawable-hdpi/import_menubar.png"
     },
     {
-        "merged": "C:\\Users\\a.grassano.spb\\ProyectosAndroid\\KN-Estadisticas\\app\\build\\intermediates\\res\\merged\\debug\\layout-v21_notification_action_tombstone.xml.flat",
-        "source": "C:\\Users\\a.grassano.spb\\.gradle\\caches\\transforms-2\\files-2.1\\1b89259178ef779b1768aa5f02abf547\\res\\layout-v21\\notification_action_tombstone.xml"
+        "merged": "/home/andrea/AndroidStudioProjects/KN-Estadisticas/app/build/intermediates/res/merged/debug/drawable-mdpi_remove_icon.png.flat",
+        "source": "/home/andrea/AndroidStudioProjects/KN-Estadisticas/app/src/main/res/drawable-mdpi/remove_icon.png"
     },
     {
-        "merged": "C:\\Users\\a.grassano.spb\\ProyectosAndroid\\KN-Estadisticas\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_notification_bg_normal_pressed.9.png.flat",
-        "source": "C:\\Users\\a.grassano.spb\\.gradle\\caches\\transforms-2\\files-2.1\\1b89259178ef779b1768aa5f02abf547\\res\\drawable-hdpi-v4\\notification_bg_normal_pressed.9.png"
+        "merged": "/home/andrea/AndroidStudioProjects/KN-Estadisticas/app/build/intermediates/res/merged/debug/drawable-xhdpi_export_csv.png.flat",
+        "source": "/home/andrea/AndroidStudioProjects/KN-Estadisticas/app/src/main/res/drawable-xhdpi/export_csv.png"
     },
     {
-        "merged": "C:\\Users\\a.grassano.spb\\ProyectosAndroid\\KN-Estadisticas\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_draw_chart_menubar.png.flat",
-        "source": "C:\\Users\\a.grassano.spb\\ProyectosAndroid\\KN-Estadisticas\\app\\src\\main\\res\\drawable-hdpi\\draw_chart_menubar.png"
+        "merged": "/home/andrea/AndroidStudioProjects/KN-Estadisticas/app/build/intermediates/res/merged/debug/layout_splash.xml.flat",
+        "source": "/home/andrea/AndroidStudioProjects/KN-Estadisticas/app/src/main/res/layout/splash.xml"
     },
     {
-        "merged": "C:\\Users\\a.grassano.spb\\ProyectosAndroid\\KN-Estadisticas\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_csv_menbar.png.flat",
-        "source": "C:\\Users\\a.grassano.spb\\ProyectosAndroid\\KN-Estadisticas\\app\\src\\main\\res\\drawable-xhdpi\\csv_menbar.png"
+        "merged": "/home/andrea/AndroidStudioProjects/KN-Estadisticas/app/build/intermediates/res/merged/debug/drawable-hdpi_csv_menbar.png.flat",
+        "source": "/home/andrea/AndroidStudioProjects/KN-Estadisticas/app/src/main/res/drawable-hdpi/csv_menbar.png"
     },
     {
-        "merged": "C:\\Users\\a.grassano.spb\\ProyectosAndroid\\KN-Estadisticas\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21_notification_action_background.xml.flat",
-        "source": "C:\\Users\\a.grassano.spb\\.gradle\\caches\\transforms-2\\files-2.1\\1b89259178ef779b1768aa5f02abf547\\res\\drawable-v21\\notification_action_background.xml"
+        "merged": "/home/andrea/AndroidStudioProjects/KN-Estadisticas/app/build/intermediates/res/merged/debug/drawable-ldpi_export_menbar.png.flat",
+        "source": "/home/andrea/AndroidStudioProjects/KN-Estadisticas/app/src/main/res/drawable-ldpi/export_menbar.png"
     },
     {
-        "merged": "C:\\Users\\a.grassano.spb\\ProyectosAndroid\\KN-Estadisticas\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_txt_menbar.png.flat",
-        "source": "C:\\Users\\a.grassano.spb\\ProyectosAndroid\\KN-Estadisticas\\app\\src\\main\\res\\drawable-hdpi\\txt_menbar.png"
+        "merged": "/home/andrea/AndroidStudioProjects/KN-Estadisticas/app/build/intermediates/res/merged/debug/drawable-mdpi_edit_chart_menubar.png.flat",
+        "source": "/home/andrea/AndroidStudioProjects/KN-Estadisticas/app/src/main/res/drawable-mdpi/edit_chart_menubar.png"
     },
     {
-        "merged": "C:\\Users\\a.grassano.spb\\ProyectosAndroid\\KN-Estadisticas\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_remove_icon.png.flat",
-        "source": "C:\\Users\\a.grassano.spb\\ProyectosAndroid\\KN-Estadisticas\\app\\src\\main\\res\\drawable-hdpi\\remove_icon.png"
+        "merged": "/home/andrea/AndroidStudioProjects/KN-Estadisticas/app/build/intermediates/res/merged/debug/drawable-ldpi_export_csv.png.flat",
+        "source": "/home/andrea/AndroidStudioProjects/KN-Estadisticas/app/src/main/res/drawable-ldpi/export_csv.png"
     },
     {
-        "merged": "C:\\Users\\a.grassano.spb\\ProyectosAndroid\\KN-Estadisticas\\app\\build\\intermediates\\res\\merged\\debug\\layout_notification_action.xml.flat",
-        "source": "C:\\Users\\a.grassano.spb\\.gradle\\caches\\transforms-2\\files-2.1\\1b89259178ef779b1768aa5f02abf547\\res\\layout\\notification_action.xml"
+        "merged": "/home/andrea/AndroidStudioProjects/KN-Estadisticas/app/build/intermediates/res/merged/debug/drawable-mdpi-v4_notification_bg_low_normal.9.png.flat",
+        "source": "/home/andrea/.gradle/caches/transforms-2/files-2.1/90ad557a22b636b5a708311fa19d5fe7/res/drawable-mdpi-v4/notification_bg_low_normal.9.png"
     },
     {
-        "merged": "C:\\Users\\a.grassano.spb\\ProyectosAndroid\\KN-Estadisticas\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_icon.png.flat",
-        "source": "C:\\Users\\a.grassano.spb\\ProyectosAndroid\\KN-Estadisticas\\app\\src\\main\\res\\drawable-hdpi\\icon.png"
+        "merged": "/home/andrea/AndroidStudioProjects/KN-Estadisticas/app/build/intermediates/res/merged/debug/drawable-ldpi_config_menubar.png.flat",
+        "source": "/home/andrea/AndroidStudioProjects/KN-Estadisticas/app/src/main/res/drawable-ldpi/config_menubar.png"
     },
     {
-        "merged": "C:\\Users\\a.grassano.spb\\ProyectosAndroid\\KN-Estadisticas\\app\\build\\intermediates\\res\\merged\\debug\\layout_year_row.xml.flat",
-        "source": "C:\\Users\\a.grassano.spb\\ProyectosAndroid\\KN-Estadisticas\\app\\src\\main\\res\\layout\\year_row.xml"
+        "merged": "/home/andrea/AndroidStudioProjects/KN-Estadisticas/app/build/intermediates/res/merged/debug/drawable-mdpi_csv_menbar.png.flat",
+        "source": "/home/andrea/AndroidStudioProjects/KN-Estadisticas/app/src/main/res/drawable-mdpi/csv_menbar.png"
     },
     {
-        "merged": "C:\\Users\\a.grassano.spb\\ProyectosAndroid\\KN-Estadisticas\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_notify_panel_notification_icon_bg.png.flat",
-        "source": "C:\\Users\\a.grassano.spb\\.gradle\\caches\\transforms-2\\files-2.1\\1b89259178ef779b1768aa5f02abf547\\res\\drawable-xhdpi-v4\\notify_panel_notification_icon_bg.png"
+        "merged": "/home/andrea/AndroidStudioProjects/KN-Estadisticas/app/build/intermediates/res/merged/debug/drawable-mdpi_txt_menbar.png.flat",
+        "source": "/home/andrea/AndroidStudioProjects/KN-Estadisticas/app/src/main/res/drawable-mdpi/txt_menbar.png"
     },
     {
-        "merged": "C:\\Users\\a.grassano.spb\\ProyectosAndroid\\KN-Estadisticas\\app\\build\\intermediates\\res\\merged\\debug\\drawable_notification_bg.xml.flat",
-        "source": "C:\\Users\\a.grassano.spb\\.gradle\\caches\\transforms-2\\files-2.1\\1b89259178ef779b1768aa5f02abf547\\res\\drawable\\notification_bg.xml"
+        "merged": "/home/andrea/AndroidStudioProjects/KN-Estadisticas/app/build/intermediates/res/merged/debug/drawable-mdpi_icon.png.flat",
+        "source": "/home/andrea/AndroidStudioProjects/KN-Estadisticas/app/src/main/res/drawable-mdpi/icon.png"
     },
     {
-        "merged": "C:\\Users\\a.grassano.spb\\ProyectosAndroid\\KN-Estadisticas\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_edit_chart_main.png.flat",
-        "source": "C:\\Users\\a.grassano.spb\\ProyectosAndroid\\KN-Estadisticas\\app\\src\\main\\res\\drawable-xhdpi\\edit_chart_main.png"
+        "merged": "/home/andrea/AndroidStudioProjects/KN-Estadisticas/app/build/intermediates/res/merged/debug/drawable-hdpi_setting_chart_main.png.flat",
+        "source": "/home/andrea/AndroidStudioProjects/KN-Estadisticas/app/src/main/res/drawable-hdpi/setting_chart_main.png"
     },
     {
-        "merged": "C:\\Users\\a.grassano.spb\\ProyectosAndroid\\KN-Estadisticas\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi_export_txt.png.flat",
-        "source": "C:\\Users\\a.grassano.spb\\ProyectosAndroid\\KN-Estadisticas\\app\\src\\main\\res\\drawable-ldpi\\export_txt.png"
+        "merged": "/home/andrea/AndroidStudioProjects/KN-Estadisticas/app/build/intermediates/res/merged/debug/drawable-hdpi_compare_charts_menubar.png.flat",
+        "source": "/home/andrea/AndroidStudioProjects/KN-Estadisticas/app/src/main/res/drawable-hdpi/compare_charts_menubar.png"
     },
     {
-        "merged": "C:\\Users\\a.grassano.spb\\ProyectosAndroid\\KN-Estadisticas\\app\\build\\intermediates\\res\\merged\\debug\\layout_notification_template_big_media.xml.flat",
-        "source": "C:\\Users\\a.grassano.spb\\.gradle\\caches\\transforms-2\\files-2.1\\e5f10cb6e3e9a994651b7a701ee00836\\res\\layout\\notification_template_big_media.xml"
+        "merged": "/home/andrea/AndroidStudioProjects/KN-Estadisticas/app/build/intermediates/res/merged/debug/drawable-hdpi_about_us_menubar.png.flat",
+        "source": "/home/andrea/AndroidStudioProjects/KN-Estadisticas/app/src/main/res/drawable-hdpi/about_us_menubar.png"
     },
     {
-        "merged": "C:\\Users\\a.grassano.spb\\ProyectosAndroid\\KN-Estadisticas\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_add_item_main.png.flat",
-        "source": "C:\\Users\\a.grassano.spb\\ProyectosAndroid\\KN-Estadisticas\\app\\src\\main\\res\\drawable-hdpi\\add_item_main.png"
+        "merged": "/home/andrea/AndroidStudioProjects/KN-Estadisticas/app/build/intermediates/res/merged/debug/drawable-hdpi_txt_menbar.png.flat",
+        "source": "/home/andrea/AndroidStudioProjects/KN-Estadisticas/app/src/main/res/drawable-hdpi/txt_menbar.png"
     },
     {
-        "merged": "C:\\Users\\a.grassano.spb\\ProyectosAndroid\\KN-Estadisticas\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_notify_panel_notification_icon_bg.png.flat",
-        "source": "C:\\Users\\a.grassano.spb\\.gradle\\caches\\transforms-2\\files-2.1\\1b89259178ef779b1768aa5f02abf547\\res\\drawable-hdpi-v4\\notify_panel_notification_icon_bg.png"
+        "merged": "/home/andrea/AndroidStudioProjects/KN-Estadisticas/app/build/intermediates/res/merged/debug/layout-v21_notification_action_tombstone.xml.flat",
+        "source": "/home/andrea/.gradle/caches/transforms-2/files-2.1/90ad557a22b636b5a708311fa19d5fe7/res/layout-v21/notification_action_tombstone.xml"
     },
     {
-        "merged": "C:\\Users\\a.grassano.spb\\ProyectosAndroid\\KN-Estadisticas\\app\\build\\intermediates\\res\\merged\\debug\\layout_month_row.xml.flat",
-        "source": "C:\\Users\\a.grassano.spb\\ProyectosAndroid\\KN-Estadisticas\\app\\src\\main\\res\\layout\\month_row.xml"
+        "merged": "/home/andrea/AndroidStudioProjects/KN-Estadisticas/app/build/intermediates/res/merged/debug/drawable-mdpi_export_csv.png.flat",
+        "source": "/home/andrea/AndroidStudioProjects/KN-Estadisticas/app/src/main/res/drawable-mdpi/export_csv.png"
     },
     {
-        "merged": "C:\\Users\\a.grassano.spb\\ProyectosAndroid\\KN-Estadisticas\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_add_item_main.png.flat",
-        "source": "C:\\Users\\a.grassano.spb\\ProyectosAndroid\\KN-Estadisticas\\app\\src\\main\\res\\drawable-mdpi\\add_item_main.png"
+        "merged": "/home/andrea/AndroidStudioProjects/KN-Estadisticas/app/build/intermediates/res/merged/debug/layout_notification_template_lines_media.xml.flat",
+        "source": "/home/andrea/.gradle/caches/transforms-2/files-2.1/a882bb62ba3406e88e072deec96a42e2/res/layout/notification_template_lines_media.xml"
     },
     {
-        "merged": "C:\\Users\\a.grassano.spb\\ProyectosAndroid\\KN-Estadisticas\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_csv_menbar.png.flat",
-        "source": "C:\\Users\\a.grassano.spb\\ProyectosAndroid\\KN-Estadisticas\\app\\src\\main\\res\\drawable-mdpi\\csv_menbar.png"
+        "merged": "/home/andrea/AndroidStudioProjects/KN-Estadisticas/app/build/intermediates/res/merged/debug/drawable-mdpi_compare_charts_menubar.png.flat",
+        "source": "/home/andrea/AndroidStudioProjects/KN-Estadisticas/app/src/main/res/drawable-mdpi/compare_charts_menubar.png"
     },
     {
-        "merged": "C:\\Users\\a.grassano.spb\\ProyectosAndroid\\KN-Estadisticas\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_icon.png.flat",
-        "source": "C:\\Users\\a.grassano.spb\\ProyectosAndroid\\KN-Estadisticas\\app\\src\\main\\res\\drawable-xhdpi\\icon.png"
+        "merged": "/home/andrea/AndroidStudioProjects/KN-Estadisticas/app/build/intermediates/res/merged/debug/drawable-xhdpi_add_menubar.png.flat",
+        "source": "/home/andrea/AndroidStudioProjects/KN-Estadisticas/app/src/main/res/drawable-xhdpi/add_menubar.png"
     },
     {
-        "merged": "C:\\Users\\a.grassano.spb\\ProyectosAndroid\\KN-Estadisticas\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_export_csv.png.flat",
-        "source": "C:\\Users\\a.grassano.spb\\ProyectosAndroid\\KN-Estadisticas\\app\\src\\main\\res\\drawable-hdpi\\export_csv.png"
+        "merged": "/home/andrea/AndroidStudioProjects/KN-Estadisticas/app/build/intermediates/res/merged/debug/xml_provider_paths.xml.flat",
+        "source": "/home/andrea/AndroidStudioProjects/KN-Estadisticas/app/src/main/res/xml/provider_paths.xml"
     },
     {
-        "merged": "C:\\Users\\a.grassano.spb\\ProyectosAndroid\\KN-Estadisticas\\app\\build\\intermediates\\res\\merged\\debug\\layout_list_comparar_charts.xml.flat",
-        "source": "C:\\Users\\a.grassano.spb\\ProyectosAndroid\\KN-Estadisticas\\app\\src\\main\\res\\layout\\list_comparar_charts.xml"
+        "merged": "/home/andrea/AndroidStudioProjects/KN-Estadisticas/app/build/intermediates/res/merged/debug/drawable-xhdpi_export_menbar.png.flat",
+        "source": "/home/andrea/AndroidStudioProjects/KN-Estadisticas/app/src/main/res/drawable-xhdpi/export_menbar.png"
     },
     {
-        "merged": "C:\\Users\\a.grassano.spb\\ProyectosAndroid\\KN-Estadisticas\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi_config_menubar.png.flat",
-        "source": "C:\\Users\\a.grassano.spb\\ProyectosAndroid\\KN-Estadisticas\\app\\src\\main\\res\\drawable-ldpi\\config_menubar.png"
+        "merged": "/home/andrea/AndroidStudioProjects/KN-Estadisticas/app/build/intermediates/res/merged/debug/layout_items_manager.xml.flat",
+        "source": "/home/andrea/AndroidStudioProjects/KN-Estadisticas/app/src/main/res/layout/items_manager.xml"
     },
     {
-        "merged": "C:\\Users\\a.grassano.spb\\ProyectosAndroid\\KN-Estadisticas\\app\\build\\intermediates\\res\\merged\\debug\\layout_notification_template_lines_media.xml.flat",
-        "source": "C:\\Users\\a.grassano.spb\\.gradle\\caches\\transforms-2\\files-2.1\\e5f10cb6e3e9a994651b7a701ee00836\\res\\layout\\notification_template_lines_media.xml"
+        "merged": "/home/andrea/AndroidStudioProjects/KN-Estadisticas/app/build/intermediates/res/merged/debug/drawable-xhdpi_export_main.png.flat",
+        "source": "/home/andrea/AndroidStudioProjects/KN-Estadisticas/app/src/main/res/drawable-xhdpi/export_main.png"
     },
     {
-        "merged": "C:\\Users\\a.grassano.spb\\ProyectosAndroid\\KN-Estadisticas\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_about_us_menubar.png.flat",
-        "source": "C:\\Users\\a.grassano.spb\\ProyectosAndroid\\KN-Estadisticas\\app\\src\\main\\res\\drawable-mdpi\\about_us_menubar.png"
+        "merged": "/home/andrea/AndroidStudioProjects/KN-Estadisticas/app/build/intermediates/res/merged/debug/drawable-xhdpi_csv_menbar.png.flat",
+        "source": "/home/andrea/AndroidStudioProjects/KN-Estadisticas/app/src/main/res/drawable-xhdpi/csv_menbar.png"
     },
     {
-        "merged": "C:\\Users\\a.grassano.spb\\ProyectosAndroid\\KN-Estadisticas\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_icon.png.flat",
-        "source": "C:\\Users\\a.grassano.spb\\ProyectosAndroid\\KN-Estadisticas\\app\\src\\main\\res\\drawable-mdpi\\icon.png"
+        "merged": "/home/andrea/AndroidStudioProjects/KN-Estadisticas/app/build/intermediates/res/merged/debug/layout_chart_row_label.xml.flat",
+        "source": "/home/andrea/AndroidStudioProjects/KN-Estadisticas/app/src/main/res/layout/chart_row_label.xml"
     },
     {
-        "merged": "C:\\Users\\a.grassano.spb\\ProyectosAndroid\\KN-Estadisticas\\app\\build\\intermediates\\res\\merged\\debug\\layout_notification_template_icon_group.xml.flat",
-        "source": "C:\\Users\\a.grassano.spb\\.gradle\\caches\\transforms-2\\files-2.1\\1b89259178ef779b1768aa5f02abf547\\res\\layout\\notification_template_icon_group.xml"
+        "merged": "/home/andrea/AndroidStudioProjects/KN-Estadisticas/app/build/intermediates/res/merged/debug/layout_about_us.xml.flat",
+        "source": "/home/andrea/AndroidStudioProjects/KN-Estadisticas/app/src/main/res/layout/about_us.xml"
     },
     {
-        "merged": "C:\\Users\\a.grassano.spb\\ProyectosAndroid\\KN-Estadisticas\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_export_menbar.png.flat",
-        "source": "C:\\Users\\a.grassano.spb\\ProyectosAndroid\\KN-Estadisticas\\app\\src\\main\\res\\drawable-hdpi\\export_menbar.png"
+        "merged": "/home/andrea/AndroidStudioProjects/KN-Estadisticas/app/build/intermediates/res/merged/debug/drawable-hdpi_manage_item_main.png.flat",
+        "source": "/home/andrea/AndroidStudioProjects/KN-Estadisticas/app/src/main/res/drawable-hdpi/manage_item_main.png"
     },
     {
-        "merged": "C:\\Users\\a.grassano.spb\\ProyectosAndroid\\KN-Estadisticas\\app\\build\\intermediates\\res\\merged\\debug\\layout_splash.xml.flat",
-        "source": "C:\\Users\\a.grassano.spb\\ProyectosAndroid\\KN-Estadisticas\\app\\src\\main\\res\\layout\\splash.xml"
+        "merged": "/home/andrea/AndroidStudioProjects/KN-Estadisticas/app/build/intermediates/res/merged/debug/layout_chart_config.xml.flat",
+        "source": "/home/andrea/AndroidStudioProjects/KN-Estadisticas/app/src/main/res/layout/chart_config.xml"
     },
     {
-        "merged": "C:\\Users\\a.grassano.spb\\ProyectosAndroid\\KN-Estadisticas\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_notification_bg_normal.9.png.flat",
-        "source": "C:\\Users\\a.grassano.spb\\.gradle\\caches\\transforms-2\\files-2.1\\1b89259178ef779b1768aa5f02abf547\\res\\drawable-xhdpi-v4\\notification_bg_normal.9.png"
+        "merged": "/home/andrea/AndroidStudioProjects/KN-Estadisticas/app/build/intermediates/res/merged/debug/layout_alta_item.xml.flat",
+        "source": "/home/andrea/AndroidStudioProjects/KN-Estadisticas/app/src/main/res/layout/alta_item.xml"
     },
     {
-        "merged": "C:\\Users\\a.grassano.spb\\ProyectosAndroid\\KN-Estadisticas\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_remove_icon.png.flat",
-        "source": "C:\\Users\\a.grassano.spb\\ProyectosAndroid\\KN-Estadisticas\\app\\src\\main\\res\\drawable-mdpi\\remove_icon.png"
+        "merged": "/home/andrea/AndroidStudioProjects/KN-Estadisticas/app/build/intermediates/res/merged/debug/drawable-hdpi_add_menubar.png.flat",
+        "source": "/home/andrea/AndroidStudioProjects/KN-Estadisticas/app/src/main/res/drawable-hdpi/add_menubar.png"
     },
     {
-        "merged": "C:\\Users\\a.grassano.spb\\ProyectosAndroid\\KN-Estadisticas\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_export_csv.png.flat",
-        "source": "C:\\Users\\a.grassano.spb\\ProyectosAndroid\\KN-Estadisticas\\app\\src\\main\\res\\drawable-mdpi\\export_csv.png"
+        "merged": "/home/andrea/AndroidStudioProjects/KN-Estadisticas/app/build/intermediates/res/merged/debug/layout_notification_action_tombstone.xml.flat",
+        "source": "/home/andrea/.gradle/caches/transforms-2/files-2.1/90ad557a22b636b5a708311fa19d5fe7/res/layout/notification_action_tombstone.xml"
     },
     {
-        "merged": "C:\\Users\\a.grassano.spb\\ProyectosAndroid\\KN-Estadisticas\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_edit_icon.png.flat",
-        "source": "C:\\Users\\a.grassano.spb\\ProyectosAndroid\\KN-Estadisticas\\app\\src\\main\\res\\drawable-hdpi\\edit_icon.png"
+        "merged": "/home/andrea/AndroidStudioProjects/KN-Estadisticas/app/build/intermediates/res/merged/debug/drawable-ldpi_delete_chart_menubar.png.flat",
+        "source": "/home/andrea/AndroidStudioProjects/KN-Estadisticas/app/src/main/res/drawable-ldpi/delete_chart_menubar.png"
     },
     {
-        "merged": "C:\\Users\\a.grassano.spb\\ProyectosAndroid\\KN-Estadisticas\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi_setting_chart_main.png.flat",
-        "source": "C:\\Users\\a.grassano.spb\\ProyectosAndroid\\KN-Estadisticas\\app\\src\\main\\res\\drawable-ldpi\\setting_chart_main.png"
+        "merged": "/home/andrea/AndroidStudioProjects/KN-Estadisticas/app/build/intermediates/res/merged/debug/drawable-mdpi_import_menubar.png.flat",
+        "source": "/home/andrea/AndroidStudioProjects/KN-Estadisticas/app/src/main/res/drawable-mdpi/import_menubar.png"
     },
     {
-        "merged": "C:\\Users\\a.grassano.spb\\ProyectosAndroid\\KN-Estadisticas\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_notification_bg_normal_pressed.9.png.flat",
-        "source": "C:\\Users\\a.grassano.spb\\.gradle\\caches\\transforms-2\\files-2.1\\1b89259178ef779b1768aa5f02abf547\\res\\drawable-mdpi-v4\\notification_bg_normal_pressed.9.png"
+        "merged": "/home/andrea/AndroidStudioProjects/KN-Estadisticas/app/build/intermediates/res/merged/debug/drawable-xhdpi_add_item_main.png.flat",
+        "source": "/home/andrea/AndroidStudioProjects/KN-Estadisticas/app/src/main/res/drawable-xhdpi/add_item_main.png"
     },
     {
-        "merged": "C:\\Users\\a.grassano.spb\\ProyectosAndroid\\KN-Estadisticas\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi_import_menubar.png.flat",
-        "source": "C:\\Users\\a.grassano.spb\\ProyectosAndroid\\KN-Estadisticas\\app\\src\\main\\res\\drawable-ldpi\\import_menubar.png"
+        "merged": "/home/andrea/AndroidStudioProjects/KN-Estadisticas/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4_notification_bg_low_normal.9.png.flat",
+        "source": "/home/andrea/.gradle/caches/transforms-2/files-2.1/90ad557a22b636b5a708311fa19d5fe7/res/drawable-xhdpi-v4/notification_bg_low_normal.9.png"
     }
 ]

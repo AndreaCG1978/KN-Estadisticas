@@ -67,7 +67,7 @@ public class DataBaseManager {
 	public CursorLoader cursorLoaderItemChart(Context context, Object value){
 		String selection = null;
 		if(value != null){
-			selection = ConstantsAdmin.querySelectionColumnByValue(ConstantsAdmin.KEY_ROWID, value);
+			selection = ConstantsAdmin.querySelectionColumnByValue(ConstantsAdmin.KEY_ITEMCHART_CHARTID, value);
 		}
 		return new CursorLoader( context, null, null, selection, null, null)
 		{
