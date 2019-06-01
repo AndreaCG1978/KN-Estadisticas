@@ -109,8 +109,13 @@ id btnEdit
 id btnExport
 id btnRemove
 id btnTxt
+id buttonAddChart
+id buttonCompareChart
+id buttonConfig
 id buttonGuardarChart
 id buttonGuardarItem
+id buttonHelp
+id buttonImportCsv
 id buttonPickDate
 id buttonPickTime
 id cancel_action

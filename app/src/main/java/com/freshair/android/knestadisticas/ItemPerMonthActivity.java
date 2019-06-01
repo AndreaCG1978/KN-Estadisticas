@@ -65,7 +65,17 @@ public class ItemPerMonthActivity extends KNListFragment implements LoaderManage
         this.configurarBotones();
 		getActionBar().setDisplayHomeAsUpEnabled(true);
     }
-	
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()){
+            case android.R.id.home:
+                onBackPressed();
+                return true;
+        }
+        return super.onOptionsItemSelected(item);
+    }
+
 	private void configurarBotones(){
 		ImageView btn = this.findViewById(R.id.btnAddItem);
 		btn.setOnClickListener(new View.OnClickListener() {

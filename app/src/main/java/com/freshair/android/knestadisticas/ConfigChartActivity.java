@@ -14,6 +14,7 @@ import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.LoaderManager;
 import android.support.v4.content.CursorLoader;
 import android.support.v4.content.Loader;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemSelectedListener;
@@ -84,6 +85,16 @@ public class ConfigChartActivity extends FragmentActivity implements LoaderManag
     }
 	*/
 
+
+	@Override
+	public boolean onOptionsItemSelected(MenuItem item) {
+		switch (item.getItemId()){
+			case android.R.id.home:
+				onBackPressed();
+				return true;
+		}
+		return super.onOptionsItemSelected(item);
+	}
 	
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -105,10 +116,12 @@ public class ConfigChartActivity extends FragmentActivity implements LoaderManag
         this.configurarChecksBox();
         this.configurarTitulo();
 		getActionBar().setDisplayHomeAsUpEnabled(true);
+		getActionBar().setHomeButtonEnabled(true);
 
        
     }
-    
+
+
     private void configurarTitulo(){
     	TextView text = this.findViewById(R.id.titleChartName);
 		text.setText(this.getString(R.string.label_configuracion).toUpperCase());	

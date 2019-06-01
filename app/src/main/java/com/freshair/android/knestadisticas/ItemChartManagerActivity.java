@@ -92,6 +92,16 @@ public class ItemChartManagerActivity extends ExpandableListFragment implements 
         this.registrarBotones();
 		getActionBar().setDisplayHomeAsUpEnabled(true);
     }
+
+	@Override
+	public boolean onOptionsItemSelected(MenuItem item) {
+		switch (item.getItemId()){
+			case android.R.id.home:
+				onBackPressed();
+				return true;
+		}
+		return super.onOptionsItemSelected(item);
+	}
 	
 	private void registrarWidgets(){
 		mNameChart = this.findViewById(R.id.nameChartItemManager);

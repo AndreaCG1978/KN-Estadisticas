@@ -58,6 +58,16 @@ public class ListadoCompararChartsActivity extends ListActivity {
         this.configurarWidgets();
 		getActionBar().setDisplayHomeAsUpEnabled(true);
     }
+
+	@Override
+	public boolean onOptionsItemSelected(MenuItem item) {
+		switch (item.getItemId()){
+			case android.R.id.home:
+				onBackPressed();
+				return true;
+		}
+		return super.onOptionsItemSelected(item);
+	}
 	
 	private void configurarWidgets(){
 		ImageView btn = this.findViewById(R.id.btnDrw);
@@ -104,7 +114,9 @@ public class ListadoCompararChartsActivity extends ListActivity {
 	
 	private void configurarList(ListView listView){
 		DataBaseManager mDBManager = DataBaseManager.getInstance(this);
+		ConstantsAdmin.inicializarBD(mDBManager);
 		List<KNChart> charts = ConstantsAdmin.obtenerAllChart(this, mDBManager);
+		ConstantsAdmin.finalizarBD(mDBManager);
 		this.filtrarChartsSinItems(charts);
 		if(charts.size() > 1){
 			posSelected = new ArrayList<>();

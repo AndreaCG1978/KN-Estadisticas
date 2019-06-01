@@ -25,6 +25,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.SimpleExpandableListAdapter;
 import android.widget.TextView;
@@ -44,6 +45,11 @@ public class MainActivity extends ExpandableListFragment implements LoaderManage
 	private MainActivity me = null;
 	private int selectedFormatImport = -1;
     private final int GRAFICOS_CURSOR = 1;
+    private ImageView buttonAddChart = null;
+    private ImageView buttonImportCsv = null;
+    private ImageView buttonCompareChart = null;
+    private ImageView buttonConfig = null;
+    private ImageView buttonHelp = null;
 	/*
     @Override
 	public void startManagingCursor(Cursor c) {
@@ -58,14 +64,61 @@ public class MainActivity extends ExpandableListFragment implements LoaderManage
         this.cargarLoaders();
   //      allMyCursors = new ArrayList<>();
         this.setContentView(R.layout.main);
-        me = this;
         layoutInflater = (LayoutInflater) this.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
     //    this.recargarLista();
         this.getExpandableListView().setDividerHeight(14);
-
+        this.configButtons();
 
     }
-    
+
+    private void configButtons() {
+        buttonAddChart = this.findViewById(R.id.buttonAddChart);
+        buttonAddChart.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // TODO Auto-generated method stub
+                openAltaChart();
+            }
+        });
+
+        buttonImportCsv = this.findViewById(R.id.buttonImportCsv);
+        buttonImportCsv.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // TODO Auto-generated method stub
+                openImportCSV();
+            }
+        });
+
+        buttonCompareChart = this.findViewById(R.id.buttonCompareChart);
+        buttonCompareChart.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // TODO Auto-generated method stub
+                openCompararChart();
+            }
+        });
+
+        buttonConfig = this.findViewById(R.id.buttonConfig);
+        buttonConfig.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // TODO Auto-generated method stub
+                openConfigurarComparacion();
+            }
+        });
+
+        buttonHelp = this.findViewById(R.id.buttonHelp);
+        buttonHelp.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // TODO Auto-generated method stub
+                openAyuda();
+            }
+        });
+
+    }
+
     protected void onActivityResult(int requestCode, int resultCode, Intent intent) {
     	super.onActivityResult(requestCode, resultCode, intent);
     //	this.resetAllMyCursors();

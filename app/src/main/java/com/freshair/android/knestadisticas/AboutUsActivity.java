@@ -24,6 +24,8 @@ public class AboutUsActivity extends Activity {
 		getActionBar().setDisplayHomeAsUpEnabled(true);
     }
 
+
+
     
     private void configurarWidgets(){
     	mail = this.findViewById(R.id.textAcercaDeMail);

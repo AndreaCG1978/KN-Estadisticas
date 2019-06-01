@@ -7,23 +7,61 @@
     android:scrollbarAlwaysDrawVerticalTrack="true"
     android:layout_margin="3dp">
 
-    <TextView
+
+
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/color_gris_oscuro"
-        android:gravity="left"
-        android:padding="10dp"
-        android:text="@string/title_listado_principal"
-        android:textColor="@color/color_gris_claro"
-        android:textSize="15sp"
-        android:textStyle="bold"
-        android:layout_marginBottom="5dp"/>
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:background="@color/color_gris_claro">
+
+        <ImageButton android:id="@+id/buttonAddChart"
+            android:layout_width="32dp" android:layout_height="32dp"
+            android:background="@drawable/add_item_main"
+            android:contentDescription="buttonAddChart" />
+
+
+
+        <ImageButton android:id="@+id/buttonImportCsv"
+            android:layout_width="32dp" android:layout_height="32dp"
+            android:background="@drawable/import_menubar"
+            android:contentDescription="buttonImportCsv"
+            android:layout_marginLeft="35dp"
+            android:layout_marginStart="35dp" />
+
+        <ImageButton android:id="@+id/buttonCompareChart"
+            android:layout_width="32dp" android:layout_height="32dp"
+            android:background="@drawable/compare_charts_menubar"
+            android:contentDescription="buttonCompareChart"
+            android:layout_marginLeft="35dp"
+            android:layout_marginStart="35dp" />
+
+        <ImageButton android:id="@+id/buttonConfig"
+            android:layout_width="32dp" android:layout_height="32dp"
+            android:background="@drawable/config_menubar"
+            android:contentDescription="buttonConfig"
+            android:layout_marginLeft="35dp"
+            android:layout_marginStart="35dp" />
+
+        <ImageButton android:id="@+id/buttonHelp"
+            android:layout_width="32dp" android:layout_height="32dp"
+            android:background="@drawable/help_menubar"
+            android:contentDescription="buttonHelp"
+            android:layout_marginLeft="35dp"
+            android:layout_marginStart="35dp" />
+
+    </LinearLayout>
+
+
 
     <ExpandableListView
         android:id="@android:id/list"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_margin="5dp"
         android:scrollbarAlwaysDrawVerticalTrack="true"></ExpandableListView>
+
 
 
 </LinearLayout>

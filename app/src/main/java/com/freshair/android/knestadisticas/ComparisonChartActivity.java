@@ -106,6 +106,16 @@ public class ComparisonChartActivity extends FragmentActivity implements LoaderM
       this.configurarTipoGrafico();
 	  getActionBar().setDisplayHomeAsUpEnabled(true);
   }
+
+	@Override
+	public boolean onOptionsItemSelected(MenuItem item) {
+		switch (item.getItemId()){
+			case android.R.id.home:
+				onBackPressed();
+				return true;
+		}
+		return super.onOptionsItemSelected(item);
+	}
   
   @Override
   protected void onResume() {
