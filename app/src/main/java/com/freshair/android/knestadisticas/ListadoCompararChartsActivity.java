@@ -56,6 +56,7 @@ public class ListadoCompararChartsActivity extends ListActivity {
         this.setContentView(R.layout.list_comparar_charts);
         this.configurarList(getListView());    
         this.configurarWidgets();
+		getActionBar().setDisplayHomeAsUpEnabled(true);
     }
 	
 	private void configurarWidgets(){

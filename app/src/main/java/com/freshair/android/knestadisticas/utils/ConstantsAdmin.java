@@ -898,22 +898,19 @@ public class ConstantsAdmin {
     
    
     public static void exportarCSV(Activity context, int formatInput, List<KNItemChart> listaItems, KNChart chart){
-    	Asociacion canStore;
-    	Boolean boolValue;
-    	String msg;
     	String body;
         try
         {
-        	canStore = comprobarSDCard(context);
-     		boolValue = (Boolean)canStore.getKey();
-     		msg = (String) canStore.getValue();
-     		if(boolValue){
+        	//canStore = comprobarSDCard(context);
+     	//	boolValue = (Boolean)canStore.getKey();
+     	//	msg = (String) canStore.getValue();
+     	//	if(boolValue){
      			body = obtenerCsvDeItems(listaItems, formatInput);
      			almacenarArchivo(folderCSV, chart.getName() + csvExtension , body);
      			mensaje = context.getString(R.string.mensaje_exito_exportar_csv);
-     		}else{
-    			mensaje = msg;
-     		}
+     		//}else{
+    		//	mensaje = msg;
+     		//}
      		
 
 		 } catch (FileNotFoundException e) {

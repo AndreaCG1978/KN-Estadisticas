@@ -63,6 +63,7 @@ public class ItemPerMonthActivity extends KNListFragment implements LoaderManage
         this.configurarList(getListView()); 
         this.actualizarWidgets();
         this.configurarBotones();
+		getActionBar().setDisplayHomeAsUpEnabled(true);
     }
 	
 	private void configurarBotones(){

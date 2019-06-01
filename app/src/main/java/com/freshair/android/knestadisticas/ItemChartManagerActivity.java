@@ -90,6 +90,7 @@ public class ItemChartManagerActivity extends ExpandableListFragment implements 
         this.guardarChartSeleccionado(this.getIntent());
         this.configurarList(getExpandableListView()); 
         this.registrarBotones();
+		getActionBar().setDisplayHomeAsUpEnabled(true);
     }
 	
 	private void registrarWidgets(){

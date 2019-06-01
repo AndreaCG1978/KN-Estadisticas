@@ -104,6 +104,7 @@ public class ConfigChartActivity extends FragmentActivity implements LoaderManag
         this.configurarSpinnerTimeFormat();
         this.configurarChecksBox();
         this.configurarTitulo();
+		getActionBar().setDisplayHomeAsUpEnabled(true);
 
        
     }

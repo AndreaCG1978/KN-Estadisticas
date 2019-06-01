@@ -16,20 +16,25 @@ import org.achartengine.renderer.SimpleSeriesRenderer;
 import org.achartengine.renderer.XYMultipleSeriesRenderer;
 import org.achartengine.renderer.XYSeriesRenderer;
 
+import android.Manifest;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.ProgressDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.database.Cursor;
 import android.graphics.Color;
 import android.graphics.Paint.Align;
 import android.os.AsyncTask;
+import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
+import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.LoaderManager;
+import android.support.v4.content.ContextCompat;
 import android.support.v4.content.CursorLoader;
 import android.support.v4.content.Loader;
 import android.view.Menu;
@@ -56,6 +61,10 @@ public class SimpleLinearChartActivity extends FragmentActivity implements Loade
   private int selectedFormatImport = -1;
   private SimpleLinearChartActivity me = null;
   private final int ITEM_CHART_CURSOR = 1;
+
+
+  private final int PERMISSIONS_MAKE_BACKUP = 101;
+
 /*
   @Override
 	public void startManagingCursor(Cursor c) {
@@ -69,9 +78,12 @@ public class SimpleLinearChartActivity extends FragmentActivity implements Loade
       this.cargarLoaders();
       me = this;
    //   allMyCursors = new ArrayList<>();
+
       this.setContentView(R.layout.chart_view);
       this.guardarChartSeleccionado();
       this.configurarBotones();
+	  getActionBar().setDisplayHomeAsUpEnabled(true);
+	  getActionBar().setHomeButtonEnabled(true);
   }
 
 	private void cargarLoaders() {
@@ -128,7 +140,8 @@ public class SimpleLinearChartActivity extends FragmentActivity implements Loade
 			@Override
 			public void onClick(View v) {
 				// TODO Auto-generated method stub
-				exportChartCsv();
+				//exportChartCsv();
+				askForWriteStoragePermission();
 			}
 		});	    
 	    
@@ -140,6 +153,17 @@ public class SimpleLinearChartActivity extends FragmentActivity implements Loade
         });  
 	    
   }
+
+
+	@Override
+	public void onRequestPermissionsResult(int requestCode, String[] permissions,
+										   int[] grantResults) {
+		if (requestCode == PERMISSIONS_MAKE_BACKUP) {
+			if (grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+				this.exportChartCsv();
+			}
+		}
+	}
   
   private void guardarChartSeleccionado(){
 	    idChartSelect = (String)this.getIntent().getExtras().get(ConstantsAdmin.CHART_SELECCIONADO);
@@ -364,6 +388,32 @@ public class SimpleLinearChartActivity extends FragmentActivity implements Loade
 		AlertDialog alert =  builder.create();
 	    alert.show();
   }
+
+
+	private void askForWriteStoragePermission() {
+		if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+			if (ContextCompat.checkSelfPermission(this, Manifest.permission.WRITE_EXTERNAL_STORAGE)
+					!= PackageManager.PERMISSION_GRANTED) {
+				ActivityCompat.requestPermissions(this,
+						new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE},
+						PERMISSIONS_MAKE_BACKUP);
+
+
+			} else {//Ya tiene el permiso...
+				this.exportChartCsv();
+			}
+		} else {
+			this.exportChartCsv();
+		}
+
+
+	}
+
+
+
+
+
+
 
 	@NonNull
 	@Override

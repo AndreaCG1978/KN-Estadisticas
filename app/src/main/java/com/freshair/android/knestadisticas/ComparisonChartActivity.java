@@ -104,6 +104,7 @@ public class ComparisonChartActivity extends FragmentActivity implements LoaderM
       this.configurarBotones();
       this.configurarColores();
       this.configurarTipoGrafico();
+	  getActionBar().setDisplayHomeAsUpEnabled(true);
   }
   
   @Override

@@ -21,6 +21,7 @@ public class AboutUsActivity extends Activity {
         this.setContentView(R.layout.about_us);
        	this.setTitle(R.string.title_acerca_de);
        	this.configurarWidgets();
+		getActionBar().setDisplayHomeAsUpEnabled(true);
     }
 
     
