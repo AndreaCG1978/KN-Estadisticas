@@ -90,6 +90,7 @@ public class ItemChartManagerActivity extends ExpandableListFragment implements 
         this.guardarChartSeleccionado(this.getIntent());
         this.configurarList(getExpandableListView()); 
         this.registrarBotones();
+
 		getActionBar().setDisplayHomeAsUpEnabled(true);
     }
 
@@ -298,9 +299,14 @@ public class ItemChartManagerActivity extends ExpandableListFragment implements 
             }
         };
         setListAdapter(mAdapter);
-        if(mGroupSelected != -1 && mGroupSelected < this.getExpandableListAdapter().getGroupCount()){
-        	this.getExpandableListView().expandGroup(mGroupSelected);
-        }
+ //       if(mGroupSelected != -1 && mGroupSelected < this.getExpandableListAdapter().getGroupCount()){
+ //       	this.getExpandableListView().expandGroup(mGroupSelected);
+ //       }else{
+			int count = mAdapter.getGroupCount();
+			for (int i = 0; i < count; i++) {
+				this.getExpandableListView().expandGroup(i);
+			}
+	//	}
        
    	
     }

@@ -627,7 +627,7 @@ public class ConstantsAdmin {
     private static final String comparisonName  = "comparisonChart";
     private static final String chartName  = "kngraphit";
     
- 
+ /*
     
     private static Asociacion comprobarSDCard(Activity context){
     	Asociacion map;
@@ -668,7 +668,7 @@ public class ConstantsAdmin {
         
         return map;
     }
-    
+    */
 /*    
     
     private static boolean canStoreFile(){
@@ -699,22 +699,22 @@ public class ConstantsAdmin {
     
     
     public static void exportTxT(Activity context, List<KNItemChart> listaItems, KNChart chart){
-    	Asociacion canStore;
-    	Boolean boolValue;
-    	String msg;
+    //	Asociacion canStore;
+//    	Boolean boolValue;
+  //  	String msg;
     	String body = null;
         try
         {
-        	canStore = comprobarSDCard(context);
-     		boolValue = (Boolean)canStore.getKey();
-     		msg = (String) canStore.getValue();
-     		if(boolValue){
+    //    	canStore = comprobarSDCard(context);
+    // 		boolValue = (Boolean)canStore.getKey();
+    // 		msg = (String) canStore.getValue();
+    // 		if(boolValue){
      			body = obtenerTxtDeItems(listaItems, chart, context);
      			almacenarArchivo(folderTxt, chart.getName() + textExtension , body);
      			mostrarMensajeDialog(context, context.getString(R.string.mensaje_exito_exportar_txt));
-     		}else{
-     			mostrarMensajeDialog(context, msg);
-     		}
+     //		}else{
+     ///			mostrarMensajeDialog(context, msg);
+     //		}
      		
 
 		 } catch (FileNotFoundException e) {
@@ -737,19 +737,19 @@ public class ConstantsAdmin {
   	  //View v1 = relativeView.getRootView();
   	  chartView.setDrawingCacheEnabled(true);
   	  Bitmap bm = chartView.getDrawingCache();
-  	  Asociacion canStore;
-  	  Boolean boolValue;
-  	  String msg;
+  //	  Asociacion canStore;
+  //	  Boolean boolValue;
+  //	  String msg;
   	  try {
-  		  canStore = comprobarSDCard(context);
-  		  boolValue = (Boolean)canStore.getKey();
-  		  msg = (String) canStore.getValue();
-  		  if(boolValue){
+  //		  canStore = comprobarSDCard(context);
+  //		  boolValue = (Boolean)canStore.getKey();
+  //		  msg = (String) canStore.getValue();
+  //		  if(boolValue){
   			  almacenarImagen(context, nombreDirectorio, nombreArchivo, bm);
   		//      mostrarMensajeDialog(context,context.getString(R.string.mensaje_exito_exportar_chart) + nombreArchivo);
-  		  }else{
-  			  mostrarMensajeDialog(context, msg);
-  		  }
+  	//	  }else{
+  	//		  mostrarMensajeDialog(context, msg);
+  	//	  }
   		      //    MediaStore.Images.Media.insertImage(getContentResolver(), bm, barcodeNumber + ".jpg Card Image", barcodeNumber  + ".jpg Card Image");
   	  } catch (FileNotFoundException e) {
   		  mostrarMensajeDialog(context, context.getString(R.string.mensaje_error_exportar_chart));
@@ -905,7 +905,7 @@ public class ConstantsAdmin {
      	//	boolValue = (Boolean)canStore.getKey();
      	//	msg = (String) canStore.getValue();
      	//	if(boolValue){
-     			body = obtenerCsvDeItems(listaItems, formatInput);
+     			body = obtenerCsvDeItems(listaItems, formatInput, chart.getUnit());
      			almacenarArchivo(folderCSV, chart.getName() + csvExtension , body);
      			mensaje = context.getString(R.string.mensaje_exito_exportar_csv);
      		//}else{
@@ -918,7 +918,7 @@ public class ConstantsAdmin {
 	  		  //mostrarMensajeAplicacion(context, e.toString(), 11);
 	  	 } catch (IOException e) {
 	  		  try {
-                  body = obtenerCsvDeItems(listaItems, formatInput);
+                  body = obtenerCsvDeItems(listaItems, formatInput, chart.getUnit());
 	  			  almacenarArchivo(folderCSV, chartName + csvExtension, body);
 	  			  mensaje = context.getString(R.string.mensaje_exito_exportar_csv);
 	  		  } catch (IOException e2) {
@@ -930,8 +930,8 @@ public class ConstantsAdmin {
     	
     }
     
-    private static String obtenerCsvDeItemsAllSeparated(List<KNItemChart> list){
-    	String result = "";
+    private static String obtenerCsvDeItemsAllSeparated(List<KNItemChart> list, String unit){
+    	String result = unit + "\n";
         Iterator<KNItemChart> it = list.iterator();
         KNItemChart item;
         while(it.hasNext()){
@@ -963,15 +963,15 @@ public class ConstantsAdmin {
     	return result;
     }
     
-    private static String obtenerCsvDeItems(List<KNItemChart> list, int formatInput){
+    private static String obtenerCsvDeItems(List<KNItemChart> list, int formatInput, String unit){
     	String result = null;
-    	if(formatInput == FORMAT_DATETIME){
+    /*	if(formatInput == FORMAT_DATETIME){
     		result = obtenerCsvDeItemsDateTime(list);
     	}else if(formatInput == FORMAT_DATE){
     		result = obtenerCsvDeItemsDate(list);
-    	}else if(formatInput == FORMAT_ALLSEPARATE){
-    		result = obtenerCsvDeItemsAllSeparated(list);
-    	}
+    	}else if(formatInput == FORMAT_ALLSEPARATE){*/
+    	result = obtenerCsvDeItemsAllSeparated(list, unit);
+    //	}
     	return result;
     }
     
@@ -981,6 +981,8 @@ public class ConstantsAdmin {
         KNChart chart;
         KNItemChart item;
         List<KNItemChart> items;
+		String[] campos;
+		String unit = null;
         int cantChartsCompletos = 0;
         int cantChartsIncompletos = 0;
         try {
@@ -992,7 +994,10 @@ public class ConstantsAdmin {
 	            while(it.hasNext()){
 	                file = it.next();
 	                body = obtenerContenidoArchivo(file, context);
-	                chart = crearChartDesdeArchivo(file.getName(), mdbManager);
+					campos = body.split("\n");
+					unit = campos[0];
+	                chart = crearChartDesdeArchivo(file.getName(), mdbManager, unit);
+
 	                items = obtenerItemsDeString(body, chart, formatInput);
 	                itItems = items.iterator();
 	                if(items.size() > 0){
@@ -1019,15 +1024,15 @@ public class ConstantsAdmin {
 
     }
 
-    private static KNChart crearChartDesdeArchivo(String filename, DataBaseManager mdbM){
+    private static KNChart crearChartDesdeArchivo(String filename, DataBaseManager mdbM, String unit){
         KNChart chart = new KNChart();
         KNChart oldChart;
         long idNuevoChart = -1;
         String[] parts = filename.split(PUNTO);
         chart.setName(parts[parts.length -2]);
-        chart.setUnit("X");
+        chart.setUnit(unit);
         // ACA TRUNCAR EL NOMBRE CON EL SIZE MAXIMO DE NOMBRE DE CHART
-		int maxChartNameLength = 15;
+		int maxChartNameLength = 25;
 		if(chart.getName().length() > maxChartNameLength){
             chart.setName(chart.getName().substring(0, maxChartNameLength - 1));
         }
@@ -1040,6 +1045,7 @@ public class ConstantsAdmin {
         }else{
             chart = oldChart;
         }
+
         return chart;
 
     }
@@ -1051,11 +1057,12 @@ public class ConstantsAdmin {
     	  ArrayList<File> files = null;
     	  File[] arrayFiles;
     	  File f;
-    	  boolean boolValue;
+    	  boolean boolValue = true;
     	  Asociacion canStore;
-    	  canStore = comprobarSDCard(context);
-   		  boolValue = (Boolean)canStore.getKey();
-   		  String msg = (String)canStore.getValue();
+    	//  canStore = comprobarSDCard(context);
+   		 // boolValue = (Boolean)canStore.getKey();
+   		//  String msg = (String)canStore.getValue();
+		  String msg = "";
    		  if(boolValue){
    		 	  String path = obtenerPath(folderCSV);
    		      File dir = new File(path);
@@ -1086,13 +1093,13 @@ public class ConstantsAdmin {
 
     private static List<KNItemChart> obtenerItemsDeString(String body, KNChart chart, int inputFormat){
     	List<KNItemChart> items = null;
-    	if(inputFormat == FORMAT_ALLSEPARATE){
+    //	if(inputFormat == FORMAT_ALLSEPARATE){*/
     		items = obtenerItemsDeStringAllSeparateFormat(body, chart);
-    	}else if(inputFormat == FORMAT_DATETIME){
+    /*	}else if(inputFormat == FORMAT_DATETIME){
     		items = obtenerItemsDeStringDateTimeFormat(body, chart);
     	}else if(inputFormat == FORMAT_DATE){
     		items = obtenerItemsDeStringDateFormat(body, chart);
-    	}
+    	}*/
     	
     	return items;
     }
@@ -1178,11 +1185,11 @@ public class ConstantsAdmin {
     private static String obtenerContenidoArchivo(File file, Activity context)throws IOException{
         // ACA DEBERIA CARGAR EL CONTENIDO DEL ARCHIVO PASADO COMO PARAMETRO, HACER LOS CONTROLES DE LECTURA
     	String line;
-    	Asociacion canStore = comprobarSDCard(context);
-    	boolean boolValue = (Boolean)canStore.getKey();
-    	String msg = (String) canStore.getValue();
+    //	Asociacion canStore = comprobarSDCard(context);
+    //	boolean boolValue = (Boolean)canStore.getKey();
+    	//String msg = (String) canStore.getValue();
     	String result = "";
-    	if(boolValue){
+    //	if(boolValue){
     		BufferedReader input =  new BufferedReader(new FileReader(file));
     		line = input.readLine();
     		while(line != null){
@@ -1193,9 +1200,9 @@ public class ConstantsAdmin {
     			line = input.readLine();
     		}
     		
-    	}else{
-			  mensaje = msg;
-    	}
+    //	}else{
+	//		  mensaje = msg;
+    //	}
     	
         return result;
 

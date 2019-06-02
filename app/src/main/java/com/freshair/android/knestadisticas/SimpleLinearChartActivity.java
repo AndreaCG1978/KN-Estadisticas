@@ -384,7 +384,8 @@ public class SimpleLinearChartActivity extends FragmentActivity implements Loade
     private void exportChartCsv() {
         //  ConstantsAdmin.exportCsv(this, items, mChart);
 
-        final CharSequence[] items = {this.getString(R.string.format_date_time), this.getString(R.string.format_date), this.getString(R.string.format_all_separated)};
+        //final CharSequence[] items = {this.getString(R.string.format_date_time), this.getString(R.string.format_date), this.getString(R.string.format_all_separated)};
+        final CharSequence[] items = {this.getString(R.string.format_all_separated)};
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setTitle(this.getString(R.string.title_select_format));
         builder.setSingleChoiceItems(items, -1, new DialogInterface.OnClickListener() {
