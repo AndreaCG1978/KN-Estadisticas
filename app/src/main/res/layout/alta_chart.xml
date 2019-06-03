@@ -58,7 +58,7 @@
             android:layout_marginStart="5dp"
             android:layout_marginLeft="5dp"
             android:hint="@string/label_unidad"
-            android:inputType="textCapWords"
+            android:inputType="textCapCharacters"
             android:maxLength="10" />
 
     </LinearLayout>
