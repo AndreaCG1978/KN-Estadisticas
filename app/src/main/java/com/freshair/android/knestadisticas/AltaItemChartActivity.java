@@ -1,6 +1,11 @@
 package com.freshair.android.knestadisticas;
 
+import java.text.DateFormat;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.Calendar;
+import java.util.Date;
+import java.util.Locale;
 
 import android.app.DatePickerDialog;
 import android.app.Dialog;
@@ -55,7 +60,11 @@ public class AltaItemChartActivity extends FragmentActivity implements LoaderMan
         this.registrarWidgets();
         this.guardarItemChartSeleccionado(this.getIntent());
         this.configurarBotonAgregar();
-        this.configurarDatePicker();
+        try {
+            this.configurarDatePicker();
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
         this.configurarTimePicker();
         ConstantsAdmin.guardoItem = false;
         dialog.show();
@@ -82,7 +91,7 @@ public class AltaItemChartActivity extends FragmentActivity implements LoaderMan
 		btnEditar = dialog.findViewById(R.id.buttonGuardarItem);
 	}
 	
-	private void configurarDatePicker(){
+	private void configurarDatePicker() throws ParseException {
 		 final int month;
 		 final int day;
 /*
@@ -115,8 +124,12 @@ public class AltaItemChartActivity extends FragmentActivity implements LoaderMan
 								mYear = c.get(Calendar.YEAR);
 								mMonth = String.valueOf(c.get(Calendar.MONTH) + 1);
 								mDay = String.valueOf(c.get(Calendar.DAY_OF_MONTH));
-								actualizarFecha();
-							}
+                                try {
+                                    actualizarFecha();
+                                } catch (ParseException e) {
+                                    e.printStackTrace();
+                                }
+                            }
 						}, mYear, month - 1, day);
 				/*dpd.getDatePicker().setMinDate(System.currentTimeMillis());
 
@@ -256,7 +269,7 @@ public class AltaItemChartActivity extends FragmentActivity implements LoaderMan
 //		};
 // --Commented out by Inspection STOP (28/5/2019 07:26)
 
-    private void actualizarFecha(){
+    private void actualizarFecha() throws ParseException {
     	String fecha;
     	fecha = obtenerFecha();
 		mDate.setText(fecha);
@@ -311,12 +324,24 @@ public class AltaItemChartActivity extends FragmentActivity implements LoaderMan
 		mValue.setText(mItemChartSeleccionado.getValue());
 	}
 	
-	private String obtenerFecha(){
-		return mYear + "-" + mMonth + "-" + mDay;
+	private String obtenerFecha() throws ParseException {
+		DateFormat df = DateFormat.getDateInstance(DateFormat.SHORT, Locale.getDefault());
+		String pattern = "yyyy-MM-dd";
+		SimpleDateFormat simpleDateFormat = new SimpleDateFormat(pattern);
+		Date date = simpleDateFormat.parse(mYear + "-" + mMonth + "-" + mDay);
+		String formattedDate = df.format(date);
+		return formattedDate;
+	//	return mYear + "-" + mMonth + "-" + mDay;
 	}
 	
 	private String obtenerHora(){
-		return mHour + ":" + mMin;
+ 		String hora = mHour;
+ 		if(mMin.length() == 1){
+ 			hora = hora + ":0" +  mMin;
+		}else{
+			hora = hora + ":" +  mMin;
+		}
+		return hora;
 	}
 	
 	private boolean validarEntradaDeDatos(){
